@@ -1,0 +1,83 @@
+.closeIconContainer--show-more {
+    top: 15px;
+}
+
+.closeIcon--show-more {
+    color: #E30613;
+}
+
+.closeIconButton--close {
+    padding: 0;
+    text-decoration: underline;
+    color: #fff;
+    font-family: 'Montserrat-Bold';
+    letter-spacing: 1px;
+    font-size: 13px;
+    line-height: 16px;
+}
+
+.opened--show-more,
+.opened--department,
+.opened--menu {
+    display: flex;
+}
+
+.closed--show-more,
+.closed--department,
+.closed--menu {
+    display: none;
+}
+
+.drawer--show-more,
+.drawer--department,
+.drawer--menu {
+    transform: unset !important;
+}
+
+.closeIconContainer--show-more,
+.closeIconContainer--department,
+.closeIconContainer--menu {
+    position: absolute;
+    right: 0;
+}
+
+.closeIcon--department,
+.closeIcon--menu {
+    color: #fff;
+}
+
+.openIconContainer--menu-desktop,
+.openIconContainer--show-more,
+.openIconContainer--menu {
+    padding: 0;
+}
+
+.openIconContainer--show-more {
+    flex-direction: column-reverse;
+    display: flex;
+}
+
+.openIconContainer--menu-desktop::after {
+    content: 'Menú';
+    font-family: 'Montserrat-Bold';
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0;
+    color: #fff;
+}
+
+.openIconContainer--menu-desktop {
+    width: 135px;
+    height: 37px;
+    background: #90B51B;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 25px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (min-width: 1026px) {}
+
+@media screen and (max-width: 1025px) {}

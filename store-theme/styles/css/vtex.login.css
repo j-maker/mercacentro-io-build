@@ -1,0 +1,114 @@
+.buttonLink :global(.vtex-button) {
+    min-height: unset;
+    border: none;
+}
+
+.formTitle {
+    font-family: 'Montserrat-Bold';
+}
+
+.contentContainer {
+    width: 347px;
+    height: auto;
+    padding-bottom: 20px;
+    background: #fff;
+    border-radius: 10px;
+}
+
+.optionsListItem :global(.vtex-button__label) {
+    font-size: 14px;
+}
+
+.box {
+    right: -60px;
+}
+
+.emailForm .formTitle::after {
+    content: "\A Recibir código vía e-mail";
+    font-family: 'Montserrat-Regular';
+    white-space: pre;
+    line-height: 1.5;
+}
+
+.codeConfirmation :global(.vtex-input-prefix__group),
+.emailVerification :global(.vtex-input-prefix__group) {
+    border-radius: 50px;
+    height: 50px;
+}
+
+.formFooter {
+    border: none;
+}
+
+
+.formFooter .backButton :global(.vtex-button) {
+    border-radius: 50px;
+    border: 1px solid #E30613;
+    background-color: #FFFFFF;
+    width: 135px;
+    height: 45px;
+    margin-right: #E30613;
+}
+
+.emailAndPasswordForm .formLinkContainer {
+    padding: 0;
+}
+
+.formFooter .sendButton {
+    margin: 0;
+}
+
+.dontHaveAccount {
+    text-align: center;
+    width: 190px;
+}
+.dontHaveAccount:after {
+    content: "Regístrese";
+    font-family: 'Montserrat-Bold';
+    font-size: 16px;
+    line-height: 19px;
+    color: #90B51B;
+}
+
+.formFooter .sendButton :global(.vtex-button) {
+    border-radius: 50px;
+    border: 1px solid #E30613;
+    background-color: #E30613;
+    width: 135px;
+    height: 45px;
+    margin-left: 5px;
+}
+
+@media screen and (min-width: 1026px) {
+    .profileIcon {
+        display: none;
+    }
+
+    .container :global(.vtex-button) {
+        width: 45px;
+        margin: 0 8px;
+    }
+}
+
+@media screen and (max-width: 1025px) {
+    .emailForm .formTitle::after {
+        content: "código de acceso";
+        font-family: 'Montserrat-Bold';
+        font-size: 16px;
+        line-height: 19px;
+        margin-left: 10px;
+    }
+
+    .content .formTitle::after {
+        content: "email y contraseña";
+        font-family: 'Montserrat-Bold';
+        font-size: 16px;
+        line-height: 19px;
+        margin-left: 5px;
+    }
+
+    .formFooter .sendButton :global(.vtex-button) {
+        width: 100%;
+        margin: 0 auto;
+    }
+}

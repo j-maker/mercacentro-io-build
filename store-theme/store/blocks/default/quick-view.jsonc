@@ -1,0 +1,27 @@
+{
+    "modal-trigger#quick-view": {
+        "children": [
+            "rich-text#quick-view",
+            "modal-layout#quick-view"
+        ],
+        "props": {
+            "blockClass": "quick-view"
+        }
+    },
+    "rich-text#quick-view": {
+        "props": {
+            "text": "",
+            "blockClass": "quick-view"
+        }
+    },
+    "modal-layout#quick-view": {
+        "children": [
+            "rich-text#modal-content"
+        ]
+    },
+    "rich-text#modal-content": {
+        "props": {
+            "text": "Hello"
+        }
+    }
+}

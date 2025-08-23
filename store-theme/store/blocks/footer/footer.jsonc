@@ -1,0 +1,23 @@
+{
+  "footer": {
+    "title": "Footer",
+    "blocks": [
+      "footer-layout.mobile",
+      "footer-layout.desktop"
+    ]
+  },
+  "footer-layout.desktop": {
+    "title": "Desktop",
+    "children": [
+      "flex-layout.row#deals",
+      "flex-layout.row#wrapper-footer-desktop"
+    ]
+  },
+  "footer-layout.mobile": {
+    "title": "Mobile",
+    "children": [
+      "flex-layout.row#deals",
+      "flex-layout.row#wrapper-footer"
+    ]
+  }
+}

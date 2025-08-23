@@ -1,0 +1,46 @@
+{
+  "name": "store-location",
+  "vendor": "superdrycolombia",
+  "version": "0.0.3",
+  "vtex-version": "0.0.0",
+  "builders": {
+    "react": "3.x",
+    "store": "0.x"
+  },
+  "title": "Store location",
+  "description": "store location list",
+  "scripts": {
+    "postreleasy": "vtex publish --verbose"
+  },
+  "dependencies": {
+    "vtex.store": "2.x",
+    "vtex.styleguide": "9.x"
+  },
+  "settingsSchema": {
+    "title": "Store location",
+    "type": "object",
+    "properties": {
+      "google": {
+        "title": "Google Key",
+        "description": "Enter your google key",
+        "type": "string"
+      }
+    }
+  },
+  "policies": [
+    {
+      "name": "vbase-read-write"
+    },
+    {
+      "name": "update-app-settings"
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "apigateway.serpro.gov.br",
+        "path": "*"
+      }
+    }
+  ],
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
+}

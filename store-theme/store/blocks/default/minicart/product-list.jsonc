@@ -1,0 +1,89 @@
+{
+    "product-list#main": {
+        "title": "Lista",
+        "props": {
+            "blockClass": "pruducts__minicart"
+        },
+        "blocks": [
+            "product-list-content-desktop"
+        ]
+    },
+    "product-list-content-desktop": {
+        "title": "Contenido",
+        "props": {
+            "blockClass": "total__content__minicart__prducts"
+        },
+        "children": [
+            "flex-layout.row#list-row"
+        ]
+    },
+    "flex-layout.row#list-row": {
+        "title": "Contenedor Items",
+        "props": {
+            "blockClass": "total__wrapper__minicart",
+            "fullWidth": true,
+            "paddingBottom": "6",
+            "paddingTop": "5",
+            "colSizing": "auto",
+            "preserverLayoutOnMobile": "false"
+        },
+        "children": [
+            "product-list-image",
+            "flex-layout.row#main-container",
+            "flex-layout.row#precio-remove"
+        ]
+    },
+    "product-list-image": {
+        "title": "Imagen Producto",
+        "props": {
+            "blockClass": "image__minicart"
+        }
+    },
+    "flex-layout.row#main-container": {
+        "title": "Items",
+        "props": {
+            "width": "grow",
+            "blockClass": "main__content_items"
+        },
+        "children": [
+"vtex.product-list:product-name",
+"quantity-selector"
+            /* "flex-layout.row#name-remove",
+            "quantity-selector#minicart",
+            "product-variations",
+            "price#desktop" */
+        ]
+    },
+    "flex-layout.row#precio-remove": {
+        "title": "Precio - Eliminar",
+        "props": {
+            "blockClass": "name__remove",
+            "colSizing": "auto",
+            "marginLeft": "3"
+        },
+        "children": [
+            "remove-button",
+            "price"
+        ]
+    },
+    "quantity-selector": {
+        "title": "Selector Cantidad",
+        "props": {
+            "blockClass": "selector__quantity",
+            "mode": "stepper"
+        }
+    },
+    "price#desktop": {
+        "title": "Precio",
+        "props": {
+            "textAlign": "left",
+            "blockClass": "price__minicart"
+        }
+    },
+    "product-variations": {
+        "title": "Variaciones",
+        "props": {
+            "blockClass": "varionations__minicart"
+        }
+    }
+}

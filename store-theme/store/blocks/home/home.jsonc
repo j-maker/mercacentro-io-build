@@ -1,0 +1,102 @@
+{
+  "store.home": {
+    "title": "Home",
+    "blocks": [
+      "countdown",
+      "responsive-layout.desktop#home",
+      "responsive-layout.mobile#home"
+    ]
+  },
+  "responsive-layout.desktop#home": {
+    "title": "Desktop",
+    "children": [
+      "toggle-layout#slider_banner",
+      "toggle-layout#bannerx3",
+      /* CATEGORIEESE */
+      "toggle-layout#bannerx2-1",
+      "toggle-layout#tabs",
+      "toggle-layout#image_home-2",
+      "toggle-layout#shelf_countdown", /* contaddor y titulos */
+      "toggle-layout#bannerx3-no-standard",
+      "toggle-layout#bannerx2-2",
+      "toggle-layout#banner-shelf",
+      "toggle-layout#bannerx3-1",
+      "toggle-layout#bannerx2-3",
+      "toggle-layout#shelf_desktop",
+      "toggle-layout#image_home-3",
+      "toggle-layout#image_home"
+    ]
+  },
+  "responsive-layout.mobile#home": {
+    "title": "Mobile",
+    "children": [
+      "toggle-layout#tabs"
+    ]
+  },
+  "toggle-layout#shelf_countdown": {
+    "title": "Vitrina contador M/O",
+    "children": [
+      "rich-text#title-shelfs",
+      "list-context.product-list#collection"
+    ]
+  },
+  "toggle-layout#banner-shelf": {
+    "title": "Banner - Vitrina M/O",
+    "children": [
+      "flex-layout.row#banner-shelf"
+    ]
+  },
+  "flex-layout.row#banner-shelf": {
+    "title": "Contenido",
+    "children": [
+      "image#banner_shelf",
+      "list-context.product-list#collection_x4"
+    ],
+    "props": {
+      "colSizing": "auto",
+      "fullWidth": true,
+      "colGap": 0,
+      "blockClass": "banner-shelf"
+    }
+  },
+  "list-context.product-list#collection_x4": {
+    "title": "Collection",
+    "blocks": [
+      "product-summary.shelf"
+    ],
+    "children": [
+      "slider-layout#tabs_collection_x4"
+    ],
+    "props": {
+      "width": "80%",
+      "hideUnavailableItems": false,
+      "maxItems": 8,
+      "collection": "/138",
+      "preload": false,
+      "orderBy": "OrderByTopSaleDESC"
+    }
+  },
+  "slider-layout#tabs_collection_x4": {
+    "title": "Slider",
+    "props": {
+      "blockClass": [
+        "tabs"
+      ],
+      "itemsPerPage": {
+        "desktop": 4,
+        "tablet": 3,
+        "phone": 2
+      },
+      "showNavigationArrows": "desktopOnly",
+      "showPaginationDots": "always"
+    }
+  },
+  "image#banner_shelf": {
+    "title": "Banner",
+    "props": {
+      "width": "20%",
+      "blockClass": "banner-shelf",
+      "src": ""
+    }
+  }
+}

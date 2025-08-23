@@ -1,0 +1,32 @@
+.stackItem--wishlist {
+    bottom: 70px;
+    top: unset;
+    right: 9px;
+    left: unset;
+}
+
+.stackItem--wishlist :global(.vtex-button__label) {
+    padding: 0;
+}
+
+.stackItem--quick-view {
+    bottom: 30px;
+    top: unset;
+    right: 10px;
+    left: unset;
+}
+
+.stackItem--quick-view,
+.stackItem--wishlist {
+    display: none;
+    transition: all 0.3s ease;
+}
+
+@media screen and (min-width: 1026px) {
+    :global(.vtex-product-summary-2-x-element):hover .stackItem--wishlist,
+    :global(.vtex-product-summary-2-x-element):hover .stackItem--quick-view {
+        display: initial;
+    }
+}
+
+@media screen and (max-width: 1025px) {}

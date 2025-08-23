@@ -1,0 +1,214 @@
+{
+    "header-row#main_desktop_bottom": {
+        "title": "Contenido",
+        "props": {
+            "sticky": true,
+            "zIndex": 99,
+            "blockClass": ["header_desktop", "header_desktop_bottom"],
+            "fullWidth": true
+        },
+        "children": [
+            "rich-text#header-top-text-desktop",
+            "rich-text#header-interest"
+        ]
+    },
+    "image#top-header": {
+        "title": "Top Header",
+        "props": {
+            "src": "/assets/vtex.file-manager-graphql/images/d92b87fc-b9e9-428d-870c-90fcb8855e28___0c1ea045f398999d6edaa8e660356e95.png",
+            "alt": "promotion",
+            "title": "Promotion",
+            "maxHeight": "auto",
+            "blockClass": "top-header"
+        }
+    },
+    "header-row#main_desktop": {
+        "title": "Contenido",
+        "props": {
+            "sticky": true,
+            "zIndex": 100,
+            "blockClass": "header_desktop",
+            "fullWidth": true
+        },
+        "children": [
+            "flex-layout.row#header-logo-menu",
+            "search-bar",
+            "flex-layout.row#header-components"
+        ]
+    },
+    "header-row#main_mobile": {
+        "title": "Contenido",
+        "props": {
+            "sticky": true,
+            "zIndex": 100,
+            "blockClass": "header_mobile_main"
+        },
+        "children": [
+            "drawer#header-mobile",
+            "image#wishlist",
+            "minicart.v2",
+            "login#main",
+            "drawer#header-show-more"
+        ]
+    },
+    "flex-layout.row#header-logo-menu": {
+        "title": "Logo y menu",
+        "children": [
+            "image#logo",
+            "drawer#menu"
+        ],
+        "props": {
+            "colJustify": "between",
+            "fullWidth": true,
+            "colSizing": "auto",
+            "blockClass": "header_logo_menu"
+        }
+    },
+    "drawer#menu": {
+        "title": "Menu",
+        "props": {
+            "blockClass": "menu-desktop"
+        }
+    },
+    "flex-layout.row#header-components": {
+        "title": "Componentes",
+        "props": {
+            "colJustify": "right",
+            "fullWidth": true,
+            "colSizing": "auto",
+            "blockClass": "header_desktop"
+        },
+        "children": [
+            "rich-text#metod-shipping",
+            "image#wishlist",
+            "login#main",
+            "minicart.v2"
+        ]
+    },
+    "rich-text#metod-shipping": {
+        "title": "Metodo de entrega",
+        "props": {
+            "text": "[Método de Entrega](#)",
+            "blockClass": "metod-shipping"
+        }
+    },
+    "search-bar": {
+        "title": "Buscador",
+        "props": {
+            "blurOnSubmit": true,
+            "displayMode": "search-and-clear-buttons",
+            "inputType": "text",
+            "blockClass": "header_search_bar_desktop",
+            "placeholder": "Busca un producto..."
+        },
+        "blocks": [
+            "autocomplete-result-list.v2"
+        ]
+    },
+    "autocomplete-result-list.v2": {
+        "title": "Búsqueda autocompletar",
+        "blocks": [
+            "product-summary.shelf"
+        ],
+        "props": {
+            "maxTopSearches": 0,
+            "maxHistory": 0,
+            "maxSuggestedProducts": 3,
+            "maxSuggestedTerms": 3,
+            "autocompleteWidth": 90,
+            "productLayout": "VERTICAL",
+            "hideTitles": false,
+            "historyFirst": false,
+            "simulationBehavior": "default"
+        }
+    },
+    "login#main": {
+        "title": "Login",
+        "props": {
+            "blockClass": "login",
+            "accountOptionsButtonBehavior": "popover",
+            "hideIconLabel": true,
+            "logInButtonBehavior": "popover",
+            "showIconProfile": true,
+            "googleOneTapMarginTop": "3rem",
+            "googleOneTapAlignment": "Right",
+            "hasGoogleOneTap": true,
+            "emailPlaceholder": "Correo electrónico",
+            "identifierPlaceholder": "Correo electrónico 1",
+            "optionsTitle": "Ingresa o crea tu cuenta",
+            "passwordPlaceholder": "Contraseña",
+            "termsAndConditions": "Al ingresar aceptas los [términos y condiciones](/terminos-y-condiciones)",
+            "emailAndPasswordTitle": "Iniciar sesión",
+            "accessCodeTitle": "Iniciar sesión con código",
+            "accessCodePlaceholder": "Código de acceso"
+        }
+    },
+    "vtex.menu@2.x:menu#menu-subcategory-1": {
+        "title": "Menu Subcategoria",
+        "props": {
+            "blockClass": [
+                "menu-subcategory"
+            ]
+        }
+    },
+    "image#wishlist": {
+        "title": "Wishlist",
+        "props": {
+            "link": {
+                "url": "/account#/wishlist"
+            },
+            "src": "",
+            "alt": "Wishlist",
+            "title": "Wishlist",
+            "maxHeight": "auto",
+            "blockClass": "wishlist"
+        }
+    },
+    "rich-text#head-show-more": {
+        "title": "Ver mas",
+        "props": {
+            "text": "[Método de Entrega](#) [Catálogo](#) [Nuestras Tiendas](#) [¿Cómo Comprar?](#)",
+            "blockClass": "show-more-header"
+        }
+    },
+    "flex-layout.row#header-top": {
+        "title": "Contenido Top",
+        "children": [
+            "image#logo-header-top",
+            "search-bar"
+        ],
+        "props": {
+            "preserveLayoutOnMobile": true,
+            "fullWidth": true,
+            "colSizing": "auto"
+        }
+    },
+    "image#logo-header-top": {
+        "title": "Logo",
+        "props": {
+            "src": "",
+            "blockClass": "logo-header-top"
+        }
+    },
+    "rich-text#header-top-text": {
+        "title": "Texto",
+        "props": {
+            "blockClass": "header-top-text",
+            "text": "[Merca](#) [Electro y tecno.](#) **[Ofertas](#)**"
+        }
+    },
+    "rich-text#header-top-text-desktop": {
+        "title": "Links",
+        "props": {
+            "blockClass": "header-top-text-desktop",
+            "text": "[Mercado](#) [Electrodomesticos](#) **[Tecnologia](#)**"
+        }
+    },
+    "rich-text#header-interest": {
+        "title": "Links",
+        "props": {
+            "blockClass": "header-interest",
+            "text": "**[Ofertas](#)** [Catalogo](#) [Nuestras tiendas](#)"
+        }
+    }
+}

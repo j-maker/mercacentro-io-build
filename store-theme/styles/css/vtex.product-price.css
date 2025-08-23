@@ -1,0 +1,57 @@
+.currencyLiteral {
+    display: none;
+}
+
+.savings {
+    font-size: 12px;
+    font-family: 'Montserrat-Bold';
+    background: #FBBA00;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3px;
+    border-radius: 3px;
+    margin-bottom: 7px;
+}
+
+.sellingPrice {
+    display: flex;
+}
+
+.listPriceValue {
+    color: #00000060;
+}
+
+.sellingPriceValue {
+    font-family: 'Montserrat-Bold';
+    color: #000000;
+    margin-bottom: 7px;
+}
+
+@media screen and (min-width: 1026px) {
+    .sellingPriceValue {
+        font-size: 19px;
+        line-height: 21px;
+    }
+
+    :global(.vtex-flex-layout-0-x-flexRow--minicart-price) .sellingPriceValue {
+        font-size: 15px;
+        line-height: 19px;
+        margin: 0 10px 0 0;
+        font-family: 'Montserrat-SemiBold';
+    }
+
+    :global(.vtex-flex-layout-0-x-flexRow--minicart-price) .listPriceValue {
+        font-size: 15px;
+        line-height: 19px;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 1025px) {
+    .savings,
+    .listPriceValue {
+        font-size: 13px;
+        line-height: 15px;
+    }
+}

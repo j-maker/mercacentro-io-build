@@ -1,0 +1,154 @@
+{
+    "product-summary.shelf": {
+        "title": "Vitrina",
+        "children": [
+            "stack-layout#main-content",
+            "flex-layout.row#info-shelf"
+        ]
+    },
+    "product-summary.shelf#minicart": {
+        "title": "Vitrina",
+        "children": [
+            "flex-layout.row#minicart"
+        ],
+        "props": {
+            "blockClass": "minicart"
+        }
+    },
+    "flex-layout.row#minicart": {
+        "children": [
+            "product-summary-image",
+            "flex-layout.col#minicart-name-price",
+            "add-to-cart-button#minicart"
+        ],
+        "props": {
+            "colSizing": "auto",
+            "fullWidth": true,
+            "blockClass": "minicart"
+        }
+    },
+    "product-summary-image": {
+        "props": {
+            "showBadge": false
+        }
+    },
+    "add-to-cart-button#minicart": {
+        "props": {
+            "isOneClickBuy ": true,
+            "unavailableText": "Un",
+            "blockClass": "minicart",
+            "text": "Ad"
+        }
+    },
+    "flex-layout.col#minicart-name-price": {
+        "children": [
+            "product-summary-name",
+            "flex-layout.row#minicart-price"
+        ],
+        "props": {
+            "preventVerticalStretch": true,
+            "blockClass": "minicart-name-price"
+        }
+    },
+    "flex-layout.row#minicart-price": {
+        "children": [
+            "product-selling-price",
+            "product-list-price"
+        ],
+        "props": {
+            "colJustify": "left",
+            "fullWidth": true,
+            "colSizing": "auto",
+            "blockClass": "minicart-price"
+        }
+    },
+    "stack-layout#main-content": {
+        "title": "Stack Layout",
+        "children": [
+            "product-summary-image",
+            "add-to-list-btn",
+            "modal-trigger#quick-view"
+        ]
+    },
+    "flex-layout.row#info-shelf": {
+        "title": "Info vitrina",
+        "children": [
+            "flex-layout.col#info-shelf"
+        ],
+        "props": {
+            "blockClass": "info-shelf",
+            "fullWidth": true
+        }
+    },
+    "flex-layout.col#info-shelf": {
+        "children": [
+            "product-summary-name",
+            "flex-layout.row#prices",
+            "product-selling-price",
+            "product-summary-brand",
+            "flex-layout.row#add-cart-button"
+        ],
+        "props": {
+            "preventVerticalStretch": true,
+            "blockClass": "info-shelf"
+        }
+    },
+    "flex-layout.row#prices": {
+        "children": [
+            "product-price-savings",
+            "product-list-price"
+        ],
+        "props": {
+            "blockClass": "prices",
+            "colJustify": "left",
+            "colSizing": "auto",
+            "colGap": 5,
+            "fullWidth": true,
+            "preserveLayoutOnMobile": true,
+            "preventVerticalStretch": true,
+            "preventHorizontalStretch": true
+        }
+    },
+    "flex-layout.row#add-cart-button": {
+        "children": [
+            "product-rating-inline",
+            "add-to-cart-button#summary"
+        ],
+        "props": {
+            "preserveLayoutOnMobile": true,
+            "blockClass": "add-cart-button",
+            "fullWidth": true
+        }
+    },
+    "product-summary-brand": {
+        "props": {
+            "blockClass": "brand"
+        }
+    },
+    "add-to-list-btn": {
+        "title": "Botón Wishlist",
+        "props": {
+            "blockClass": "wishlist"
+        }
+    },
+    "product-price-savings": {
+        "props": {
+            "message": "-{savingsPercentage}"
+        }
+    },
+    "add-to-cart-button#summary": {
+        "props": {
+            "width": "60%",
+            "isOneClickBuy ": true,
+            "unavailableText": "NO DISPONIBLE",
+            "blockClass": "shelf",
+            "text": "Agregar"
+        }
+    },
+    "product-rating-inline": {
+        "props": {
+            "width": "40%",
+            "blockClass": "rating"
+        }
+    }
+}

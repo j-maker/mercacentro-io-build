@@ -1,0 +1,13 @@
+{
+  "store.product": {
+    "title": "Página de Producto",
+    "children": [
+      "breadcrumb",
+      "responsive-layout.mobile#main",
+      "responsive-layout.desktop#main",
+      "responsive-layout.mobile#shelf-related",
+      "responsive-layout.desktop#shelf-related",
+      "product-reviews"
+    ]
+  }
+}

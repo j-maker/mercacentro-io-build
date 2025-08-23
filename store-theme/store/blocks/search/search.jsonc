@@ -1,0 +1,121 @@
+/* Ok */
+{
+  "store.search": {
+    "title": "Search",
+    "blocks": [
+      "search-result-layout#search"
+    ],
+    "props": {
+      "fullWidth": true,
+      "hideUnavailableItems": true,
+      "context": {
+        "hideUnavailableItems": true,
+        "orderByField": "OrderByReleaseDateDESC",
+        "facetsBehavior": "dynamic",
+        "maxItemsPerPage": 16,
+        "skusFilter": "ALL",
+        "simulationBehavior": "default"
+      }
+    }
+  },
+  "store.search#category": {
+    "title": "Categorías",
+    "blocks": [
+      "toggle-layout#slider_banner",
+      "rich-text#seo-app-title",
+      "rich-text#seo-app-link-categories",
+      "search-result-layout"
+    ],
+    "props": {
+      "fullWidth": true,
+      "hideUnavailableItems": true,
+      "context": {
+        "hideUnavailableItems": true,
+        "orderByField": "OrderByReleaseDateDESC",
+        "facetsBehavior": "dynamic",
+        "maxItemsPerPage": 16,
+        "skusFilter": "ALL",
+        "simulationBehavior": "default"
+      }
+    }
+  },
+  "store.search#brand": {
+    "title": "Marca",
+    "blocks": [
+      "toggle-layout#slider_banner",
+      "rich-text#seo-app-title",
+      "rich-text#seo-app-link-categories",
+      "search-result-layout"
+    ],
+    "props": {
+      "fullWidth": true,
+      "hideUnavailableItems": true,
+      "context": {
+        "hideUnavailableItems": true,
+        "orderByField": "OrderByReleaseDateDESC",
+        "facetsBehavior": "dynamic",
+        "maxItemsPerPage": 16,
+        "skusFilter": "ALL",
+        "simulationBehavior": "default"
+      }
+    }
+  },
+  "store.search#department": {
+    "title": "Departamento",
+    "blocks": [
+      "toggle-layout#slider_banner",
+      "rich-text#seo-app-title",
+      "rich-text#seo-app-link-categories",
+      "search-result-layout"
+    ],
+    "props": {
+      "fullWidth": true,
+      "hideUnavailableItems": true,
+      "context": {
+        "hideUnavailableItems": true,
+        "orderByField": "OrderByReleaseDateDESC",
+        "facetsBehavior": "dynamic",
+        "maxItemsPerPage": 16,
+        "skusFilter": "ALL",
+        "simulationBehavior": "default"
+      }
+    }
+  },
+  "store.search#subcategory": {
+    "title": "Subcategorías",
+    "blocks": [
+      "toggle-layout#slider_banner",
+      "rich-text#seo-app-title",
+      "rich-text#seo-app-link-categories",
+      "search-result-layout"
+    ],
+    "props": {
+      "fullWidth": true,
+      "hideUnavailableItems": true,
+      "context": {
+        "hideUnavailableItems": true,
+        "orderByField": "OrderByReleaseDateDESC",
+        "facetsBehavior": "dynamic",
+        "maxItemsPerPage": 16,
+        "skusFilter": "ALL",
+        "simulationBehavior": "default"
+      }
+    }
+  },
+  "search-result-layout": {
+    "title": "Pagina listada",
+    "blocks": [
+      "search-result-layout.desktop",
+      "search-result-layout.mobile",
+      "search-not-found-layout"
+    ]
+  },
+  "search-result-layout#search": {
+    "title": "Pagina listada",
+    "blocks": [
+      "search-result-layout.desktop#search",
+      "search-result-layout.mobile#search",
+      "search-not-found-layout"
+    ]
+  }
+}

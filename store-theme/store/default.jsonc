@@ -1,0 +1,28 @@
+{
+  "store.orderplaced": {
+    "title": "Orden Confirmada",
+    "blocks": ["order-placed"]
+  },
+
+  "store.account": {
+    "title": "Mi Cuenta",
+    "blocks": ["my-account"],
+    "parent": {
+      "challenge": "challenge.profile"
+    }
+  },
+
+  "store.login": {
+    "title": "Iniciar Sesión",
+    "blocks": ["login-content#default"]
+  },
+
+  "login-content#default": {
+    "title": "Contenido de Login",
+    "props": {
+      "isInitialScreenOptionOnly": false,
+      "defaultOption": 1,
+      "showPasswordVerificationIntoTooltip": true
+    }
+  }
+} 

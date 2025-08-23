@@ -1,0 +1,46 @@
+.styledLinkContent--menu-subcategory {
+    white-space: break-spaces;
+}
+
+.styledLinkContainer--menu-subcategory {
+    margin: 0 15px;
+    padding: 15px 0;
+}
+
+.styledLinkContent--menu-footer-desktop {
+    font-size: 14px;
+}
+
+.styledLinkContent--menu-mobile {
+    white-space: break-spaces;
+}
+
+.styledLinkContainer--menu-mobile {
+    margin: 0;
+    padding: 10px 0;
+}
+
+:global(.vtex-menu-2-x-styledLinkContent--menu-footer-desktop),
+.paragraph--newsletter-title {
+    font-family: 'Montserrat-Bold';
+}
+
+.menuItem--menu-footer-desktop .styledLinkContent--menu-footer-desktop {
+    font-family: 'Inter-Regular';
+    font-size: 12px;
+    white-space: break-spaces;
+}
+
+.styledLink--menu-footer-desktop--highlight .styledLinkContent--menu-footer-desktop,
+.styledLinkContent--menu-footer-desktop {
+    font-family: 'Inter-Bold';
+    font-size: 16px;
+}
+
+.menuItem--menu-footer-desktop .styledLinkContainer--menu-footer-desktop {
+    padding-top: 15px;
+}
+
+@media screen and (min-width: 1026px) {}
+
+@media screen and (max-width: 1025px) {}

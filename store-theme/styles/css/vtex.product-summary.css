@@ -1,0 +1,71 @@
+.element {
+    padding: 0;
+}
+.container {
+    border: 1px solid #f5f5f5;
+    max-width: 400px !important;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.nameContainer {
+    padding: 0;
+    justify-content: flex-start;
+    margin-bottom: 7px;
+}
+
+.productNameContainer {
+    text-align: left;
+}
+
+.productBrand{
+    font-family: 'Montserrat-SemiBold';
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.productBrandContainer--brand {
+    text-align: left;
+    font-size: 12px;
+    font-family: 'Montserrat-SemiBold';
+}
+
+.productBrandName--brand::before {
+    content: 'Vendido por: ';
+    font-family: 'Montserrat-Regular';
+    color: #000000;
+    margin-right: 5px;
+}
+
+.productBrandName--brand {
+    margin-bottom: 7px;
+    display: flex;
+}
+
+.containerNormal--minicart {
+    border: unset;
+    border-bottom: 1px solid #e1e1e1;
+    box-shadow: unset;
+    border-radius: 0;
+}
+
+
+@media screen and (min-width: 1026px) {
+    .containerNormal--minicart {
+        padding-bottom: 15px;
+    }
+
+}
+
+@media screen and (max-width: 1025px) {
+    .productBrand {
+        font-size: 13px;
+        line-height: 16px;
+    }
+    .productBrandName--brand {
+        font-size: 10px;
+        line-height: 12px;
+    }
+}

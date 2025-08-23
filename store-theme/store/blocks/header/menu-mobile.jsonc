@@ -1,0 +1,412 @@
+{
+    "drawer#header-show-more": {
+        "title": "Mostrar más",
+        "children": [
+            "rich-text#head-show-more"
+        ],
+        "props": {
+            "width": "100%",
+            "blockClass": "show-more"
+        }
+    },
+    "drawer#header-mobile": {
+        "title": "Menu",
+        "children": [
+            "flex-layout.row#menu-mobile"
+        ],
+        "props": {
+            "width": "100%",
+            "blockClass": "menu"
+        }
+    },
+    "image#logo-category": {
+        "title": "Logo Category",
+        "props": {
+            "link": {
+                "url": "#"
+            },
+            "src": "/assets/vtex.file-manager-graphql/images/0eb377c3-dbff-4369-959e-49fff558a39a___2f867cede8ef5c61f07d8ecca6e79bcf.png",
+            "title": "Logo Categorias",
+            "blockClass": "logo-category"
+        }
+    },
+    "flex-layout.row#menu-mobile": {
+        "title": "Menu Mobile",
+        "children": [
+            "flex-layout.col#menu-mobile"
+        ],
+        "props": {
+            "blockClass": "menu-mobile",
+            "fullWidth": true
+        }
+    },
+    "flex-layout.col#menu-mobile": {
+        "title": "Menu Mobile",
+        "children": [
+            "image#logo-category",
+            "rich-text#menu-mobile-department-title",
+            "toggle-layout#menu-mobile-department-1",
+            "toggle-layout#menu-mobile-department-2",
+            "toggle-layout#menu-mobile-department-3",
+            "toggle-layout#menu-mobile-department-4",
+            "toggle-layout#menu-mobile-department-5",
+            "toggle-layout#menu-mobile-department-6",
+            "toggle-layout#menu-mobile-department-7",
+            "toggle-layout#menu-mobile-department-8",
+            "toggle-layout#menu-mobile-department-9",
+            "toggle-layout#menu-mobile-department-10",
+            "toggle-layout#menu-mobile-department-11",
+            "toggle-layout#menu-mobile-department-12",
+            "toggle-layout#menu-mobile-department-13",
+            "toggle-layout#menu-mobile-department-14"
+        ]
+    },
+    "rich-text#menu-mobile-department-title": {
+        "title": "Titulo",
+        "props": {
+            "text": "Categorías",
+            "blockClass": "menu-mobile-department-title"
+        }
+    },
+    "toggle-layout#menu-mobile-department-1": {
+        "title": "Departamento 1",
+        "children": [
+            "flex-layout.row#department"
+        ]
+    },
+    "toggle-layout#menu-mobile-department-2": {
+        "title": "Departamento 2",
+        "children": [
+            "flex-layout.row#department"
+        ]
+    },
+    "toggle-layout#menu-mobile-department-3": {
+        "title": "Departamento 3",
+        "children": [
+            "flex-layout.row#department"
+        ]
+    },
+    "toggle-layout#menu-mobile-department-4": {
+        "title": "Departamento 4",
+        "children": [
+            "flex-layout.row#department"
+        ]
+    },
+    "toggle-layout#menu-mobile-department-5": {
+        "title": "Departamento 5",
+        "children": [
+            "flex-layout.row#department"
+        ]
+    },
+    "toggle-layout#menu-mobile-department-6": {
+        "title": "Departamento 6",
+        "children": [
+            "flex-layout.row#department"
+        ]
+    },
+    "toggle-layout#menu-mobile-department-7": {
+        "title": "Departamento 7",
+        "children": [
+            "flex-layout.row#department"
+        ]
+    },
+    "toggle-layout#menu-mobile-department-8": {
+        "title": "Departamento 8",
+        "children": [
+            "flex-layout.row#department"
+        ]
+    },
+    "toggle-layout#menu-mobile-department-9": {
+        "title": "Departamento 9",
+        "children": [
+            "flex-layout.row#department"
+        ]
+    },
+    "toggle-layout#menu-mobile-department-10": {
+        "title": "Departamento 10",
+        "children": [
+            "flex-layout.row#department"
+        ]
+    },
+    "toggle-layout#menu-mobile-department-11": {
+        "title": "Departamento 11",
+        "children": [
+            "flex-layout.row#department"
+        ]
+    },
+    "toggle-layout#menu-mobile-department-12": {
+        "title": "Departamento 12",
+        "children": [
+            "flex-layout.row#department"
+        ]
+    },
+    "toggle-layout#menu-mobile-department-13": {
+        "title": "Departamento 13",
+        "children": [
+            "flex-layout.row#department"
+        ]
+    },
+    "toggle-layout#menu-mobile-department-14": {
+        "title": "Departamento 14",
+        "children": [
+            "flex-layout.row#department"
+        ]
+    },
+    "flex-layout.row#department": {
+        "children": [
+            "drawer#department",
+            "rich-text#department-title"
+        ],
+        "props": {
+            "blockClass": "department",
+            "fullWidth": true
+        }
+    },
+    "drawer#department": {
+        "title": "Departamento",
+        "children": [
+            "flex-layout.row#menu-mobile-category"
+        ],
+        "props": {
+            "width": "100%",
+            "blockClass": "department"
+        }
+    },
+    "flex-layout.row#menu-mobile-category": {
+        "title": "Menu Mobile",
+        "children": [
+            "flex-layout.col#menu-mobile-category"
+        ],
+        "props": {
+            "blockClass": "menu-mobile",
+            "fullWidth": true
+        }
+    },
+    "flex-layout.col#menu-mobile-category": {
+        "title": "Menu Mobile",
+        "children": [
+            "image#logo-category",
+            "flex-layout.row#items",
+            "toggle-layout#menu-mobile-category-1",
+            "toggle-layout#menu-mobile-category-2",
+            "toggle-layout#menu-mobile-category-3",
+            "toggle-layout#menu-mobile-category-4",
+            "toggle-layout#menu-mobile-category-5",
+            "toggle-layout#menu-mobile-category-6",
+            "toggle-layout#menu-mobile-category-7",
+            "toggle-layout#menu-mobile-category-8",
+            "toggle-layout#menu-mobile-category-9",
+            "toggle-layout#menu-mobile-category-10",
+            "toggle-layout#menu-mobile-category-11",
+            "toggle-layout#menu-mobile-category-12",
+            "toggle-layout#menu-mobile-category-13",
+            "toggle-layout#menu-mobile-category-14",
+            "toggle-layout#menu-mobile-category-15",
+            "toggle-layout#menu-mobile-category-16",
+            "toggle-layout#menu-mobile-category-17",
+            "toggle-layout#menu-mobile-category-18",
+            "toggle-layout#menu-mobile-category-19",
+            "toggle-layout#menu-mobile-category-20"
+        ]
+    },
+    "flex-layout.row#items": {
+        "title": "Items header",
+        "children": [
+            "drawer-close-button#items",
+            "rich-text#category-title-header",
+            "rich-text#category-all"
+        ],
+        "props": {
+            "preserveLayoutOnMobile": true,
+            "fullWidth": true,
+            "blockClass": "item"
+        }
+    },
+    "drawer-close-button#items": {
+        "title": "Cerrar",
+        "props": {
+            "text": "Volver",
+            "blockClass": "close"
+        }
+    },
+    "rich-text#department-title": {
+        "title": "Titulo",
+        "props": {
+            "text": "Departamento",
+            "blockClass": "department-title"
+        }
+    },
+    "toggle-layout#menu-mobile-category-1": {
+        "title": "Categoria 1",
+        "children": [
+            "disclosure-layout#menu-mobile-category"
+        ]
+    },
+    "toggle-layout#menu-mobile-category-2": {
+        "title": "Categoria 2",
+        "children": [
+            "disclosure-layout#menu-mobile-category"
+        ]
+    },
+    "toggle-layout#menu-mobile-category-3": {
+        "title": "Categoria 3",
+        "children": [
+            "disclosure-layout#menu-mobile-category"
+        ]
+    },
+    "toggle-layout#menu-mobile-category-4": {
+        "title": "Categoria 4",
+        "children": [
+            "disclosure-layout#menu-mobile-category"
+        ]
+    },
+    "toggle-layout#menu-mobile-category-5": {
+        "title": "Categoria 5",
+        "children": [
+            "disclosure-layout#menu-mobile-category"
+        ]
+    },
+    "toggle-layout#menu-mobile-category-6": {
+        "title": "Categoria 6",
+        "children": [
+            "disclosure-layout#menu-mobile-category"
+        ]
+    },
+    "toggle-layout#menu-mobile-category-7": {
+        "title": "Categoria 7",
+        "children": [
+            "disclosure-layout#menu-mobile-category"
+        ]
+    },
+    "toggle-layout#menu-mobile-category-8": {
+        "title": "Categoria 8",
+        "children": [
+            "disclosure-layout#menu-mobile-category"
+        ]
+    },
+    "toggle-layout#menu-mobile-category-9": {
+        "title": "Categoria 9",
+        "children": [
+            "disclosure-layout#menu-mobile-category"
+        ]
+    },
+    "toggle-layout#menu-mobile-category-10": {
+        "title": "Categoria 10",
+        "children": [
+            "disclosure-layout#menu-mobile-category"
+        ]
+    },
+    "toggle-layout#menu-mobile-category-11": {
+        "title": "Categoria 11",
+        "children": [
+            "disclosure-layout#menu-mobile-category"
+        ]
+    },
+    "toggle-layout#menu-mobile-category-12": {
+        "title": "Categoria 12",
+        "children": [
+            "disclosure-layout#menu-mobile-category"
+        ]
+    },
+    "toggle-layout#menu-mobile-category-13": {
+        "title": "Categoria 13",
+        "children": [
+            "disclosure-layout#menu-mobile-category"
+        ]
+    },
+    "toggle-layout#menu-mobile-category-15": {
+        "title": "Categoria 15",
+        "children": [
+            "disclosure-layout#menu-mobile-category"
+        ]
+    },
+    "toggle-layout#menu-mobile-category-14": {
+        "title": "Categoria 14",
+        "children": [
+            "disclosure-layout#menu-mobile-category"
+        ]
+    },
+    "toggle-layout#menu-mobile-category-16": {
+        "title": "Categoria 16",
+        "children": [
+            "disclosure-layout#menu-mobile-category"
+        ]
+    },
+    "toggle-layout#menu-mobile-category-17": {
+        "title": "Categoria 17",
+        "children": [
+            "disclosure-layout#menu-mobile-category"
+        ]
+    },
+    "toggle-layout#menu-mobile-category-18": {
+        "title": "Categoria 18",
+        "children": [
+            "disclosure-layout#menu-mobile-category"
+        ]
+    },
+    "toggle-layout#menu-mobile-category-19": {
+        "title": "Categoria 19",
+        "children": [
+            "disclosure-layout#menu-mobile-category"
+        ]
+    },
+    "toggle-layout#menu-mobile-category-20": {
+        "title": "Categoria 20",
+        "children": [
+            "disclosure-layout#menu-mobile-category"
+        ]
+    },
+    "disclosure-layout#menu-mobile-category": {
+        "title": "Categoria",
+        "children": [
+            "disclosure-trigger#menu-mobile-category",
+            "disclosure-content#menu-mobile-category"
+        ]
+    },
+    "disclosure-trigger#menu-mobile-category": {
+        "title": "Titulo",
+        "children": [
+            "rich-text#category-title"
+        ],
+        "props": {
+            "blockClass": "menu-category"
+        }
+    },
+    "disclosure-content#menu-mobile-category": {
+        "title": "Subcategoria",
+        "children": [
+            "vtex.menu@2.x:menu#menu-subcategory-1"
+        ],
+        "props": {
+            "blockClass": "menu-category"
+        }
+    },
+    "rich-text#category-title": {
+        "title": "Texto",
+        "props": {
+            "text": "Categoria",
+            "blockClass": [
+                "department-title",
+                "category-title"
+            ]
+        }
+    },
+    "rich-text#category-title-header": {
+        "title": "Titulo",
+        "props": {
+            "text": "Categoria",
+            "blockClass": [
+                "category-title-header"
+            ]
+        }
+    },
+    "rich-text#category-all": {
+        "title": "Ver todo",
+        "props": {
+            "text": "[Ver todo](#)",
+            "blockClass": [
+                "category-title-header"
+            ]
+        }
+    }
+}

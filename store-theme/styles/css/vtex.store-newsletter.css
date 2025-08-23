@@ -1,0 +1,50 @@
+.newsletterForm :global(.vtex-checkbox__line-container) {
+    display: flex;
+    align-items: center;
+}
+
+.newsletterForm :global(.vtex-input__label) {
+    display: none;
+}
+
+.newsletterForm :global(.vtex-styleguide-9-x-input) {
+    padding: 0 5px 0 0;
+}
+
+.newsletterForm :global(.vtex-input-prefix__group) {
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid #acacac;
+}
+
+.newsletterForm :global(.vtex-input-prefix__group) {
+    border: none;
+}
+
+.defaultSuccessMessage {
+    text-align: center;
+    font-family: 'Montserrat-Bold';
+}
+
+@media screen and (min-width: 1026px) {
+    .newsletterForm {
+        display: flex;
+        max-width: 1024px;
+        margin: 0 auto;
+        white-space: break-spaces;
+        flex-wrap: wrap;
+    }
+    .confirmationCheckboxContainer {
+        margin-left: auto;
+        width: calc(100% - 370px);
+        margin-top: -25px;
+    }
+
+    .newsletterForm :global(.vtex-checkbox__label) {
+        font-size: 14px;
+    }
+}
+
+
+@media screen and (max-width: 1025px) {
+}

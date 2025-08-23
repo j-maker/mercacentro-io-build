@@ -1,0 +1,126 @@
+.imageElementLink--banner_slider,
+.imageElement--top-header {
+    outline: 0 !important;
+    width: 100% !important;
+}
+
+.externalSearchButtonWrapper {
+    border: none;
+}
+
+.searchBarIcon {
+    background-color: transparent;
+}
+
+.searchBarContainer {
+    width: calc(100% - 760px);
+    height: 40px;
+    padding: 0 30px;
+}
+
+.imageElementLink--logo-category {
+    background-color: #90B51B;
+    display: flex;
+    height: 60px;
+    align-items: center;
+    width: 100%;
+    padding: 10px 40px;
+}
+
+.imageElementLink--wishlist {
+    text-decoration: none;
+}
+
+.imageElement--methods-of-payment {
+    width: 100% !important;
+    display: flex;
+}
+
+.imageElement--logo-first {
+    width: 100% !important;
+    margin-bottom: 20px;
+}
+
+.imageElement--logo-second,
+.imageElement--logo-third {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.imageElementLink--logo-header-top {
+    display: flex;
+}
+
+.imageElementLink--image-home {
+    display: flex;
+    width: 100%;
+}
+
+.imageElement--image-home {
+    margin: 0 auto 50px;
+    width: calc(100% - 80px);
+    border-radius: 10px;
+}
+
+.imageElementLink--banner-shelf,
+.imageElementLink--bannerx3 {
+    display: flex;
+}
+
+.imageElement--banner-shelf,
+.imageElement--bannerx3 {
+    width: 100% !important;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.imageElementLink--banner-shelf,
+.imageElement--banner-shelf {
+    height: fit-content;
+}
+
+.productBrand--ean::before {
+    content: "";
+}
+
+@media screen and (min-width: 1026px) {
+    .imageElementLink--logo-first {
+        width: 245px;
+    }
+
+    .imageElement--logo-first {
+        margin-bottom: 0;
+    }
+
+    .imageElement--methods-of-payment {
+        max-width: 850px;
+        margin: 0 auto;
+    }
+
+    .imageElementLink--wishlist {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 8px;
+        width: 45px !important;
+    }
+}
+
+@media screen and (max-width: 1025px) {
+    .autoCompleteOuterContainer--header_search_bar_desktop :global(.vtex-input-prefix__group) {
+        border-radius: 50px;
+        border-color: #90B51B;
+    }
+
+    .searchBarContainer {
+        padding: 0 0 0 20px;
+        display: flex;
+        align-items: center;
+    }
+
+    .externalSearchButtonWrapper .searchBarIcon {
+        padding: 0 20px 0 0;
+    }
+}

@@ -1,0 +1,269 @@
+@import "../configs/global.css";
+@import "../configs/vtex.reviews-and-ratings.css";
+
+
+
+.flexRowContent--banner-shelf {
+    padding-left: 40px;
+    margin-top: 80px;
+}
+
+.flexRowContent--bannerx2 {
+    width: calc(100% - 80px);
+    margin: 0 auto 40px;
+}
+
+.flexRowContent--bannerx3_ns,
+.flexRowContent--bannerx3 {
+    width: calc(100% - 80px);
+    margin: 0 auto 20px;
+}
+
+.flexRowContent--search-mobile {
+    width: 270px;
+    height: 36px;
+    margin: 0 auto;
+    border: 1px solid #90B51B;
+    border-radius: 10px;
+}
+
+.flexRowContent--bannerx3_ns,
+.flexRowContent--bannerx2,
+.flexRowContent--bannerx3 {
+    justify-content: space-between;
+}
+
+.flexColChild--info-shelf:first-child {
+    margin-bottom: auto;
+}
+
+.flexRowContent--search-mobile .stretchChildrenWidth {
+    width: 50% !important;
+}
+
+.flexRow--info-shelf,
+.flexRowContent--info-shelf {
+    height: 100%;
+}
+
+.flexRowContent--add-cart-button :global(.vtex-button) {
+    border-radius: 50px;
+    background: #E3061320;
+    border: 1px solid #e30613;
+}
+
+.flexRowContent--add-cart-button :global(.vtex-add-to-cart-button-0-x-buttonText--shelf) {
+    color: #e30613;
+    font-family: 'Montserrat-SemiBold';
+    display: flex;
+    align-items: center;
+}
+
+.flexCol--info-shelf {
+    padding: 10px 15px;
+}
+
+.flexRowContent--search-desktop {
+    gap: 20px;
+}
+
+.flexRowContent--content__minicart__footer {
+    flex-direction: column;
+}
+
+.flexRow--name__remove {
+    padding: 5px 0;
+}
+
+.flexRow--continue {
+    padding: 0 10px;
+    margin: 20px 0 30px;
+}
+
+.flexRowContent--name__remove {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.flexRowContent--main__content_items {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.flexRowContent--total__wrapper__minicart {
+    display: flex;
+}
+
+.flexRowContent--item {
+    width: calc(100% - 40px);
+    margin: 0 auto;
+    justify-content: space-between;
+    margin: 20px auto;
+    border-radius: 7px;
+    background-color: #90B51B;
+    height: 45px;
+}
+
+.flexRow--department {
+    padding: 0 40px;
+}
+
+.flexRowContent--department {
+    position: relative;
+}
+
+.flexRow--menu-mobile {
+    width: 100%;
+}
+
+.flexColChild--deals {
+    text-align: center;
+}
+
+.flexColChild--deals::after {
+    font-size: 48px;
+}
+
+.flexRow--newsletter-form {
+    padding: 10px 15px;
+    background: #fff;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.flexRow--wrapper-footer {
+    background-color: #f5f5f5;
+    padding: 20px 20px 90px;
+    border-top: 10px solid #90B51B;
+}
+
+.flexRow--disclosure-mobile {
+    padding: 30px;
+}
+
+.flexRowContent--menu-footer {
+    padding-top: 40px;
+    border-top: 1px solid #acacac;
+    margin-top: 40px;
+    padding-bottom: 40px;
+}
+
+.flexRow--newsletter-titles {
+    max-width: 350px;
+}
+
+.flexRow--newsletter-titles :global(.vtex-rich-text-0-x-paragraph) {
+    text-align: left;
+    font-family: 'Montserrat-Bold';
+    margin: 0;
+    line-height: 19px;
+    margin-bottom: 20px;
+}
+
+.flexRowContent--deals {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.flexRow--header_logo_menu,
+.flexRow--header_desktop {
+    width: 380px;
+}
+
+.flexRowContent--header_logo_menu .stretchChildrenWidth {
+    display: flex;
+    align-items: center;
+}
+
+.flexRow--links-interest {
+    width: 100%;
+}
+
+.flexRow--links-interest :global(.vtex-menu-2-x-menuItem) {
+    font-family: 'Montserrat-Bold';
+    font-size: 14px;
+}
+
+@media screen and (min-width: 1026px) {
+    .flexRowContent--minicart :global(.vtex-button__label) {
+        padding: 0;
+    }
+    .flexRowContent--minicart :global(.vtex-button) {
+        background: transparent;
+        width: 30px;
+        height: 30px;
+        border: 1px solid #e30613;
+        min-height: unset;
+    }
+
+    .flexCol--minicart-shelf {
+        width: 42%;
+        border-right: 1px solid #e1e1e1;
+        padding: 0 25px;
+        overflow-y: auto;
+    }
+
+    .flexRow--deals {
+        margin-top: 50px;
+    }
+
+    .flexRowContent--deals {
+        margin-bottom: 50px;
+    }
+
+    .flexRow--newsletter-form {
+        width: calc(100% - 370px);
+        margin-left: auto;
+        height: fit-content;
+    }
+
+    .flexRow--wrapper-footer {
+        padding: 40px;
+    }
+
+    .flexRowContent--newsletter-titles {
+        flex-direction: column;
+    }
+
+    .flexRowContent--main__content_items {
+        flex-direction: row;
+    }
+
+    .flexRow--content__minicart__footer {
+        width: 500px;
+    margin: 0 auto;
+    }
+
+    .flexRow--continue {
+        margin-bottom: 20px;
+    }
+
+    .flexRowContent--continue {
+        width: 390px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 1025px) {
+    .flexRowContent--add-cart-button :global(.vtex-add-to-cart-button-0-x-buttonText--shelf) {
+        font-size: 13px;
+        line-height: 16px;
+    }
+
+    .flexRowContent--deals {
+        flex-wrap: wrap;
+        white-space: break-spaces;
+        display: flex;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .flexRowContent--logo-social {
+        padding-top: 40px;
+        border-top: 1px solid #acacac;
+        margin-top: 40px;
+    }
+
+}

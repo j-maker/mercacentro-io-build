@@ -1,0 +1,28 @@
+.trigger {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    width: 100%;
+}
+
+.content--menu-category,
+.trigger--menu-category {
+    padding: 0 40px;
+    position: relative;
+}
+
+.trigger--menu-category--visible :global(.vtex-rich-text-0-x-paragraph--category-title)::after {
+    transform: rotate(90deg);
+}
+
+:global(.vtex-rich-text-0-x-paragraph--title-accordion)::after {
+    font-family: icon;
+}
+
+:global(.vtex-rich-text-0-x-paragraph--title-accordion)::after {
+    content: \e92c;
+}
+
+@media screen and (min-width: 1026px) {}
+
+@media screen and (max-width: 1025px) {}

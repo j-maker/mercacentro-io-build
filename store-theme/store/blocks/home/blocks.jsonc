@@ -1,0 +1,417 @@
+{
+    "toggle-layout#tabs": {
+        "title": "tabs M/O",
+        "children": [
+            "tab-layout#home"
+        ]
+    },
+    "toggle-layout#shelf_desktop": {
+        "title": "Vitrina 4 M/O",
+        "children": [
+            "rich-text#title-shelfs",
+            "list-context.product-list#collection"
+        ]
+    },
+    "toggle-layout#image_home-2": {
+        "title": "Imagen 2 M/O",
+        "children": [
+            "image#home_4"
+        ]
+    },
+    "toggle-layout#image_home-3": {
+        "title": "Imagen 3 M/O",
+        "children": [
+            "image#home_3"
+        ]
+    },
+    "toggle-layout#image_home": {
+        "title": "Imagen 4 M/O",
+        "children": [
+            "image#home_4"
+        ]
+    },
+    "toggle-layout#bannerx3": {
+        "title": "Banner x3 M/O",
+        "children": [
+            "flex-layout.row#bannerx3"
+        ]
+    },
+    "toggle-layout#bannerx3-no-standard": {
+        "title": "Banner x3 NS M/O",
+        "children": [
+            "flex-layout.row#bannerx3_ns"
+        ]
+    },
+    "toggle-layout#bannerx3-1": {
+        "title": "Banner x3-1 M/O",
+        "children": [
+            "flex-layout.row#bannerx3"
+        ]
+    },
+    "toggle-layout#bannerx2-1": {
+        "title": "Banner x2-1 M/O",
+        "children": [
+            "flex-layout.row#bannerx2"
+        ]
+    },
+    "toggle-layout#bannerx2-2": {
+        "title": "Banner x2-2 M/O",
+        "children": [
+            "flex-layout.row#bannerx2"
+        ]
+    },
+    "toggle-layout#bannerx2-3": {
+        "title": "Banner x2-3 M/O",
+        "children": [
+            "flex-layout.row#bannerx2"
+        ]
+    },
+    "flex-layout.row#bannerx2": {
+        "title": "Contenido",
+        "children": [
+            "image#banner_x2_1",
+            "image#banner_x2_2"
+        ],
+        "props": {
+            "fullWidth": true,
+            "colGap": 0,
+            "blockClass": "bannerx2"
+        }
+    },
+    "flex-layout.row#bannerx3_ns": {
+        "title": "Contenido",
+        "children": [
+            "image#banner_x3_1",
+            "image#banner_x3_2",
+            "image#banner_x3_3"
+        ],
+        "props": {
+            "fullWidth": true,
+            "colGap": 0,
+            "blockClass": "bannerx3_ns"
+        }
+    },
+    "flex-layout.row#bannerx3": {
+        "title": "Contenido",
+        "children": [
+            "image#banner_x3_1",
+            "image#banner_x3_2",
+            "image#banner_x3_3"
+        ],
+        "props": {
+            "fullWidth": true,
+            "colGap": 0,
+            "blockClass": "bannerx3"
+        }
+    },
+    "image#banner_x2_1": {
+        "title": "Banner 1",
+        "props": {
+            "link": {
+                "url": "#"
+            },
+            "blockClass": "bannerx3",
+            "src": ""
+        }
+    },
+    "image#banner_x2_2": {
+        "title": "Banner 2",
+        "props": {
+            "link": {
+                "url": "#"
+            },
+            "blockClass": "bannerx3",
+            "src": ""
+        }
+    },
+    "image#banner_x3_1": {
+        "title": "Banner 1",
+        "props": {
+            "link": {
+                "url": "#"
+            },
+            "blockClass": "bannerx3",
+            "src": ""
+        }
+    },
+    "image#banner_x3_2": {
+        "title": "Banner 2",
+        "props": {
+            "link": {
+                "url": "#"
+            },
+            "blockClass": "bannerx3",
+            "src": ""
+        }
+    },
+    "image#banner_x3_3": {
+        "title": "Banner 3",
+        "props": {
+            "link": {
+                "url": "#"
+            },
+            "blockClass": "bannerx3",
+            "src": ""
+        }
+    },
+    "rich-text#title-shelfs": {
+        "title": "Titulo vitrina",
+        "props": {
+            "blockClass": "title-shelfs",
+            "text": "#### Marca mercacentro"
+        }
+    },
+    "image#home_3": {
+        "title": "Imagen",
+        "props": {
+            "link": {
+                "url": "#"
+            },
+            "blockClass": "image-home",
+            "src": "/assets/vtex.file-manager-graphql/images/8b29b281-6f6e-4d8c-be47-7ee311277251___6f76dad09a14a3ae067c7535df9f3414.png"
+        }
+    },
+    "image#home_4": {
+        "title": "Imagen",
+        "props": {
+            "link": {
+                "url": "#"
+            },
+            "blockClass": "image-home",
+            "src": "/assets/vtex.file-manager-graphql/images/f19fa003-fbdb-4648-a4b8-90ba4764e8d3___09b82dc7408415f3ed07429d0aa56601.png"
+        }
+    },
+    "tab-layout#home": {
+        "children": [
+            "tab-list#home",
+            "tab-content#home"
+        ],
+        "props": {
+            "blockClass": "home",
+            "defaultActiveTabId": "home1"
+        }
+    },
+    "tab-list#home": {
+        "children": [
+            "tab-list.item#home1",
+            "tab-list.item#home2",
+            "tab-list.item#home3"
+        ],
+        "props": {
+            "blockClass": "home"
+        }
+    },
+    "tab-list.item#home1": {
+        "props": {
+            "blockClass": "home",
+            "tabId": "home1",
+            "label": "Electrodomésticos",
+            "defaultActiveTab": true
+        }
+    },
+    "tab-list.item#home2": {
+        "props": {
+            "blockClass": "home",
+            "tabId": "home2",
+            "label": "Tecnología"
+        }
+    },
+    "tab-list.item#home3": {
+        "props": {
+            "blockClass": "home",
+            "tabId": "home3",
+            "label": "Más vendidos"
+        }
+    },
+    "tab-content#home": {
+        "children": [
+            "tab-content.item#home1",
+            "tab-content.item#home2",
+            "tab-content.item#home3"
+        ]
+    },
+    "tab-content.item#home1": {
+        "children": [
+            "list-context.product-list#collection"
+        ],
+        "props": {
+            "tabId": "home1"
+        }
+    },
+    "tab-content.item#home2": {
+        "children": [
+            "list-context.product-list#collection"
+        ],
+        "props": {
+            "tabId": "home2"
+        }
+    },
+    "tab-content.item#home3": {
+        "children": [
+            "list-context.product-list#collection"
+        ],
+        "props": {
+            "tabId": "home3"
+        }
+    },
+    "list-context.product-list#collection": {
+        "title": "Collection",
+        "blocks": [
+            "product-summary.shelf"
+        ],
+        "children": [
+            "slider-layout#tabs_collection"
+        ],
+        "props": {
+            "hideUnavailableItems": false,
+            "maxItems": 8,
+            "collection": "/138",
+            "preload": false,
+            "orderBy": "OrderByTopSaleDESC"
+        }
+    },
+    "slider-layout#tabs_collection": {
+        "title": "Slider",
+        "props": {
+            "blockClass": [
+                "tabs"
+            ],
+            "itemsPerPage": {
+                "desktop": 5,
+                "tablet": 3,
+                "phone": 2
+            },
+            "showNavigationArrows": "desktopOnly",
+            "showPaginationDots": "always"
+        }
+    },
+    "toggle-layout#slider_banner": {
+        "title": "Banner M/O",
+        "children": [
+            "list-context.image-list#slider_principal"
+        ],
+        "props": {
+            "renderChildren": false
+        }
+    },
+    "toggle-layout#slider_aux": {
+        "title": "Banner Aux M/O",
+        "children": [
+            "list-context.image-list#slider_aux"
+        ]
+    },
+    "list-context.image-list#slider_aux": {
+        "title": "Contenido",
+        "children": [
+            "toggle-layout#slider_aux_ca",
+            "toggle-layout#slider_aux_sa"
+        ],
+        "props": {
+            "width": "100%",
+            "height": "auto",
+            "preload": true,
+            "images": [
+                {}
+            ]
+        }
+    },
+    "toggle-layout#slider_aux_ca": {
+        "title": "Slider CA M/O",
+        "children": [
+            "slider-layout#slider_aux_ca"
+        ]
+    },
+    "toggle-layout#slider_aux_sa": {
+        "title": "Slider SA M/O",
+        "children": [
+            "slider-layout#slider_aux_sa"
+        ]
+    },
+    "slider-layout#slider_aux_ca": {
+        "title": "Slide",
+        "props": {
+            "autoplay": {
+                "stopOnHover": true,
+                "timeout": 5000
+            },
+            "itemsPerPage": {
+                "desktop": 3,
+                "tablet": 2,
+                "phone": 1.5
+            },
+            "blockClass": "banner_aux",
+            "showNavigationArrows": "never",
+            "showPaginationDots": "always"
+        }
+    },
+    "slider-layout#slider_aux_sa": {
+        "title": "Slide",
+        "props": {
+            "itemsPerPage": {
+                "desktop": 3,
+                "tablet": 2,
+                "phone": 1.5
+            },
+            "blockClass": "banner_aux",
+            "showNavigationArrows": "never",
+            "showPaginationDots": "always"
+        }
+    },
+    "list-context.image-list#slider_principal": {
+        "title": "Contenido",
+        "children": [
+            "toggle-layout#slider_ca",
+            "toggle-layout#slider_sa"
+        ],
+        "props": {
+            "width": "100%",
+            "height": "auto",
+            "preload": true,
+            "images": [
+                {}
+            ]
+        }
+    },
+    "toggle-layout#slider_ca": {
+        "title": "Slider CA M/O",
+        "children": [
+            "slider-layout#slider_ca"
+        ]
+    },
+    "toggle-layout#slider_sa": {
+        "title": "Slider SA M/O",
+        "children": [
+            "slider-layout#slider_sa"
+        ]
+    },
+    "slider-layout#slider_ca": {
+        "title": "Slide",
+        "props": {
+            "autoplay": {
+                "stopOnHover": true,
+                "timeout": 5000
+            },
+            "itemsPerPage": {
+                "desktop": 1,
+                "tablet": 1,
+                "phone": 1
+            },
+            "blockClass": "banner_slider",
+            "showNavigationArrows": "never",
+            "showPaginationDots": "desktopOnly"
+        }
+    },
+    "slider-layout#slider_sa": {
+        "title": "Slide",
+        "props": {
+            "itemsPerPage": {
+                "desktop": 1,
+                "tablet": 1,
+                "phone": 1
+            },
+            "blockClass": "banner_slider",
+            "showNavigationArrows": "always",
+            "showPaginationDots": "always"
+        }
+    }
+}

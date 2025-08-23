@@ -1,0 +1,386 @@
+{
+    "flex-layout.row#deals": {
+        "title": "Deals",
+        "children": [
+            "flex-layout.col#deals-1",
+            "flex-layout.col#deals-2",
+            "flex-layout.col#deals-3",
+            "flex-layout.col#deals-4",
+            "flex-layout.col#deals-5"
+        ],
+        "props": {
+            "blockClass": "deals",
+            "preserveLayoutOnMobile": true,
+            "fullWidth": true
+        }
+    },
+    "flex-layout.col#deals-1": {
+        "title": "Deals 1", 
+        "children": [
+            "image#deals-1",
+            "rich-text#deals-1"
+        ],
+        "props": {
+            "blockClass": "deals"
+        }
+    },
+    "image#deals-1": {
+        "title": "Deals 1",
+        "props": {
+            "src": ""
+        }
+    },
+    "rich-text#deals-1": {
+        "title": "Deals 1",
+        "props": {
+            "blockClass": "deals",
+            "text": "Acumula mercapesos"
+        }
+    },
+    "flex-layout.col#deals-2": {
+        "title": "Deals 2",
+        "children": [
+            "image#deals-1",
+            "rich-text#deals-1"
+        ],
+        "props": {
+            "blockClass": "deals"
+        }
+    },
+    "flex-layout.col#deals-3": {
+        "title": "Deals 3",
+        "children": [
+            "image#deals-1",
+            "rich-text#deals-1"
+        ],
+        "props": {
+            "blockClass": "deals"
+        }
+    },
+    "flex-layout.col#deals-4": {
+        "title": "Deals 4",
+        "children": [
+            "image#deals-1",
+            "rich-text#deals-1"
+        ],
+        "props": {
+            "blockClass": "deals"
+        }
+    },
+    "flex-layout.col#deals-5": {
+        "title": "Deals 5",
+        "children": [
+            "image#deals-1",
+            "rich-text#deals-1"
+        ],
+        "props": {
+            "blockClass": "deals"
+        }
+    },
+    "newsletter-form": {
+        "title": "Newsletter",
+        "children": [
+            "flex-layout.row#newsletter-titles",
+            "flex-layout.row#newsletter-form",  
+            "newsletter-checkbox-confirmation"
+        ]
+    },
+    "flex-layout.row#newsletter-form": {
+        "title": "Input y Botón",
+      "children": [
+        "newsletter-input-email",
+        "newsletter-submit"
+      ],
+      "props": {
+        "fullWidth": true,
+        "blockClass": "newsletter-form",
+        "colSizing": "auto",
+        "preserveLayoutOnMobile": true
+      }
+    },
+    "newsletter-input-email": {
+        "title": "Email Input",
+        "props": {
+            "placeholderText": "Correo electrónico",
+            "inputLabel": "null",
+            "errorMessage": "Por favor ingresa un email válido"
+        }
+    },
+    "newsletter-submit": {
+        "title": "Submit Button",
+        "props": {
+            "submitButtonLabel": "Suscribirme"
+        }
+    },
+    "newsletter-checkbox-confirmation": {
+        "title": "Checkbox Confirmación",
+        "props": {
+            "checkboxLabel": "He leído y acepto la política de privacidad"
+        }
+    },
+    "rich-text#newsletter-title": {
+        "title": "Título Newsletter",
+        "props": {
+            "textAlignment": "CENTER",
+            "textPosition": "CENTER",
+            "text": "¡NO TE PIERDAS NADA!",
+            "blockClass": "newsletter-title"
+        }
+    },
+    "flex-layout.row#newsletter-titles": {
+      "children": ["rich-text#newsletter-description", "rich-text#newsletter-title"],
+      "props": {
+        "colSizing": "auto",
+        "blockClass": "newsletter-titles"
+      }
+    },
+    "rich-text#newsletter-description": {
+        "title": "Descripción Newsletter",
+        "props": {
+            "textAlignment": "CENTER",
+            "textPosition": "CENTER",
+            "text": "Suscríbete a mercacentro.com, entérate de nuestras ofertas y novedades."
+        }
+    },
+    "flex-layout.row#menu-desktop": {
+        "title": "Menu",
+        "children": [
+            "flex-layout.row#logo-social",
+            "vtex.menu@2.x:menu#footer-menu-desktop-1",
+            "vtex.menu@2.x:menu#footer-menu-desktop-2",
+            "vtex.menu@2.x:menu#footer-menu-desktop-3",
+            "vtex.menu@2.x:menu#footer-menu-desktop-4"
+        ],
+        "props": {
+            "blockClass": "menu-footer"
+        }
+    },
+    "flex-layout.row#logo-social": {
+        "title": "Logo y Redes Sociales",
+        "children": [
+            "flex-layout.col#logo-social"
+        ],
+        "props": {
+            "blockClass": "logo-social"
+        }
+    },
+    "flex-layout.col#logo-social": {
+        "title": "Contenido ",
+        "children": [
+            "image#logo",
+            "social-networks",
+            "image#logo_2",
+            "image#logo_3"
+        ]
+    },
+    "disclosure-layout-group#group": {
+        "title": "Grupo Acordeón",
+        "children": [
+            "disclosure-layout#first",
+            "disclosure-layout#second",
+            "disclosure-layout#third",
+            "disclosure-layout#fourth"
+        ]
+    },
+    "disclosure-layout#first": {
+        "title": "Acordeón 1",
+        "children": [
+            "disclosure-trigger#first",
+            "disclosure-content#first"
+        ]
+    },
+    "disclosure-layout#second": {
+        "title": "Acordeón 2",
+        "children": [
+            "disclosure-trigger#second",
+            "disclosure-content#second"
+        ]
+    },
+    "disclosure-layout#third": {
+        "title": "Acordeón 3",
+        "children": [
+            "disclosure-trigger#third",
+            "disclosure-content#third"
+        ]
+    },
+    "disclosure-layout#fourth": {
+        "title": "Acordeón 4",
+        "children": [
+            "disclosure-trigger#fourth",
+            "disclosure-content#fourth"
+        ]
+    },
+    "disclosure-trigger#first": {
+        "title": "Título",
+        "children": [
+            "rich-text#question1"
+        ]
+    },
+    "disclosure-trigger#second": {
+        "title": "Título",
+        "children": [
+            "rich-text#question1"
+        ]
+    },
+    "disclosure-trigger#third": {
+        "title": "Título",
+        "children": [
+            "rich-text#question1"
+        ]
+    },
+    "disclosure-trigger#fourth": {
+        "title": "Título",
+        "children": [
+            "rich-text#question1"
+        ]
+    },
+    "disclosure-content#first": {
+        "title": "Contenido",
+        "children": [
+            "vtex.menu@2.x:menu#footer-menu"
+        ]
+    },
+    "disclosure-content#second": {
+        "title": "Contenido",
+        "children": [
+            "vtex.menu@2.x:menu#footer-menu"
+        ]
+    },
+    "disclosure-content#third": {
+        "title": "Contenido",
+        "children": [
+            "vtex.menu@2.x:menu#footer-menu"
+        ]
+    },
+    "disclosure-content#fourth": {
+        "title": "Contenido",
+        "children": [
+            "vtex.menu@2.x:menu#footer-menu"
+        ]
+    },
+    "vtex.menu@2.x:menu#footer-menu": {
+        "title": "Menu Mobile",
+        "props": {
+            "blockClass": "menu-footer-desktop"
+        }
+    },
+    "vtex.menu@2.x:menu#footer-menu-desktop-1": {
+        "title": "Menu 1",
+        "props": {
+            "blockClass": "menu-footer-desktop"
+        }
+    },
+    "vtex.menu@2.x:menu#footer-menu-desktop-2": {
+        "title": "Menu 2",
+        "props": {
+            "blockClass": "menu-footer-desktop"
+        }
+    },
+    "vtex.menu@2.x:menu#footer-menu-desktop-3": {
+        "title": "Menu 3",
+        "props": {
+            "blockClass": "menu-footer-desktop"
+        }
+    },
+    "vtex.menu@2.x:menu#footer-menu-desktop-4": {
+        "title": "Menu 4",
+        "props": {
+            "blockClass": "menu-footer-desktop"
+        }
+    },
+    "social-networks": {
+        "title": "Redes Sociales"
+    },
+    "image#logo": {
+        "title": "Logo Principal",
+        "props": {
+            "blockClass": "logo-first",
+            "src": ""
+        }
+    },
+    "image#logo_2": {
+        "title": "Logo Secundario",
+        "props": {
+            "blockClass": "logo-second",
+            "src": ""
+        }
+    },
+    "image#logo_3": {
+        "title": "Logo Terciario",
+        "props": {
+            "blockClass": "logo-third",
+            "src": ""
+        }
+    },
+    "image#methods": {
+        "title": "Métodos de Pago",
+        "props": {
+            "blockClass": "methods-of-payment",
+            "src": "/assets/vtex.file-manager-graphql/images/24956e95-30a3-4275-a076-ec831cfbb40d___ded4f26f2fc65de42bc20a33fa2604ef.png"
+        }
+    },
+    "rich-text#question1": {
+        "title": "Texto Acordeón",
+        "props": {
+            "blockClass": "title-accordion",
+            "text": "Información de legal."
+        }
+    },
+    "flex-layout.row#wrapper-footer-desktop": {
+        "children": [
+            "flex-layout.col#wrapper-footer-desktop"
+        ],
+        "props": {
+            "fullWidth": true,
+            "blockClass": "wrapper-footer"
+        }
+    },
+    "flex-layout.col#wrapper-footer-desktop": {
+        "children": [
+            "newsletter-form",
+            "flex-layout.row#menu-desktop",
+            "image#methods"
+        ],
+        "props": {
+            "preserveLayoutOnMobile": true
+        }
+    },
+    "flex-layout.row#wrapper-footer": {
+        "children": [
+            "flex-layout.col#wrapper-footer"
+        ],
+        "props": {
+            "fullWidth": true,
+            "blockClass": "wrapper-footer"
+        }
+    },
+    "flex-layout.col#wrapper-footer": {
+        "children": [
+            "newsletter-form",
+            "flex-layout.row#logo-social",
+            "flex-layout.row#disclosure-mobile",
+            "image#methods"
+        ],
+        "props": {
+            "preserveLayoutOnMobile": true
+        }
+    },
+    "flex-layout.row#disclosure-mobile": {
+        "children": [
+            "flex-layout.col#disclosure-mobile"
+        ],
+        "props": {
+            "fullWidth": true,
+            "preserveLayoutOnMobile": true,
+            "blockClass": "disclosure-mobile"
+        }
+    },
+    "flex-layout.col#disclosure-mobile": {
+        "children": [
+            "disclosure-layout-group#group"
+        ],
+        "props": {  
+            "blockClass": "disclosure-mobile"
+        }
+    }
+}

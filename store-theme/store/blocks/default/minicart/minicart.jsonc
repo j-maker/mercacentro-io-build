@@ -1,0 +1,198 @@
+{
+  "minicart.v2": {
+    "title": "Minicarrito",
+    "props": {
+      "itemCountMode": "totalAvailable",
+      "variation": "drawer",
+      "drawerSlideDirection": "rightToLeft",
+      "maxDrawerWidth": 600,
+      "quantityDisplay": "always",
+      "backdropMode": "visible",
+      "customPixelEventName": "addToCart"
+    },
+    "children": [
+      "responsive-layout.desktop#shelf-minicart",
+      "minicart-base-content"
+    ]
+  },
+  "responsive-layout.desktop#shelf-minicart": {
+    "children": [
+      "flex-layout.col#minicart-shelf"
+    ]
+  },
+  "flex-layout.col#minicart-shelf": {
+    "children": [
+      "rich-text#minicart-title",
+      "list-context.product-list#minicart"
+    ],
+    "props": {
+      "preventVerticalStretch": true,
+      "blockClass": "minicart-shelf"
+    }
+  },
+  "rich-text#minicart-title": {
+    "title": "Titulo",
+    "props": {
+      "blockClass": "title__minicart_shelf",
+      "text": "Te podría interesar"
+    }
+  },
+  "minicart-base-content": {
+    "title": "Contenedor",
+    "blocks": [
+      "minicart-empty-state"
+    ],
+    "children": [
+      "rich-text#flag_main_minicart",
+      "minicart-product-list",
+      "flex-layout.row#minicart-footer"
+    ]
+  },
+  "minicart-empty-state": {
+    "title": " Vacío",
+    "children": [
+      "image#minicart_empty",
+      "rich-text#text-minicart-empty",
+      "rich-text#button-minicart-empty"
+    ]
+  },
+  "minicart-product-list": {
+    "title": "Lista",
+    "props": {
+      "blockClass": "content__minicart__products"
+    },
+    "blocks": [
+      "product-list#main"
+    ]
+  },
+  "image#minicart_empty": {
+    "title": "Imagen",
+    "props": {
+      "blockClass": "image__minicart__empty"
+    }
+  },
+  "rich-text#text-minicart-empty": {
+    "title": "Texto",
+    "props": {
+      "textPosition": "CENTER",
+      "blockClass": "text__minicart__empty",
+      "text": "**Tu carrito de compras está vacío**"
+    }
+  },
+  "rich-text#button-minicart-empty": {
+    "title": "Comprar",
+    "props": {
+      "textPosition": "CENTER",
+      "text": "[Seguir Comprando](/)",
+      "blockClass": "go__to__continue"
+    }
+  },
+  "rich-text#flag_main_minicart": {
+    "title": "Texto",
+    "props": {
+      "textAlignment": "LEFT",
+      "textPosition": "LEFT",
+      "blockClass": "flagminicart",
+      "text": "Los descuentos serán visualizados al seleccionar el método de pago"
+    }
+  },
+  "flex-layout.row#minicart-footer": {
+    "title": "Contenido",
+    "props": {
+      "blockClass": "content__minicart__footer",
+      "colSizing": "auto"
+    },
+    "children": [
+      "minicart-summary",
+      "flex-layout.row#continue"
+    ]
+  },
+  "flex-layout.row#continue": {
+    "children": [
+      "rich-text#continue",
+      "minicart-checkout-button"
+    ],
+    "props": {
+      "blockClass": "continue",
+      "fullWidth": true,
+      "preserveLayoutOnMobile": true
+    }
+  },
+  "rich-text#continue": {
+    "title": "Botón Seguir Comprando",
+    "props": {
+      "text": "[Ver carrito](/)",
+      "blockClass": "continue"
+    }
+  },
+  "minicart-summary": {
+    "title": "Checkout",
+    "blocks": [
+      "checkout-summary.compact"
+    ]
+  },
+  "checkout-summary.compact": {
+    "title": "Checkout",
+    "children": [
+      "summary-totalizers"
+    ],
+    "props": {
+      "totalizersToShow": [
+        // "Discounts",
+        "Items",
+        "Discounts",
+        "Tax"
+      ]
+    }
+  },
+  "summary-totalizers": {
+    "title": "Resumen Precios",
+    "props": {
+      "showTotal": true,
+      "showDeliveryTotal": false
+    }
+  },
+  "minicart-checkout-button": {
+    "title": "Botón Cerrar Compra",
+    "props": {
+      "blockClass": "botton__close__buy"
+    }
+  },
+  "drawer-close-button": {
+    "title": "Boton Cerrar Carrito",
+    "props": {
+      "blockClass": "close__button__minicart"
+    }
+  },
+  "list-context.product-list#minicart": {
+    "title": "Collection",
+    "blocks": [
+      "product-summary.shelf#minicart"
+    ],
+    "children": [
+      "slider-layout#minicart"
+    ],
+    "props": {
+      "hideUnavailableItems": false,
+      "maxItems": 8,
+      "collection": "/138",
+      "preload": false,
+      "orderBy": "OrderByTopSaleDESC"
+    }
+  },
+  "slider-layout#minicart": {
+    "title": "Slider",
+    "props": {
+      "blockClass": [
+        "minicart"
+      ],
+      "itemsPerPage": {
+        "desktop": 10,
+        "tablet": 10,
+        "phone": 10
+      },
+      "showNavigationArrows": "never",
+      "showPaginationDots": "never"
+    }
+  }
+}

@@ -1,0 +1,297 @@
+.storeMarkStoreAddressWazeLink {}
+
+.containerStoreFinal :global(.vtex-styleguide-9-x-jsFocusVisible):nth-child(1) {
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 10px;
+}
+
+.storeContainerList {
+
+}
+
+.storeContainerList .containerStoreFinal:nth-child(2) {
+  border-bottom: none;
+  margin-top: 20px;
+}
+
+.storeContainerList .containerStoreFinal:nth-child(3) {
+  border-top: none;
+}
+
+:global(.vtex__icon-caret-down)::after {
+  content: "-";
+  font-size: 25px;
+}
+
+.container {
+  font-size: 14px;
+}
+
+.storeContainerList :global(.vtex-dropdown__arrow) {
+  color: #757575;
+}
+
+.containerMainStore h1 {
+  font-size: 18px;
+  color: #353535;
+  font-weight: 900;
+
+}
+
+.storeContainerList :global(.vtex-dropdown__container) {
+  font-size: 14px;
+  height: 42px;
+}
+
+.storeContainerList h3 {
+  font-size: 14px;
+  color: #353535;
+  font-weight: 600;
+  margin-bottom: 7px;
+
+}
+
+.storeContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  padding: 20px 30px 30px 40px;
+}
+
+.titleContainer {
+  width: 100%;
+}
+
+.title {
+  padding: 0px 20px;
+  font-size: 40px;
+  color: #ee7400;
+  font-weight: 500;
+  border: 0px;
+  border-style: dashed;
+  border-bottom-width: 2px;
+  margin-bottom: 50px;
+  padding-bottom: 10px;
+}
+
+/* .storeContainerList {
+  width: 330px;
+} */
+
+.moreStoreFinal {
+  font-size: 12px;
+  text-decoration: underline;
+}
+
+.containerStoreFinal {
+  border: 1px solid #e5e5e5;
+  padding: 10px 10px 0 10px;
+  color: #353535;
+  margin-bottom: 10px;
+}
+
+.storeTitle {
+  font-size: 14px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.storeContainerMap {
+  width: calc(74% - 30px);
+  height: 600px;
+  position: relative;
+}
+
+.storeMarkStoreName {
+  font-size: 22px;
+  color: #d5752d;
+  font-weight: bold;
+}
+
+.storeMarkStoreAddress {
+  color: #353535;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.storeMarkStoreType {
+  color: #d5752d;
+  font-weight: bold;
+}
+
+.storeMarkStoreSchedule {
+  color: #707070;
+  font-size: 14px;
+  margin-bottom: 10px;
+
+}
+
+.storeMarkStoreConsultant {
+  margin-top: 10px;
+  color: #707070;
+  font-size: 12px;
+  margin-bottom: 5px;
+
+}
+
+.storeMarkStorePhone {
+  color: #000;
+  text-decoration: underline;
+  margin-bottom: 15px;
+  font-size: 12px;
+
+}
+
+.storeMarkStoreEmail {
+  color: #707070;
+  font-weight: bold;
+  font-size: 11px;
+  margin-bottom: 10px;
+}
+
+.storeContainerList :global(.vtex-styleguide-9-x-dropdown) {
+  margin-bottom: 10px;
+}
+
+.storeContainerList :global(.vtex-styleguide-9-x-dropdown):nth-child(2) {
+  margin-bottom: 20px;
+}
+
+.storeMarkStoreContainer {
+  margin-top: 15px;
+}
+
+.storeMarkStoreContainer .storeMarkStoreConsultant {
+  margin: 0;
+}
+
+.storeMarkStoreScheduleTitle {
+  color: #707070;
+  margin-top: 20px;
+}
+
+.storeMarkStoreImage {
+  width: 97%;
+  height: 120px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-bottom: 10px;
+  margin-left: 7px;
+  box-sizing: border-box;
+  margin-top: 5px;
+}
+
+.storeMarkStoreOtherTitle {
+  font-weight: bold;
+  color: #707070;
+  margin-top: 5px;
+}
+
+.storeMarkStoreOtherDescription {
+  color: #707070;
+}
+
+.containerStoreOption {
+  border-bottom: 1px solid #e6e6e6;
+  margin-top: 10px;
+  cursor: pointer;
+  font-size: 0.8rem;
+
+  text-transform: capitalize;
+}
+
+.containerStoreFinalOption {
+  display: flex;
+  flex-direction: column;
+  margin-left: 15px;
+
+}
+
+.titleStoreFinal {
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.subtitleStoreFinal {
+  color: #787878;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+.dropdown__button {}
+
+.containerStoreFinal :global(.flex.flex-row.items-center.pointer)[aria-expanded="true"] > :global(.c-muted-3.ml3.self-center)::after {
+  font-family: icon;
+  content: '\e908';
+  color: #000;
+}
+
+.containerStoreFinal :global(.flex.flex-row.items-center.pointer)[aria-expanded="false"] > :global(.c-muted-3.ml3.self-center)::after {
+  font-family: icon;
+  content: '\e90b';
+  color: #000;
+}
+
+.containerStoreFinal :global(.vtex__icon-caret-down),
+.containerStoreFinal :global(.vtex__icon-caret-up),
+.storeMarkContainer .storeMarkStoreAddressWaze {
+  display: none;
+}
+.storeMarkStoreContainer :global(.flex) {
+  justify-content: space-between;
+}
+@media screen and (min-width:1026px) {
+  .storeMarkStoreAddressWaze {
+    margin-top: -1px;
+    margin-left: 11px;
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  .containerMainStore {
+    width: 26%;
+  }
+}
+
+@media (max-width: 600px) {
+  /* .storeContainerList .containerStoreFinal:nth-child(2) {
+    margin-top: 390px;
+  } */
+
+  .storeContainer {
+    margin-top: 10px;
+    padding: 0px;
+  }
+
+  .containerMainStore {
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 100%;
+  }
+
+  .storeMarkStoreAddressWaze,
+  .storeMarkStoreOtherContainer,
+  .storeMarkContainer,
+  .storeContainerList,
+  .storeContainerMap,
+  .storeContainerList {
+    background: #fff;
+  }
+
+  .storeContainerMap {
+    /* height: 350px; */
+    /* top: 380px; */
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .storeMarkStoreContainer {
+    margin-bottom: 30px;
+  }
+}

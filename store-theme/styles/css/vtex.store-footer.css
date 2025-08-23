@@ -1,0 +1,18 @@
+.socialNetworkLink {
+    text-decoration: none;
+    border: 1px solid #acacac;
+    border-radius: 50%;
+    width: 26px;
+    justify-content: center;
+    height: 26px;
+}
+
+.socialNetworksContainer {
+    width: 80%;
+    margin: 0 auto 20px;
+    justify-content: space-between;
+}
+
+@media screen and (min-width: 1026px) {}
+
+@media screen and (max-width: 1025px) {}

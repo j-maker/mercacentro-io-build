@@ -1,0 +1,357 @@
+:global(.vtex-reviews-and-ratings-3-x-container) {
+    max-width: 700px !important;
+    margin: auto;
+}
+
+:global(.vtex-reviews-and-ratings-3-x-reviewsHeading) {
+    text-align: center;
+    border-color: transparent;
+    font: normal normal 600 20px/24px Montserrat-Regular;
+    letter-spacing: 2px;
+    color: #000;
+}
+
+:global(.vtex-reviews-and-ratings-3-x-reviewsRating) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+:global(.vtex-reviews-and-ratings-3-x-reviewsRating) :global(.vtex-reviews-and-ratings-3-x-reviewsRatingAverage) {
+    display: none;
+}
+
+:global(.vtex-reviews-and-ratings-3-x-star--filled),
+:global(.vtex-reviews-and-ratings-3-x-star--empty) {
+    color: #EAB932;
+}
+
+:global(.vtex-reviews-and-ratings-3-x-writeReviewButton) {
+    font: normal normal normal 16px/19px Montserrat-Regular;
+    letter-spacing: 0.8px;
+    color: #000;
+}
+
+:global(.vtex-reviews-and-ratings-3-x-writeReviewButton):hover {
+    color: #000;
+}
+
+:global(.vtex-reviews-and-ratings-3-x-formContainer) {
+    padding: 0px;
+    margin-top: 20px;
+    background-color: transparent;
+}
+
+:global(.vtex-reviews-and-ratings-3-x-formContainer) :global(.vtex-card) {
+    padding: 0px;
+    box-shadow: none !important;
+}
+
+:global(.vtex-reviews-and-ratings-3-x-formContainer) :global(.vtex-styleguide-9-x-input),
+:global(.vtex-reviews-and-ratings-3-x-formContainer) :global(.vtex-textarea__input) {
+    border: 1px solid #90B51B;
+    resize: none !important;
+}
+
+:global(.vtex-reviews-and-ratings-3-x-formContainer) :global(.vtex-input-prefix__group):hover {
+    border-color: transparent;
+}
+
+:global(.vtex-reviews-and-ratings-3-x-formSubmit) {
+    text-align: center;
+}
+
+:global(.vtex-reviews-and-ratings-3-x-reviewCommentsContainer) {
+    text-align: left;
+    font: normal normal normal 16px/19px Montserrat-Regular;
+    letter-spacing: 0.8px;
+    color: #000;
+}
+
+:global(.vtex-reviews-and-ratings-3-x-reviewsOrderBy) {
+    display: none !important;
+}
+
+:global(.vtex-reviews-and-ratings-3-x-formContainer) :global(.vtex-input__label),
+:global(.vtex-reviews-and-ratings-3-x-formContainer) :global(.vtex-textarea__label) {
+    font: normal normal 300 16px/19px Montserrat-Regular;
+    letter-spacing: 0.8px;
+    color: #000;
+}
+
+:global(.vtex-reviews-and-ratings-3-x-reviewsRatingCount) {
+    font: normal normal normal 12px/14px Montserrat-Regular;
+    letter-spacing: 0.6px;
+    color: #000;
+    margin-left: 5px;
+}
+
+:global(.vtex-reviews-and-ratings-3-x-writeReviewContainer) {
+    border-top: 1px solid #90B51B;
+    padding-top: 30px;
+}
+
+:global(.vtex-reviews-and-ratings-3-x-reviewCommentUser) {
+    text-align: left;
+    font: normal normal normal 18px/22px Montserrat-Regular;
+    letter-spacing: 0.9px;
+    color: #000;
+}
+
+:global(.vtex-reviews-and-ratings-3-x-reviewComment) {
+    text-align: left;
+    font: italic normal 300 16px/19px Montserrat-Regular;
+    letter-spacing: 0.8px;
+    color: #000;
+}
+
+:global(.vtex-reviews-and-ratings-3-x-reviewCommentRating) :global(.vtex-reviews-and-ratings-3-x-star--filled),
+:global(.vtex-reviews-and-ratings-3-x-reviewCommentRating) :global(.vtex-reviews-and-ratings-3-x-star--empty) {
+    color: #EAB932;
+    font-style: normal;
+}
+
+:global(.vtex-reviews-and-ratings-3-x-reviewsPaging) {
+    display: flex;
+    justify-content: center;
+    font: normal normal normal 12px/14px Montserrat-Regular;
+    letter-spacing: 0.6px;
+    color: #b9b9b9;
+}
+
+:global(.vtex-reviews-and-ratings-3-x-loginLink) {
+    color: #000;
+    font: normal normal normal 16px Montserrat-Regular;
+}
+
+:global(.vtex-reviews-and-ratings-3-x-summaryTotalReviews) {
+    font: normal normal normal 12px/14px Montserrat-Regular;
+    letter-spacing: 0.6px;
+    color: #000;
+    margin-left: 5px;
+    margin-top: 4px;
+}
+
+:global(.vtex-reviews-and-ratings-3-x-summaryTotalReviews)::after {
+    content: "Reviews";
+    font-size: 14px;
+    color: #000;
+    margin-left: 5px;
+}
+
+:global(.vtex-reviews-and-ratings-3-x-reviewsPaging)>div>div>div div :global(.vtex-button__label),
+:global(.vtex-reviews-and-ratings-3-x-reviewsPaging) :global(.vtex__icon-caret-right) path,
+:global(.vtex-reviews-and-ratings-3-x-reviewsPaging) :global(.vtex__icon-caret-left) path {
+    display: none;
+}
+
+:global(.vtex-reviews-and-ratings-3-x-reviewsPaging)>div>div>div div :global(.vtex-button) {
+    background: none !important;
+    border: none;
+    font-family: Icon-ab;
+    font-size: 16px !important;
+}
+
+:global(.vtex-reviews-and-ratings-3-x-reviewsPaging)>div>div>div div:nth-child(3) :global(.vtex-button)::after {
+    content: "\e936";
+}
+
+:global(.vtex-reviews-and-ratings-3-x-reviewsPaging) div div div div:nth-child(2) :global(.vtex-button)::after {
+    content: "\e935";
+}
+
+:global(.vtex-reviews-and-ratings-3-x-reviewCommentUser) {
+    font-size: 14px !important;
+}
+
+:global(.vtex-reviews-and-ratings-3-x-formSection) :global(.vtex-button__label) {
+    font-size: 14px;
+    padding-bottom: 0 !important;
+}
+
+:global(.vtex-reviews-and-ratings-3-x-formRating) {
+    justify-content: flex-start;
+}
+
+:global(.vtex-reviews-and-ratings-3-x-writeReviewButton) {
+    color: #000 !important;
+    text-transform: uppercase;
+    font-size: 14px !important;
+    line-height: 18px !important;
+}
+
+:global(.vtex-reviews-and-ratings-3-x-formSection) :global(.vtex-input-prefix__group),
+:global(.vtex-reviews-and-ratings-3-x-formSection) :global(.vtex-input-prefix__group):focus {
+    outline: none;
+    border: none;
+    max-height: 35px;
+}
+
+:global(.vtex-reviews-and-ratings-3-x-formSection) :global(.vtex-styleguide-9-x-input),
+:global(.vtex-reviews-and-ratings-3-x-formSection) :global(.vtex-textarea__input),
+:global(.vtex-reviews-and-ratings-3-x-formSection) :global(.vtex-textarea__label),
+:global(.vtex-reviews-and-ratings-3-x-formSection) :global(.vtex-input__label) {
+    font-size: 12px !important;
+    color: #000 !important;
+    margin-bottom: 0;
+    font-weight: 400;
+    font-family: "FiraSans-Regular", system-ui;
+    letter-spacing: 1px;
+    outline: none;
+}
+
+:global(.vtex-reviews-and-ratings-3-x-formSection) :global(.vtex-styleguide-9-x-input) {
+    height: 35px;
+    font-size: 14px;
+    line-height: 18px;
+    font-family: "Montserrat-Regular";
+}
+
+:global(.vtex-reviews-and-ratings-3-x-reviewsRatingCount) {
+    margin-top: 4px;
+}
+
+:global(.vtex-reviews-and-ratings-3-x-reviewComment) {
+    margin-top: 0;
+    border: none;
+}
+
+:global(.vtex-reviews-and-ratings-3-x-reviewAuthorName) {
+    font-style: normal;
+    color: #000;
+    font-weight: 400;
+    font-family: "Montserrat-Regular";
+}
+
+:global(.vtex-reviews-and-ratings-3-x-reviewCommentMessage) {
+    max-width: 80%;
+    font-size: 14px;
+    margin-top: 5px;
+    font-family: "Montserrat-Regular";
+}
+
+:global(.vtex-reviews-and-ratings-3-x-formContainer) :global(.vtex-card) :global(.c-danger) {
+    color: #000;
+}
+
+:global(.vtex-reviews-and-ratings-3-x-reviewComment) ul li {
+    font: normal normal normal 16px/19px Montserrat-Regular;
+    letter-spacing: 0.8px;
+    color: #000;
+}
+
+:global(.vtex-reviews-and-ratings-3-x-reviewAuthorBy),
+:global(.vtex-reviews-and-ratings-3-x-reviewDate),
+:global(.vtex-reviews-and-ratings-3-x-writeReviewContainer) [role="button"] svg,
+:global(.vtex-reviews-and-ratings-3-x-writeReviewContainer) :global(.vtex-styleguide-9-x-jsFocusVisible) [role="region"] ul>li:nth-child(1),
+:global(.vtex-reviews-and-ratings-3-x-writeReviewContainer) :global(.vtex-card) h3 {
+    display: none;
+}
+
+:global(.vtex-reviews-and-ratings-3-x-writeReviewContainer) :global(.vtex-styleguide-9-x-jsFocusVisible) [aria-expanded="false"] :global(.vtex-reviews-and-ratings-3-x-writeReviewButton) {
+    border: 1px solid #90B51B;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+:global(.vtex-reviews-and-ratings-3-x-starpicker) :global(.vtex-input__label),
+:global(.vtex-reviews-and-ratings-3-x-writeReviewContainer) :global(.vtex-styleguide-9-x-jsFocusVisible) [aria-expanded="true"] {
+    display: none;
+}
+
+:global(.vtex-reviews-and-ratings-3-x-formContainer) :global(.vtex-card) form {
+    display: flex;
+    flex-direction: column;
+}
+
+:global(.vtex-reviews-and-ratings-3-x-formContainer) :global(.vtex-card) form>div:nth-child(1) {
+    order: 3;
+}
+
+:global(.vtex-reviews-and-ratings-3-x-formContainer) :global(.vtex-card) form>div:nth-child(2) {
+    order: 1;
+    display: flex !important;
+    justify-content: flex-start !important;
+}
+
+:global(.vtex-reviews-and-ratings-3-x-formContainer) :global(.vtex-card) form>div:nth-child(3) {
+    order: 2;
+}
+
+:global(.vtex-reviews-and-ratings-3-x-formContainer) :global(.vtex-card) form>div:nth-child(4) {
+    order: 4;
+}
+
+:global(.vtex-reviews-and-ratings-3-x-formContainer) :global(.vtex-card) form>div:nth-child(5) {
+    order: 5;
+}
+
+:global(.vtex-reviews-and-ratings-3-x-formContainer) :global(.vtex-card) form>div:nth-child(6) {
+    order: 6;
+}
+
+:global(.vtex-reviews-and-ratings-3-x-formContainer) :global(.vtex-card) form>div:nth-child(7) {
+    order: 7;
+}
+
+:global(.vtex-reviews-and-ratings-3-x-writeReviewContainer) :global(.vtex-styleguide-9-x-jsFocusVisible) div:nth-child(1) div:nth-child(2) {
+    justify-content: center;
+    display: flex;
+}
+
+:global(.vtex-reviews-and-ratings-3-x-writeReviewContainer) :global(.vtex-styleguide-9-x-jsFocusVisible) [role="region"] ul>li {
+    font-size: 0;
+    margin: 0;
+}
+
+:global(.vtex-reviews-and-ratings-3-x-writeReviewContainer) :global(.vtex-styleguide-9-x-jsFocusVisible) [role="region"] ul>li:nth-child(2) strong {
+    font-size: 14px !important;
+}
+
+:global(.vtex-reviews-and-ratings-3-x-reviewComments) :global(.review__comment) {
+    border-color: transparent;
+}
+
+:global(.vtex-reviews-and-ratings-3-x-reviewCommentsContainer) h5 {
+    text-align: center;
+    font-size: 14px;
+    font-family: Montserrat-Regular;
+    font-weight: 300;
+}
+
+:global(.vtex-reviews-and-ratings-3-x-summaryContainer) span {
+    display: flex;
+    align-items: center;
+}
+
+:global(.vtex-reviews-and-ratings-3-x-reviewCommentMessage) span a,
+:global(.vtex-reviews-and-ratings-3-x-reviewCommentMessage) span span span span a {
+    color: #535353;
+    font-weight: 400;
+}
+
+:global(.vtex-reviews-and-ratings-3-x-container) {
+    padding: 0 15px;
+}
+
+@media screen and (min-width: 1025px) {
+
+    :global(.vtex-reviews-and-ratings-3-x-summaryContainer) :global(.vtex-button),
+    :global(.vtex-reviews-and-ratings-3-x-summaryContainer) span {
+        justify-content: center;
+        margin: 0;
+    }
+
+    :global(.vtex-reviews-and-ratings-3-x-summaryTotalReviews) {
+        font-size: 13px;
+        margin-left: 10px;
+        margin-top: 2px;
+    }
+
+    :global(.vtex-reviews-and-ratings-3-x-summaryContainer) :global(.vtex-reviews-and-ratings-3-x-summaryButtonContainer) {
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+}

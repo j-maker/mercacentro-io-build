@@ -1,0 +1,16 @@
+{
+  "vendor": "mercacentro",
+  "name": "countdown",
+  "version": "0.0.0",
+  "title": "countdown",
+  "description": "countdown",
+  "builders": {
+    "react": "3.x",
+    "store": "0.x"
+  },
+  "dependencies": {
+    
+  },
+  "policies": [],
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
+}

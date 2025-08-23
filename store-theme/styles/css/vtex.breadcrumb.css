@@ -1,0 +1,44 @@
+.container {
+    padding: 15px;
+}
+
+.term {
+    color: #90B51B;
+    font-family: 'Montserrat-Bold';
+}
+
+.caretIcon {
+    color: #9f9f9f;
+}
+
+.term,
+.link {
+    font-size: 10px;
+    line-height: 19px;
+}
+
+.homeLink {
+    padding-left: 0;
+}
+.homeLink::after {
+    content: 'Inicio';
+    font-size: 10px;
+    line-height: 19px;
+    font-family: 'Montserrat-Regular';
+}
+
+@media screen and (min-width: 1026px) {
+    .homeLink::after {
+        font-size: 12px;
+        line-height: 18px;
+    }
+    .container {
+        padding: 20px 40px;
+    }
+
+    .term,
+    .link {
+        font-size: 12px;
+        line-height: 18px;
+    }
+}

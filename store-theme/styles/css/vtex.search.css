@@ -1,0 +1,94 @@
+.biggy-autocomplete {
+    flex-direction: row;
+    left: -20px;
+    width: calc(100% + 40px) !important;
+    top: 10px;
+}
+
+.tileListSeeMore {
+    font-size: 16px;
+    line-height: 19px;
+    font-family: 'Montserrat-Regular';
+    color: #90B51B;
+}
+
+.itemListTitle ,
+.tileListTitle {
+    font-family: 'Montserrat-Bold';
+    font-size: 16px;
+    line-height: 19px;
+    color: #90B51B;
+}
+
+.tileListItem {
+    margin: 0 5px;
+}
+
+.tileListItem :global(.vtex-product-price-1-x-sellingPriceValue) {
+    font-size: 16px;
+}
+.tileListItem :global(.vtex-product-price-1-x-listPriceValue),
+.tileListItem :global(.vtex-product-summary-2-x-productBrand) {
+    font-size: 14px;
+}
+
+@media screen and (min-width: 1026px) {
+    .biggy-autocomplete::after {
+        background-color: #00000040;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        content: '';
+        pointer-events: none;
+    }   
+
+    .biggy-autocomplete {
+        border-radius: 10px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .biggy-autocomplete-wrapper {
+        width: 70vw !important;
+    }
+
+    .biggy-autocomplete {
+        left: 17vw;
+        right: unset;
+        top: 22px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .biggy-autocomplete {
+        left: 21vw;
+    }
+}
+
+@media screen and (min-width: 1330px) {
+    .biggy-autocomplete {
+        left: 18vw;
+    }
+}
+
+@media screen and (min-width: 1460px) {
+    .biggy-autocomplete {
+        left: 15vw;
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    .biggy-autocomplete {
+        left: 12vw;
+    }
+}
+
+@media screen and (min-width: 1740px) {
+    .biggy-autocomplete {
+        left: 9vw;
+    }
+}
+
+@media screen and (max-width: 1025px) {}

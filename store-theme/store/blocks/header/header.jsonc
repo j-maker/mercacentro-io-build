@@ -1,0 +1,44 @@
+{
+    "header": {
+        "title": "Header",
+        "blocks": [
+            "header-layout.mobile",
+            "header-layout.desktop"
+        ]
+    },
+    "header.full": {
+        "title": "Header",
+        "blocks": [
+            "header-layout.mobile",
+            "header-layout.desktop"
+        ]
+    },
+    "header-layout.desktop": {
+        "title": "Desktop",
+        "children": [
+            "image#top-header",
+            "header-row#main_desktop",
+            "header-row#main_desktop_bottom"
+        ]
+    },
+    "header-layout.mobile": {
+        "title": "Mobile",
+        "children": [
+            "header-row#main-top-mobile",
+            "header-row#main_mobile"
+        ]
+    },
+    "header-row#main-top-mobile": {
+        "title": "Contenido Top",
+        "props": {
+            "sticky": true,
+            "zIndex": 100,
+            "blockClass": "header-top-mobile",
+            "fullWidth": true
+        },
+        "children": [
+            "flex-layout.row#header-top",
+            "rich-text#header-top-text"
+        ]
+    }
+}

@@ -1,0 +1,156 @@
+.openIconContainer :global(.vtex-button) {
+    position: absolute;
+}
+
+.minicartQuantityBadge {
+    user-select: none;
+    background: red;
+    top: -20px !important;
+    right: -27px !important;
+    font-size: 9px;
+    width: 13px;
+    height: 13px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.closeIcon {
+    width: 20px;
+    color: #E30613;
+    font-weight: bold;
+}
+
+.openIconContainer {
+    padding: 0;
+}
+
+.minicartTitle {
+    padding-left: 1rem;
+    margin: 20px 0;
+    line-height: 19px;
+    font-size: 16px;
+    color: #1a1a1a;
+    font-family: 'Montserrat-Regular';
+    font-weight: 100;
+}
+
+/* end minicart title */
+
+.openIconContainer :global(.vtex-button__label) {
+    text-decoration: none;
+}
+
+.minicartQuantityBadgeDefault {
+    top: 3.5px;
+    right: 2px;
+    font-size: 12px;
+}
+
+
+.minicartCheckoutButton {
+    margin-left: 5px;
+    justify-content: center;
+}
+
+.minicartCheckoutButton :global(.vtex-button) {
+    border-radius: 20px;
+    height: 36px;
+    font-size: 13px;
+    line-height: 16px;
+    font-family: 'Montserrat-Bold';
+    text-decoration: none;
+    width: fit-content;
+}
+
+.minicartCheckoutButton--botton__close__buy {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.minicartProductListContainer--content__minicart__products {
+    padding: 0 1rem;
+}
+
+
+
+
+
+.closeIconContainer {
+    position: absolute;
+    inset-inline-end: 0;
+}
+
+.minicartSideBarContentWrapper,
+.childrenContainer,
+.drawerContent {
+    height: 100% !important;
+}
+
+.minicartCheckoutButton--botton__close__buy :global(.vtex-button__label) {
+    font-family: 'Montserrat-Regular';
+    font-size: 14px;
+}
+
+.opened {
+    width: 100% !important;
+}
+
+@media screen and (min-width: 1026px) {
+    .minicartCheckoutButton :global(.vtex-button) {
+        border-radius: 5px;
+        width: 180px;
+    }
+    
+    .minicartTitle {
+        font-family: 'Montserrat-SemiBold';
+        font-size: 20px;
+        line-height: 23px;
+    }
+
+    .drawerStyles {
+        width: 58% !important;
+    }
+
+    .minicartSideBarContentWrapper {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+    }
+
+    .opened {
+        max-width: 1060px !important;
+        width: 70% !important;
+        border-radius: 10px 0 0 10px;
+    }
+
+    .closeIconButton {
+        padding: 8px;
+    }
+
+    .closeIconContainer {
+        position: absolute;
+        right: 15px;
+        top: 5px;
+    }
+
+    .minicartSideBarContentWrapper {
+        height: 100vh !important;
+    }
+
+    .openIconContainer {
+        background: #90B51B;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        padding: 0 10px;
+        margin-left: 8px;
+    }
+}
+
+@media screen and (max-width: 1025px) {}
