@@ -1,3 +1,69 @@
+.slide--view-related {
+    padding: 0 !important;
+    width: 100% !important;
+    height: auto;
+    margin-bottom: 5px;
+}
+
+.sliderContainer--view-related :global(.vtex-slider-0-x-sliderFrame) {
+    flex-wrap: wrap;
+    width: 100% !important;
+    transform: none !important;
+}
+
+/* .shelfContentContainer--view-related {
+    width: 225px !important;
+} */
+
+.sliderContainer--view-related :global(.vtex-product-summary-2-x-brandName) {
+    font-size: 14px;
+    line-height: 17px;
+    font-family: 'Montserrat-Medium';
+}
+
+.sliderContainer--view-related :global(.vtex-product-summary-2-x-productName) {
+    font-size: 12px;
+}
+.shelfContentContainer--view-related :global(.vtex-product-summary-2-x-container) {
+    box-shadow: none;
+    border: none;
+}
+
+.shelfContentContainer--view-related :global(.vtex-product-summary-2-x-image) {
+    width: 39px;
+    padding: 3px;
+    border: 1px solid #E0E0E0;
+    border-radius: 5px;
+}
+
+.shelfContentContainer--view-related :global(.vtex-product-summary-2-x-element) {
+    flex-direction: row;
+    gap: 10px;
+}
+
+.relatedProducts--view-related {
+    padding: 0 !important;
+}
+
+.shelfContentContainer--view-related :global(.vtex-product-summary-2-x-imageContainer) {
+    width: auto;
+    margin: 0;
+    padding: 1px 0;
+}
+
+.title--view-related {
+    margin-bottom: 20px !important;
+    padding: 0;
+    border: none !important;
+    font-family: 'Montserrat-Bold' !important;
+    font-size: 16px !important;
+    line-height: 19px !important;
+}
+
+.shelfContentContainer--view-related :global(.vtex-product-summary-2-x-nameContainer) {
+    
+}
+
 @media screen and (min-width: 1026px) {}
 
 @media screen and (max-width: 1025px) {}

@@ -1,3 +1,31 @@
+.heading--title-countddown {
+    margin: 0;
+    font-family: 'Montserrat-Bold';
+    font-size: 21px;
+    line-height: 24px;
+}
+
+.paragraph--title-countddown {
+    margin: 5px 0 0;
+}
+
+.container--title-countddown {
+    align-items: center;
+}
+
+.link--countdown-all {
+    font-family: 'Montserrat-Bold';
+    color: #000;
+}
+
+.paragraph--countdown-all {
+    margin: 0;
+}
+
+.container--countdown-all {
+    align-items: center;
+}
+
 .paragraph--seo-app-link-categories {
     width: 110px;
     min-width: 110px;
@@ -375,7 +403,43 @@
     line-height: 23px;
 }
 
+.paragraph--how-buy {
+    margin: 0 0 20px 0;
+    background-color: #F5F5F5;
+    border: 1px solid #E0E0E0;
+    padding: 7px 20px;
+    border-radius: 30px;
+}
+
+.link--how-buy {
+    color: #000;
+    font-family: 'Montserrat-Medium';
+    text-decoration: none;
+}
+
+.paragraph--offer {
+    margin: 0 0 20px 0;
+}
+
+.link--offer {
+    font-family: 'Montserrat-Medium';
+    font-size: 12px;
+    color: #000;
+}
+
+.wrapper--terms {
+    width: 100%;
+    padding: 0 15px;
+    margin: 30px 0;
+}
+
 @media screen and (min-width: 1026px) {
+    .wrapper--terms {
+        width: 100%;
+        padding: 0 40px;
+        margin: 30px 0;
+    }
+
     .link--continue {
         height: 40px;
         width: 180px !important;

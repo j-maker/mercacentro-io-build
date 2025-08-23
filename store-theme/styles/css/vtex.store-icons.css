@@ -1,3 +1,6 @@
+:global(.vtex-flex-layout-0-x-flexRow--pdp-buttons) :global(.vtex-add-to-cart-button-0-x-buttonText--add-pdp)::after,
+:global(.vtex-store-components-3-x-shareSocialButton)::before,
+:global(.vtex-rich-text-0-x-paragraph--countdown-all)::after,
 :global(.vtex-flex-layout-0-x-flexRowContent--minicart) :global(.vtex-button__label)::before,
 :global(.vtex-search-result-3-x-orderByText)::before,
 :global(.vtex-add-to-cart-button-0-x-buttonText--shelf)::after,
@@ -30,6 +33,13 @@
     font-family: icon;
 }
 
+:global(.vtex-slider-layout-0-x-container--categoris),
+:global(.vtex-shelf-1-x-slide--view-related),
+:global(.vtex-product-quantity-1-x-quantitySelectorTitle),
+:global(.vtex-shelf-1-x-arrowRight--view-related),
+:global(.vtex-shelf-1-x-arrowLeft--view-related),
+:global(.vtex-store-components-3-x-shareSocialButton--pinterest),
+:global(.vtex-store-components-3-x-shareSocialIcon),
 :global(.vtex-search-2-x-biggy-autocomplete) :global(.vtex-flex-layout-0-x-flexRow--add-cart-button),
 :global(.vtex-search-2-x-biggy-autocomplete) :global(.vtex-product-summary-2-x-productBrandContainer--brand),
 :global(.vtex-search-2-x-biggy-autocomplete) :global(.vtex-stack-layout-0-x-stackItem--quick-view),
@@ -68,6 +78,12 @@
     background-color: #90B51B;
 }
 
+:global(.vtex-store-components-3-x-shareSocialButton--facebook)::before,
+:global(.vtex-store-components-3-x-shareSocialButton--twitter)::before,
+:global(.vtex-store-components-3-x-shareSocialButton--linkedin)::before,
+:global(.vtex-store-components-3-x-shareSocialButton--instagram)::before,
+:global(.vtex-store-components-3-x-shareSocialButton--youtube)::before,
+:global(.vtex-rich-text-0-x-paragraph--countdown-all)::after,
 :global(.vtex-search-result-3-x-orderByText)::before,
 :global(.vtex-search-result-3-x-caretIcon),
 :global(.vtex-rich-text-0-x-link--header-top-text)::before,
@@ -99,6 +115,13 @@
 :global(.vtex-store-components-3-x-imageElementLink--wishlist)::after,
 :global(.vtex-store-drawer-0-x-openIconContainer--menu)::after {
     color: #fff;
+}
+
+:global(.vtex-product-list-0-x-removeButton)::before,
+:global(.vtex-flex-layout-0-x-flexRowContent--minicart) :global(.vtex-button__label)::before,
+:global(.vtex-flex-layout-0-x-flexRow--pdp-buttons) :global(.vtex-add-to-cart-button-0-x-buttonText--add-pdp)::after,
+:global(.vtex-add-to-cart-button-0-x-buttonText--shelf)::after {
+    color: #E30613; 
 }
 
 :global(.vtex-wish-list-1-x-wishlistIcon) {
@@ -135,8 +158,8 @@
     line-height: 10px;
 }
 
+
 :global(.vtex-add-to-cart-button-0-x-buttonText--shelf)::after {
-    color: #E30613;
     content: "\e905";
     font-weight: bold;
     margin-left: 5px;
@@ -145,7 +168,13 @@
 :global(.vtex-product-list-0-x-removeButton)::before {
     content: "\e907";
     font-size: 20px;
-    color: #E30613;
+}
+
+:global(.vtex-rich-text-0-x-paragraph--countdown-all)::after {
+    content: "\e907";
+    font-size: 20px;
+    margin-left: 10px;
+        text-decoration: none;
 }
 
 :global(.vtex-login-2-x-accessCodeOptionBtn) :global(.vtex-button__label)::before {
@@ -199,7 +228,6 @@
 :global(.vtex-flex-layout-0-x-flexRowContent--minicart) :global(.vtex-button__label)::before {
     content: "\e905";
     font-size: 17px;
-    color: #e30613;
 }
 
 :global(.vtex-rich-text-0-x-wrapper--quick-view)::before {
@@ -215,6 +243,11 @@
     font-size: 30px;
 }
 
+:global(.vtex-add-to-cart-button-0-x-buttonText--add-pdp)::after {
+    content: "\e905";
+    font-size: 20px;
+    font-weight: bold;
+}
 :global(.vtex-minicart-2-x-openIconContainer)::after {
     content: "\e905";
     font-size: 31px;
@@ -265,6 +298,7 @@
     content: "\e916";
 }
 
+:global(.vtex-store-components-3-x-shareSocialButton--facebook)::before,    
 :global(.vtex-store-footer-2-x-socialNetworkLink--facebook)::after {
     content: "\e913";
 }
@@ -273,8 +307,13 @@
     content: "\e917";
 }
 
+:global(.vtex-store-components-3-x-shareSocialButton--twitter)::before,
 :global(.vtex-store-footer-2-x-socialNetworkLink--twitter)::after {
     content: "\e914";
+}
+
+:global(.vtex-store-components-3-x-shareSocialButton--whatsapp)::before {
+    content: "\e915";
 }
 
 :global(.vtex-store-footer-2-x-socialNetworkLink--instagram)::after {

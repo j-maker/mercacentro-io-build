@@ -397,7 +397,9 @@
   margin-bottom: 40px;
 }
 
-
+:global(.vtex-slider-layout-0-x-slideChildrenContainer--categoris) > div {
+  width: 100%;
+}
 
 @media screen and (min-width: 1026px) {
 
@@ -433,9 +435,23 @@
     align-items: center;
     flex-wrap: wrap;
   }
+
+  :global(.vtex-flex-layout-0-x-flexRowContent--countdown-container)> :global(.vtex-flex-layout-0-x-stretchChildrenWidth):nth-child(1),
+  :global(.vtex-flex-layout-0-x-flexRowContent--countdown-container)> :global(.vtex-flex-layout-0-x-stretchChildrenWidth):nth-child(3) {
+    width: 30% !important;
+  }
+
+  :global(.vtex-shelf-1-x-slide--view-related):nth-child(1),
+  :global(.vtex-shelf-1-x-slide--view-related):nth-child(2) {
+    display: initial !important;
+  }
 }
 
 @media screen and (max-width: 1025px) {
+  :global(.vtex-search-result-3-x-scrim):global(.dn),
+  :global(.vtex-search-result-3-x-scrim):global(.dn)+:global(.vtex-search-result-3-x-sidebar) {
+    display: none;
+  }
   :global(.vtex-search-result-3-x-accordionFilterContainer)+:global(.ReactCollapse--collapse)> :global(.ReactCollapse--content)> :global(.pl8) {
     padding: 0 40px !important;
   }
@@ -463,6 +479,8 @@
     margin: 0 auto 30px;
   }
 }
+
+
 
 @media screen and (min-width: 1026px) {
   :global(.vtex-account) :global(.w-100.mw9.pv7-m.pv9-l.flex) .menu {

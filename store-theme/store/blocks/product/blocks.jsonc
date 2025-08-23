@@ -18,6 +18,7 @@
             "flex-layout.col#main-info-product"
         ],
         "props": {
+            "colGap": 5,
             "fullWidth": true,
             "colSizing": "auto",
             "colJustify": "between",
@@ -29,6 +30,7 @@
             "product-images"
         ],
         "props": {
+            "width": "37%",
             "blockClass": "main-desktop-image"
         }
     },
@@ -70,6 +72,7 @@
             "image#methods"
         ],
         "props": {
+            "width": "40%",
             "blockClass": "main-desktop-image"
         }
     },
@@ -114,26 +117,57 @@
             "flex-layout.row#prices",
             "product-selling-price",
             "rich-text#offer",
-            "add-to-list-btn#pdp",
-            "product-quantity",
-            "add-to-cart-button#pdp",
+            "flex-layout.row#pdp-wish-quantity",
+            "flex-layout.row#pdp-buttons",
+            "shelf.relatedProducts#view",
+            "rich-text#how-buy",
             "share"
         ],
         "props": {
+            "width": "23%",
             "preventVerticalStretch": true
         }
     },
+    "flex-layout.row#pdp-wish-quantity": {
+        "children": [
+            "product-quantity",
+            "add-to-list-btn#pdp"
+        ],
+        "props": {
+            "marginBottom": 6,
+            "colSizing": "auto",
+            "blockClass": "wish-quantity"
+        }
+    },
+    "rich-text#how-buy": {
+        "title": "Texto",
+        "props": {
+            "text": "[¿Como comprar?](#)",
+            "blockClass": "how-buy"
+        }
+    },
     "rich-text#offer": {
-        "title": "Rich Text",
+        "title": "Texto",
         "props": {
             "text": "[Ver vigencia de la oferta](#)",
-            "blockClass": "rich-text"
+            "blockClass": "offer"
         }
     },
     "add-to-list-btn#pdp": {
         "title": "Botón Wishlist",
         "props": {
-            "blockClass": "wishlist"
+            "blockClass": "pdp"
+        }
+    },
+    "flex-layout.row#pdp-buttons": {
+        "children": [
+            "add-to-cart-button#pdp"
+        ],
+        "props": {
+            "marginBottom": 6,
+            "colSizing": "auto",
+            "fullWidth": true,
+            "blockClass": "pdp-buttons"
         }
     },
     "add-to-cart-button#pdp": {
@@ -160,6 +194,23 @@
         "children": [
             "shelf.relatedProducts#mobile"
         ]
+    },
+    "shelf.relatedProducts#view": {
+        "title": "Conf Vitrina",
+        "blocks": [
+            "product-summary.shelf#view"
+        ],
+        "props": {
+            "blockClass": "view-related",
+            "recommendation": "view",
+            "productList": {
+                "titleText": "Vistos recientemente",
+                "itemsPerPage": {
+                    "desktop": 3
+                },
+                "minItemsPerPage": 3
+            }
+        }
     },
     "shelf.relatedProducts": {
         "title": "Conf Vitrina",

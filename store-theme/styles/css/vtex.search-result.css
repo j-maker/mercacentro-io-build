@@ -99,7 +99,8 @@
     padding: 15px 0;
     width: 100%;
     margin: 0 auto;
-    justify-content: space-between;
+    justify-content: flex-start;
+    gap: 20px;
 }
 
 .galleryItem {
@@ -128,7 +129,7 @@
 
     .galleryItem {
         flex-basis: calc(25% - 20px) !important;
-        margin: 0 20px 0 0;
+        /* margin: 0 20px 0 0; */
     }
 
     .orderByButton {
@@ -137,9 +138,20 @@
         padding: 5px 15px;
         border-color: #f6f6f6;
     }
+
+    .gallery {
+        width: calc(100% + 20px);
+    }
 }
 
 @media screen and (max-width: 1025px) {
+    .scrim {
+        display: initial;
+    }
+    .sidebar {
+    transform: none !important;
+    }
+    
     .filterApplyButtonWrapper,
     .filterClearButtonWrapper {
         padding: 0;
@@ -173,6 +185,7 @@
         border: none;
         padding: 20px 40px;
         margin-bottom: 30px;
+        width: 90%;
     }
     .filterAccordionItemBox :global(.vtex-checkbox__label) {
         font-size: 13px;

@@ -17,6 +17,55 @@
     display: none;
 }
 
+.infoCardImageContainer--categoris,
+.infoCardTextContainer--categoris {
+    width: 100%;
+    text-align: center;
+}
+
+.infoCardContainer--categoris {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 0;
+}
+
+.infoCardTextContainer--categoris {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slideChildrenContainer--categoris {
+    align-items: baseline;
+}
+
+.sliderLayoutContainer--categoris{
+    width: calc(100% - 80px);
+    margin: 40px auto;
+}
+
+.paginationDotsContainer--categoris {
+    bottom: -40px !important;
+}
+
+.infoCardCallActionText--categoris {
+    margin: 0;
+    font-family: 'Montserrat-Bold';
+    text-decoration: none;
+}
+
+.infoCardCallActionContainer--categoris {
+    margin: 5px 0;
+    width: 50%;
+    text-decoration: none;
+}
+
+
+.infoCardImage--categoris {
+    width: auto;
+    height: 50px;
+}
 
 :global(.vtex-shelf-1-x-title) {
     font-family: 'Inter-Bold';
@@ -68,7 +117,7 @@
     padding-left: 30px;
 }
 
-:global(.vtex-flex-layout-0-x-flexRowContent--banner-shelf) .sliderLeftArrow--tabs{
+:global(.vtex-flex-layout-0-x-flexRowContent--banner-shelf) .sliderLeftArrow--tabs {
     left: 26px;
 }
 
@@ -84,13 +133,15 @@
     padding: 0 10px;
 }
 
+.caretIcon--categoris,
 :global(.vtex-shelf-1-x-caretIcon),
-.caretIcon--tabs{
+.caretIcon--tabs {
     width: 12px;
     height: 12px;
     color: #90B51B;
 }
 
+.sliderArrows--categoris,
 :global(.vtex-shelf-1-x-arrow),
 .sliderArrows--tabs {
     border-radius: 50%;
@@ -104,11 +155,12 @@
 }
 
 
-
+.sliderRightArrows--categoris,
 .sliderRightArrow--tabs {
     right: 36px;
 }
 
+.sliderLetArrows--categoris,
 .sliderLeftArrow--tabs {
     left: 36px;
 }
@@ -117,6 +169,7 @@
     .slide--minicart {
         margin-bottom: 15px;
     }
+
     :global(.vtex-shelf-1-x-relatedProducts),
     .sliderLayoutContainer--tabs {
         padding: 0 40px;
@@ -132,4 +185,9 @@
     .sliderLayoutContainer--banner_slider {
         padding: 15px 15px 0 15px;
     }
+
+    .sliderLayoutContainer--categoris{
+        width: calc(100% - 30px);
+    }
+    
 }

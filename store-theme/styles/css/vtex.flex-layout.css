@@ -186,10 +186,35 @@
     font-size: 14px;
 }
 
+.flexRowContent--wish-quantity {
+    width: 225px;
+    gap: 10px;
+}
+
+.flexRow--wish-quantity :global(.vtex-wish-list-1-x-wishlistIconContainer--pdp) :global(.vtex-button__label) {
+    padding: 0 !important;
+}
+
+.flexRow--wish-quantity :global(.vtex-wish-list-1-x-outline)::before {
+    background: transparent;
+    color: #e30613;
+    border-radius: 50%;
+    border: 1px solid;
+    padding: 8px;
+}
+
+.flexRow--categories {
+    margin:60px 0
+}
+
 @media screen and (min-width: 1026px) {
+    .flexRow--main-desktop {
+        padding: 0 40px;
+    }
     .flexRowContent--minicart :global(.vtex-button__label) {
         padding: 0;
     }
+
     .flexRowContent--minicart :global(.vtex-button) {
         background: transparent;
         width: 30px;
@@ -233,7 +258,7 @@
 
     .flexRow--content__minicart__footer {
         width: 500px;
-    margin: 0 auto;
+        margin: 0 auto;
     }
 
     .flexRow--continue {
@@ -244,9 +269,15 @@
         width: 390px;
         margin: 0 auto;
     }
+
+    .flexRowContent--countdown-container {
+        margin-bottom: 30px;
+        padding: 0 40px;
+    }
 }
 
 @media screen and (max-width: 1025px) {
+
     .flexRowContent--add-cart-button :global(.vtex-add-to-cart-button-0-x-buttonText--shelf) {
         font-size: 13px;
         line-height: 16px;

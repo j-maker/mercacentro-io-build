@@ -6,6 +6,13 @@
             "flex-layout.row#info-shelf"
         ]
     },
+    "product-summary.shelf#view": {
+        "title": "Vitrina",
+        "children": [
+            "product-summary-image",
+            "product-summary-name"
+        ]
+    },
     "product-summary.shelf#minicart": {
         "title": "Vitrina",
         "children": [

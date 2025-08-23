@@ -139,6 +139,19 @@
 
     .minicartSideBarContentWrapper {
         height: 100vh !important;
+        position: relative;
+    }
+
+    .minicartEmptyStateContainer {
+        position: absolute;
+        right: 0;
+        width: 58%;
+        top: 50px;
+        height: calc(100vh - 50px);
+    }
+
+    .closeIconContainer {
+        z-index: 999999;
     }
 
     .openIconContainer {

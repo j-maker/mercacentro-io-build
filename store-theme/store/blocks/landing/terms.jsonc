@@ -1,0 +1,14 @@
+{
+    "store.custom#terms": {
+        "children": [
+            "rich-text#terms"        
+        ]
+    },
+    "rich-text#terms": {
+        "title": "Terms and Conditions",
+        "props": {
+            "text": "",
+            "blockClass": "terms"
+        }
+    }
+}

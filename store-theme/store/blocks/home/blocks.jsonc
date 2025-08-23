@@ -66,6 +66,59 @@
             "flex-layout.row#bannerx2"
         ]
     },
+    "toggle-layout#categories": {
+        "title": "Categorias M/O",
+        "children": [
+            "flex-layout.row#categories"
+        ],
+        "props": {
+            "fullWidth": true
+        }
+    },
+    "flex-layout.row#categories": {
+        "children": [
+            "flex-layout.col#categories"
+        ],
+        "props": {
+            "fullWidth": true,
+            "blockClass": "categories"
+        }
+    },
+    "flex-layout.col#categories": {
+        "children": [
+            "rich-text#title-shelfs",
+            "list-context.info-card-list#categoris"
+        ],
+        "props": {
+            "blockClass": "categories"
+        }
+    },
+    "list-context.info-card-list#categoris": {
+        "title": "Info Card List",
+        "children": [
+            "slider-layout#categoris"
+        ],
+        "props": {
+            "infoCards": [
+                {}
+            ]
+        }
+    },
+    "slider-layout#categoris": {
+        "title": "Slider",
+        "props": {
+            "blockClass": [
+                "categoris"
+            ],
+            "itemsPerPage": {
+                "desktop": 6,
+                "tablet": 3,
+                "phone": 2
+            },
+            "showNavigationArrows": "desktopOnly",
+            "showPaginationDots": "always"
+        }
+    },
     "flex-layout.row#bannerx2": {
         "title": "Contenido",
         "children": [
@@ -159,6 +212,22 @@
         "props": {
             "blockClass": "title-shelfs",
             "text": "#### Marca mercacentro"
+        }
+    },
+    "rich-text#title-countddown": {
+        "title": "Titulo vitrina",
+        "props": {
+            "blockClass": "title-countddown",
+            "text": "#### ¡Ofertas por tiempo limitado!\n Aprovecha estso súper descuentos"
+        }
+    },
+    "rich-text#title-countdown-all": {
+        "title": "Ver todo",
+        "props": {
+            "textAlignment": "RIGHT",
+            "textPosition": "RIGHT",
+            "blockClass": "countdown-all",
+            "text": "[Ver todo](#)"
         }
     },
     "image#home_3": {

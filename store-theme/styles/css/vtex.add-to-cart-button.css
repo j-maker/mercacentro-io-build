@@ -1,3 +1,19 @@
 .buttonText--minicart {
     font-size: 0;
 }
+
+.buttonText--add-pdp {
+    color: #E30613;
+    font-family: 'Montserrat-Bold';
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+:global(.vtex-flex-layout-0-x-flexRow--pdp-buttons) :global(.vtex-button) {
+    background: #E3061320;
+    border: 1px solid red;
+    border-radius: 30px;
+    height: 40px;
+    width: 225px;
+}

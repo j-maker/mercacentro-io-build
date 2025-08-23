@@ -98,11 +98,12 @@ const Countdown: React.FC<CountdownProps> = ({
         backgroundColor,
         border: `${borderWidth} solid ${borderColor}`,
         borderRadius,
-        padding: '10px 0px',
+        padding: '5px 0px 0',
         margin,
         textAlign: 'center' as const,
         fontFamily: 'Montserrat, sans-serif',
         width: 'fit-content',
+        height: 'fit-content',
         display: 'inline-block'
     };
 
@@ -129,7 +130,7 @@ const Countdown: React.FC<CountdownProps> = ({
 
     const timeUnitStyle = {
         display: 'inline-block' as const,
-        margin: '0 10px',
+        margin: '0',
         verticalAlign: 'top' as const
     };
 
@@ -291,7 +292,7 @@ CountdownWithSchema.schema = {
         borderRadius: {
             title: 'Radio del Borde',
             type: 'string',
-            default: '0px',
+            default: '5px',
             description: 'Radio de las esquinas del borde'
         },
         padding: {

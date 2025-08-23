@@ -2,9 +2,8 @@
   "store.home": {
     "title": "Home",
     "blocks": [
-      "countdown",
-      "responsive-layout.desktop#home",
-      "responsive-layout.mobile#home"
+      "responsive-layout.mobile#home",
+      "responsive-layout.desktop#home"
     ]
   },
   "responsive-layout.desktop#home": {
@@ -12,7 +11,7 @@
     "children": [
       "toggle-layout#slider_banner",
       "toggle-layout#bannerx3",
-      /* CATEGORIEESE */
+      "toggle-layout#categories",
       "toggle-layout#bannerx2-1",
       "toggle-layout#tabs",
       "toggle-layout#image_home-2",
@@ -36,7 +35,7 @@
   "toggle-layout#shelf_countdown": {
     "title": "Vitrina contador M/O",
     "children": [
-      "rich-text#title-shelfs",
+      "flex-layout.row#countdown-container",
       "list-context.product-list#collection"
     ]
   },
@@ -45,6 +44,19 @@
     "children": [
       "flex-layout.row#banner-shelf"
     ]
+  },
+  "flex-layout.row#countdown-container": {
+    "title": "Contador",
+    "children": [
+      "rich-text#title-countddown",
+      "countdown",
+      "rich-text#title-countdown-all"
+    ],
+    "props": {
+      "blockClass": "countdown-container",
+      "fullWidth": true,
+      "colSizing": "auto"
+    }
   },
   "flex-layout.row#banner-shelf": {
     "title": "Contenido",

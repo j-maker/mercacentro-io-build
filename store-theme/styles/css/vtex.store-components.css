@@ -85,6 +85,29 @@
     content: "";
 }
 
+.shareContainer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.shareSocialButton {
+    font-size: 20px !important;
+    border: 1px solid #90B51B !important;
+    color: #90B51B !important;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+}
+
+.shareButtons {
+    gap: 10px;
+}
+
+.shareLabel {
+    margin: 0;
+}
+
 @media screen and (min-width: 1026px) {
     .imageElementLink--logo-first {
         width: 245px;
