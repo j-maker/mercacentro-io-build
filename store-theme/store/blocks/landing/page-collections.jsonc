@@ -1,0 +1,31 @@
+/* Ok */
+{
+  "store.custom#collectionsMain": {
+    "title": "Colecciones",
+    "blocks": [
+      "toggle-layout#slider_banner",
+      "rich-text#seo-app-title",
+      "rich-text#seo-app-link-categories",
+      "search-result-layout.customQuery#collection"
+    ]
+  },
+  "search-result-layout.customQuery#collection": {
+    "title": "Colecciones",
+    "props": {
+      "querySchema": {
+        "maxItemsPerPage": 16,
+        "orderByField": "OrderByReleaseDateDESC",
+        "hideUnavailableItems": true,
+        "facetsBehavior": "Static",
+        "simulationBehavior": "default",
+        "skusFilter": "ALL",
+        "mapField": "productClusterIds"
+      }
+    },
+    "blocks": [
+      "search-result-layout.desktop",
+      "search-result-layout.mobile",
+      "search-not-found-layout"
+    ]
+  }
+}

@@ -92,7 +92,7 @@
             "product-summary-name",
             "flex-layout.row#prices",
             "product-selling-price",
-            "product-summary-brand",
+            "product-seller-name",
             "flex-layout.row#add-cart-button"
         ],
         "props": {
@@ -125,11 +125,6 @@
             "preserveLayoutOnMobile": true,
             "blockClass": "add-cart-button",
             "fullWidth": true
-        }
-    },
-    "product-summary-brand": {
-        "props": {
-            "blockClass": "brand"
         }
     },
     "add-to-list-btn": {

@@ -28,7 +28,50 @@
     margin-bottom: 7px;
 }
 
+.savings--pdp {
+    font-size: 14px;
+    border-radius: 5px 15px 15px 5px;
+    padding: 8px 12px;
+}
+
+.stackItem--pdp {
+    left: 95px;
+    top: 10px;
+}
+
+.sellerNameContainer {
+    font-size: 12px;
+    text-align: left;
+    width: 100%;
+    display: flex;
+    margin: 0;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+
+
+.sellerName {
+    font-family: 'Montserrat-SemiBold';
+    max-width: 110px;
+}
+
+.sellerNameContainer--pdp {
+    font-size: 14px;
+    line-height: 15px;
+}
+
+.sellerName--pdp {
+    font-family: 'Montserrat-Regular';
+    max-width: unset;
+}
+
 @media screen and (min-width: 1026px) {
+    .sellerNameContainer--pdp {
+        font-family: 'Montserrat-Bold';
+        margin-bottom: 20px;
+    }
+
     .sellingPriceValue {
         font-size: 19px;
         line-height: 21px;
@@ -49,6 +92,17 @@
 }
 
 @media screen and (max-width: 1025px) {
+
+    :global(.vtex-flex-layout-0-x-flexRow--main-info-mobile) .sellingPriceValue {
+        font-size: 21px;
+        line-height: 25px;
+    }
+
+    :global(.vtex-flex-layout-0-x-flexRow--main-info-mobile) .listPriceValue  {
+        font-size: 16px;
+        line-height: 19px;
+    }
+
     .savings,
     .listPriceValue {
         font-size: 13px;

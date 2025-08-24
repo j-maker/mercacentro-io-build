@@ -27,11 +27,42 @@
     },
     "flex-layout.col#main-desktop-image": {
         "children": [
-            "product-images"
+            "stack-layout#image"
         ],
         "props": {
             "width": "37%",
             "blockClass": "main-desktop-image"
+        }
+    },
+    "stack-layout#image": {
+        "children": [
+            "product-images",
+            "product-price-savings#pdp"
+        ]
+    },
+    "stack-layout#image-mobile": {
+        "children": [
+            "product-images",
+            "add-to-list-btn#pdp"
+        ],
+        "props": {
+            "blockClass": "image-mobile"
+        }
+    },
+    "sticky-layout#buy-button": {
+        "props": {
+            "blockClass": "buy-button",
+            "position": "bottom"
+        },
+        "children": [
+            "product-quantity",
+            "add-to-cart-button#pdp"
+        ]
+    },
+    "product-price-savings#pdp": {
+        "props": {
+            "blockClass": "pdp",
+            "message": "-{savingsPercentage}"
         }
     },
     "flex-layout.row#main-info-mobile": {
@@ -39,7 +70,9 @@
             "flex-layout.col#main-info-mobile"
         ],
         "props": {
-            "blockClass": "main-desktop-image"
+            "fullWidth": true,
+            "colSizing": "auto",
+            "blockClass": "main-info-mobile"
         }
     },
     "flex-layout.col#main-info-mobile": {
@@ -47,31 +80,57 @@
             "vtex.store-components:product-name",
             "flex-layout.row#sku-ean",
             "product-rating-inline",
-            "product-images",
+            "stack-layout#image-mobile",
             "flex-layout.row#prices",
             "product-selling-price",
             "rich-text#offer",
-            //vendido
+            "product-seller-name#pdp",
             //entreega
-            //como comprar
+            "rich-text#how-buy", //como comprar
             "rich-text#methods-pdp",
             "image#methods",
-            "share"
-        ],
+            "share",
+            "sticky-layout#buy-button"
+        ]
+    },
+    "product-seller-name": {
         "props": {
-            "blockClass": "main-desktop-image"
+            "showLabel": true,
+            "label": "Vendido por "
+        }
+    },
+    "product-seller-name#pdp": {
+        "props": {
+            "blockClass": "pdp",
+            "showLabel": true,
+            "label": "Vendido por "
+        }
+    },
+    "product-identifier.product": {
+        "props": {
+            "label": "custom",
+            "customLabel": "GTIN",
+            "idField": "skuEan"
+        }
+    },
+    "product-identifier.product#sku": {
+        "props": {
+            "label": "custom",
+            "customLabel": "SKU",
+            "idField": "skuReferenceId"
         }
     },
     "flex-layout.col#main-info": {
         "children": [
             "vtex.store-components:product-name",
             "flex-layout.row#sku-ean",
+            "product-seller-name#pdp",
             "product-rating-inline",
-            /* "product-brand", */
             "rich-text#methods-pdp",
             "image#methods"
         ],
         "props": {
+            "preventVerticalStretch": true,
             "width": "40%",
             "blockClass": "main-desktop-image"
         }
@@ -84,14 +143,21 @@
         }
     },
     "vtex.store-components:product-name": {
-        "title": "Nombre del producto"
+        "title": "Nombre del producto",
+        "props": {
+            "blockClass": "name-pdp"
+        }
     },
     "flex-layout.row#sku-ean": {
         "children": [
-            "vtex.store-components:product-name#sku",
-            "vtex.store-components:product-name#ean"
+            "product-identifier.product#sku",
+            "product-identifier.product"
+            /* "vtex.store-components:product-name#ean" */
         ],
         "props": {
+            "preserveLayoutOnMobile": true,
+            "colJustify": "left",
+            "colSizing": "auto",
             "fullWidth": true,
             "blockClass": "sku-ean"
         }
@@ -104,14 +170,14 @@
             "tag": "h4"
         }
     },
-    "vtex.store-components:product-name#ean": {
+    /* "vtex.store-components:product-name#ean": {
         "title": "Ean",
         "props": {
             "blockClass": "ean",
             "showProductReference": true,
             "tag": "h4"
         }
-    },
+    }, */
     "flex-layout.col#main-info-product": {
         "children": [
             "flex-layout.row#prices",

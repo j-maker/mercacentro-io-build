@@ -401,7 +401,22 @@
   width: 100%;
 }
 
+:global(.vtex-product-identifier-0-x-product-identifier) {
+  font-family: 'Montserrat-Bold';
+  color: #555;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+:global(.vtex-product-identifier-0-x-product-identifier__value) {
+  font-family: 'Montserrat-Regular';
+}
+
 @media screen and (min-width: 1026px) {
+  /* :global(.vtex-store-components-3-x-productImagesGallerySwiperContainer) > div:global(.swiper-wrapper) {
+    border: 1px solid #00000010;
+    border-radius: 10px;
+} */
 
   :global(.vtex-flex-layout-0-x-flexRowContent--total__wrapper__minicart)> :global(.vtex-flex-layout-0-x-stretchChildrenWidth):nth-child(1),
   :global(.vtex-flex-layout-0-x-flexRowContent--minicart)> :global(.vtex-flex-layout-0-x-stretchChildrenWidth):nth-child(1) {

@@ -1,0 +1,30 @@
+.wrapper--buy-button {
+    height: auto !important;
+}
+
+.container--buy-button {
+    bottom: 77px !important;
+    width: calc(100% - 60px);
+    margin: 0 auto;
+    display: flex;
+    padding: 7px 10px;
+    border: 1px solid #e6e6e6;
+    background: #fff;
+    border-radius: 10px;
+    position: fixed;
+    gap: 10px;
+}
+
+.container--buy-button :global(.vtex-numeric-stepper__minus-button) {
+    border-radius: 5px 0 0 5px;
+}
+
+.container--buy-button :global(.vtex-numeric-stepper__plus-button) {
+    border-radius: 0 5px 5px 0;
+}
+
+.container--buy-button :global(.vtex-numeric-stepper__minus-button),
+.container--buy-button :global(.vtex-numeric-stepper__plus-button),
+.container--buy-button :global(.vtex-numeric-stepper__input) {
+    height: 40px;
+}

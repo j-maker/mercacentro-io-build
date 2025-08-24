@@ -2,6 +2,7 @@
     font-size: 0;
 }
 
+:global(.vtex-sticky-layout-0-x-container--buy-button) .buttonText--add-pdp,
 .buttonText--add-pdp {
     color: #E30613;
     font-family: 'Montserrat-Bold';
@@ -10,6 +11,7 @@
     gap: 5px;
 }
 
+:global(.vtex-sticky-layout-0-x-container--buy-button) :global(.vtex-button),
 :global(.vtex-flex-layout-0-x-flexRow--pdp-buttons) :global(.vtex-button) {
     background: #E3061320;
     border: 1px solid red;

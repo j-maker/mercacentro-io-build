@@ -1,3 +1,8 @@
+.stackItem--pdp {
+    left: 95px;
+    top: 10px;
+}
+
 .stackItem--wishlist {
     bottom: 70px;
     top: unset;
@@ -29,4 +34,18 @@
     }
 }
 
-@media screen and (max-width: 1025px) {}
+@media screen and (max-width: 1025px) {
+    .stackItem--image-mobile--pdp {
+        left: unset;
+        right: 0;
+    }
+    .stackItem--image-mobile--pdp :global(.vtex-button__label){
+        padding: 0;
+    }
+
+    .stackItem--image-mobile--pdp :global(.vtex-wish-list-1-x-outline)::before {
+        background: transparent;
+        color: #E30613;
+        border: 1px solid #e6e6e6;
+    } 
+}

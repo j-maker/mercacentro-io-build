@@ -207,6 +207,14 @@
     margin:60px 0
 }
 
+.flexRowContent--sku-ean {
+    margin-bottom: 15px;
+}
+
+.flexRowContent--main-info-mobile {
+    padding: 0 20px;
+}
+
 @media screen and (min-width: 1026px) {
     .flexRow--main-desktop {
         padding: 0 40px;
@@ -277,7 +285,9 @@
 }
 
 @media screen and (max-width: 1025px) {
-
+    .flexRowContent--sku-ean {
+        gap: 10px;
+    }
     .flexRowContent--add-cart-button :global(.vtex-add-to-cart-button-0-x-buttonText--shelf) {
         font-size: 13px;
         line-height: 16px;

@@ -26,23 +26,6 @@
     text-overflow: ellipsis;
 }
 
-.productBrandContainer--brand {
-    text-align: left;
-    font-size: 12px;
-    font-family: 'Montserrat-SemiBold';
-}
-
-.productBrandName--brand::before {
-    content: 'Vendido por: ';
-    font-family: 'Montserrat-Regular';
-    color: #000000;
-    margin-right: 5px;
-}
-
-.productBrandName--brand {
-    margin-bottom: 7px;
-    display: flex;
-}
 
 .containerNormal--minicart {
     border: unset;

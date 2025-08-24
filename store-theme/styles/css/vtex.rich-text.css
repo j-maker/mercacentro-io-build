@@ -433,6 +433,10 @@
     margin: 30px 0;
 }
 
+.paragraph--methods-pdp {
+    margin: 0 0 5px;
+}
+
 @media screen and (min-width: 1026px) {
     .wrapper--terms {
         width: 100%;

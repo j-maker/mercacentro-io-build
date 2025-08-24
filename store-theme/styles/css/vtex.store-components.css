@@ -108,7 +108,53 @@
     margin: 0;
 }
 
+.carouselGaleryThumbs {
+    width: 70px !important;
+}
+
+.productImagesThumb {
+    margin-bottom: 10px;
+}
+
+.productBrand--name-pdp {
+    font-size: 25px;
+    line-height: 28px;
+}
+
+:global(.vtex-flex-layout-0-x-flexColChild--main-desktop-image) .imageElement--methods-of-payment {
+    width: 400px !important;
+    margin: 0;
+}
+
+.productNameContainer--name-pdp {
+    margin-bottom: 15px;
+}
+
+.swiperCaret .caretIcon {
+    color: #adadad;
+    width: 12px;
+}
+
 @media screen and (min-width: 1026px) {
+    .productBrand--name-pdp {
+        font-family: 'Montserrat-Bold';
+    }
+
+    .productImagesGallerySwiperContainer {
+        padding-bottom: 40px;
+    }
+
+    .figure {
+        border: 1px solid #00000010;
+        border-radius: 5px;
+        padding: 5px;
+    }
+
+    .carouselGaleryCursor {
+        margin-left: auto;
+        width: calc(100% - 70px);
+    }
+
     .imageElementLink--logo-first {
         width: 245px;
     }
@@ -132,6 +178,10 @@
 }
 
 @media screen and (max-width: 1025px) {
+    .shareContainer {
+        margin-top: 20px;
+    }
+
     .autoCompleteOuterContainer--header_search_bar_desktop :global(.vtex-input-prefix__group) {
         border-radius: 50px;
         border-color: #90B51B;
