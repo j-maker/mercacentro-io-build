@@ -80,6 +80,7 @@
             "vtex.store-components:product-name",
             "flex-layout.row#sku-ean",
             "product-rating-inline",
+            /* "product-rating-summary", */
             "stack-layout#image-mobile",
             "flex-layout.row#prices",
             "product-selling-price",
@@ -125,7 +126,8 @@
             "vtex.store-components:product-name",
             "flex-layout.row#sku-ean",
             "product-seller-name#pdp",
-            "product-rating-inline",
+                
+            "product-rating-summary",
             "rich-text#methods-pdp",
             "image#methods"
         ],
@@ -312,6 +314,22 @@
                 },
                 "minItemsPerPage": 2
             }
+        }
+    },
+    "product-rating-inline": {
+        "props": {
+            "showTotal": true,
+            "showCount": true,
+            "showAverage": true,
+            "blockClass": "rating"
+        }
+    },
+    "product-rating-summary": {
+        "props": {
+            "showCount": true,
+            "showAverage": true,
+            "showTotal": true,
+            "blockClass": "rating-summary"
         }
     }
 }

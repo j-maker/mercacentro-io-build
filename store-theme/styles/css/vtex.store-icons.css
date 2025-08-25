@@ -162,6 +162,16 @@
     line-height: 10px;
 }
 
+:global(.vtex-flex-layout-0-x-flexColChild--info-shelf) :global(.vtex-reviews-and-ratings-3-x-summaryTotalReviews)::before {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url(/arquivos/Star%201.png) no-repeat center center;
+    background-size: contain;
+    margin-left: 5px;
+    vertical-align: middle;
+}
 
 :global(.vtex-add-to-cart-button-0-x-buttonText--shelf)::after {
     content: "\e905";
@@ -178,7 +188,7 @@
     content: "\e907";
     font-size: 20px;
     margin-left: 10px;
-        text-decoration: none;
+    text-decoration: none;
 }
 
 :global(.vtex-login-2-x-accessCodeOptionBtn) :global(.vtex-button__label)::before {
@@ -362,8 +372,8 @@
 
 @media screen and (max-width: 1025px) {
     :global(.vtex-search-result-3-x-orderByText)::before {
-        content: "\e92b";
-        font-size: 16px;
+        content: "\e940";
+        font-size: 13px;
         margin-right: 7px;
     }
 

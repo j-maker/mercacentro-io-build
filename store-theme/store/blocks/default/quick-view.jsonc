@@ -53,7 +53,7 @@
             "flex-layout.row#prices",
             "product-selling-price",
             "product-seller-name#pdp",
-            "product-rating-inline",
+            "product-rating-summary",
             "flex-layout.row#quick-add"
         ]
     },

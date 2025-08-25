@@ -63,7 +63,7 @@
     width: 190px;
 }
 .dontHaveAccount:after {
-    content: "Regístrese";
+    content: "¡Regístrate aquí!";
     font-family: 'Montserrat-Bold';
     font-size: 16px;
     line-height: 19px;

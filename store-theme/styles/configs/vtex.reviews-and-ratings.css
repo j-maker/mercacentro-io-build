@@ -132,12 +132,12 @@
     margin-top: 4px;
 }
 
-:global(.vtex-reviews-and-ratings-3-x-summaryTotalReviews)::after {
+/* :global(.vtex-reviews-and-ratings-3-x-summaryTotalReviews)::after {
     content: "Reviews";
     font-size: 14px;
     color: #000;
     margin-left: 5px;
-}
+} */
 
 :global(.vtex-reviews-and-ratings-3-x-reviewsPaging)>div>div>div div :global(.vtex-button__label),
 :global(.vtex-reviews-and-ratings-3-x-reviewsPaging) :global(.vtex__icon-caret-right) path,
@@ -333,6 +333,11 @@
 
 :global(.vtex-reviews-and-ratings-3-x-container) {
     padding: 0 15px;
+}
+
+:global(.vtex-flex-layout-0-x-flexColChild--info-shelf) :global(.vtex-reviews-and-ratings-3-x-stars),
+:global(.vtex-flex-layout-0-x-flexColChild--info-shelf) :global(.vtex-reviews-and-ratings-3-x-summaryButtonContainer) {
+    display: none !important;
 }
 
 @media screen and (min-width: 1025px) {

@@ -440,8 +440,9 @@
     justify-content: flex-end;
   }
 
-  :global(.vtex-flex-layout-0-x-flexRowContent--content__minicart__footer)> :global(.vtex-flex-layout-0-x-stretchChildrenWidth) {
+  :global(.vtex-flex-layout-0-x-flexRowContent--content__minicart__footer)> :global(.vtex-flex-layout-0-x-stretchChildrenWidth):nth-child(3) {
     border-top: 1px solid #e1e1e1;
+    margin-top: 15px;
   }
 
   :global(.vtex-reviews-and-ratings-3-x-summaryContainer) {

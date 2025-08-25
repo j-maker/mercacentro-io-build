@@ -118,7 +118,7 @@
     },
     "flex-layout.row#add-cart-button": {
         "children": [
-            "product-rating-inline",
+            "product-rating-summary",
             "add-to-cart-button#summary"
         ],
         "props": {
@@ -145,12 +145,6 @@
             "unavailableText": "NO DISPONIBLE",
             "blockClass": "shelf",
             "text": "Agregar"
-        }
-    },
-    "product-rating-inline": {
-        "props": {
-            "width": "40%",
-            "blockClass": "rating"
         }
     }
 }

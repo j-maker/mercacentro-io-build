@@ -282,6 +282,10 @@
         margin-bottom: 30px;
         padding: 0 40px;
     }
+
+    .flexRowContent--sku-ean-summary {
+        gap: 10px;
+    }
 }
 
 @media screen and (max-width: 1025px) {

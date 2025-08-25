@@ -103,8 +103,20 @@
       "colSizing": "auto"
     },
     "children": [
+      "responsive-layout.mobile#freeshipping",
       "minicart-summary",
+      "responsive-layout.desktop#freeshipping",
       "flex-layout.row#continue"
+    ]
+  },
+  "responsive-layout.desktop#freeshipping": {
+    "children": [
+      "custom-freeshipping"
+    ]
+  },
+  "responsive-layout.mobile#freeshipping": {
+    "children": [
+      "custom-freeshipping"
     ]
   },
   "flex-layout.row#continue": {
