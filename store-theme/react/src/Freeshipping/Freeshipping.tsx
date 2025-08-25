@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useOrderForm } from 'vtex.order-manager/OrderForm';
 import styles from './styles.css';
 import { pathOr } from 'ramda';
@@ -6,9 +6,18 @@ import { FormattedPrice } from 'vtex.formatted-price'
 
 interface FreeshippingProps {
     Envio: number;
+    defaultVisible?: boolean;
 }
 
-const Freeshipping = ({ Envio }: FreeshippingProps) => {
+const Freeshipping = ({ Envio, defaultVisible = true }: FreeshippingProps) => {
+    const [isVisible, setIsVisible] = useState(() => {
+        // Intentar recuperar estado de localStorage
+        if (typeof window !== 'undefined') {
+            const saved = localStorage.getItem('freeshipping-visible');
+            return saved !== null ? JSON.parse(saved) : defaultVisible;
+        }
+        return defaultVisible;
+    });
     const orderForm = useOrderForm();
     
     // Obtener valores del carrito con valores por defecto seguros
@@ -23,26 +32,45 @@ const Freeshipping = ({ Envio }: FreeshippingProps) => {
     const amountMissing = qualifiesForFreeShipping ? 0 : Envio - subtotal;
     const progressValue = Math.min(subtotal, Envio);
 
+    // Guardar estado en localStorage cuando cambie
+    const toggleVisibility = () => {
+        const newState = !isVisible;
+        setIsVisible(newState);
+        if (typeof window !== 'undefined') {
+            localStorage.setItem('freeshipping-visible', JSON.stringify(newState));
+        }
+    };
+
     return (
         <div className={styles.containerMain}>
-            {!qualifiesForFreeShipping ? (
-                <div className={`block ${styles.containerDeliveryPay}`}>
-                    <div className={`flex ${styles.containerDeliveryText}`}>
-                        Te faltan <FormattedPrice value={amountMissing} />
-                        <p className={styles.textAddSend}> para que tu envío sea gratis.</p>
-                    </div>
-                    <div>
-                        <div className={`flex ${styles.price__progress}`}>
-                            <span><FormattedPrice value={0} /></span>
-                            <span><FormattedPrice value={Envio} /></span>
+            <button 
+                className={styles.toggleButton}
+                onClick={toggleVisibility}
+                aria-label={isVisible ? "Ocultar información de envío" : "Mostrar información de envío"}
+            >
+                {isVisible ? "➖" : "➕"} Envío gratis
+            </button>
+            
+            {isVisible && (
+                !qualifiesForFreeShipping ? (
+                    <div className={`block ${styles.containerDeliveryPay}`}>
+                        <div className={`flex ${styles.containerDeliveryText}`}>
+                            Te faltan <FormattedPrice value={amountMissing} />
+                            <p className={styles.textAddSend}> para que tu envío sea gratis.</p>
                         </div>
-                        <progress className={styles.progressBar} max={Envio} value={progressValue} />
+                        <div>
+                            <div className={`flex ${styles.price__progress}`}>
+                                <span><FormattedPrice value={0} /></span>
+                                <span><FormattedPrice value={Envio} /></span>
+                            </div>
+                            <progress className={styles.progressBar} max={Envio} value={progressValue} />
+                        </div>
                     </div>
-                </div>
-            ) : (
-                <div className={styles.containerDeliveryFree}>
-                    ¡Disfruta comprando! Tu envío es totalmente gratis.
-                </div>
+                ) : (
+                    <div className={styles.containerDeliveryFree}>
+                        ¡Disfruta comprando! Tu envío es totalmente gratis.
+                    </div>
+                )
             )}
         </div>
     )
@@ -60,6 +88,11 @@ Freeshipping.getSchema = () => {
             Envio: {
                 title: 'Valor envio gratis',
                 type: 'number'
+            },
+            defaultVisible: {
+                title: 'Visible por defecto',
+                type: 'boolean',
+                default: true
             }
         }
     }

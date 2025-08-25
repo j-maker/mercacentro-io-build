@@ -1,0 +1,62 @@
+.containerMain {
+  position: relative;
+  margin: 10px 0;
+}
+
+.toggleButton {
+  background: transparent;
+  border: 1px solid #ddd;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+}
+
+.toggleButton:hover {
+  background: #f5f5f5;
+  border-color: #ccc;
+}
+
+.containerDeliveryPay {
+  margin-top: 10px;
+  padding: 15px;
+  background: #f8f8f8;
+  border-radius: 8px;
+}
+
+.containerDeliveryText {
+  align-items: baseline;
+  gap: 4px;
+}
+
+.textAddSend {
+  margin: 0;
+  display: inline;
+}
+
+.price__progress {
+  justify-content: space-between;
+  margin: 10px 0 5px;
+  font-size: 12px;
+  color: #666;
+}
+
+.progressBar {
+  width: 100%;
+  height: 8px;
+  border-radius: 4px;
+}
+
+.containerDeliveryFree {
+  margin-top: 10px;
+  padding: 15px;
+  background: #e8f5e9;
+  border-radius: 8px;
+  color: #2e7d32;
+  font-weight: 500;
+  text-align: center;
+}
