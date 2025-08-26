@@ -335,8 +335,8 @@
     "custom-flixmedia": {
         "title": "Flixmedia",
         "props": {
-            "partnerId": "TU_ID_REAL_AQUI", // ← Cambiar por tu ID real
-            "locale": "es-CO",
+            "partnerId": "16746", // ← Cambiar por tu ID real
+            "locale": "f5",
             "currency": "COP"
         }
     }
