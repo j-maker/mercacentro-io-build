@@ -129,7 +129,8 @@
                 
             "product-rating-summary",
             "rich-text#methods-pdp",
-            "image#methods"
+            "image#methods",
+            "custom-flixmedia"
         ],
         "props": {
             "preventVerticalStretch": true,

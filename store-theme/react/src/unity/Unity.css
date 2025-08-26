@@ -1,0 +1,33 @@
+.unityContainer {
+  margin: 10px 0;
+}
+
+.unityInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: left;
+}
+
+.unitMeasure {
+  font-size: 14px;
+  color: #666;
+  font-weight: 500;
+}
+
+.pricePerUnit {
+  font-size: 12px;
+  line-height: 17px;
+  color: #555;
+}
+
+@media (max-width: 768px) {
+  .unityContainer {
+    margin: 8px 0;
+  }
+
+  .unitMeasure,
+  .pricePerUnit {
+    font-size: 13px;
+  }
+}

@@ -1,5 +1,11 @@
 {
   "custom-freeshipping": {
     "component": "Freeshipping"
+  },
+  "custom-unity": {
+    "component": "unity"
+  },
+  "custom-flixmedia": {
+    "component": "flixmedia"
   }
 }

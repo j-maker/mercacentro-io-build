@@ -92,6 +92,7 @@
             "product-summary-name",
             "flex-layout.row#prices",
             "product-selling-price",
+            "custom-unity",
             "product-seller-name",
             "flex-layout.row#add-cart-button"
         ],
