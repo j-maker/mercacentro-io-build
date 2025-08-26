@@ -126,7 +126,6 @@
             "vtex.store-components:product-name",
             "flex-layout.row#sku-ean",
             "product-seller-name#pdp",
-                
             "product-rating-summary",
             "rich-text#methods-pdp",
             "image#methods",
@@ -331,6 +330,14 @@
             "showAverage": true,
             "showTotal": true,
             "blockClass": "rating-summary"
+        }
+    },
+    "custom-flixmedia": {
+        "title": "Flixmedia",
+        "props": {
+            "partnerId": "TU_ID_REAL_AQUI", // ← Cambiar por tu ID real
+            "locale": "es-CO",
+            "currency": "COP"
         }
     }
 }
