@@ -2,6 +2,7 @@
 .imageElement--top-header {
     outline: 0 !important;
     width: 100% !important;
+    display: flex;
 }
 
 .externalSearchButtonWrapper {
@@ -136,6 +137,11 @@
 }
 
 @media screen and (min-width: 1026px) {
+    .flexCol--main-desktop-image {
+        border-right: 1px solid #ebebeb;
+        padding-right: 10px;
+    }
+
     .productBrand--name-pdp {
         font-family: 'Montserrat-Bold';
     }
@@ -178,8 +184,20 @@
 }
 
 @media screen and (max-width: 1025px) {
+    .productImagesGallerySwiperContainer {
+        padding-bottom: 30px;
+        margin-bottom: 10px;
+    }
+    .swiperCaretPrev {
+        left: 10px;
+    }
+
+    .swiperCaretNext {
+        right: 10px;
+    }
+
     .shareContainer {
-        margin-top: 20px;
+        margin: 30px 0;
     }
 
     .autoCompleteOuterContainer--header_search_bar_desktop :global(.vtex-input-prefix__group) {

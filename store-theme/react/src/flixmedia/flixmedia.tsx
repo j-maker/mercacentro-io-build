@@ -1,5 +1,6 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useProduct } from 'vtex.product-context';
+import './flixmedia.css';
 
 interface FlixmediaConfig {
   partnerId: string;
@@ -16,6 +17,8 @@ const Flixmedia: React.FC<FlixmediaConfig> = ({
   const flixmediaRef = useRef<HTMLDivElement>(null);
   const scriptRef = useRef<HTMLScriptElement | null>(null);
   const isInitialized = useRef(false);
+  const [showProductDescription, setShowProductDescription] = useState(false);
+  const [flixmediaHasContent, setFlixmediaHasContent] = useState(false);
 
   useEffect(() => {
     if (typeof window !== 'undefined' && (window as any).flixJsCallbacks && typeof (window as any).flixJsCallbacks.reset !== 'undefined') {
@@ -82,6 +85,8 @@ const Flixmedia: React.FC<FlixmediaConfig> = ({
     };
 
     script.onerror = () => {
+      // Si hay error al cargar el script, mostrar descripción del producto
+      setShowProductDescription(true);
     };
 
     document.head.appendChild(script);
@@ -96,12 +101,18 @@ const Flixmedia: React.FC<FlixmediaConfig> = ({
         const flixJsCallbacks = (window as any).flixJsCallbacks;
 
         flixJsCallbacks.setLoadCallback(() => {
+          // Callback cuando se carga el contenido de inpage
+          checkFlixmediaContent();
         }, 'inpage');
 
         flixJsCallbacks.setLoadCallback(() => {
+          // Callback cuando se carga el contenido de minisite
+          checkFlixmediaContent();
         }, 'minisite');
 
         flixJsCallbacks.setLoadCallback(() => {
+          // Callback cuando no hay contenido (noshow)
+          setShowProductDescription(true);
         }, 'noshow');
 
         isInitialized.current = true;
@@ -109,6 +120,31 @@ const Flixmedia: React.FC<FlixmediaConfig> = ({
         setTimeout(configureFlixmedia, 1000);
       }
     } catch (error) {
+      // Si hay error, mostrar descripción del producto
+      setShowProductDescription(true);
+    }
+  };
+
+  const checkFlixmediaContent = () => {
+    // Verificar si flixmedia tiene contenido
+    const inpageElement = document.getElementById('flix-inpage');
+    const minisiteElement = document.getElementById('flix-minisite');
+    
+    if (inpageElement && minisiteElement) {
+      const hasInpageContent = inpageElement.children.length > 0 && inpageElement.innerHTML.trim() !== '';
+      const hasMinisiteContent = minisiteElement.children.length > 0 && minisiteElement.innerHTML.trim() !== '';
+      
+      if (hasInpageContent || hasMinisiteContent) {
+        setFlixmediaHasContent(true);
+        setShowProductDescription(false);
+      } else {
+        // Si no hay contenido después de un tiempo, mostrar descripción del producto
+        setTimeout(() => {
+          if (!flixmediaHasContent) {
+            setShowProductDescription(true);
+          }
+        }, 3000);
+      }
     }
   };
 
@@ -132,6 +168,11 @@ const Flixmedia: React.FC<FlixmediaConfig> = ({
     return productContext.product.priceRange.sellingPrice.lowPrice.toString();
   };
 
+  const getProductDescription = (): string => {
+    if (!productContext?.product?.description) return '';
+    return productContext.product.description;
+  };
+
   useEffect(() => {
     if (productContext?.product && isInitialized.current) {
       if (typeof window !== 'undefined' && (window as any).flixJsCallbacks) {
@@ -145,6 +186,30 @@ const Flixmedia: React.FC<FlixmediaConfig> = ({
       loadFlixmediaScript();
     }
   }, [productContext?.product]);
+
+  // Si no hay producto, no mostrar nada
+  if (!productContext?.product) {
+    return null;
+  }
+
+  // Si debemos mostrar la descripción del producto
+  if (showProductDescription) {
+    const description = getProductDescription();
+    if (!description) {
+      return null; // No mostrar nada si no hay descripción
+    }
+
+    return (
+      <div className="product-description-fallback">
+        <div className="product-description-content">
+          <div 
+            className="product-description-text"
+            dangerouslySetInnerHTML={{ __html: description }}
+          />
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div 

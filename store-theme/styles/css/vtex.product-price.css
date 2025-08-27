@@ -92,6 +92,10 @@
 }
 
 @media screen and (max-width: 1025px) {
+    .sellerNameContainer--pdp {
+        font-size: 12px;
+        line-height: 19px;
+    }
 
     :global(.vtex-flex-layout-0-x-flexRow--main-info-mobile) .sellingPriceValue {
         font-size: 21px;

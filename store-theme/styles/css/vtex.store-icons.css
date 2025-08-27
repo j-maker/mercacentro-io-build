@@ -287,18 +287,6 @@
     right: 40px;
 }
 
-:global(.vtex-rich-text-0-x-paragraph--title-accordion)::after {
-    content: "\e92e";
-    position: absolute;
-    right: 0;
-    display: flex;
-    align-items: center;
-    height: 100%;
-    top: 0;
-    color: #9f9f9f;
-    font-size: 10px;
-}
-
 :global(.vtex-wish-list-1-x-outline)::before {
     content: "\e91b";
     font-size: 18px !important;

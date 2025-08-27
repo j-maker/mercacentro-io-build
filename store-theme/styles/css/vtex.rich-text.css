@@ -503,6 +503,15 @@
 }
 
 @media screen and (max-width: 1025px) {
+    .link--offer {
+        font-family: 'Montserrat-Regular';
+    }
+    .paragraph--methods-pdp {
+        margin: 0 0 10px 0;
+    }
+    .paragraph--how-buy {
+        margin: 20px 0 30px 0;
+    }
     .link--continue {
         height: 40px;
     }

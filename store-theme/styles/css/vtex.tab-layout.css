@@ -35,6 +35,24 @@
     color: #90B51B;
 }
 
+
+
+.listContainer--product {
+    min-width: 100% !important;
+    margin-top: 30px !important;
+}
+
+.listItem--product {
+    width: 50%;
+}
+
+.listItem--product :global(.vtex-button) {
+    width: 100%;
+}
+
+.contentItem--product {
+    max-height: 300px;
+}
 @media screen and (min-width: 1026px) {
     .listContainer {
         min-width: 670px;

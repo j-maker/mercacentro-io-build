@@ -91,6 +91,7 @@
             "rich-text#methods-pdp",
             "image#methods",
             "share",
+            "tab-layout#product",
             "sticky-layout#buy-button"
         ]
     },
@@ -129,7 +130,8 @@
             "product-rating-summary",
             "rich-text#methods-pdp",
             "image#methods",
-            "custom-flixmedia"
+            "tab-layout#product"
+            
         ],
         "props": {
             "preventVerticalStretch": true,
@@ -338,6 +340,80 @@
             "partnerId": "16746", // ← Cambiar por tu ID real
             "locale": "f5",
             "currency": "COP"
+        }
+    },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    "tab-layout#product": {
+        "children": [
+            "tab-list#product",
+            "tab-content#product"
+        ],
+        "props": {
+            "blockClass": "home",
+            "defaultActiveTabId": "product1"
+        }
+    },
+    "tab-list#product": {
+        "children": [
+            "tab-list.item#product1",
+            "tab-list.item#product2"
+        ],
+        "props": {
+            "blockClass": ["product","home"]
+        }
+    },
+    "tab-list.item#product1": {
+        "props": {
+            "blockClass": ["product", "home"],
+            "tabId": "product1",
+            "label": "Descripción",
+            "defaultActiveTab": true
+        }
+    },
+    "tab-list.item#product2": {
+        "props": {
+            "blockClass": ["product", "home"],
+            "tabId": "product2",
+            "label": "Especificaciones"
+        }
+    },
+    
+    "tab-content#product": {
+        "children": [
+            "tab-content.item#product1",
+            "tab-content.item#product2"
+        ]
+    },
+    "tab-content.item#product1": {
+        "children": [
+          "custom-flixmedia"  
+        ],
+        "props": {
+            "blockClass": "product",
+            "tabId": "product1"
+        }
+    },
+    "tab-content.item#product2": {
+        "children": [
+            "product-specification-group"
+        ],
+        "props": {
+            "blockClass": "product",
+            "tabId": "product2"
         }
     }
 }
