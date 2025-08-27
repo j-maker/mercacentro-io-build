@@ -34,15 +34,26 @@ const Unity = () => {
     // Obtener el precio del producto
     const price = selectedItem.sellers?.[0]?.commertialOffer?.Price;
     
-    // Solo calcular precio por unidad si la unidad de medida es "Unidad"
-    const shouldCalculatePerUnit = unidadMedida === 'Unidad';
+    // Calcular precio por unidad para cualquier unidad de medida
+    const shouldCalculatePerUnit = unidadMedida && valorUnidadMedida;
     
     // Calcular el precio por unidad de medida solo si es necesario
-    const pricePerUnit = shouldCalculatePerUnit && price && valorUnidadMedida 
-        ? (price / parseFloat(valorUnidadMedida) / 10).toFixed(3)
-        : null;
+    let pricePerUnit = null;
+    
+    if (shouldCalculatePerUnit && price && valorUnidadMedida) {
+        if (unidadMedida === 'Unidad') {
+            // Para Unidad: sin división por 100, sin decimales
+            pricePerUnit = (price / parseFloat(valorUnidadMedida)).toFixed(0);
+        } else if (unidadMedida === 'Gramo') {
+            // Para Gramo: sin división por 100, 1 decimal
+            pricePerUnit = (price / parseFloat(valorUnidadMedida)).toFixed(1);
+        } else {
+            // Para otras unidades: con división por 100, 1 decimal
+            pricePerUnit = (price / 100 / parseFloat(valorUnidadMedida)).toFixed(1);
+        }
+    }
 
-    // Solo mostrar si tenemos los datos necesarios y la unidad es "Unidad"
+    // Solo mostrar si tenemos los datos necesarios
     if (!shouldCalculatePerUnit || !unidadMedida || !valorUnidadMedida || !pricePerUnit) {
         return null;
     }
@@ -53,6 +64,8 @@ const Unity = () => {
                 <span className={handles.pricePerUnit}>
                     ({unidadMedida} a ${pricePerUnit})
                 </span>
+                <br />
+                <small>Valor: {valorUnidadMedida}</small>
             </div>
         </div>
     );
