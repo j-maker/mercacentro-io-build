@@ -1,3 +1,4 @@
+:global(.vtex-menu-2-x-styledLinkContent--menu-department)::after,
 :global(.vtex-add-to-cart-button-0-x-buttonText--add-pdp)::after,
 :global(.vtex-flex-layout-0-x-flexRow--pdp-buttons) :global(.vtex-add-to-cart-button-0-x-buttonText--add-pdp)::after,
 :global(.vtex-store-components-3-x-shareSocialButton)::before,
@@ -277,6 +278,14 @@
     font-size: 28px;
 }
 
+:global(.vtex-menu-2-x-styledLinkContent--menu-department)::after {
+    content: "\e92e";
+    font-size: 10px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
 :global(.vtex-rich-text-0-x-paragraph--department-title)::after {
     content: "\e92e";
     position: absolute;
@@ -330,7 +339,22 @@
     content: '\e92c';
 }
 
+/* :global(.vtex-menu-2-x-styledLinkContent--menu-department) {
+    transition: all 0.3s ease;
+} */
 
+:global(.vtex-menu-2-x-styledLinkContent--menu-department):hover {
+    background-color: #f0f0f0;
+}
+
+:global(.vtex-menu-2-x-styledLinkContent--menu-department):hover::after {
+    color: #90B51B;
+}
+
+:global(.vtex-menu-2-x-styledLinkContent--menu-department):hover {
+    font-family: 'Montserrat-Bold';
+    color: #90B51B;
+}
 
 @media screen and (min-width: 1026px) {
     :global(.vtex-store-components-3-x-imageElementLink--wishlist)::after {

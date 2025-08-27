@@ -66,6 +66,10 @@
     max-width: unset;
 }
 
+.sellerName {
+    min-height: 28px;
+}
+
 @media screen and (min-width: 1026px) {
     .sellerNameContainer--pdp {
         font-family: 'Montserrat-Bold';

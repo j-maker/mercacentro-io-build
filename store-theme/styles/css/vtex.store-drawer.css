@@ -1,3 +1,23 @@
+.closeIconContainer--menu-desktop {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 99;
+}
+
+.closeIcon--menu-desktop {
+    color: #fff;
+    width: 22px;
+}
+
+.childrenContainer--menu-desktop {
+    flex-direction: column;
+}
+
+.drawer--menu-desktop {
+    border-right: 1px solid #90B51B;
+}
+
 .closeIconContainer--show-more {
     top: 15px;
 }

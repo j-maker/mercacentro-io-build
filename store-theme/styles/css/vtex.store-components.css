@@ -137,6 +137,10 @@
 }
 
 @media screen and (min-width: 1026px) {
+    :global(.vtex-store-drawer-0-x-childrenContainer--menu-desktop) .imageElementLink--logo-category {
+        position: fixed;
+    }
+
     .flexCol--main-desktop-image {
         border-right: 1px solid #ebebeb;
         padding-right: 10px;

@@ -4,7 +4,10 @@
         "props": {
             "sticky": true,
             "zIndex": 99,
-            "blockClass": ["header_desktop", "header_desktop_bottom"],
+            "blockClass": [
+                "header_desktop",
+                "header_desktop_bottom"
+            ],
             "fullWidth": true
         },
         "children": [
@@ -67,9 +70,97 @@
     "drawer#menu": {
         "title": "Menu",
         "props": {
+            "maxWidth": "400px",
             "blockClass": "menu-desktop"
+        },
+        "children": [
+            "image#logo-category",
+            "rich-text#menu-mobile-department-title",
+            "menu-item#shop",
+            "menu-item#shop",
+            "menu-item#shop",
+            "menu-item#shop",
+            "menu-item#shop",
+            "menu-item#shop",
+            "menu-item#shop",
+            "menu-item#shop",
+            "menu-item#shop",
+            "menu-item#shop",
+            "menu-item#shop",
+            "menu-item#shop",
+            "menu-item#shop",
+            "menu-item#shop",
+            "menu-item#shop",
+            "menu-item#shop",
+            "menu-item#shop"
+        ]
+    },
+    "menu-item#shop": {
+        "props": {
+            "type": "custom",
+            "highlight": false,
+            "blockClass": "menu-department",
+            "itemProps": {
+                "type": "internal",
+                "href": "#",
+                "noFollow": false,
+                "tagTitle": "Departamento",
+                "text": "Departamento"
+            }
+        },
+        "blocks": [
+            "vtex.menu@2.x:submenu#shop"
+        ]
+    },
+    "vtex.menu@2.x:submenu#shop": {
+        "children": [
+            "vtex.menu@2.x:menu#submenushop"
+        ],
+        "props": {
+            "blockClass": "submenu"
         }
     },
+    "vtex.menu@2.x:menu#submenushop": {
+        "children": [
+            "flex-layout.row#menu-department-title"
+        ]
+    },
+    "flex-layout.row#menu-department-title": {
+      "children": [
+        "rich-text#menu-department-title",
+        "flex-layout.row#menu-subcategories"
+    ],
+      "props": {
+        "colSizing": "auto",
+        "fullWidth": true,
+        "blockClass": "menu-department-title"
+      }
+    },
+    "flex-layout.row#menu-subcategories": {
+        "children": [
+            "rich-text#menu-subcategories",
+            "rich-text#menu-subcategories"
+        ],
+        "props": {
+            "fullWidth": true,
+            "blockClass": "subcategories"
+        }
+    },
+    "rich-text#menu-subcategories": {
+        "title": "Departamento",
+        "props": {
+            "text": "[Ver todo](#)\n[Ver todo](#)\n[Ver todo](#)\n[Ver todo](#)\n[Ver todo](#)\n[Ver todo](#)\n[Ver todo](#)\n[Ver todo](#)\n[Ver todo](#)\n[Ver todo](#)\n[Ver todo](#)\n",
+            "blockClass": "subcategories"
+        }
+    },
+    "rich-text#menu-department-title": {
+        "title": "Departamento",
+        "props": {
+            "text": "Departamento [Ver todo](#)",
+            "blockClass": "department-tt"
+        }
+    },
+
     "flex-layout.row#header-components": {
         "title": "Componentes",
         "props": {

@@ -1,3 +1,33 @@
+.submenuWrapper--submenu--isOpen {
+    position: fixed;
+    width: calc(100vw - 400px);
+    right: 0;
+    left: 400px;
+    top: 0;
+    bottom: 0;
+    padding: 15px;
+}
+
+.styledLinkContent--menu-department {
+    font-family: 'Montserrat-Medium';
+}
+
+.styledLinkContainer--menu-department {
+    margin: 0;
+    min-height: 43px;
+}
+
+.styledLinkContent--menu-department {
+    padding: 12px 20px ;
+    margin: 0 0 0 20px;
+    border-radius: 5px;
+    white-space: break-spaces;
+}
+
+.menuContainerNav {
+    width: 100%;
+}
+
 .styledLinkContent--menu-subcategory {
     white-space: break-spaces;
 }

@@ -412,6 +412,10 @@
   font-family: 'Montserrat-Regular';
 }
 
+:global(.vtex-flex-layout-0-x-flexColChild--info-shelf):nth-child(3) {
+  margin-bottom: auto;
+}
+
 @media screen and (min-width: 1026px) {
   /* :global(.vtex-store-components-3-x-productImagesGallerySwiperContainer) > div:global(.swiper-wrapper) {
     border: 1px solid #00000010;

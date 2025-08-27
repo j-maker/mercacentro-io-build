@@ -33,9 +33,6 @@
     justify-content: space-between;
 }
 
-.flexColChild--info-shelf:first-child {
-    margin-bottom: auto;
-}
 
 .flexRowContent--search-mobile .stretchChildrenWidth {
     width: 50% !important;
@@ -216,6 +213,14 @@
 }
 
 @media screen and (min-width: 1026px) {
+    .flexRowContent--menu-department-title {
+        flex-direction: column;
+    }
+    
+    .flexRow--menu-department-title {
+        width: 100%;
+    }
+
     .flexRow--main-desktop {
         padding: 0 40px;
     }

@@ -64,8 +64,6 @@ const Unity = () => {
                 <span className={handles.pricePerUnit}>
                     ({unidadMedida} a ${pricePerUnit})
                 </span>
-                <br />
-                <small>Valor: {valorUnidadMedida}</small>
             </div>
         </div>
     );
