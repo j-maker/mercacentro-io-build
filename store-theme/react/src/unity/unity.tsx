@@ -34,13 +34,16 @@ const Unity = () => {
     // Obtener el precio del producto
     const price = selectedItem.sellers?.[0]?.commertialOffer?.Price;
     
-    // Calcular el precio por unidad de medida
-    const pricePerUnit = price && valorUnidadMedida 
+    // Solo calcular precio por unidad si la unidad de medida es "Unidad"
+    const shouldCalculatePerUnit = unidadMedida === 'Unidad';
+    
+    // Calcular el precio por unidad de medida solo si es necesario
+    const pricePerUnit = shouldCalculatePerUnit && price && valorUnidadMedida 
         ? (price / parseFloat(valorUnidadMedida) / 100).toFixed(2) // Convertir de centavos
         : null;
 
-    // Solo mostrar si tenemos todos los datos necesarios
-    if (!unidadMedida || !valorUnidadMedida || !pricePerUnit) {
+    // Solo mostrar si tenemos los datos necesarios y la unidad es "Unidad"
+    if (!shouldCalculatePerUnit || !unidadMedida || !valorUnidadMedida || !pricePerUnit) {
         return null;
     }
 
