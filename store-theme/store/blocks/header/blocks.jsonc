@@ -76,22 +76,147 @@
         "children": [
             "image#logo-category",
             "rich-text#menu-mobile-department-title",
-            "menu-item#shop",
-            "menu-item#shop",
-            "menu-item#shop",
-            "menu-item#shop",
-            "menu-item#shop",
-            "menu-item#shop",
-            "menu-item#shop",
-            "menu-item#shop",
-            "menu-item#shop",
-            "menu-item#shop",
-            "menu-item#shop",
-            "menu-item#shop",
-            "menu-item#shop",
-            "menu-item#shop",
-            "menu-item#shop",
-            "menu-item#shop",
+            "toggle-layout#menu-department-1",
+            "toggle-layout#menu-department-2",
+            "toggle-layout#menu-department-3",
+            "toggle-layout#menu-department-4",
+            "toggle-layout#menu-department-5",
+            "toggle-layout#menu-department-6",
+            "toggle-layout#menu-department-7",
+            "toggle-layout#menu-department-8",
+            "toggle-layout#menu-department-9",
+            "toggle-layout#menu-department-10",
+            "toggle-layout#menu-department-11",
+            "toggle-layout#menu-department-12",
+            "toggle-layout#menu-department-13",
+            "toggle-layout#menu-department-14",
+            "toggle-layout#menu-department-15",
+            "toggle-layout#menu-department-16",
+            "toggle-layout#menu-department-17",
+            "toggle-layout#menu-department-18",
+            "toggle-layout#menu-department-19",
+            "toggle-layout#menu-department-20"
+        ]
+    },
+    "toggle-layout#menu-department-1": {
+        "title": "Departamento 1 M/O",
+        "children": [
+            "menu-item#shop"
+        ]
+    },
+    "toggle-layout#menu-department-2": {
+        "title": "Departamento 2 M/O",
+        "children": [
+            "menu-item#shop"
+        ]
+    },
+    "toggle-layout#menu-department-3": {
+        "title": "Departamento 3 M/O",
+        "children": [
+            "menu-item#shop"
+        ]
+    },
+    "toggle-layout#menu-department-4": {
+        "title": "Departamento 4 M/O",
+        "children": [
+            "menu-item#shop"
+        ]
+    },
+    "toggle-layout#menu-department-5": {
+        "title": "Departamento 5 M/O",
+        "children": [
+            "menu-item#shop"
+        ]
+    },
+    "toggle-layout#menu-department-6": {
+        "title": "Departamento 6 M/O",
+        "children": [
+            "menu-item#shop"
+        ]
+    },
+    "toggle-layout#menu-department-7": {
+        "title": "Departamento 7 M/O",
+        "children": [
+            "menu-item#shop"
+        ]
+    },
+    "toggle-layout#menu-department-8": {
+        "title": "Departamento 8 M/O",
+        "children": [
+            "menu-item#shop"
+        ]
+    },
+    "toggle-layout#menu-department-9": {
+        "title": "Departamento 9 M/O",
+        "children": [
+            "menu-item#shop"
+        ]
+    },
+    
+    "toggle-layout#menu-department-10": {
+        "title": "Departamento 10 M/O",
+        "children": [
+            "menu-item#shop"
+        ]
+    },
+    "toggle-layout#menu-department-11": {
+        "title": "Departamento 11 M/O",
+        "children": [
+            "menu-item#shop"
+        ]
+    },
+    "toggle-layout#menu-department-12": {
+        "title": "Departamento 12 M/O",
+        "children": [
+            "menu-item#shop"
+        ]
+    },
+    "toggle-layout#menu-department-13": {
+        "title": "Departamento 13 M/O",
+        "children": [
+            "menu-item#shop"
+        ]
+    },
+    "toggle-layout#menu-department-14": {
+        "title": "Departamento 14 M/O",
+        "children": [
+            "menu-item#shop"
+        ]
+    },
+    "toggle-layout#menu-department-15": {
+        "title": "Departamento 15 M/O",
+        "children": [
+            "menu-item#shop"
+        ]
+    },
+    "toggle-layout#menu-department-16": {
+        "title": "Departamento 16 M/O",
+        "children": [
+            "menu-item#shop"
+        ]
+    },
+    "toggle-layout#menu-department-17": {
+        "title": "Departamento 17 M/O",
+        "children": [
+            "menu-item#shop"
+        ]
+    },
+    "toggle-layout#menu-department-18": {
+        "title": "Departamento 18 M/O",
+        "children": [
+            "menu-item#shop"
+        ]
+    },
+    "toggle-layout#menu-department-19": {       
+        "title": "Departamento 19 M/O",
+        "children": [
+            "menu-item#shop"
+        ]
+    },
+    
+    "toggle-layout#menu-department-20": {
+        "title": "Departamento 20 M/O",
+        "children": [
             "menu-item#shop"
         ]
     },
@@ -126,30 +251,62 @@
         ]
     },
     "flex-layout.row#menu-department-title": {
-      "children": [
-        "rich-text#menu-department-title",
-        "flex-layout.row#menu-subcategories"
-    ],
-      "props": {
-        "colSizing": "auto",
-        "fullWidth": true,
-        "blockClass": "menu-department-title"
-      }
+        "children": [
+            "rich-text#menu-department-title",
+            "flex-layout.row#menu-subcategories"
+        ],
+        "props": {
+            "colSizing": "auto",
+            "fullWidth": true,
+            "blockClass": "menu-department-title"
+        }
     },
     "flex-layout.row#menu-subcategories": {
         "children": [
             "rich-text#menu-subcategories",
-            "rich-text#menu-subcategories"
+            "rich-text#menu-subcategories_2",
+            "flex-layout.col#image-subcategories"
         ],
         "props": {
+            "colGap": "10px",
             "fullWidth": true,
             "blockClass": "subcategories"
         }
     },
-    "rich-text#menu-subcategories": {
-        "title": "Departamento",
+    "flex-layout.col#image-subcategories": {
+        "title": "Imagenes",
+        "children": [
+            "image#image-subcategories",
+            "image#image-subcategories"
+        ],
         "props": {
-            "text": "[Ver todo](#)\n[Ver todo](#)\n[Ver todo](#)\n[Ver todo](#)\n[Ver todo](#)\n[Ver todo](#)\n[Ver todo](#)\n[Ver todo](#)\n[Ver todo](#)\n[Ver todo](#)\n[Ver todo](#)\n",
+            "width": "30%",
+            "blockClass": "image-subcategories"
+        }
+    },
+    "image#image-subcategories": {
+        "title": "Imagen",
+        "props": {
+            "src": "/arquivos/230x340.png",
+            "link": {
+                "url": "#"
+            },
+            "blockClass": "image-subcategories"
+        }
+    },
+    "rich-text#menu-subcategories": {
+        "title": "Subcategorias",
+        "props": {
+            "width": "35%",
+            "text": "",
+            "blockClass": "subcategories"
+        }
+    },
+    "rich-text#menu-subcategories_2": {
+        "title": "Subcategorias",
+        "props": {
+            "width": "35%",
+            "text": "",
             "blockClass": "subcategories"
         }
     },
@@ -160,7 +317,6 @@
             "blockClass": "department-tt"
         }
     },
-
     "flex-layout.row#header-components": {
         "title": "Componentes",
         "props": {

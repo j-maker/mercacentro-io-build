@@ -136,6 +136,20 @@
     width: 12px;
 }
 
+.imageElementLink--image-subcategories{
+    display: flex;
+}
+
+.imageElement--image-subcategories {
+    width: 100%;
+    padding: 0;
+    margin-right: 30px;
+    margin-bottom: 20px;
+    border-radius: 10px;    
+}
+
+
+
 @media screen and (min-width: 1026px) {
     :global(.vtex-store-drawer-0-x-childrenContainer--menu-desktop) .imageElementLink--logo-category {
         position: fixed;

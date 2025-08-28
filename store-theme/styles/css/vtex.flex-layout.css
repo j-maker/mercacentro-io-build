@@ -212,6 +212,15 @@
     padding: 0 20px;
 }
 
+.flexRowContent--subcategories {
+    padding: 10px 0 5px 10px;
+}
+
+.flexCol--image-subcategories {
+    overflow-y: auto;
+    max-height: 88vh;
+}
+
 @media screen and (min-width: 1026px) {
     .flexRowContent--menu-department-title {
         flex-direction: column;
