@@ -556,6 +556,24 @@
 }
 
 @media screen and (max-width: 1025px) {
+    .wrapper--title-countddown {
+        width: calc(100% - 30px);
+        margin: 0 auto 25px;
+    }
+    .wrapper--title-shelfs {
+        width: calc(100% - 30px);
+        margin: 0 auto 20px;
+    }
+
+    .paragraph--title-countddown,
+    .heading--title-countddown {
+        text-align: center;
+    }
+
+    .heading--title-shelfs {
+        font-size: 22px;
+        line-height: 27px;
+    }
     .link--offer {
         font-family: 'Montserrat-Regular';
     }

@@ -303,6 +303,16 @@
 }
 
 @media screen and (max-width: 1025px) {
+    .flexRow--categories {
+        margin: 30px 0;
+    }
+
+    .flexRowContent--countdown-container {
+        flex-direction: column-reverse;
+        display: flex;
+        gap: 15px;
+    }
+
     .flexRowContent--sku-ean {
         gap: 10px;
     }

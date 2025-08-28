@@ -468,6 +468,12 @@
 }
 
 @media screen and (max-width: 1025px) {
+
+  :global(.vtex-flex-layout-0-x-flexRowContent--countdown-container) > :global(.vtex-flex-layout-0-x-stretchChildrenWidth):nth-child(2) > div {
+    width: calc(100% - 50px) !important;
+    margin: 0 auto !important;
+  }
+
   :global(.vtex-search-result-3-x-scrim):global(.dn),
   :global(.vtex-search-result-3-x-scrim):global(.dn)+:global(.vtex-search-result-3-x-sidebar) {
     display: none;

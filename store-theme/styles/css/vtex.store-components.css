@@ -232,4 +232,14 @@
     .externalSearchButtonWrapper .searchBarIcon {
         padding: 0 20px 0 0;
     }
+
+    .imageElement--banner-shelf-home-mobile {
+        width: calc(100% - 30px);
+        border-radius: 10px;
+        margin: 15px auto 10px;
+    }
+
+    .imageElementLink--banner-shelf-home-mobile {
+        display: flex;
+    }
 }

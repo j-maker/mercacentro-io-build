@@ -363,8 +363,20 @@
             "renderChildren": false
         }
     },
-    "toggle-layout#slider_aux": {
-        "title": "Banner Aux M/O",
+    "toggle-layout#slider_aux_1": {
+        "title": "Banner Aux 1 M/O",
+        "children": [
+            "list-context.image-list#slider_aux"
+        ]
+    },
+    "toggle-layout#slider_aux_2": {
+        "title": "Banner Aux 2 M/O",
+        "children": [
+            "list-context.image-list#slider_aux"
+        ]
+    },
+    "toggle-layout#slider_aux_3": {
+        "title": "Banner Aux 3 M/O",
         "children": [
             "list-context.image-list#slider_aux"
         ]
@@ -372,8 +384,7 @@
     "list-context.image-list#slider_aux": {
         "title": "Contenido",
         "children": [
-            "toggle-layout#slider_aux_ca",
-            "toggle-layout#slider_aux_sa"
+            "slider-layout#slider_aux_sa"
         ],
         "props": {
             "width": "100%",
@@ -408,6 +419,7 @@
                 "tablet": 2,
                 "phone": 1.5
             },
+            "usePagination": false,
             "blockClass": "banner_aux",
             "showNavigationArrows": "never",
             "showPaginationDots": "always"
@@ -421,6 +433,7 @@
                 "tablet": 2,
                 "phone": 1.5
             },
+            "usePagination": false,
             "blockClass": "banner_aux",
             "showNavigationArrows": "never",
             "showPaginationDots": "always"

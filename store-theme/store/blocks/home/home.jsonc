@@ -29,7 +29,60 @@
   "responsive-layout.mobile#home": {
     "title": "Mobile",
     "children": [
-      "toggle-layout#tabs"
+      "toggle-layout#bannershelf_mobile",
+      "toggle-layout#slider_aux_1",
+      "toggle-layout#categories",
+      "toggle-layout#bannershelf_mobile_2",
+      "toggle-layout#tabs",
+      //slider
+      "toggle-layout#shelf_countdown",
+      "toggle-layout#bannershelf_mobile_3",
+      "toggle-layout#slider_aux_2",
+      "toggle-layout#bannershelf",
+      "toggle-layout#bannershelf_mobile_4",
+      "toggle-layout#slider_aux_3"
+    ]
+  },
+  "toggle-layout#bannershelf_mobile": {
+    "title": "Banner 1 M/O",
+    "children": [
+      "image#banner_shelf-home_mobile"
+    ]
+  },
+  "toggle-layout#bannershelf_mobile_2": {
+    "title": "Banner 2 M/O",
+    "children": [
+      "image#banner_shelf-home_mobile"
+    ]
+  },
+  "toggle-layout#bannershelf_mobile_3": {
+    "title": "Banner 3 M/O",
+    "children": [
+      "image#banner_shelf-home_mobile"
+    ]
+  },
+  "toggle-layout#bannershelf_mobile_4": {
+    "title": "Banner 4 M/O",
+    "children": [
+      "image#banner_shelf-home_mobile"
+    ]
+  },
+  "image#banner_shelf-home_mobile": {
+    "title": "Banner",
+    "props": {
+      "blockClass": "banner-shelf-home-mobile",
+      "src": "/assets/vtex.file-manager-graphql/images/375ed0fb-d9ae-455a-8319-3a478b1e30f4___be74371ad771f249bb892dccdb43d5f9.png",
+      "link": {
+        "url": "#"
+      }
+    }
+  },
+  "toggle-layout#bannershelf": {
+    "title": "Marca Mercacentro M/O",
+    "children": [
+      "rich-text#title-shelfs",
+      //banner
+      "list-context.product-list#collection"
     ]
   },
   "toggle-layout#shelf_countdown": {
@@ -50,13 +103,19 @@
     "children": [
       "rich-text#title-countddown",
       "countdown",
-      "rich-text#title-countdown-all"
+      "responsive-layout.desktop#see-all"
     ],
     "props": {
       "blockClass": "countdown-container",
       "fullWidth": true,
       "colSizing": "auto"
     }
+  },
+  "responsive-layout.desktop#see-all": {
+    "title": "Ver todo Desktop",
+    "children": [
+      "rich-text#title-countdown-all"
+    ]
   },
   "flex-layout.row#banner-shelf": {
     "title": "Contenido",

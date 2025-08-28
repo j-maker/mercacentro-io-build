@@ -190,4 +190,26 @@
         width: calc(100% - 30px);
     }
     
+    .sliderLayoutContainer--tabs {
+        padding: 0 5px;
+        margin-bottom: 25px;
+    }
+
+    .imageElementLink--banner_aux {
+        display: flex;
+        width: 100%;
+    }
+
+    .imageElement--banner_aux {
+        border-radius: 10px;
+    }
+
+    .slideChildrenContainer--banner_aux {
+        padding: 10px;
+    }
+
+    .sliderLayoutContainer--banner_aux {
+        padding-left: 5px;
+        margin-bottom: 40px;
+    }
 }
