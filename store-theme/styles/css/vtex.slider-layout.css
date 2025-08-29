@@ -188,6 +188,7 @@
 
     .sliderLayoutContainer--categoris{
         width: calc(100% - 30px);
+        margin: 30px auto;
     }
     
     .sliderLayoutContainer--tabs {

@@ -553,6 +553,11 @@
     .container--seo-app-link-categories {
         width: 100%;
     }
+
+    :global(.vtex-minicart-2-x-minicartCheckoutButton--botton__close__buy) :global(.vtex-button__label) {
+        font-family: 'Montserrat-Bold';
+        font-size: 12px;
+    }
 }
 
 @media screen and (max-width: 1025px) {

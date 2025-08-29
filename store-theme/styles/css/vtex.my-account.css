@@ -453,7 +453,6 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    flex-wrap: wrap;
   }
 
   :global(.vtex-flex-layout-0-x-flexRowContent--countdown-container)> :global(.vtex-flex-layout-0-x-stretchChildrenWidth):nth-child(1),
@@ -464,6 +463,20 @@
   :global(.vtex-shelf-1-x-slide--view-related):nth-child(1),
   :global(.vtex-shelf-1-x-slide--view-related):nth-child(2) {
     display: initial !important;
+  }
+  /* :global(.render-route-store-product) :global(.flex.flex-grow-1.w-100.flex-column) {
+    overflow: auto;
+    height: 450px;
+  }
+
+  :global(.render-route-store-product) :global(.vtex-render__container-id-main) {
+    position: sticky;
+    top: 20px;
+  } */
+
+  :global(.vtex-flex-layout-0-x-flexRowContent--main-desktop) > :global(.vtex-flex-layout-0-x-stretchChildrenWidth):nth-child(2) :global(.vtex-flex-layout-0-x-flexCol--main-desktop-image) > :global(.vtex-flex-layout-0-x-flexColChild--main-desktop-image):last-child {
+    max-height: 400px;
+    overflow: auto;
   }
 }
 

@@ -1,0 +1,17 @@
+{
+    "store.custom#store-location": {
+        "children": [
+            "iframe#store-location"
+        ]
+    },
+    "iframe#store-location": {
+        "title": "Store Location",
+        "props": {
+            "height": "600px",
+            "width": "100%",
+            "src": "https://supermercadosmercacentro.com/nuestras-tiendas/",
+            "blockClass": "store-location",
+            "className": "store-location-iframe"
+        }
+    }
+}

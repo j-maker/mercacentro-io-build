@@ -1,0 +1,57 @@
+/* Store Location Layout - Dos columnas */
+.store-location {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Columna del mapa (lado izquierdo) */
+.store-location-iframe {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Columna del listado de tiendas (lado derecho) */
+.store-location::after {
+  content: '';
+  flex: 1;
+  min-width: 300px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+  .store-location {
+    flex-direction: column;
+    padding: 15px;
+  }
+  
+  .store-location-iframe {
+    order: 1;
+  }
+  
+  .store-location::after {
+    order: 2;
+    min-width: auto;
+    margin-top: 20px;
+  }
+}
+
+/* Estilos adicionales para mejorar la apariencia */
+.store-location-iframe {
+  background: #fff;
+}
+
+.store-location::after {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-left: 4px solid #007bff;
+}

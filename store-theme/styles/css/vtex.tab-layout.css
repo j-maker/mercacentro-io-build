@@ -51,7 +51,7 @@
 }
 
 .contentItem--product {
-    max-height: 300px;
+    max-height: 50vh;
 }
 @media screen and (min-width: 1026px) {
     .listContainer {

@@ -35,6 +35,8 @@
     font-family: icon;
 }
 
+:global(.vtex-store-components-3-x-shareSocialButton--pinterest),
+:global(.vtex-store-components-3-x-shareSocialButton--twitter),
 :global(.vtex-shelf-1-x-shelfContentContainer--sumary-related) :global(.vtex-stack-layout-0-x-stackItem--wishlist),
 :global(.vtex-shelf-1-x-shelfContentContainer--sumary-related) :global(.vtex-stack-layout-0-x-stackItem--quick-view),
 :global(.vtex-slider-layout-0-x-container--categoris),
@@ -178,6 +180,7 @@
     content: "\e905";
     font-weight: bold;
     margin-left: 5px;
+    font-size: 16px;
 }
 
 :global(.vtex-product-list-0-x-removeButton)::before {
@@ -357,6 +360,71 @@
 }
 
 @media screen and (min-width: 1026px) {
+    
+    :global(.vtex-store-footer-2-x-socialNetworkLink),
+    :global(.vtex-store-footer-2-x-socialNetworkLink)::after,
+    :global(.vtex-menu-2-x-styledLinkContent--menu-footer-desktop),
+    :global(.vtex-search-result-3-x-filter),
+    :global(.vtex-rich-text-0-x-paragraph--countdown-all),
+    :global(.vtex-rich-text-0-x-link--continue),
+    :global(.vtex-product-list-0-x-quantitySelectorButton),
+    :global(.vtex-flex-layout-0-x-flexRowContent--minicart) :global(.vtex-button),
+    :global(.vtex-flex-layout-0-x-flexRowContent--minicart) :global(.vtex-button) :global(.vtex-button__label)::before,
+    :global(.vtex-tab-layout-0-x-listItem--home) :global(.vtex-button__label),
+    :global(.vtex-slider-layout-0-x-slideChildrenContainer--categoris),
+    :global(.vtex-store-drawer-0-x-openIconContainer--menu-desktop),
+    :global(.vtex-minicart-2-x-openIconContainer) :global(.vtex-button),
+    :global(.vtex-login-2-x-container) :global(.vtex-button),
+    :global(.vtex-store-components-3-x-imageElementLink)
+    :global(.vtex-button) :global(.vtex-add-to-cart-button-0-x-buttonText--shelf),
+    :global(.vtex-rich-text-0-x-link--subcategories),
+    :global(.vtex-rich-text-0-x-link--department-tt),
+    :global(.vtex-product-list-0-x-removeButton),
+    :global(.vtex-store-components-3-x-imageElementLink) {
+        transition: all .3s;
+    }
+
+    :global(.vtex-search-result-3-x-filter):hover,
+    :global(.vtex-rich-text-0-x-paragraph--countdown-all):hover,
+    :global(.vtex-product-list-0-x-quantitySelectorButton):hover,
+    :global(.vtex-product-list-0-x-removeButton):hover,
+    :global(.vtex-rich-text-0-x-link--department-tt):hover,
+    :global(.vtex-slider-layout-0-x-slideChildrenContainer--categoris):hover,
+    :global(.vtex-store-drawer-0-x-openIconContainer--menu-desktop):hover,
+    :global(.vtex-minicart-2-x-openIconContainer) :global(.vtex-button):hover,
+    :global(.vtex-login-2-x-container) :global(.vtex-button):hover,
+    :global(.vtex-store-components-3-x-imageElementLink):hover {
+        opacity: 0.7;
+    }
+
+
+    :global(.vtex-store-footer-2-x-socialNetworkLink):hover,
+    :global(.vtex-store-footer-2-x-socialNetworkLink):hover::after,
+    :global(.vtex-menu-2-x-styledLinkContent--menu-footer-desktop):hover,
+    :global(.vtex-rich-text-0-x-link--subcategories):hover,
+    :global(.vtex-tab-layout-0-x-listItem--home):hover :global(.vtex-button__label) {
+        color: #90B51B;
+    }
+
+    :global(.vtex-button):hover :global(.vtex-add-to-cart-button-0-x-buttonText--add-pdp),
+    :global(.vtex-button):hover :global(.vtex-add-to-cart-button-0-x-buttonText--shelf) {
+        font-size: 0;
+    }
+
+    :global(.vtex-rich-text-0-x-link--continue):hover,
+    :global(.vtex-flex-layout-0-x-flexRowContent--minicart) :global(.vtex-button):hover {
+        background-color: #E30613;
+    }
+
+    :global(.vtex-rich-text-0-x-link--continue):hover,
+    :global(.vtex-flex-layout-0-x-flexRowContent--minicart) :global(.vtex-button):hover :global(.vtex-button__label)::before {
+        color: #fff;
+    }
+
+    :global(.vtex-flex-layout-0-x-flexRow--shipping-info) {
+        margin-top: 10px;
+    }
+
     :global(.vtex-store-components-3-x-imageElementLink--wishlist)::after {
         color: #90B51B;
         font-size: 24px;

@@ -27,12 +27,24 @@
     },
     "flex-layout.col#main-desktop-image": {
         "children": [
-            "stack-layout#image"
+            "stack-layout#image",
+            "flex-layout.row#shipping-info"
         ],
         "props": {
             "width": "37%",
             "blockClass": "main-desktop-image"
         }
+    },
+    "flex-layout.row#shipping-info": {
+      "children": [
+        "custom-tiempo-envio",
+        "custom-domicilio"
+      ],
+      "props": {
+        "colSizing": "auto",
+        "colJustify": "between",
+        "blockClass": "shipping-info"
+      }
     },
     "stack-layout#image": {
         "children": [
@@ -126,18 +138,24 @@
         "children": [
             "vtex.store-components:product-name",
             "flex-layout.row#sku-ean",
-            "product-seller-name#pdp",
-            "product-rating-summary",
-            "rich-text#methods-pdp",
-            "image#methods",
-            "tab-layout#product"
-            
+            "flex-layout.col#main-sticky"
         ],
         "props": {
             "preventVerticalStretch": true,
             "width": "40%",
             "blockClass": "main-desktop-image"
         }
+    },
+    "flex-layout.col#main-sticky": {
+        "children": [
+            "product-seller-name#pdp",
+            "product-rating-summary",
+            "custom-descripcion",
+            "rich-text#methods-pdp",
+            "image#methods",
+            "tab-layout#product"
+        ],
+        "props": {}
     },
     "rich-text#methods-pdp": {
         "title": "Métodos de pago",
@@ -196,6 +214,15 @@
         "props": {
             "width": "23%",
             "preventVerticalStretch": true
+        }
+    },
+    "share": {
+        "title": "Share",
+        "props": {
+            "socialNetworks": [
+                "facebook",
+                "whatsapp"
+            ]
         }
     },
     "flex-layout.row#pdp-wish-quantity": {
@@ -342,21 +369,6 @@
             "currency": "COP"
         }
     },
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     "tab-layout#product": {
         "children": [
             "tab-list#product",
@@ -373,12 +385,18 @@
             "tab-list.item#product2"
         ],
         "props": {
-            "blockClass": ["product","home"]
+            "blockClass": [
+                "product",
+                "home"
+            ]
         }
     },
     "tab-list.item#product1": {
         "props": {
-            "blockClass": ["product", "home"],
+            "blockClass": [
+                "product",
+                "home"
+            ],
             "tabId": "product1",
             "label": "Descripción",
             "defaultActiveTab": true
@@ -386,12 +404,14 @@
     },
     "tab-list.item#product2": {
         "props": {
-            "blockClass": ["product", "home"],
+            "blockClass": [
+                "product",
+                "home"
+            ],
             "tabId": "product2",
             "label": "Especificaciones"
         }
     },
-    
     "tab-content#product": {
         "children": [
             "tab-content.item#product1",
@@ -400,7 +420,7 @@
     },
     "tab-content.item#product1": {
         "children": [
-          "custom-flixmedia"  
+            "custom-flixmedia"
         ],
         "props": {
             "blockClass": "product",

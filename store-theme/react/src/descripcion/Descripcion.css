@@ -1,0 +1,28 @@
+.descripcionContainer {
+  margin: 10px 0;
+}
+
+.descripcionInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: left;
+}
+
+.descripcionText {
+  font-size: 14px;
+  line-height: 20px;
+  color: #333;
+  font-weight: 400;
+}
+
+@media (max-width: 768px) {
+  .descripcionContainer {
+    margin: 8px 0;
+  }
+
+  .descripcionText {
+    font-size: 13px;
+    line-height: 18px;
+  }
+}

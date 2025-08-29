@@ -7,5 +7,14 @@
   },
   "custom-flixmedia": {
     "component": "flixmedia"
+  },
+  "custom-descripcion": {
+    "component": "descripcion"
+  },
+  "custom-tiempo-envio": {
+    "component": "tiempo-envio"
+  },
+  "custom-domicilio": {
+    "component": "domicilio"
   }
 }

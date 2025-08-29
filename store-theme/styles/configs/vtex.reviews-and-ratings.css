@@ -112,7 +112,7 @@
 }
 
 :global(.vtex-reviews-and-ratings-3-x-reviewsPaging) {
-    display: flex;
+    display: none;
     justify-content: center;
     font: normal normal normal 12px/14px Montserrat-Regular;
     letter-spacing: 0.6px;
@@ -338,6 +338,21 @@
 :global(.vtex-flex-layout-0-x-flexColChild--info-shelf) :global(.vtex-reviews-and-ratings-3-x-stars),
 :global(.vtex-flex-layout-0-x-flexColChild--info-shelf) :global(.vtex-reviews-and-ratings-3-x-summaryButtonContainer) {
     display: none !important;
+}
+
+:global(.vtex-reviews-and-ratings-3-x-summaryButtonContainer) :global(.vtex-button)  {
+    background: none;
+    border: none;
+    min-height: unset;
+    margin-left: 5px;
+}
+
+:global(.vtex-reviews-and-ratings-3-x-summaryButtonContainer) :global(.vtex-button__label) {
+    font-size: 12px;   
+    line-height: 14px; 
+    padding: 0;
+    color: #90B51B;
+    text-decoration: underline;
 }
 
 @media screen and (min-width: 1025px) {

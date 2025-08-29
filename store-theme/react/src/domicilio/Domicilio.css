@@ -1,0 +1,27 @@
+.domicilioContainer {
+  margin: 10px 0;
+}
+
+.domicilioInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: left;
+}
+
+.domicilioText {
+  font-size: 14px;
+  line-height: 17px;
+  color: #666;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .domicilioContainer {
+    margin: 8px 0;
+  }
+
+  .domicilioText {
+    font-size: 13px;
+  }
+}

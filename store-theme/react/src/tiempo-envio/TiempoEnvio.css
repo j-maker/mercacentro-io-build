@@ -1,0 +1,27 @@
+.tiempoEnvioContainer {
+  margin: 10px 0;
+}
+
+.tiempoEnvioInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: left;
+}
+
+.tiempoEnvioText {
+  font-size: 14px;
+  line-height: 17px;
+  color: #666;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .tiempoEnvioContainer {
+    margin: 8px 0;
+  }
+
+  .tiempoEnvioText {
+    font-size: 13px;
+  }
+}
