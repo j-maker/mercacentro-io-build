@@ -7,7 +7,7 @@
     ]
   },
   "responsive-layout.desktop#home": {
-    "title": "Desktop",
+    "title": "Home Desktop",
     "children": [
       "toggle-layout#slider_banner",
       "toggle-layout#bannerx3",
@@ -27,14 +27,14 @@
     ]
   },
   "responsive-layout.mobile#home": {
-    "title": "Mobile",
+    "title": "Home Mobile",
     "children": [
       "toggle-layout#bannershelf_mobile",
       "toggle-layout#slider_aux_1",
       "toggle-layout#categories",
       "toggle-layout#bannershelf_mobile_2",
       "toggle-layout#tabs",
-      //slider
+      "toggle-layout#banner_slider_mobile",
       "toggle-layout#shelf_countdown",
       "toggle-layout#bannershelf_mobile_3",
       "toggle-layout#slider_aux_2",
@@ -46,7 +46,7 @@
   "toggle-layout#bannershelf_mobile": {
     "title": "Banner 1 M/O",
     "children": [
-      "image#banner_shelf-home_mobile"
+      "list-context.image-list#slider_principal"
     ]
   },
   "toggle-layout#bannershelf_mobile_2": {

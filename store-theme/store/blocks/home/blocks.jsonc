@@ -439,6 +439,34 @@
             "showPaginationDots": "always"
         }
     },
+    "list-context.image-list#slider_mobile": {
+        "title": "Contenido",
+        "children": [
+            "slider-layout#slider_sa_mobile"
+        ],
+        "props": {
+            "width": "100%",
+            "height": "auto",
+            "preload": true,
+            "images": [
+                {}
+            ]
+        }
+    },
+    "slider-layout#slider_sa_mobile": {
+        "title": "Slide",
+        "props": {
+            "itemsPerPage": {
+                "desktop": 1,
+                "tablet": 1,
+                "phone": 1.1
+            },
+            "blockClass": ["banner_slider", "banner_slider_mobile"],
+            "showNavigationArrows": "never",
+            "showPaginationDots": "never",
+            "usePagination": false
+        }
+    },
     "list-context.image-list#slider_principal": {
         "title": "Contenido",
         "children": [
@@ -453,6 +481,13 @@
                 {}
             ]
         }
+    },
+    
+    "toggle-layout#banner_slider_mobile": {
+        "title": "Banner Slide M/O",
+        "children": [
+            "list-context.image-list#slider_mobile"
+        ]
     },
     "toggle-layout#slider_ca": {
         "title": "Slider CA M/O",

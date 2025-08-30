@@ -373,7 +373,14 @@
     margin: 0;
 }
 
-.paragraph--header-interest,
+.strong--header-interest {
+    display: flex;
+    align-items: center;
+}
+.paragraph--header-interest {
+    display: flex;
+    margin: 0;
+}
 .paragraph--header-top-text-desktop {
     margin: 0;
 }
@@ -383,6 +390,8 @@
     color: #fff;
     margin-left: 30px;
     letter-spacing: .5px;
+    display: flex;
+    align-items: center;
 }
 
 .link--header-top-text-desktop {

@@ -1,3 +1,4 @@
+:global(.vtex-rich-text-0-x-paragraph--header-interest) :global(.vtex-rich-text-0-x-link--header-interest)::before,
 :global(.vtex-menu-2-x-styledLinkContent--menu-department)::after,
 :global(.vtex-add-to-cart-button-0-x-buttonText--add-pdp)::after,
 :global(.vtex-flex-layout-0-x-flexRow--pdp-buttons) :global(.vtex-add-to-cart-button-0-x-buttonText--add-pdp)::after,
@@ -35,6 +36,7 @@
     font-family: icon;
 }
 
+:global(.vtex-store-components-3-x-searchBarIcon--header_search_bar_desktop--clear),
 :global(.vtex-store-components-3-x-shareSocialButton--pinterest),
 :global(.vtex-store-components-3-x-shareSocialButton--twitter),
 :global(.vtex-shelf-1-x-shelfContentContainer--sumary-related) :global(.vtex-stack-layout-0-x-stackItem--wishlist),
@@ -112,6 +114,7 @@
     margin-bottom: -3px;
 }
 
+:global(.vtex-rich-text-0-x-paragraph--header-interest) :global(.vtex-rich-text-0-x-link--header-interest)::before,
 :global(.vtex-wish-list-1-x-outline)::before,
 :global(.vtex-wish-list-1-x-fill)::before,
 :global(.vtex-rich-text-0-x-wrapper--quick-view)::before,

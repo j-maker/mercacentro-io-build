@@ -425,6 +425,7 @@
             "search-bar"
         ],
         "props": {
+            "blockClass": "header-top-search",
             "preserveLayoutOnMobile": true,
             "fullWidth": true,
             "colSizing": "auto"
