@@ -1,0 +1,1441 @@
+/*!**************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/styles.scss ***!
+  \**************************************************************************************************************************************/
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap);
+/*!******************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/styles.scss (1) ***!
+  \******************************************************************************************************************************************/
+@charset "UTF-8";
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  src: url("https://fonts.gstatic.com/s/montserrat/v26/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCs16Hw5aXpsog.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Montserrat-Medium";
+  font-style: normal;
+  font-weight: 600;
+  src: url("https://fonts.gstatic.com/s/montserrat/v26/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCs16Hw5aXpsog.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Montserrat-Bold";
+  font-style: normal;
+  font-weight: 700;
+  src: url("https://fonts.gstatic.com/s/montserrat/v26/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCs16Hw5aXpsog.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Montserrat-ExtraBold";
+  font-style: normal;
+  font-weight: 800;
+  src: url("https://fonts.gstatic.com/s/montserrat/v26/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCs16Hw5aXpsog.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Montserrat-Black";
+  font-style: normal;
+  font-weight: 900;
+  src: url("https://fonts.gstatic.com/s/montserrat/v26/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCs16Hw5aXpsog.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Mazda-icons";
+  font-style: normal;
+  font-weight: normal;
+  src: url("/_v/public/vtex.styles-graphql/v1/font/2385fd63dcbc0c4a0cae050c8d818224.otf") format("opentype");
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  padding-bottom: 0 !important;
+}
+
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+.test-montserrat {
+  font-family: "Montserrat", sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 16px !important;
+}
+
+* {
+  font-family: "Montserrat", sans-serif !important;
+}
+
+.font-weight-400 {
+  font-weight: 400;
+}
+
+.font-weight-500 {
+  font-weight: 500;
+}
+
+.font-weight-600 {
+  font-weight: 600;
+}
+
+.font-weight-700 {
+  font-weight: 700;
+}
+
+.font-weight-800 {
+  font-weight: 800;
+}
+
+.font-weight-900 {
+  font-weight: 900;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.font-extrabold {
+  font-weight: 800;
+}
+
+.font-black {
+  font-weight: 900;
+}
+
+.custom-main-header {
+  height: 60px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+  background: #90B51B;
+}
+.custom-main-header a {
+  width: fit-content;
+  margin: 0 auto;
+  outline: none;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.custom-main-header a .main-logo {
+  width: 220px;
+  height: auto;
+  object-fit: contain;
+}
+@media (max-width: 768px) {
+  .custom-main-header a .main-logo {
+    width: 140px;
+  }
+}
+.custom-main-header a .main-logo-desktop {
+  display: block;
+}
+@media (max-width: 768px) {
+  .custom-main-header a .main-logo-desktop {
+    display: none;
+  }
+}
+.custom-main-header a .main-logo-mobile {
+  display: none;
+}
+@media (max-width: 768px) {
+  .custom-main-header a .main-logo-mobile {
+    display: block;
+  }
+}
+
+.checkout-steps-custom {
+  margin-top: 23px;
+}
+.checkout-steps-custom .checkout-steps-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.checkout-steps-custom .checkout-steps-container .checkout-step a {
+  font-size: 1rem;
+  color: #000000;
+  text-decoration: unset;
+}
+.checkout-steps-custom .checkout-steps-container .checkout-step.active a {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  text-decoration: underline;
+}
+
+.custom-main-footer {
+  background-color: #FFFFFF;
+  padding: 40px 20px;
+  margin-top: 40px;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+.custom-main-footer .footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+@media (max-width: 768px) {
+  .custom-main-footer .footer-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+.custom-main-footer .contact-info h3 {
+  color: #000000;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 1.125rem;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.custom-main-footer .contact-info .contact-details .contact-item {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+@media (min-width: 769px) {
+  .custom-main-footer .contact-info .contact-details .contact-item {
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+  }
+}
+.custom-main-footer .contact-info .contact-details .contact-item .contact-label {
+  color: #000000;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 0.875rem;
+  min-width: 120px;
+}
+@media (max-width: 768px) {
+  .custom-main-footer .contact-info .contact-details .contact-item .contact-label {
+    min-width: auto;
+    font-weight: 600;
+  }
+}
+.custom-main-footer .contact-info .contact-details .contact-item .contact-text {
+  color: #000000;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.4;
+}
+.custom-main-footer .contact-info .contact-details .contact-item .contact-link {
+  color: #000000;
+  font-weight: 800;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.875rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.custom-main-footer .contact-info .contact-details .contact-item .contact-link:hover {
+  color: #666666;
+  text-decoration: underline;
+}
+@media screen and (max-width: 768px) {
+  .custom-main-footer .contact-info {
+    text-align: center;
+  }
+}
+.custom-main-footer .payment-methods h3 {
+  color: #000000;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  font-size: 1.125rem;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+}
+.custom-main-footer .payment-methods .payment-image-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.custom-main-footer .payment-methods .payment-image-container .payment-image {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+.custom-main-footer .payment-methods .payment-image-container .payment-image-desktop {
+  display: block;
+  max-width: 400px;
+}
+@media (max-width: 768px) {
+  .custom-main-footer .payment-methods .payment-image-container .payment-image-desktop {
+    display: none;
+  }
+}
+.custom-main-footer .payment-methods .payment-image-container .payment-image-mobile {
+  display: none;
+  max-width: 300px;
+}
+@media (max-width: 768px) {
+  .custom-main-footer .payment-methods .payment-image-container .payment-image-mobile {
+    display: block;
+  }
+}
+
+.container-main {
+  min-height: calc(100dvh - 94px);
+  max-width: unset;
+}
+
+.table.cart-items td.product-image img {
+  width: 80px !important;
+  height: 86px !important;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  .container.container-main.container-order-form {
+    width: calc(100% - 40px);
+  }
+}
+.checkout-container .cart-template .empty-cart-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.checkout-container .cart-template .empty-cart-content p {
+  text-align: center;
+}
+.checkout-container .cart-template .empty-cart-content #cart-choose-products {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 10px 15px;
+  font-family: "Montserrat", sans-serif;
+}
+.checkout-container .cart-template .empty-cart-content .empty-cart-title {
+  font-size: 0;
+}
+.checkout-container .cart-template .empty-cart-content .empty-cart-title::before {
+  content: "Tu carrito está vacío";
+  font-size: 1.425rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+.checkout-container .cart-template .empty-cart-content .empty-cart-message {
+  font-size: 0;
+}
+.checkout-container .cart-template .empty-cart-content .empty-cart-message::before {
+  content: "Para continuar comprando, navega por las distintas categorías que tenemos para ti.";
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  display: flex;
+}
+.checkout-container .cart-template .cart .cart-items::before {
+  content: "Resumen de compra";
+  color: #000000;
+  font-size: 26px;
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: 70px;
+}
+@media screen and (max-width: 768px) {
+  .checkout-container .cart-template .cart .cart-items::before {
+    margin-bottom: 25px;
+    font-size: 24px;
+  }
+}
+.checkout-container .cart-template .cart .cart-items thead {
+  display: none;
+}
+@media (min-width: 769px) {
+  .checkout-container .cart-template .cart .cart-items thead tr {
+    justify-content: space-between;
+  }
+  .checkout-container .cart-template .cart .cart-items thead th.product {
+    width: 60% !important;
+  }
+  .checkout-container .cart-template .cart .cart-items thead th.quantity {
+    min-width: 80px;
+    margin-left: 10px;
+  }
+  .checkout-container .cart-template .cart .cart-items thead th.item-remove {
+    display: block;
+    order: 6;
+  }
+}
+.checkout-container .cart-template .cart .cart-items tbody {
+  display: flex;
+  gap: 24px;
+  flex-direction: column;
+}
+.checkout-container .cart-template .cart .cart-items tbody .product-item {
+  border: none;
+}
+.checkout-container .cart-template .cart .cart-items tbody .product-item .v-custom-product-item-wrap {
+  padding: 0;
+}
+.checkout-container .cart-template .cart .cart-items tbody .product-item .v-custom-product-item-wrap .product-name a {
+  font-size: 1rem;
+  max-width: 150px;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  color: #000000;
+  text-transform: capitalize;
+}
+@media screen and (max-width: 768px) {
+  .checkout-container .cart-template .cart .cart-items tbody .product-item .v-custom-product-item-wrap .product-name a {
+    font-size: 0.813rem;
+  }
+}
+.checkout-container .cart-template .cart .cart-items tbody .product-item .v-custom-product-item-wrap .product-name .seller {
+  display: none;
+}
+.checkout-container .cart-template .cart .cart-items tbody .product-item .v-custom-product-item-wrap .item-remove {
+  width: fit-content !important;
+  top: -15px !important;
+}
+.checkout-container .cart-template .cart .cart-items tbody .product-item .v-custom-product-item-wrap .item-remove .item-link-remove .item-remove-ico {
+  display: none;
+}
+.checkout-container .cart-template .cart .cart-items tbody .product-item .v-custom-product-item-wrap .item-remove .item-link-remove .item-remove-text {
+  display: block;
+  color: #000000;
+  font-size: 0.875rem;
+  text-decoration: underline;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+}
+.checkout-container .cart-template .cart .cart-items tbody .product-item .v-custom-product-item-wrap .product-price {
+  font-size: 1rem;
+  display: flex !important;
+  flex-direction: column-reverse;
+}
+.checkout-container .cart-template .cart .cart-items tbody .product-item .v-custom-product-item-wrap .product-price .best-price {
+  margin: 0;
+  color: #000000;
+  display: flex;
+  justify-content: center;
+}
+.checkout-container .cart-template .cart .cart-items tbody .product-item .v-custom-product-item-wrap .product-price .list-price {
+  font-size: 0.813rem;
+  color: #999999;
+  display: flex;
+  justify-content: flex-end;
+}
+.checkout-container .cart-template .cart .cart-items tbody .product-item .v-custom-product-item-wrap .product-price .price-details {
+  display: none;
+}
+@media (max-width: 769px) {
+  .checkout-container .cart-template .cart .cart-items tbody .product-item .v-custom-product-item-wrap .product-price {
+    font-size: 0.813rem;
+  }
+}
+.checkout-container .cart-template .cart .cart-items tbody .product-item .v-custom-product-item-wrap .quantity {
+  border-color: #000000;
+}
+.checkout-container .cart-template .cart .cart-items tbody .product-item .v-custom-product-item-wrap .quantity .item-quantity-change {
+  height: 23px;
+}
+.checkout-container .cart-template .cart .cart-items tbody .product-item .v-custom-product-item-wrap .quantity input {
+  width: 100% !important;
+  max-width: unset;
+  display: flex;
+  font-family: "Montserrat", sans-serif;
+}
+.checkout-container .cart-template .cart .cart-items tbody .product-item .v-custom-product-item-wrap .quantity .item-quantity-change .icon::before {
+  font-family: "Mazda-icons";
+  font-size: 11px;
+  color: #000000;
+  height: 23px;
+  width: auto;
+  display: flex;
+  align-items: center;
+  font-weight: normal;
+}
+.checkout-container .cart-template .cart .cart-items tbody .product-item .v-custom-product-item-wrap .quantity .item-quantity-change .icon-plus-sign::before {
+  content: "\e90b";
+}
+.checkout-container .cart-template .cart .cart-items tbody .product-item .v-custom-product-item-wrap .quantity .item-quantity-change .icon-minus-sign::before {
+  content: "\e911";
+}
+@media (min-width: 769px) {
+  .checkout-container .cart-template .cart .cart-items tbody .product-item .v-custom-product-item-wrap {
+    justify-content: space-between;
+  }
+  .checkout-container .cart-template .cart .cart-items tbody .product-item .v-custom-product-item-wrap .product-name {
+    width: 50% !important;
+    transform: translateX(-20px);
+  }
+  .checkout-container .cart-template .cart .cart-items tbody .product-item .v-custom-product-item-wrap .item-remove {
+    margin: 0;
+  }
+  .checkout-container .cart-template .cart .cart-items tbody .product-item .v-custom-product-item-wrap .quantity {
+    margin: 0;
+    width: 130px;
+    justify-content: space-between;
+    padding: 0px 3px;
+    height: 40px;
+    border-radius: 5px;
+    border-color: rgba(0, 0, 0, 0.1254901961);
+  }
+}
+.checkout-container .cart-template .summary-template-holder {
+  margin-top: 0;
+  border: 1px solid rgba(0, 0, 0, 0.0823529412);
+  border-radius: 10px;
+  padding: 20px;
+}
+.checkout-container .cart-template .summary-template-holder .row-fluid.summary .totalizers.summary-totalizers.cart-totalizers .coupon-column.summary-coupon-wrap::before {
+  content: "¿Tienes un cupón de descuento?";
+  text-align: center;
+  font-size: 1rem;
+  display: block;
+  margin-bottom: 10px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  color: #000000;
+}
+.checkout-container .cart-template .summary-template-holder .row-fluid.summary .totalizers.summary-totalizers.cart-totalizers .coupon-column.summary-coupon-wrap input#cart-coupon {
+  border: 1px solid #f3f3f3;
+  background: #f3f3f3;
+  color: #8c8c8c;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  height: 35px;
+}
+.checkout-container .cart-template .summary-template-holder .row-fluid.summary .totalizers.summary-totalizers.cart-totalizers .coupon-column.summary-coupon-wrap button#cart-coupon-add {
+  box-shadow: rgba(0, 0, 0, 0.075) 0px 1px 1px 0px inset, rgba(0, 0, 0, 0) 0px 0px 0.012px 0px;
+  background: #f3f3f3;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-color: #f3f3f3;
+  font-size: 16px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  font-size: 0;
+}
+.checkout-container .cart-template .summary-template-holder .row-fluid.summary .totalizers.summary-totalizers.cart-totalizers .coupon-column.summary-coupon-wrap button#cart-coupon-add::before {
+  content: "Agregar";
+  font-size: 14px;
+  color: #000000;
+}
+.checkout-container .cart-template .summary-template-holder .row-fluid.summary .totalizers.summary-totalizers.cart-totalizers .accordion-group .accordion-body .accordion-inner {
+  margin-top: 35px;
+}
+.checkout-container .cart-template .summary-template-holder .row-fluid.summary .totalizers.summary-totalizers.cart-totalizers .accordion-group .accordion-body .accordion-inner tbody {
+  padding: 6px 0 0;
+  border: none;
+}
+.checkout-container .cart-template .summary-template-holder .row-fluid.summary .totalizers.summary-totalizers.cart-totalizers .accordion-group .accordion-body .accordion-inner .totalizers-list td {
+  color: #000000;
+  font-size: 0.875rem;
+  margin-bottom: 10px;
+}
+.checkout-container .cart-template .summary-template-holder .row-fluid.summary .totalizers.summary-totalizers.cart-totalizers .accordion-group .accordion-body .accordion-inner .totalizers-list .info::after {
+  content: ":";
+}
+.checkout-container .cart-template .summary-template-holder .row-fluid.summary .totalizers.summary-totalizers.cart-totalizers .accordion-group .accordion-body .accordion-inner tfoot td {
+  color: #000000;
+  font-size: 1.125rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+}
+.checkout-container .cart-template .summary-template-holder .row-fluid.summary .totalizers.summary-totalizers.cart-totalizers .accordion-group .accordion-body .accordion-inner tfoot .info::after {
+  content: ":";
+}
+.checkout-container .cart-template .summary-template-holder .cart-links.cart-links-bottom {
+  position: initial;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 24px;
+}
+.checkout-container .cart-template .summary-template-holder .cart-links.cart-links-bottom .btn-success {
+  border-radius: 20px;
+  font-size: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 7px;
+}
+.checkout-container .cart-template .summary-template-holder .cart-links.cart-links-bottom .btn-success::before {
+  content: "Finalizar compra";
+  font-size: 0.875rem;
+  font-weight: normal;
+  letter-spacing: 1px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+}
+.checkout-container .cart-template .summary-template-holder .cart-links.cart-links-bottom .link-choose-more-products-wrapper {
+  text-align: center;
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+}
+.checkout-container .cart-template .summary-template-holder .cart-links.cart-links-bottom .link-choose-more-products-wrapper a {
+  color: #ED1C24;
+  text-transform: initial;
+  font-size: 0;
+  border: 1px solid #ED1C24;
+  font-weight: 900;
+  text-decoration: none;
+  padding: 7px;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 22px;
+  margin: 0;
+  transition: all 0.3s ease;
+}
+.checkout-container .cart-template .summary-template-holder .cart-links.cart-links-bottom .link-choose-more-products-wrapper a:hover {
+  background: #ED1C24;
+  color: #FFFFFF;
+}
+.checkout-container .cart-template .summary-template-holder .cart-links.cart-links-bottom .link-choose-more-products-wrapper a::before {
+  content: "Seguir comprando";
+  font-size: 0.875rem;
+  margin-left: 20px;
+}
+@media (min-width: 769px) {
+  .checkout-container .cart-template .summary-template-holder {
+    position: initial;
+  }
+}
+.checkout-container .cart-template .cart-more-options #shipping-preview-container {
+  display: none;
+}
+
+@media (min-width: 769px) {
+  .checkout-container .table.cart-items tbody tr td.quantity-price {
+    display: flex !important;
+    order: 3;
+  }
+}
+.table.cart-items tbody tr td.product-price .v-custom-quantity-price__list--selling:after,
+.table.cart-items tbody tr td.product-price .v-custom-quantity-price__list--selling:before {
+  content: " ";
+}
+
+.v-custom-quantity-price__list--selling .vqc-ldelem {
+  display: none;
+}
+
+.table.cart-items tbody tr td.product-price .v-custom-quantity-price__best, .table.cart-items tbody tr td.quantity-price .v-custom-quantity-price__best {
+  color: #000000;
+}
+
+.checkbox-item {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+#terms-checkbox {
+  margin-top: 0;
+}
+
+.cart-checkboxes-container {
+  margin-bottom: 40px;
+}
+
+.checkout-container .orderform-template .orderform-template-holder {
+  /* &::before {
+    content: "FINALIZAR COMPRA";
+    font-size: 1rem;
+    color: $main-gray;
+    display: block;
+    margin-bottom: 16px;
+  } */
+}
+.checkout-container .orderform-template .orderform-template-holder #client-profile-data,
+.checkout-container .orderform-template .orderform-template-holder #shipping-data,
+.checkout-container .orderform-template .orderform-template-holder #payment-data {
+  border: 1px solid #fff;
+  border-radius: 4px;
+  padding: 22px 16px;
+  margin-bottom: 16px;
+}
+.checkout-container .orderform-template .orderform-template-holder #client-profile-data .step .accordion-heading .link-box-edit,
+.checkout-container .orderform-template .orderform-template-holder #shipping-data .step .accordion-heading .link-box-edit,
+.checkout-container .orderform-template .orderform-template-holder #payment-data .step .accordion-heading .link-box-edit {
+  opacity: 1;
+}
+.checkout-container .orderform-template .orderform-template-holder #client-profile-data .step .accordion-heading .link-box-edit .icon-edit,
+.checkout-container .orderform-template .orderform-template-holder #shipping-data .step .accordion-heading .link-box-edit .icon-edit,
+.checkout-container .orderform-template .orderform-template-holder #payment-data .step .accordion-heading .link-box-edit .icon-edit {
+  display: none;
+}
+.checkout-container .orderform-template .orderform-template-holder #client-profile-data .step .accordion-heading .link-box-edit::before,
+.checkout-container .orderform-template .orderform-template-holder #shipping-data .step .accordion-heading .link-box-edit::before,
+.checkout-container .orderform-template .orderform-template-holder #payment-data .step .accordion-heading .link-box-edit::before {
+  content: "Editar";
+  font-size: 0.875rem;
+  text-decoration: underline;
+  color: #000000;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+}
+.checkout-container .orderform-template .orderform-template-holder #client-profile-data .submit.btn-success,
+.checkout-container .orderform-template .orderform-template-holder #shipping-data .submit.btn-success,
+.checkout-container .orderform-template .orderform-template-holder #payment-data .submit.btn-success {
+  text-transform: uppercase;
+  font-weight: bold;
+  min-width: unset;
+  padding: 9px;
+  letter-spacing: 1px;
+  font-family: "Montserrat", sans-serif;
+  text-transform: none;
+}
+@media (min-width: 769px) {
+  .checkout-container .orderform-template .orderform-template-holder #client-profile-data .submit.btn-success,
+  .checkout-container .orderform-template .orderform-template-holder #shipping-data .submit.btn-success,
+  .checkout-container .orderform-template .orderform-template-holder #payment-data .submit.btn-success {
+    margin: 20px 0 0 auto;
+  }
+}
+.checkout-container .orderform-template .orderform-template-holder #client-profile-data .submit.btn-success:disabled,
+.checkout-container .orderform-template .orderform-template-holder #shipping-data .submit.btn-success:disabled,
+.checkout-container .orderform-template .orderform-template-holder #payment-data .submit.btn-success:disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+  background-color: #999999;
+  border-color: #999999;
+}
+.checkout-container .orderform-template .orderform-template-holder #client-profile-data .client-profile-data {
+  margin: 0;
+  padding: 0;
+}
+.checkout-container .orderform-template .orderform-template-holder #client-profile-data .client-profile-data .accordion-heading .accordion-toggle {
+  border-bottom: 1px solid #90B51B;
+  margin-bottom: 15px;
+}
+.checkout-container .orderform-template .orderform-template-holder #client-profile-data .client-profile-data .accordion-heading .accordion-toggle span {
+  display: flex;
+  font-size: 0px;
+  align-items: center;
+  color: #000000;
+  line-height: normal;
+  font-weight: normal;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  gap: 3px;
+}
+.checkout-container .orderform-template .orderform-template-holder #client-profile-data .client-profile-data .accordion-heading .accordion-toggle span::before {
+  font-size: 18px;
+  content: "1. Datos personales";
+  background-color: #FFFFFF;
+  border: unset;
+  color: #000000;
+  margin: 0;
+  width: auto;
+}
+.checkout-container .orderform-template .orderform-template-holder #client-profile-data .client-profile-data .accordion-body .accordion-inner .box-step .form-step {
+  padding-top: 0 !important;
+}
+.checkout-container .orderform-template .orderform-template-holder #client-profile-data .client-profile-data .accordion-body .accordion-inner .box-step .form-step .box-client-info {
+  display: flex;
+  flex-direction: column;
+  /* input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    accent-color: #000000;
+  } */
+}
+.checkout-container .orderform-template .orderform-template-holder #client-profile-data .client-profile-data .accordion-body .accordion-inner .box-step .form-step .box-client-info .row-fluid {
+  order: 1;
+}
+.checkout-container .orderform-template .orderform-template-holder #client-profile-data .client-profile-data .accordion-body .accordion-inner .box-step .form-step .box-client-info .box-client-info-pf {
+  order: 1;
+}
+.checkout-container .orderform-template .orderform-template-holder #client-profile-data .client-profile-data .accordion-body .accordion-inner .box-step .form-step .box-client-info .box-client-info-pf .input label {
+  font-size: 1rem;
+  color: #000000;
+  font-family: "Montserrat", sans-serif;
+}
+.checkout-container .orderform-template .orderform-template-holder #client-profile-data .client-profile-data .accordion-body .accordion-inner .box-step .form-step .box-client-info .box-client-info-pf .input label::after {
+  content: "*";
+}
+.checkout-container .orderform-template .orderform-template-holder #client-profile-data .client-profile-data .accordion-body .accordion-inner .box-step .form-step .box-client-info .box-client-info-pf .input input {
+  border-color: #D5D5D5;
+  border-radius: 25px;
+  font-size: 14px;
+  box-shadow: unset;
+  font-family: "Montserrat", sans-serif;
+}
+.checkout-container .orderform-template .orderform-template-holder #client-profile-data .client-profile-data .accordion-body .accordion-inner .box-step .form-step .box-client-info .box-client-info-pj .corporate-hide-link a {
+  color: #000000;
+  text-decoration: underline;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+}
+.checkout-container .orderform-template .orderform-template-holder #client-profile-data .client-profile-data .accordion-body .accordion-inner .box-step .form-step .box-client-info .box-client-info-pj .input label {
+  font-size: 1rem;
+  color: #000000;
+  font-family: "Montserrat", sans-serif;
+}
+.checkout-container .orderform-template .orderform-template-holder #client-profile-data .client-profile-data .accordion-body .accordion-inner .box-step .form-step .box-client-info .box-client-info-pj .input label::after {
+  content: "*";
+}
+.checkout-container .orderform-template .orderform-template-holder #client-profile-data .client-profile-data .accordion-body .accordion-inner .box-step .form-step .box-client-info .box-client-info-pj .input input {
+  border-color: #D5D5D5;
+  border-radius: 2px;
+  font-size: 1rem;
+  box-shadow: unset;
+  font-family: "Montserrat", sans-serif;
+}
+.checkout-container .orderform-template .orderform-template-holder #client-profile-data .client-profile-data .accordion-body .accordion-inner .box-step .form-step .box-client-info .newsletter {
+  order: 2;
+}
+.checkout-container .orderform-template .orderform-template-holder #client-profile-data .client-profile-data .accordion-body .accordion-inner .box-step .form-step .box-client-info .newsletter span {
+  font-size: 0;
+  color: #000000;
+}
+.checkout-container .orderform-template .orderform-template-holder #client-profile-data .client-profile-data .accordion-body .accordion-inner .box-step .form-step .box-client-info .newsletter span::after {
+  content: "Quiero recibir el boletín informativo con promociones.";
+  font-size: 0.875rem;
+}
+.checkout-container .orderform-template .orderform-template-holder #client-profile-data .client-profile-data .accordion-body .accordion-inner .box-step .form-step .box-client-info .save-data {
+  order: 3;
+  display: none !important;
+}
+.checkout-container .orderform-template .orderform-template-holder #client-profile-data .client-profile-data .accordion-body .accordion-inner .box-step .form-step .box-client-info .save-data .save-data-text {
+  display: none;
+}
+.checkout-container .orderform-template .orderform-template-holder #client-profile-data .client-profile-data .accordion-body .accordion-inner .box-step .form-step .box-client-info .save-data p {
+  font-size: 0.875rem;
+}
+@media (min-width: 1020px) {
+  .checkout-container .orderform-template .orderform-template-holder #client-profile-data .client-profile-data .accordion-body .accordion-inner .box-step .form-step .box-client-info .save-data p {
+    max-width: 30%;
+  }
+}
+.checkout-container .orderform-template .orderform-template-holder #client-profile-data .client-profile-data .accordion-body .accordion-inner .box-step .form-step .box-client-info .save-data p a {
+  color: #000000;
+  font-size: 0.875rem;
+  text-decoration: underline;
+}
+.checkout-container .orderform-template .orderform-template-holder #client-profile-data .client-profile-data .accordion-body .accordion-inner .box-step .form-step .btn-success {
+  font-weight: bold;
+  min-width: unset;
+  padding: 9px;
+}
+@media (min-width: 769px) {
+  .checkout-container .orderform-template .orderform-template-holder #client-profile-data .client-profile-data .accordion-body .accordion-inner .box-step .form-step .btn-success {
+    width: 40%;
+  }
+}
+.checkout-container .orderform-template .orderform-template-holder #client-profile-data .client-profile-data .accordion-body .accordion-inner .box-step .box-info .client-profile-summary {
+  color: #000000;
+  font-size: 14px;
+}
+.checkout-container .orderform-template .orderform-template-holder #client-profile-data .client-profile-data .accordion-body .accordion-inner .box-step .box-info .client-profile-summary .name {
+  line-height: 3;
+}
+.checkout-container .orderform-template .orderform-template-holder #client-profile-data .client-profile-data .accordion-body .accordion-inner .box-step .box-info .client-profile-email {
+  color: #000000;
+  font-size: 14px;
+  margin: 0;
+}
+@media (min-width: 769px) {
+  .checkout-container .orderform-template .orderform-template-holder #client-profile-data {
+    padding-top: 13px;
+  }
+}
+.checkout-container .orderform-template .orderform-template-holder #shipping-data .accordion-heading {
+  border-bottom: 1px solid #90B51B;
+  margin-bottom: 15px;
+}
+.checkout-container .orderform-template .orderform-template-holder #shipping-data .accordion-heading .accordion-toggle.collapsed {
+  color: #000000;
+  align-items: center;
+  gap: 3px;
+  display: flex;
+  font-size: 0;
+}
+.checkout-container .orderform-template .orderform-template-holder #shipping-data .accordion-heading .accordion-toggle.collapsed::before {
+  border: none;
+  content: "2. Entrega" !important;
+  display: block;
+  margin: 0;
+  width: auto;
+  color: #000000;
+  font-size: 18px;
+  line-height: 1;
+  height: auto;
+  background: none;
+}
+.checkout-container .orderform-template .orderform-template-holder #shipping-data:has(.vtex-omnishipping-1-x-SummaryItemGroup) .accordion-heading::after {
+  display: none;
+}
+.checkout-container .orderform-template .orderform-template-holder #shipping-data .shipping-container {
+  padding-top: 0 !important;
+}
+.checkout-container .orderform-template .orderform-template-holder #shipping-data .shipping-container .box-step .input {
+  width: 100%;
+  font-size: 1rem;
+}
+.checkout-container .orderform-template .orderform-template-holder #shipping-data .shipping-container .box-step .input label {
+  font-size: 1rem;
+  color: #000000;
+  margin: 15px 0 5px 0;
+}
+.checkout-container .orderform-template .orderform-template-holder #shipping-data .shipping-container .box-step .input label[for=ship-state]::before,
+.checkout-container .orderform-template .orderform-template-holder #shipping-data .shipping-container .box-step .input label[for=ship-city]::before {
+  content: "Elige ";
+}
+.checkout-container .orderform-template .orderform-template-holder #shipping-data .shipping-container .box-step .input select {
+  border: 1px solid #D5D5D5;
+  height: 40px;
+  font-size: 14px;
+  color: #000000;
+  padding: 0 15px;
+  font-family: "Montserrat", sans-serif;
+}
+.checkout-container .orderform-template .orderform-template-holder #shipping-data .shipping-container .box-step .input input {
+  border: 1px solid #D5D5D5;
+  color: #000000;
+  padding: 0 15px;
+  font-size: 1rem;
+  box-shadow: unset;
+  font-family: "Montserrat", sans-serif;
+}
+.checkout-container .orderform-template .orderform-template-holder #shipping-data .shipping-container .box-step .input input::placeholder {
+  color: #000000;
+}
+.checkout-container .orderform-template .orderform-template-holder #shipping-data .shipping-container .box-step .delivery-address-title {
+  font-size: 1rem;
+  color: #000000;
+}
+.checkout-container .orderform-template .orderform-template-holder #shipping-data .shipping-container .box-step .address-summary {
+  height: 40px;
+  border-radius: 25px;
+  padding: 0 20px;
+  margin: 0;
+  border-color: #D5D5D5;
+  background-color: #F8F8F8;
+  background: none;
+  display: flex;
+  gap: 7px;
+  align-items: center;
+}
+.checkout-container .orderform-template .orderform-template-holder #shipping-data .shipping-container .box-step .address-summary a {
+  color: #000000;
+}
+.checkout-container .orderform-template .orderform-template-holder #shipping-data .shipping-container .box-step .vtex-omnishipping-1-x-deliveryGroup .shp-lean-option {
+  border: none;
+  border-radius: 2px;
+  padding: 0;
+  height: 100%;
+}
+.checkout-container .orderform-template .orderform-template-holder #shipping-data .shipping-container .box-step .vtex-omnishipping-1-x-deliveryGroup .vtex-omnishipping-1-x-shippingSectionTitle {
+  font-size: 1rem;
+  color: #000000;
+}
+.checkout-container .orderform-template .orderform-template-holder #shipping-data .shipping-container .box-step .vtex-omnishipping-1-x-deliveryGroup .vtex-omnishipping-1-x-leanShippingGroupList {
+  border: 1px solid #D5D5D5;
+  border-radius: 25px;
+  padding: 7px 16px;
+  max-height: 64px;
+}
+.checkout-container .orderform-template .orderform-template-holder #shipping-data .shipping-container .box-step .vtex-omnishipping-1-x-deliveryGroup .vtex-omnishipping-1-x-leanShippingGroupList .vtex-omnishipping-1-x-leanShippingText {
+  height: 100%;
+}
+.checkout-container .orderform-template .orderform-template-holder #shipping-data .shipping-container .box-step .vtex-omnishipping-1-x-deliveryGroup .vtex-omnishipping-1-x-leanShippingGroupList .vtex-omnishipping-1-x-leanShippingText .vtex-omnishipping-1-x-leanShippingTextLabelSingle {
+  font-size: 1rem;
+  color: #000000;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.checkout-container .orderform-template .orderform-template-holder #shipping-data .shipping-container .box-step .vtex-omnishipping-1-x-deliveryGroup .vtex-omnishipping-1-x-leanShippingGroupList .vtex-omnishipping-1-x-svg {
+  width: 24px;
+  height: 24px;
+}
+.checkout-container .orderform-template .orderform-template-holder #shipping-data .shipping-container .box-step .vtex-omnishipping-1-x-deliveryGroup .vtex-omnishipping-1-x-leanShippingGroupList .vtex-omnishipping-1-x-svg path {
+  fill: #000000;
+}
+.checkout-container .orderform-template .orderform-template-holder #shipping-data .shipping-container .box-step .vtex-omnishipping-1-x-deliveryGroup .vtex-omnishipping-1-x-leanShippingGroupList .vtex-omnishipping-1-x-optionPrice {
+  font-size: 1rem;
+  color: #000000;
+}
+.checkout-container .orderform-template .orderform-template-holder #shipping-data .shipping-container .box-step .vtex-omnishipping-1-x-deliveryChannelsWrapper {
+  display: flex;
+  gap: 21px;
+  border: none;
+  box-shadow: none;
+}
+.checkout-container .orderform-template .orderform-template-holder #shipping-data .shipping-container .box-step .vtex-omnishipping-1-x-deliveryChannelsWrapper .vtex-omnishipping-1-x-deliveryChannelsToggle {
+  display: none;
+}
+.checkout-container .orderform-template .orderform-template-holder #shipping-data .shipping-container .box-step .vtex-omnishipping-1-x-deliveryChannelsWrapper .vtex-omnishipping-1-x-deliveryChannelsOption {
+  border-radius: 4px;
+  border: 1px solid #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  color: #000000;
+  gap: 3px;
+}
+@media (max-width: 720px) {
+  .checkout-container .orderform-template .orderform-template-holder #shipping-data .shipping-container .box-step .vtex-omnishipping-1-x-deliveryChannelsWrapper .vtex-omnishipping-1-x-deliveryChannelsOption {
+    flex-direction: column;
+  }
+}
+.checkout-container .orderform-template .orderform-template-holder #shipping-data .shipping-container .box-step .vtex-omnishipping-1-x-deliveryChannelsWrapper .vtex-omnishipping-1-x-deliveryChannelsOption .shp-method-option-complement,
+.checkout-container .orderform-template .orderform-template-holder #shipping-data .shipping-container .box-step .vtex-omnishipping-1-x-deliveryChannelsWrapper .vtex-omnishipping-1-x-deliveryChannelsOption .shp-method-option-text {
+  font-size: 0.875rem;
+}
+.checkout-container .orderform-template .orderform-template-holder #shipping-data .shipping-container .box-step .vtex-omnishipping-1-x-deliveryChannelsWrapper .vtex-omnishipping-1-x-deliveryOptionActive {
+  background-color: #000000;
+  color: #FFFFFF;
+}
+.checkout-container .orderform-template .orderform-template-holder #shipping-data .shipping-container .box-step .vtex-omnishipping-1-x-ask .vtex-omnishipping-1-x-cta button {
+  border-color: #000000;
+  background: #000000;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  padding: 16px 70px;
+}
+.checkout-container .orderform-template .orderform-template-holder #shipping-data .shipping-container .box-step .vtex-omnishipping-1-x-ask .vtex-omnishipping-1-x-imageAsk {
+  display: inline-block;
+  background: unset;
+  box-shadow: unset;
+  width: 132px;
+  height: 132px;
+  border-radius: 100%;
+  overflow: hidden;
+  margin: 30px 0;
+}
+.checkout-container .orderform-template .orderform-template-holder #shipping-data .shipping-container .box-step .vtex-omnishipping-1-x-ask .vtex-omnishipping-1-x-imageAsk::after {
+  content: "";
+  background: url(https://mazdab2c.vtexassets.com/assets/vtex.file-manager-graphql/images/a5b7e3e4-1eb9-4803-b798-b174463fafcc___bd6f6a4d153179942839c4049f7814a5.png);
+  display: block;
+  height: 132px;
+  width: 132px;
+}
+.checkout-container .orderform-template .orderform-template-holder #shipping-data .shipping-container .box-step .vtex-omnishipping-1-x-ask .vtex-omnishipping-1-x-imageAsk svg {
+  display: none;
+}
+.checkout-container .orderform-template .orderform-template-holder #shipping-data .shipping-container .box-step .vtex-omnishipping-1-x-ask .vtex-omnishipping-1-x-geolocationTitle {
+  font-size: 0;
+  margin-bottom: 40px;
+}
+.checkout-container .orderform-template .orderform-template-holder #shipping-data .shipping-container .box-step .vtex-omnishipping-1-x-ask .vtex-omnishipping-1-x-geolocationTitle::after {
+  content: "Ingrese su ubicación para seleccionar el punto de recogida más cercano";
+  font-size: 0.875rem;
+}
+.checkout-container .orderform-template .orderform-template-holder #shipping-data .shipping-container .box-step .vtex-omnishipping-1-x-ask .vtex-omnishipping-1-x-subtitle {
+  font-size: 0;
+}
+.checkout-container .orderform-template .orderform-template-holder #shipping-data .shipping-container .box-step .vtex-omnishipping-1-x-ask .vtex-omnishipping-1-x-subtitle::after {
+  content: "SELECCIONE UNA DE LAS SIGUIENTES OPCIONES";
+  font-size: 0.875rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  color: #000000;
+}
+.checkout-container .orderform-template .orderform-template-holder #shipping-data .shipping-container .box-step .shp-pickup-receiver .vtex-omnishipping-1-x-receiverTitle {
+  font-size: 0;
+  color: #000000;
+}
+.checkout-container .orderform-template .orderform-template-holder #shipping-data .shipping-container .box-step .shp-pickup-receiver .vtex-omnishipping-1-x-receiverTitle::after {
+  content: "Nombre de la persona que recibe";
+  font-size: 1rem;
+}
+.checkout-container .orderform-template .orderform-template-holder #shipping-data .shipping-container .box-step .shp-pickup-receiver .vtex-omnishipping-1-x-textBox {
+  border: 1px solid #D5D5D5;
+  border-radius: 2px;
+  padding: 16px;
+}
+.checkout-container .orderform-template .orderform-template-holder #shipping-data .shipping-container .box-step .shp-pickup-receiver .vtex-omnishipping-1-x-textBox .vtex-omnishipping-1-x-pickupReceiverIcon {
+  display: none;
+}
+.checkout-container .orderform-template .orderform-template-holder #shipping-data .shipping-container .box-step .shp-pickup-receiver .vtex-omnishipping-1-x-textBox .vtex-omnishipping-1-x-name {
+  font-size: 1rem;
+  color: #000000;
+}
+.checkout-container .orderform-template .orderform-template-holder #shipping-data .shipping-container .box-step .shp-pickup-receiver .vtex-omnishipping-1-x-textBox .vtex-omnishipping-1-x-name button {
+  font-size: 1rem;
+  color: #000000;
+  margin: 0;
+  padding: 0;
+  text-decoration: underline;
+}
+.checkout-container .orderform-template .orderform-template-holder .vtex-omnishipping-1-x-SummaryItemGroup .myship {
+  display: none;
+}
+.checkout-container .orderform-template .orderform-template-holder .vtex-omnishipping-1-x-SummaryItemGroup .vtex-omnishipping-1-x-SummaryItemContent {
+  border-bottom: unset;
+  padding-bottom: 8px;
+}
+.checkout-container .orderform-template .orderform-template-holder .vtex-omnishipping-1-x-SummaryItemGroup .vtex-omnishipping-1-x-SummaryItemContent .vtex-omnishipping-1-x-SummaryItemInfo {
+  border: none;
+  width: 60%;
+  flex: none;
+}
+.checkout-container .orderform-template .orderform-template-holder .vtex-omnishipping-1-x-SummaryItemGroup .vtex-omnishipping-1-x-SummaryItemContent .vtex-omnishipping-1-x-SummaryItemInfo .address-summary-COL {
+  display: flex;
+  flex-wrap: wrap;
+  background: none;
+  padding: 0 !important;
+  color: #000000;
+  font-size: 0.875rem;
+}
+.checkout-container .orderform-template .orderform-template-holder .vtex-omnishipping-1-x-SummaryItemGroup .vtex-omnishipping-1-x-SummaryItemContent .vtex-omnishipping-1-x-SummaryItemInfo .address-summary-COL::before {
+  display: none;
+}
+.checkout-container .orderform-template .orderform-template-holder .vtex-omnishipping-1-x-SummaryItemGroup .vtex-omnishipping-1-x-SummaryItemContent .vtex-omnishipping-1-x-SummaryItemInfo .address-summary-COL br {
+  display: none;
+}
+.checkout-container .orderform-template .orderform-template-holder .vtex-omnishipping-1-x-SummaryItemGroup .vtex-omnishipping-1-x-SummaryItemContent .vtex-omnishipping-1-x-SummaryItemInfo .address-summary-COL span {
+  padding: 7px 0;
+}
+.checkout-container .orderform-template .orderform-template-holder .vtex-omnishipping-1-x-SummaryItemGroup .vtex-omnishipping-1-x-SummaryItemContent .vtex-omnishipping-1-x-SummaryItemInfo .address-summary-COL span:nth-child(1), .checkout-container .orderform-template .orderform-template-holder .vtex-omnishipping-1-x-SummaryItemGroup .vtex-omnishipping-1-x-SummaryItemContent .vtex-omnishipping-1-x-SummaryItemInfo .address-summary-COL span:nth-child(2) {
+  width: 100%;
+}
+.checkout-container .orderform-template .orderform-template-holder .vtex-omnishipping-1-x-SummaryItemGroup .vtex-omnishipping-1-x-SummaryItemContent .vtex-omnishipping-1-x-summaryPackage,
+.checkout-container .orderform-template .orderform-template-holder .vtex-omnishipping-1-x-SummaryItemGroup .vtex-omnishipping-1-x-SummaryItemContent .vtex-omnishipping-1-x-SummaryItemPrice {
+  height: 40px;
+  border-left: 1px solid #999999;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0 0 7px;
+  color: #000000;
+  font-size: 1rem;
+}
+.checkout-container .orderform-template .orderform-template-holder .vtex-omnishipping-1-x-SummaryItemGroup .vtex-omnishipping-1-x-SummaryItemContent .vtex-omnishipping-1-x-summaryPackage {
+  color: #000000;
+  font-size: 0.875rem;
+}
+.checkout-container .orderform-template .orderform-template-holder .vtex-omnishipping-1-x-summaryChange {
+  color: #90B51B;
+  background: #fff;
+  border: 1px solid #90B51B;
+  padding: 12px 40px;
+  font-size: 0.875rem;
+  font-weight: bold;
+  width: auto;
+  border-radius: 50px;
+  text-decoration: none;
+  margin-top: 50px !important;
+}
+.checkout-container .orderform-template .orderform-template-holder .myship {
+  margin: 12px auto 0;
+  width: fit-content;
+}
+@media (min-width: 1020px) {
+  .checkout-container .orderform-template .orderform-template-holder .myship {
+    margin: 12px auto 0 0;
+  }
+}
+.checkout-container .orderform-template .orderform-template-holder .myship .warning-envio {
+  font-size: 0.845rem;
+  color: #000000;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+@media (min-width: 769px) {
+  .checkout-container .orderform-template .orderform-template-holder {
+    width: 70% !important;
+  }
+}
+.checkout-container .orderform-template #payment-data .accordion-heading {
+  border-bottom: 1px solid #90B51B;
+  margin-bottom: 15px;
+}
+.checkout-container .orderform-template #payment-data .accordion-heading .accordion-toggle.collapsed span:not(.payment-edit-link) {
+  font-size: 18px;
+  color: #000000;
+  align-items: center;
+  gap: 3px;
+  display: flex;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+}
+.checkout-container .orderform-template #payment-data .accordion-heading .accordion-toggle.collapsed span:not(.payment-edit-link)::before {
+  border: none;
+  content: "3.";
+  display: block;
+  margin: 0;
+  width: auto;
+  color: #000000;
+  font-size: 18px;
+  line-height: 1;
+  height: auto;
+  background-color: #FFFFFF;
+}
+.checkout-container .orderform-template #payment-data .accordion-inner .box-step .box-step-content .payment-group-list-btn .payment-group-item {
+  border: 1px solid #D5D5D5;
+  box-shadow: unset;
+  border-radius: 2px;
+  justify-content: space-between;
+  height: 48px;
+  padding: 0 16px;
+  background: none;
+}
+.checkout-container .orderform-template #payment-data .accordion-inner .box-step .box-step-content .payment-group-list-btn .payment-group-item span {
+  color: #999999;
+  font-size: 1rem !important;
+  font-family: "Montserrat", sans-serif;
+  font-weight: normal;
+}
+.checkout-container .orderform-template #payment-data .accordion-inner .box-step .box-step-content .payment-group-list-btn .payment-group-item::before, .checkout-container .orderform-template #payment-data .accordion-inner .box-step .box-step-content .payment-group-list-btn .payment-group-item::after {
+  display: none;
+}
+.checkout-container .orderform-template #payment-data .accordion-inner .box-step .box-step-content .payment-group-list-btn .payment-group-item.active {
+  border-color: #000000;
+}
+.checkout-container .orderform-template #payment-data .accordion-inner .box-step .box-step-content .payment-group-list-btn .payment-group-item.active span {
+  color: #000000;
+}
+.checkout-container .orderform-template #payment-data .accordion-inner .box-step .box-step-content .payment-group-list-btn .payment-group-item:hover {
+  top: 0;
+}
+.checkout-container .orderform-template #payment-data .accordion-inner .box-step .box-step-content .steps-view .payment-method .box-payment-option {
+  color: #000000;
+  font-size: 1rem;
+}
+.checkout-container .cart-template.mini-cart {
+  border: 1px solid #D8D8D8;
+  border-radius: 4px;
+  padding: 22px 16px;
+  margin-bottom: 16px;
+}
+@media (min-width: 769px) {
+  .checkout-container .cart-template.mini-cart {
+    margin-top: 2px;
+    width: 30%;
+  }
+}
+.checkout-container .cart-template.mini-cart .item {
+  border: none;
+  padding-top: 0;
+}
+.checkout-container .cart-template.mini-cart .custom-cart-template-wrap {
+  padding: 0;
+}
+.checkout-container .cart-template.mini-cart .custom-cart-template-wrap h2 {
+  margin: 0;
+  padding: 0 !important;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  color: #000000;
+  font-size: 1rem;
+}
+.checkout-container .cart-template.mini-cart .custom-cart-template-wrap .summary-cart-template-holder .cart {
+  padding-top: 0;
+  margin-top: 25px;
+  border-radius: 0;
+}
+.checkout-container .cart-template.mini-cart .custom-cart-template-wrap .summary-cart-template-holder .cart .cart-items::before {
+  display: none;
+}
+.checkout-container .cart-template.mini-cart .custom-cart-template-wrap .summary-cart-template-holder .cart .cart-items li.hproduct {
+  display: flex;
+}
+.checkout-container .cart-template.mini-cart .custom-cart-template-wrap .summary-cart-template-holder .cart .cart-items li.hproduct .product-name {
+  font-size: 14px;
+  color: #000000;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 120%;
+  width: 40%;
+  white-space: wrap;
+}
+.checkout-container .cart-template.mini-cart .custom-cart-template-wrap .summary-cart-template-holder .cart .cart-items li.hproduct .description {
+  flex-direction: column-reverse;
+  margin-top: 35px;
+}
+.checkout-container .cart-template.mini-cart .custom-cart-template-wrap .summary-cart-template-holder .cart .cart-items li.hproduct .description .item-price {
+  display: block;
+  color: #999999;
+  font-size: 0.813rem;
+  text-decoration: line-through;
+}
+.checkout-container .cart-template.mini-cart .custom-cart-template-wrap .summary-cart-template-holder .cart .cart-items li.hproduct .description .price {
+  font-size: 0.813rem;
+  color: #000000;
+}
+.checkout-container .cart-template.mini-cart .custom-cart-template-wrap .summary-cart-template-holder .cart .cart-items li.hproduct .description .shipping-date {
+  display: none;
+}
+.checkout-container .cart-template.mini-cart .custom-cart-template-wrap .summary-cart-template-holder .cart .cart-items li.hproduct .quantity.badge {
+  background-color: unset;
+  border: none;
+  align-items: center;
+  justify-content: center;
+  min-width: 10%;
+  position: relative;
+  color: #000000;
+  background-color: unset;
+  border: none !important;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  min-width: 10%;
+  color: #000000;
+  display: flex;
+  box-shadow: none;
+}
+.checkout-container .cart-template.mini-cart .custom-cart-template-wrap .summary-cart-template-holder .cart .cart-items li.hproduct .quantity.badge::before {
+  content: "x";
+  margin-right: 2px;
+}
+.checkout-container .cart-template.mini-cart .custom-cart-template-wrap .summary-cart-template-holder .cart .cart-items li.hproduct a {
+  width: 55px;
+  height: auto;
+  padding: 0 5px;
+  border: 1px solid #c5c5c5;
+  border-radius: 5px;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+.checkout-container .cart-template.mini-cart .custom-cart-template-wrap .summary-cart-template-holder .cart .cart-items li.hproduct a img {
+  width: auto;
+  height: auto;
+  border-radius: 4px;
+}
+.checkout-container .cart-template.mini-cart .custom-cart-template-wrap #go-to-cart-button {
+  display: none;
+  position: relative;
+  width: 100%;
+  right: 0;
+  text-decoration: none;
+}
+.checkout-container .cart-template.mini-cart .custom-cart-template-wrap #go-to-cart-button a {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  color: #000000;
+  font-size: 0.875rem;
+  text-decoration: underline;
+}
+.checkout-container .cart-template.mini-cart .custom-cart-template-wrap .summary-template-holder::before {
+  margin-top: 20px;
+  content: "¿Tienes un cupón de descuento?";
+  text-align: center;
+  font-size: 14px;
+  display: block;
+  margin-bottom: 10px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  color: #000000;
+}
+.checkout-container .cart-template.mini-cart .custom-cart-template-wrap .summary-template-holder input[type=text] {
+  background: #f3f3f3;
+  color: #8c8c8c;
+  border: none !important;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  margin: 0;
+  height: 35px !important;
+}
+.checkout-container .cart-template.mini-cart .custom-cart-template-wrap .summary-template-holder button[type=submit] {
+  background: #f3f3f3;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-color: #f3f3f3;
+  font-size: 16px;
+  height: 35px !important;
+  display: flex;
+  align-items: center;
+  font-size: 0;
+  box-shadow: rgba(0, 0, 0, 0.075) 0px 1px 1px 0px inset, rgba(0, 0, 0, 0) 0px 0px 0.012px 0px;
+}
+.checkout-container .cart-template.mini-cart .custom-cart-template-wrap .summary-template-holder button[type=submit]::before {
+  content: "Agregar";
+  font-size: 14px;
+  color: #000000;
+}
+.checkout-container .cart-template.mini-cart .custom-cart-template-wrap .summary-template-holder .summary-coupon-wrap {
+  border: none !important;
+}
+.checkout-container .cart-template.mini-cart .custom-cart-template-wrap .summary-template-holder .row-fluid.summary .totalizers.summary-totalizers.cart-totalizers .accordion-group .accordion-body .accordion-inner {
+  margin-top: 0px;
+}
+.checkout-container .cart-template.mini-cart .custom-cart-template-wrap .summary-template-holder .row-fluid.summary .totalizers.summary-totalizers.cart-totalizers .accordion-group .accordion-body .accordion-inner::before {
+  display: none;
+}
+.checkout-container .cart-template.mini-cart .custom-cart-template-wrap .summary-template-holder .row-fluid.summary .totalizers.summary-totalizers.cart-totalizers .accordion-group .accordion-body .accordion-inner .table .totalizers-list {
+  padding: 0;
+  margin-top: 15px;
+}
+.checkout-container .cart-template.mini-cart .custom-cart-template-wrap .summary-template-holder .row-fluid.summary .totalizers.summary-totalizers.cart-totalizers .accordion-group .accordion-body .accordion-inner .table .totalizers-list tr {
+  padding: 0;
+  /* border-bottom: 1px solid #D8D8D8 !important; */
+  font-size: 0.875rem;
+}
+.checkout-container .cart-template.mini-cart .custom-cart-template-wrap .summary-template-holder .row-fluid.summary .totalizers.summary-totalizers.cart-totalizers .accordion-group .accordion-body .accordion-inner .table tfoot tr {
+  padding: 0;
+  /* border-bottom: 1px solid #D8D8D8 !important; */
+}
+.checkout-container .cart-template.mini-cart .custom-cart-template-wrap .summary-template-holder .row-fluid.summary .totalizers.summary-totalizers.cart-totalizers .accordion-group .accordion-body .accordion-inner .table tfoot tr td {
+  font-size: 1.125rem;
+  padding: 14px 0 !important;
+}
+.checkout-container .cart-template.mini-cart .custom-cart-template-wrap .payment-submit-wrap {
+  position: initial;
+  margin-top: 16px !important;
+}
+.checkout-container .cart-template.mini-cart .custom-cart-template-wrap .payment-submit-wrap #payment-data-submit {
+  letter-spacing: 1px;
+  font-size: 1rem;
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 5px;
+  width: 80%;
+  margin: 0 auto;
+}
+.checkout-container .cart-template.mini-cart .custom-cart-template-wrap .payment-submit-wrap #payment-data-submit:last-child span {
+  font-weight: bold;
+  width: fit-content;
+  display: block;
+  height: fit-content;
+  line-height: normal;
+}
+.checkout-container .cart-template.mini-cart .custom-cart-template-wrap .payment-submit-wrap #payment-data-submit:last-child .icon-lock::before {
+  content: " " !important;
+}
+@media (min-width: 769px) {
+  .checkout-container .btn-go-to-payment {
+    width: 30%;
+  }
+}
+.checkout-container #postalCode-finished-loading {
+  display: none;
+}

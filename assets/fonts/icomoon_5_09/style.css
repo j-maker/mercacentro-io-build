@@ -1,0 +1,332 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?al4437');
+  src:  url('fonts/icomoon.eot?al4437#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?al4437') format('truetype'),
+    url('fonts/icomoon.woff?al4437') format('woff'),
+    url('fonts/icomoon.svg?al4437#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-Book-2:before {
+  content: "\e900";
+  color: #fff;
+}
+.icon-dollar_590464-1:before {
+  content: "\e901";
+  color: #90b51b;
+}
+.icon-g495:before {
+  content: "\e902";
+}
+.icon-Group-2:before {
+  content: "\e903";
+  color: #90b51b;
+}
+.icon-Group-5:before {
+  content: "\e904";
+  color: #90b51b;
+}
+.icon-Group-470:before {
+  content: "\e905";
+  color: #fff;
+}
+.icon-Group-523:before {
+  content: "\e906";
+  color: #90b51b;
+}
+.icon-Group-524:before {
+  content: "\e907";
+  color: #90b51b;
+}
+.icon-Group-549:before {
+  content: "\e908";
+  color: #ed1c24;
+}
+.icon-Group-551:before {
+  content: "\e909";
+  color: #90b51b;
+}
+.icon-Group-816 .path1:before {
+  content: "\e90a";
+  color: rgb(237, 28, 36);
+}
+.icon-Group-816 .path2:before {
+  content: "\e90b";
+  margin-left: -0.841796875em;
+  color: rgb(237, 28, 36);
+}
+.icon-Group-816 .path3:before {
+  content: "\e90c";
+  margin-left: -0.841796875em;
+  color: rgb(237, 28, 36);
+}
+.icon-Group-816 .path4:before {
+  content: "\e90d";
+  margin-left: -0.841796875em;
+  color: rgb(255, 255, 255);
+}
+.icon-Group-816 .path5:before {
+  content: "\e90e";
+  margin-left: -0.841796875em;
+  color: rgb(255, 255, 255);
+}
+.icon-Group-816 .path6:before {
+  content: "\e90f";
+  margin-left: -0.841796875em;
+  color: rgb(255, 255, 255);
+}
+.icon-Group-1005:before {
+  content: "\e910";
+}
+.icon-Group-1006 .path1:before {
+  content: "\e911";
+  color: rgb(255, 255, 255);
+}
+.icon-Group-1006 .path2:before {
+  content: "\e94a";
+  margin-left: -0.94140625em;
+  color: rgb(255, 255, 255);
+}
+.icon-Group-1006 .path3:before {
+  content: "\e94b";
+  margin-left: -0.94140625em;
+  color: rgb(255, 255, 255);
+}
+.icon-Group-1006 .path4:before {
+  content: "\e94c";
+  margin-left: -0.94140625em;
+  color: rgb(237, 28, 36);
+}
+.icon-Group-1006 .path5:before {
+  content: "\e94d";
+  margin-left: -0.94140625em;
+  color: rgb(237, 28, 36);
+}
+.icon-Group-1006 .path6:before {
+  content: "\e94e";
+  margin-left: -0.94140625em;
+  color: rgb(237, 28, 36);
+}
+.icon-Group-1019:before {
+  content: "\e912";
+}
+.icon-Group:before {
+  content: "\e913";
+}
+.icon-Group-11:before {
+  content: "\e914";
+}
+.icon-Group-21:before {
+  content: "\e915";
+}
+.icon-Group-3:before {
+  content: "\e916";
+}
+.icon-Group-4:before {
+  content: "\e917";
+}
+.icon-Group-51:before {
+  content: "\e918";
+  color: #fff;
+}
+.icon-online-shopping_6572185-1:before {
+  content: "\e919";
+  color: #90b51b;
+}
+.icon-ribbon_590498-1:before {
+  content: "\e91a";
+  color: #90b51b;
+}
+.icon-Vector-Stroke:before {
+  content: "\e91b";
+  color: #90b51b;
+}
+.icon-Vector:before {
+  content: "\e91c";
+}
+.icon-a:before {
+  content: "\e91d";
+  color: #90b51b;
+}
+.icon-blender_12666327-1:before {
+  content: "\e91e";
+  color: #90b51b;
+}
+.icon-champagne_6266565-1:before {
+  content: "\e91f";
+  color: #90b51b;
+}
+.icon-g1858:before {
+  content: "\e920";
+  color: #90b51b;
+}
+.icon-g2505:before {
+  content: "\e921";
+}
+.icon-Group-484:before {
+  content: "\e922";
+  color: #90b51b;
+}
+.icon-Group-487:before {
+  content: "\e923";
+}
+.icon-Group1:before {
+  content: "\e924";
+  color: #90b51b;
+}
+.icon-Group-1:before {
+  content: "\e925";
+  color: #90b51b;
+}
+.icon-Icon:before {
+  content: "\e926";
+  color: #90b51b;
+}
+.icon-playstation_4:before {
+  content: "\e927";
+  color: #90b51b;
+}
+.icon-smartphone_4043796-1:before {
+  content: "\e928";
+  color: #90b51b;
+}
+.icon-smartphone_40437961:before {
+  content: "\e929";
+  color: #666;
+}
+.icon-smartphone_404379611:before {
+  content: "\e92a";
+}
+.icon-smartphone_404379612:before {
+  content: "\e92b";
+}
+.icon-smartphone_404379613:before {
+  content: "\e92c";
+}
+.icon-smartphone_404379614:before {
+  content: "\e92d";
+}
+.icon-smartphone_404379615:before {
+  content: "\e92e";
+}
+.icon-smartphone_404379616:before {
+  content: "\e92f";
+}
+.icon-smartphone_404379617:before {
+  content: "\e930";
+  color: #90b51b;
+}
+.icon-hamburguer1:before {
+  content: "\e931";
+  color: #fff;
+}
+.icon-hamburguer:before {
+  content: "\e932";
+  color: #fff;
+}
+.icon-locator:before {
+  content: "\e933";
+}
+.icon-arrowccircle:before {
+  content: "\e934";
+}
+.icon-bag:before {
+  content: "\e935";
+}
+.icon-garbage:before {
+  content: "\e936";
+}
+.icon-car-play:before {
+  content: "\e937";
+  color: #90b51b;
+}
+.icon-book:before {
+  content: "\e938";
+  color: #90b51b;
+}
+.icon-clean:before {
+  content: "\e939";
+  color: #90b51b;
+}
+.icon-filter:before {
+  content: "\e93a";
+  color: #90b51b;
+}
+.icon-key:before {
+  content: "\e93b";
+}
+.icon-hamburguer2:before {
+  content: "\e93c";
+  color: #fff;
+}
+.icon-hamburguer-desktop:before {
+  content: "\e93d";
+  color: #fff;
+}
+.icon-locator1 .path1:before {
+  content: "\e93e";
+  color: rgb(237, 28, 36);
+}
+.icon-locator1 .path2:before {
+  content: "\e945";
+  margin-left: -1.01953125em;
+  color: rgb(237, 28, 36);
+}
+.icon-locator1 .path3:before {
+  content: "\e946";
+  margin-left: -1.01953125em;
+  color: rgb(237, 28, 36);
+}
+.icon-locator1 .path4:before {
+  content: "\e947";
+  margin-left: -1.01953125em;
+  color: rgb(255, 255, 255);
+}
+.icon-locator1 .path5:before {
+  content: "\e948";
+  margin-left: -1.01953125em;
+  color: rgb(255, 255, 255);
+}
+.icon-locator1 .path6:before {
+  content: "\e949";
+  margin-left: -1.01953125em;
+  color: rgb(255, 255, 255);
+}
+.icon-messages:before {
+  content: "\e93f";
+}
+.icon-arrowmultiple:before {
+  content: "\e940";
+  color: #90b51b;
+}
+.icon-store:before {
+  content: "\e941";
+  color: #90b51b;
+}
+.icon-locator2:before {
+  content: "\e942";
+}
+.icon-locator3:before {
+  content: "\e943";
+}
+.icon-locator4:before {
+  content: "\e944";
+}

@@ -27,6 +27,11 @@
     transition: all 0.3s ease;
 }
 
+:global(.vtex-flex-layout-0-x-flexRow--quick-view) .stackItem--pdp {
+    left: 0;
+    top: 0;
+}
+
 @media screen and (min-width: 1026px) {
     :global(.vtex-product-summary-2-x-element):hover .stackItem--wishlist,
     :global(.vtex-product-summary-2-x-element):hover .stackItem--quick-view {

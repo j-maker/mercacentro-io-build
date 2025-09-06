@@ -1,3 +1,4 @@
+:global(.vtex-store-link-0-x-link--product-page)::after,
 :global(.vtex-rich-text-0-x-paragraph--header-interest) :global(.vtex-rich-text-0-x-link--header-interest)::before,
 :global(.vtex-menu-2-x-styledLinkContent--menu-department)::after,
 :global(.vtex-add-to-cart-button-0-x-buttonText--add-pdp)::after,
@@ -36,6 +37,7 @@
     font-family: icon;
 }
 
+:global(.vtex-flex-layout-0-x-flexRow--quick-view) :global(.vtex-store-components-3-x-carouselGaleryThumbs),
 :global(.vtex-store-components-3-x-searchBarIcon--header_search_bar_desktop--clear),
 :global(.vtex-store-components-3-x-shareSocialButton--pinterest),
 :global(.vtex-store-components-3-x-shareSocialButton--twitter),
@@ -127,6 +129,7 @@
     color: #fff;
 }
 
+:global(.vtex-store-link-0-x-link--product-page)::after,
 :global(.vtex-product-list-0-x-removeButton)::before,
 :global(.vtex-flex-layout-0-x-flexRowContent--minicart) :global(.vtex-button__label)::before,
 :global(.vtex-flex-layout-0-x-flexRow--pdp-buttons) :global(.vtex-add-to-cart-button-0-x-buttonText--add-pdp)::after,
@@ -187,15 +190,21 @@
 }
 
 :global(.vtex-product-list-0-x-removeButton)::before {
-    content: "\e907";
+    content: "\e908";
     font-size: 20px;
 }
 
 :global(.vtex-rich-text-0-x-paragraph--countdown-all)::after {
-    content: "\e907";
-    font-size: 20px;
+    content: "";
+    background-image: url(/arquivos/arrow_circlee.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+    width: 22px;
+    height: 22px;
     margin-left: 10px;
-    text-decoration: none;
+    vertical-align: middle;
 }
 
 :global(.vtex-login-2-x-accessCodeOptionBtn) :global(.vtex-button__label)::before {
@@ -211,8 +220,8 @@
 }
 
 :global(.vtex-login-2-x-emailPasswordOptionBtn) :global(.vtex-button__label)::before {
-    content: "\e907";
-    font-size: 20px;
+    content: "\e910";
+    font-size: 14px;
     margin-right: 10px;
 }
 
@@ -253,6 +262,14 @@
 
 :global(.vtex-rich-text-0-x-wrapper--quick-view)::before {
     content: "\e92b";
+}
+
+:global(.vtex-store-link-0-x-link--product-page)::after {
+    content: "\e92b";
+    font-size: 20px;
+    border: 1px solid;
+    border-radius: 50%;
+    padding: 8px 10px;
 }
 
 :global(.vtex-store-components-3-x-externalSearchButtonWrapper) :global(.vtex-store-components-3-x-searchBarIcon)::after {
@@ -309,6 +326,10 @@
 
 :global(.vtex-wish-list-1-x-fill)::before {
     content: "\e92a";
+    font-size: 22px;
+    padding: 9px;
+    background: red;
+    border-radius: 50%;
 }
 
 :global(.vtex-store-footer-2-x-socialNetworkLink--youtube)::after {
@@ -330,7 +351,15 @@
 }
 
 :global(.vtex-store-components-3-x-shareSocialButton--whatsapp)::before {
-    content: "\e915";
+    content: "";
+    background-image: url(/arquivos/whatsapp.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+    width: 16px;
+    height: 20px;
+    vertical-align: middle;
 }
 
 :global(.vtex-store-footer-2-x-socialNetworkLink--instagram)::after {

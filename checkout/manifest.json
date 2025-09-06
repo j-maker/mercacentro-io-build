@@ -1,0 +1,13 @@
+{
+  "name": "checkout-ui-settings",
+  "vendor": "mercacentro",
+  "version": "0.0.0",
+  "title": "Checkout UI Settings",
+  "description": "Declare custom settings to be used by checkout ui",
+  "builders": {
+    "checkout-ui-custom": "0.x"
+  },
+  "scripts": {},
+  "credentialType": "absolute",
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
+}

@@ -79,7 +79,19 @@
     margin-left: 5px;
 }
 
+.oauthLabel {
+    font-size: 14px;
+}
+
 @media screen and (min-width: 1026px) {
+    .button :global(.vtex-button) {
+        height: 50px;
+        border-radius: 25px;
+        box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+        background-color: #fafafa;
+        margin-bottom: 10px;
+    }
+
     .profileIcon {
         display: none;
     }

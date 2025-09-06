@@ -99,6 +99,9 @@
     border-radius: 50%;
     width: 25px;
     height: 25px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
 }
 
 .shareButtons {
@@ -148,7 +151,16 @@
     border-radius: 10px;    
 }
 
+:global(.vtex-flex-layout-0-x-flexRow--quick-view) .carouselGaleryCursor {
+    width: 100%;
+    padding: 0;
+}
 
+:global(.vtex-flex-layout-0-x-flexRow--quick-view) .productBrand--name-pdp {
+    font-size: 18px;
+    line-height: 0.5px;
+    font-family: Montserrat-Medium;
+}
 
 @media screen and (min-width: 1026px) {
     :global(.vtex-store-drawer-0-x-childrenContainer--menu-desktop) .imageElementLink--logo-category {

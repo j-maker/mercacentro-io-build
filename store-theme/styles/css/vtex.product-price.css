@@ -70,6 +70,10 @@
     min-height: 28px;
 }
 
+:global(.vtex-flex-layout-0-x-flexRow--quick-view) .sellerNameContainer--pdp--isDefaultSeller {
+    font-family: 'Montserrat-Regular';
+}
+
 @media screen and (min-width: 1026px) {
     .sellerNameContainer--pdp {
         font-family: 'Montserrat-Bold';

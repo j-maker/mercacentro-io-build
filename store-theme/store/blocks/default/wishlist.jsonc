@@ -84,9 +84,9 @@
     "title": "Productos",
     "props": {
       "itemsPerPage": {
-        "desktop": 30,
-        "tablet": 30,
-        "phone": 30
+        "desktop": 4,
+        "tablet": 33,
+        "phone": 2
       },
       "showNavigationArrows": "desktopOnly",
       "showPaginationDots": "never",

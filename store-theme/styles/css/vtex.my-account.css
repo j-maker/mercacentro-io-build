@@ -415,10 +415,12 @@
 }
 
 @media screen and (min-width: 1026px) {
-  /* :global(.vtex-store-components-3-x-productImagesGallerySwiperContainer) > div:global(.swiper-wrapper) {
-    border: 1px solid #00000010;
-    border-radius: 10px;
-} */
+  :global(.vtex-flex-layout-0-x-flexRowContent--quick-view) {
+    justify-content: space-between;
+  }
+  :global(.vtex-flex-layout-0-x-flexRowContent--quick-view) > :global(.vtex-flex-layout-0-x-stretchChildrenWidth) {
+    width: 49% !important;
+  }
 
   :global(.vtex-flex-layout-0-x-flexRowContent--total__wrapper__minicart)> :global(.vtex-flex-layout-0-x-stretchChildrenWidth):nth-child(1),
   :global(.vtex-flex-layout-0-x-flexRowContent--minicart)> :global(.vtex-flex-layout-0-x-stretchChildrenWidth):nth-child(1) {
@@ -479,6 +481,19 @@
   }
 
 
+  :global(.vtex-rich-text-0-x-paragraph--header-interest) > :global(.vtex-rich-text-0-x-strong--header-interest) > :global(.vtex-rich-text-0-x-link--header-interest):nth-child(1)::before {
+    content: "";
+    background-image: url(/arquivos/icon-ofertas.svg);
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+  
   :global(.vtex-rich-text-0-x-paragraph--header-interest)> :global(.vtex-rich-text-0-x-link--header-interest):nth-child(3)::before {
     content: "\e941";
     margin-right: 10px;
