@@ -209,11 +209,23 @@
 }
 
 //Imagenes
-.table.cart-items td.product-image img {
-  width: 80px !important;
-  height: 86px !important;
-  object-fit: cover;
-  border-radius: 4px;
+.table.cart-items td.product-image {
+  border-radius: 10px;
+  a {
+    width: auto;
+    border: 1px solid #f2f2f2;
+    border-radius: 5px;
+
+    img {
+      background-color: #fff;
+      padding: 10px;
+      width: auto;
+      height: auto;
+      object-fit: cover;
+    }
+  }
+
+  
 }
 
 @media (max-width: 768px) {

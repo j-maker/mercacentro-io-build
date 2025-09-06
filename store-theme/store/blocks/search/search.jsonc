@@ -4,7 +4,19 @@
     "title": "Search",
     "blocks": [
       "search-result-layout#search"
-    ]
+    ],
+    "props": {
+      "fullWidth": true,
+      "hideUnavailableItems": true,
+      "context": {
+        "hideUnavailableItems": true,
+        "orderByField": "OrderByReleaseDateDESC",
+        "facetsBehavior": "dynamic",
+        "maxItemsPerPage": 16,
+        "skusFilter": "ALL",
+        "simulationBehavior": "default"
+      }
+    }
   },
   "store.search#category": {
     "title": "Categorías",
@@ -13,7 +25,19 @@
       "rich-text#seo-app-title",
       "rich-text#seo-app-link-categories",
       "search-result-layout"
-    ]
+    ],
+    "props": {
+      "fullWidth": true,
+      "hideUnavailableItems": true,
+      "context": {
+        "hideUnavailableItems": true,
+        "orderByField": "OrderByReleaseDateDESC",
+        "facetsBehavior": "dynamic",
+        "maxItemsPerPage": 16,
+        "skusFilter": "ALL",
+        "simulationBehavior": "default"
+      }
+    }
   },
   "store.search#brand": {
     "title": "Marca",
@@ -22,7 +46,19 @@
       "rich-text#seo-app-title",
       "rich-text#seo-app-link-categories",
       "search-result-layout"
-    ]
+    ],
+    "props": {
+      "fullWidth": true,
+      "hideUnavailableItems": true,
+      "context": {
+        "hideUnavailableItems": true,
+        "orderByField": "OrderByReleaseDateDESC",
+        "facetsBehavior": "dynamic",
+        "maxItemsPerPage": 16,
+        "skusFilter": "ALL",
+        "simulationBehavior": "default"
+      }
+    }
   },
   "store.search#department": {
     "title": "Departamento",
@@ -31,7 +67,19 @@
       "rich-text#seo-app-title",
       "rich-text#seo-app-link-categories",
       "search-result-layout"
-    ]
+    ],
+    "props": {
+      "fullWidth": true,
+      "hideUnavailableItems": true,
+      "context": {
+        "hideUnavailableItems": true,
+        "orderByField": "OrderByReleaseDateDESC",
+        "facetsBehavior": "dynamic",
+        "maxItemsPerPage": 16,
+        "skusFilter": "ALL",
+        "simulationBehavior": "default"
+      }
+    }
   },
   "store.search#subcategory": {
     "title": "Subcategorías",
@@ -40,7 +88,19 @@
       "rich-text#seo-app-title",
       "rich-text#seo-app-link-categories",
       "search-result-layout"
-    ]
+    ],
+    "props": {
+      "fullWidth": true,
+      "hideUnavailableItems": true,
+      "context": {
+        "hideUnavailableItems": true,
+        "orderByField": "OrderByReleaseDateDESC",
+        "facetsBehavior": "dynamic",
+        "maxItemsPerPage": 16,
+        "skusFilter": "ALL",
+        "simulationBehavior": "default"
+      }
+    }
   },
   "search-result-layout": {
     "title": "Pagina listada",

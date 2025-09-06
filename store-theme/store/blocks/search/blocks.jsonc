@@ -99,7 +99,8 @@
         "title": "Titulo Seo",
         "props": {
             "blockClass": "seo-app",
-            "text": "# Categoría"
+            "text": ""
+            /* "text": "# Categoría" */
         }
     },
     "rich-text#seo-app-link-categories": {
@@ -109,7 +110,8 @@
                 "seo-app",
                 "seo-app-link-categories"
             ],
-            "text": "[![Category](/arquivos/Ellipse%209.png)](/mercado)\n**[Lorem Ipsum dolor sit](/mercao)** \n\n[![Category](/arquivos/Ellipse%209.png)](/mercado)\n**[Lorem Ipsum dolor sit](/mercao)**\n\n[![Category](/arquivos/Ellipse%209.png)](/mercado)\n**[Lorem Ipsum dolor sit](/mercao)**\n\n[![Category](/arquivos/Ellipse%209.png)](/mercado)\n**[Lorem Ipsum dolor sit](/mercao)**\n\n[![Category](/arquivos/Ellipse%209.png)](/mercado)\n**[Lorem Ipsum dolor sit](/mercao)**\n\n[![Category](/arquivos/Ellipse%209.png)](/mercado)\n**[Lorem Ipsum dolor sit](/mercao)**"
+            "text": ""
+            /* "text": "[![Category](/arquivos/Ellipse%209.png)](/mercado)\n**[Lorem Ipsum dolor sit](/mercao)** \n\n[![Category](/arquivos/Ellipse%209.png)](/mercado)\n**[Lorem Ipsum dolor sit](/mercao)**\n\n[![Category](/arquivos/Ellipse%209.png)](/mercado)\n**[Lorem Ipsum dolor sit](/mercao)**\n\n[![Category](/arquivos/Ellipse%209.png)](/mercado)\n**[Lorem Ipsum dolor sit](/mercao)**\n\n[![Category](/arquivos/Ellipse%209.png)](/mercado)\n**[Lorem Ipsum dolor sit](/mercao)**\n\n[![Category](/arquivos/Ellipse%209.png)](/mercado)\n**[Lorem Ipsum dolor sit](/mercao)**" */
         }
     },
     "search-result-layout.mobile": {

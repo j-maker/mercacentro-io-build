@@ -20,7 +20,7 @@
   "login-content#default": {
     "title": "Contenido de Login",
     "props": {
-      "isInitialScreenOptionOnly": false,
+      "isInitialScreenOptionOnly": true,
       "defaultOption": 1,
       "showPasswordVerificationIntoTooltip": true
     }

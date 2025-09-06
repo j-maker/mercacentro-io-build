@@ -49,7 +49,7 @@
 
 
       .cart-items {
-        
+
         &::before {
           content: "Resumen de compra";
           color: #000000;
@@ -61,7 +61,7 @@
           font-weight: 800;
           line-height: 1;
           margin-bottom: 70px;
-          
+
           @media screen and (max-width: 768px) {
             margin-bottom: 25px;
             font-size: 24px;
@@ -70,6 +70,7 @@
 
         thead {
           display: none;
+
           @media (min-width: 769px) {
             tr {
               justify-content: space-between;
@@ -102,6 +103,7 @@
 
             .v-custom-product-item-wrap {
               padding: 0;
+              background-color: #fff;
 
               .product-name {
 
@@ -113,6 +115,7 @@
                   padding: 0;
                   color: #000000;
                   text-transform: capitalize;
+
                   @media screen and (max-width: 768px) {
                     font-size: 0.813rem;
                   }
@@ -128,26 +131,33 @@
                 top: -15px !important;
 
                 .item-link-remove {
-                  .item-remove-ico {
-                    display: none;
-                  }
+
 
                   .item-remove-text {
-                    display: block;
-                    color: #000000;
-                    font-size: 0.875rem;
-                    text-decoration: underline;
-                    font-family: 'Montserrat', sans-serif;
-                    font-weight: 800;
+                    font-size: 0;
+                  }
+
+                  .icon-remove {
+                    &::before {
+                      content: "";
+                      background-image: url(../arquivos/clean.svg);
+                      background-size: contain;
+                      background-repeat: no-repeat;
+                      background-position: center;
+                      width: 20px;
+                      height: 20px;
+                    }
                   }
                 }
               }
 
               .product-price {
-                font-size: 1rem;
+                margin: 0 30px;
                 display: flex !important;
-                flex-direction: column-reverse;
-                
+                flex-direction: column;
+                min-width: 100px;
+                order: 3 !important;
+
                 .best-price {
                   margin: 0;
                   color: #000000;
@@ -159,12 +169,13 @@
                   font-size: 0.813rem;
                   color: $main-gray;
                   display: flex;
-                  justify-content: flex-end;
+                  justify-content: center;
                 }
 
                 .price-details {
                   display: none;
                 }
+
                 @media (max-width: 769px) {
                   font-size: 0.813rem;
                 }
@@ -187,26 +198,46 @@
                 .item-quantity-change {
                   .icon {
                     &::before {
-                      font-family: 'Mazda-icons';
                       font-size: 11px;
                       color: #000000;
-                      height: 23px;
-                      width: auto;
+                      height: auto;
+                      width: 100%;
                       display: flex;
                       align-items: center;
                       font-weight: normal;
+                      justify-content: center;
+                      align-items: center;
+                      display: flex;
                     }
                   }
 
                   .icon-plus-sign {
                     &::before {
-                      content: "\e90b";
+                      content: "";
+                      background-image: url(../arquivos/plus.svg);
+                      background-size: contain;
+                      background-repeat: no-repeat;
+                      background-position: center;
+                      width: 12px;
+                      height: 12px;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
                     }
                   }
 
                   .icon-minus-sign {
                     &::before {
-                      content: "\e911";
+                      content: "";
+                      background-image: url(../arquivos/minus.svg);
+                      background-size: contain;
+                      background-repeat: no-repeat;
+                      background-position: center;
+                      width: 12px;
+                      height: 12px;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
                     }
                   }
                 }
@@ -226,14 +257,30 @@
 
                 .quantity {
                   margin: 0;
-                  width: 130px;
+                  min-width: 130px;
                   justify-content: space-between;
                   padding: 0px 3px;
-                  height: 40px;
+                  height: 38px;
                   border-radius: 5px;
                   border-color: #00000020;
                 }
               }
+            }
+
+          }
+
+          .item-unavailable {
+            margin-top: 0;
+            background-color: #E3061320;
+            border-color: #E30613;
+            padding: 0 10px;
+
+            .help-arrow.top-arrow {
+              border-bottom-color: #E3061320;
+            }
+
+            .icon-warning-sign {
+              display: none;
             }
           }
         }
@@ -329,6 +376,10 @@
                       content: ":";
                     }
                   }
+
+                  .monetary {
+                    width: auto;
+                  }
                 }
               }
             }
@@ -412,10 +463,13 @@
   }
 }
 
-@media (min-width: 769px) { 
-.checkout-container .table.cart-items tbody tr td.quantity-price {
-  display: flex !important;
-    order: 3;
+@media (min-width: 769px) {
+  .checkout-container .table.cart-items tbody tr td.quantity-price {
+    display: flex !important;
+    justify-content: center;
+    order: 5;
+    min-width: 100px;
+
   }
 }
 
@@ -424,12 +478,27 @@
   content: " ";
 }
 
+.v-custom-quantity-price.vqc-ldelem:last-child,
 .v-custom-quantity-price__list--selling .vqc-ldelem {
   display: none;
 }
 
-.table.cart-items tbody tr td.product-price .v-custom-quantity-price__best, .table.cart-items tbody tr td.quantity-price .v-custom-quantity-price__best {
+.v-custom-quantity-price__list--selling {
+  font-size: 1rem;
+  margin-bottom: 7px;
+}
+
+.new-product-price {
+  font-size: 1rem;
+  margin-bottom: 7px;
+  font-weight: bold;
   color: #000000;
+}
+
+.table.cart-items tbody tr td.product-price .v-custom-quantity-price__best,
+.table.cart-items tbody tr td.quantity-price .v-custom-quantity-price__best {
+  color: #000000;
+  font-size: 1rem;
 }
 
 .checkbox-item {
@@ -444,4 +513,23 @@
 
 .cart-checkboxes-container {
   margin-bottom: 40px;
+}
+
+input:focus {
+  box-shadow: none !important;
+}
+
+
+.table.cart-items tbody tr td.product-price .v-custom-quantity-price__list--list {
+  color: #000000 !important;
+  font-size: 16px;
+  line-height: 1;
+  margin-bottom: 5px;
+}
+
+body .table.cart-items tbody tr td.product-price .total-selling-price,
+body .table.cart-items tbody tr td.product-price .best-price,
+body .table.cart-items tbody tr td.quantity-price .total-selling-price,
+body .table.cart-items tbody tr td.quantity-price .best-price {
+  color: #000000 !important;
 }
