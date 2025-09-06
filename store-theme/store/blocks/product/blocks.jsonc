@@ -96,6 +96,8 @@
             "stack-layout#image-mobile",
             "flex-layout.row#prices",
             "product-selling-price",
+            "custom-flag-promotion",
+            "custom-unity",
             "rich-text#offer",
             "product-seller-name#pdp",
             //entreega
@@ -204,6 +206,8 @@
         "children": [
             "flex-layout.row#prices",
             "product-selling-price",
+            "custom-flag-promotion",
+            "custom-unity",
             "rich-text#offer",
             "flex-layout.row#pdp-wish-quantity",
             "flex-layout.row#pdp-buttons",
@@ -239,7 +243,7 @@
     "rich-text#how-buy": {
         "title": "Texto",
         "props": {
-            "text": "[¿Como comprar?](#)",
+            "text": "[¿Cómo comprar?](#)",
             "blockClass": "how-buy"
         }
     },

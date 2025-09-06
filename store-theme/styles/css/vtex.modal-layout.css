@@ -1,6 +1,6 @@
 .paper--quick-view {
     width: 700px;
-    height: 360px;
+    max-height: 420px;
     border-radius: 15px;
 }
 

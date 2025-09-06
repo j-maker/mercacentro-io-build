@@ -12,7 +12,7 @@
                 "srcLang": "en-DV",
                 "srcMessage": "store/minicart.go-to-checkout",
                 "context": "vtex.minicart@2.x",
-                "targetMessage": "Ir a comprar"
+                "targetMessage": "Ir a pagar"
             },
             {
                 "srcLang": "en-DV",

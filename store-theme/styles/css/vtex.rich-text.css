@@ -510,6 +510,8 @@
         height: 40px;
         width: 180px !important;
         border-radius: 5px;
+        color: #E30613;
+        border-color: #E30613;
     }
 
     .wrapper--flagminicart {

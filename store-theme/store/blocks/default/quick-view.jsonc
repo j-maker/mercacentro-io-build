@@ -47,7 +47,7 @@
     },
     "flex-layout.row#quick-add-summary": {
         "children": [
-            "add-to-cart-button#summary"
+            "add-to-cart-button#qv"
         ],
         "props": {
             "blockClass": "quick-add-summary",
@@ -77,7 +77,10 @@
             "custom-unity",
             "product-seller-name#pdp",
             "flex-layout.row#quick-add"
-        ]
+        ],
+        "props": {
+            "preventVerticalStretch": true
+        }
     },
     "flex-layout.row#sku-ean-summary": {
         "children": [

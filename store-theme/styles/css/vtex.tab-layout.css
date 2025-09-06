@@ -61,6 +61,12 @@
     }
 }
 
+@media screen and (max-width: 385px) {
+    .listItem :global(.vtex-button__label) {
+        font-size: 12px !important;
+    }
+}
+
 @media screen and (max-width: 1025px) {
     .listContainer {
         padding: 0 10px;

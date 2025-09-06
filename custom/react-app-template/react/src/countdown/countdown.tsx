@@ -101,7 +101,7 @@ const Countdown: React.FC<CountdownProps> = ({
         padding: '5px 0px 0',
         margin,
         textAlign: 'center' as const,
-        fontFamily: 'Montserrat, sans-serif',
+        fontFamily: 'Montserrat-Bold, sans-serif',
         width: 'fit-content',
         height: 'fit-content',
         display: 'inline-block'
@@ -115,7 +115,7 @@ const Countdown: React.FC<CountdownProps> = ({
         margin: '0 5px',
         display: 'inline-block' as const,
         minWidth: '60px',
-        fontFamily: 'Montserrat, sans-serif'
+        fontFamily: 'Montserrat-Bold, sans-serif'
     };
 
     const textStyle = {
@@ -125,7 +125,7 @@ const Countdown: React.FC<CountdownProps> = ({
         margin: '5px 0',
         textTransform: 'capitalize' as const,
         letterSpacing: '1px',
-        fontFamily: 'Montserrat, sans-serif'
+        fontFamily: 'Montserrat-Regular, sans-serif'
     };
 
     const timeUnitStyle = {
@@ -142,7 +142,7 @@ const Countdown: React.FC<CountdownProps> = ({
         color: '#c8c8c8',
         fontWeight: 'bold',
         lineHeight: '24px',
-        fontFamily: 'Montserrat, sans-serif'
+        fontFamily: 'Montserrat-Bold, sans-serif'
     };
 
     return (

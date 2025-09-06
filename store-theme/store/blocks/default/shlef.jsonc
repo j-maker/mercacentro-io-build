@@ -148,5 +148,13 @@
             "blockClass": "shelf",
             "text": "Agregar"
         }
+    },
+    "add-to-cart-button#qv": {
+        "props": {
+            "isOneClickBuy ": true,
+            "unavailableText": "NO DISPONIBLE",
+            "blockClass": "shelf",
+            "text": "Agregar"
+        }
     }
 }

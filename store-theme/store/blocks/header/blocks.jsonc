@@ -449,14 +449,14 @@
         "title": "Links",
         "props": {
             "blockClass": "header-top-text-desktop",
-            "text": "[Mercado](#) [Electrodomesticos](#) **[Tecnologia](#)**"
+            "text": "[Mercado](#) [Electrodomésticos](#) **[Tecnología](#)**"
         }
     },
     "rich-text#header-interest": {
         "title": "Links",
         "props": {
             "blockClass": "header-interest",
-            "text": "**[Ofertas](#)** [Catalogo](#) [Nuestras tiendas](#)"
+            "text": "**[Ofertas](#)** [Catálogo](#) [Nuestras tiendas](#)"
         }
     }
 }

@@ -244,8 +244,8 @@
     background: #E3061320;
     border-color: #E30613;
     border-radius: 20px;
-    padding: 0 25px;
-    min-width: 112px;
+    padding: 0;
+    width: 120px;
 }
 
 .flexRow--quick-add-summary :global(.vtex-button__label) {

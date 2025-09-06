@@ -40,6 +40,12 @@
     background-color: transparent !important;
 }
 
+.productListUnavailableItemsMessage {
+    font-size: 14px;
+    color: #E30613;
+    font-family: 'Montserrat-Bold';
+}
+
 .quantitySelectorContainer {
     width: auto !important;
 }
