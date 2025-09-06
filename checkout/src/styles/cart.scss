@@ -117,7 +117,8 @@
                   text-transform: capitalize;
 
                   @media screen and (max-width: 768px) {
-                    font-size: 0.813rem;
+                    font-size: 14px;
+                    line-height: 1.3;
                   }
                 }
 
@@ -149,6 +150,10 @@
                     }
                   }
                 }
+                @media screen and (max-width: 768px) {
+                  top: 10% !important;
+                  right: 10%;
+                }
               }
 
               .product-price {
@@ -178,11 +183,14 @@
 
                 @media (max-width: 769px) {
                   font-size: 0.813rem;
+                  margin: 0 0 7px 0 !important;
                 }
               }
 
               .quantity {
-                border-color: #000000;
+                border-color: #00000020;
+                border-radius: 4px;
+                padding: 0 5px;
 
                 .item-quantity-change {
                   height: 23px;
@@ -193,6 +201,7 @@
                   max-width: unset;
                   display: flex;
                   font-family: 'Montserrat', sans-serif;
+                  font-weight: bold;
                 }
 
                 .item-quantity-change {
@@ -292,6 +301,7 @@
       border: 1px solid #00000015;
       border-radius: 10px;
       padding: 20px;
+      font-size: 15px;
 
 
       .row-fluid.summary {
@@ -333,7 +343,7 @@
 
               &::before {
                 content: "Agregar";
-                font-size: 14px;
+                font-size: 15px;
                 color: #000000;
               }
             }
@@ -352,7 +362,7 @@
                 .totalizers-list {
                   td {
                     color: #000000;
-                    font-size: 0.875rem;
+                    font-size: 15px;
                     margin-bottom: 10px;
                   }
 
@@ -525,6 +535,9 @@ input:focus {
   font-size: 16px;
   line-height: 1;
   margin-bottom: 5px;
+  @media screen and (max-width: 768px) {
+    margin-bottom: 7px !important;
+  }
 }
 
 body .table.cart-items tbody tr td.product-price .total-selling-price,
