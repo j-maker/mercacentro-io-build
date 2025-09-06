@@ -73,7 +73,7 @@
             "product-rating-summary",
             "flex-layout.row#prices",
             "product-selling-price",
-            //promo binnes
+            "custom-flag-promotion",
             "custom-unity",
             "product-seller-name#pdp",
             "flex-layout.row#quick-add"

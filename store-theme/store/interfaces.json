@@ -1,4 +1,7 @@
 {
+  "custom-flag-promotion": {
+    "component": "FlagPromotion"
+  },
   "custom-freeshipping": {
     "component": "Freeshipping"
   },
