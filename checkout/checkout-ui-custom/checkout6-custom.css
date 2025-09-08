@@ -5,9 +5,25 @@
 /*!******************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/styles.scss (1) ***!
   \******************************************************************************************************************************************/
-@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap);
 /*!******************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/styles.scss (2) ***!
+  \******************************************************************************************************************************************/
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap);
+/*!******************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/styles.scss (3) ***!
+  \******************************************************************************************************************************************/
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap);
+/*!******************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/styles.scss (4) ***!
+  \******************************************************************************************************************************************/
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap);
+/*!******************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/styles.scss (5) ***!
+  \******************************************************************************************************************************************/
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap);
+/*!******************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/styles.scss (6) ***!
   \******************************************************************************************************************************************/
 @charset "UTF-8";
 @font-face {
@@ -1656,4 +1672,9 @@ body .table.cart-items tbody tr td.quantity-price .best-price {
   background-position: center;
   display: block;
   margin-right: 10px;
+}
+
+.container.container-main.container-order-form,
+.container.container-main.container-cart {
+  max-width: unset !important;
 }

@@ -1,0 +1,23 @@
+{
+    "geolocation": {
+        "component": "geolocation",
+        "allowed": ["geolocation"],
+        "props": {
+            "title": {
+                "type": "string",
+                "title": "Título del modal",
+                "default": "Elige un método de entrega"
+            },
+            "showButton": {
+                "type": "boolean",
+                "title": "Mostrar botón para abrir modal",
+                "default": true
+            },
+            "buttonText": {
+                "type": "string",
+                "title": "Texto del botón",
+                "default": "Seleccionar método de entrega"
+            }
+        }
+    }
+}

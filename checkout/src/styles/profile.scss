@@ -1128,3 +1128,8 @@
     }
   }
 }
+
+.container.container-main.container-order-form,
+.container.container-main.container-cart {
+  max-width: unset !important;
+}

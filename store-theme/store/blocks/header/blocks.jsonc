@@ -326,7 +326,7 @@
             "blockClass": "header_desktop"
         },
         "children": [
-            "rich-text#metod-shipping",
+            "geolocation",
             "image#wishlist",
             "login#main",
             "minicart.v2"

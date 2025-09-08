@@ -11,6 +11,7 @@
     "postreleasy": "vtex publish --verbose"
   },
   "dependencies": {
+    "mercacentro.geolocation": "0.x",
     "mercacentro.countdown": "0.x",
     "vtex.store-link": "0.x",
     "vtex.iframe": "0.x",

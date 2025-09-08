@@ -1,0 +1,12 @@
+{
+  "vendor": "mercacentro",
+  "name": "geolocation",
+  "version": "0.0.0",
+  "title": "geolocation",
+  "description": "geolocation",
+  "builders": {
+    "react": "3.x",
+    "store": "0.x"
+  },
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
+}
