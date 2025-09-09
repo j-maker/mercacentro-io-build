@@ -15,7 +15,7 @@
 }
 
 .quantitySelectorWrapper {
-    background: #F5F5F5;
+    background: transparent;
     border-radius: 4px;
     display: flex;
     align-items: center;
@@ -33,11 +33,37 @@
 
 .quantitySelectorButton {
     padding: 0;
-    border-radius: 50%;
-    border: 2px solid #E30613 !important;
     width: 15px;
     height: 15px;
     background-color: transparent !important;
+}
+
+.quantitySelectorIncrease::before {
+    content: "";
+    background-image: url(/arquivos/plus.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 17px;
+    height: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none !important;
+}
+
+.quantitySelectorDecrease::before {
+    content: "";
+    background-image: url(/arquivos/minus.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 17px;
+    height: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none !important;
 }
 
 .productListUnavailableItemsMessage {

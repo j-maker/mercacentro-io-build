@@ -181,6 +181,7 @@
   font-family: 'Montserrat-Bold';
 }
 
+:global(.vtex-product-list-0-x-quantitySelectorButton) svg,
 :global(.vtex-rich-text-0-x-paragraph--show-more-header)>br,
 :global(.vtex-account) :global(.vtex-address-form__country) {
   display: none;
@@ -327,7 +328,7 @@
 
 :global(.vtex-product-list-0-x-inputContainer) input {
   font-family: 'Montserrat-Regular';
-  font-size: 18px;
+  font-size: 15px;
   line-height: 1;
 }
 

@@ -38,7 +38,7 @@
                 text-decoration: underline;
                 color: #000000;
                 font-family: 'Montserrat', sans-serif;
-                font-weight: 800;
+                font-weight: 600;
               }
             }
           }
@@ -89,11 +89,12 @@
                 line-height: normal;
                 font-weight: normal;
                 font-family: 'Montserrat', sans-serif;
-                font-weight: 800;
+                font-weight: 600;
                 gap: 3px;
 
                 &::before {
                   font-size: 18px;
+                  font-weight: 600;
                   content: "1. Datos personales";
                   background-color: $main-white;
                   border: unset;
@@ -151,7 +152,7 @@
                           color: #000000;
                           text-decoration: underline;
                           font-family: 'Montserrat', sans-serif;
-                          font-weight: 800;
+                          font-weight: 600;
                         }
                       }
 
@@ -226,7 +227,7 @@
                   }
 
                   .btn-success {
-                    font-weight: bold;
+                    font-weight: 600;
                     min-width: unset;
                     padding: 9px;
                     font-size: 1rem;
@@ -260,7 +261,7 @@
                     margin: 0;
 
                     .link-logout {
-                      font-weight: bold;
+                      font-weight: 600;
                     }
                   }
                 }
@@ -289,6 +290,7 @@
 
             &::before {
               border: none;
+              font-weight: 600;
               content: "2. Entrega" !important;
               display: block;
               margin: 0;
@@ -518,7 +520,7 @@
                   content: "SELECCIONE UNA DE LAS SIGUIENTES OPCIONES";
                   font-size: 0.875rem;
                   font-family: 'Montserrat', sans-serif;
-                  font-weight: 800;
+                  font-weight: 600;
                   color: #000000;
                 }
               }
@@ -624,13 +626,13 @@
       }
 
       .vtex-omnishipping-1-x-summaryChange {
-        color: #90B51B;
-        background: #fff;
-        border: 1px solid #90B51B;
+        color: #90B51B !important;
+        background: #fff !important;
+        border: 1px solid #90B51B !important;
         padding: 12px 40px;
         font-size: 1rem;
-        font-weight: bold;
-        width: auto;
+        font-weight: 600;
+        width: auto !important;
         border-radius: 50px;
         text-decoration: none;
 
@@ -649,7 +651,7 @@
           color: #000000;
           margin: 0;
           font-family: 'Montserrat', sans-serif;
-          font-weight: 800;
+          font-weight: 600;
           text-transform: uppercase;
         }
       }
@@ -672,10 +674,11 @@
             gap: 3px;
             display: flex;
             font-family: 'Montserrat', sans-serif;
-            font-weight: bold;
+            font-weight: 600;
 
             &::before {
               border: none;
+              font-weight: 600;
               content: "3.";
               display: block;
               margin: 0;
@@ -765,7 +768,7 @@
     }
 
     .item {
-      border: none;
+      border: none !important;
       padding-top: 0;
     }
 
@@ -776,7 +779,7 @@
         margin: 0;
         padding: 0 !important;
         font-family: 'Montserrat', sans-serif;
-        font-weight: 800;
+        font-weight: 600;
         color: #000000;
         font-size: 0;
         text-align: center;
@@ -914,7 +917,7 @@
 
         a {
           font-family: 'Montserrat', sans-serif;
-          font-weight: 800;
+          font-weight: 600;
           color: #000000;
           font-size: 0.875rem;
           text-decoration: underline
@@ -931,7 +934,7 @@
           display: block;
           margin-bottom: 10px;
           font-family: 'Montserrat', sans-serif;
-          font-weight: 800;
+          font-weight: 600;
           color: #000000;
         }
 
@@ -1030,7 +1033,7 @@
           &:last-child {
 
             span {
-              font-weight: bold;
+              font-weight: 600;
               width: fit-content;
               display: block;
               height: fit-content;
@@ -1132,4 +1135,8 @@
 .container.container-main.container-order-form,
 .container.container-main.container-cart {
   max-width: unset !important;
+}
+
+::-webkit-scrollbar-thumb {
+  color: #8c8c8c;
 }

@@ -190,7 +190,7 @@ body {
 }
 .checkout-steps-custom .checkout-steps-container .checkout-step.active a {
   font-family: "Montserrat", sans-serif;
-  font-weight: 800;
+  font-weight: 600;
   text-decoration: underline;
 }
 
@@ -257,7 +257,7 @@ body {
 }
 .custom-main-footer .contact-info .contact-details .contact-item .contact-link {
   color: #000000;
-  font-weight: 800;
+  font-weight: 600;
   font-family: "Montserrat", sans-serif;
   font-size: 0.875rem;
   text-decoration: none;
@@ -275,7 +275,7 @@ body {
 .custom-main-footer .payment-methods h3 {
   color: #000000;
   font-family: "Montserrat", sans-serif;
-  font-weight: 800;
+  font-weight: 600;
   font-size: 1.125rem;
   margin-bottom: 20px;
   text-transform: uppercase;
@@ -360,7 +360,7 @@ body {
   content: "Tu carrito está vacío";
   font-size: 1.425rem;
   font-family: "Montserrat", sans-serif;
-  font-weight: 800;
+  font-weight: 600;
   text-transform: uppercase;
 }
 .checkout-container .cart-template .empty-cart-content .empty-cart-message {
@@ -381,7 +381,7 @@ body {
   width: 100%;
   text-align: center;
   font-family: "Montserrat", sans-serif;
-  font-weight: 800;
+  font-weight: 600;
   line-height: 1;
   margin-bottom: 70px;
 }
@@ -503,7 +503,7 @@ body {
   max-width: unset;
   display: flex;
   font-family: "Montserrat", sans-serif;
-  font-weight: bold;
+  font-weight: 600;
 }
 .checkout-container .cart-template .cart .cart-items tbody .product-item .v-custom-product-item-wrap .quantity .item-quantity-change .icon::before {
   font-size: 11px;
@@ -588,7 +588,7 @@ body {
   display: block;
   margin-bottom: 10px;
   font-family: "Montserrat", sans-serif;
-  font-weight: 800;
+  font-weight: 600;
   color: #000000;
 }
 .checkout-container .cart-template .summary-template-holder .row-fluid.summary .totalizers.summary-totalizers.cart-totalizers .coupon-column.summary-coupon-wrap input#cart-coupon {
@@ -637,7 +637,7 @@ body {
   color: #000000;
   font-size: 1.125rem;
   font-family: "Montserrat", sans-serif;
-  font-weight: 800;
+  font-weight: 600;
 }
 .checkout-container .cart-template .summary-template-holder .row-fluid.summary .totalizers.summary-totalizers.cart-totalizers .accordion-group .accordion-body .accordion-inner tfoot .info::after {
   content: ":";
@@ -667,7 +667,7 @@ body {
   font-weight: normal;
   letter-spacing: 1px;
   font-family: "Montserrat", sans-serif;
-  font-weight: 900;
+  font-weight: 600;
 }
 .checkout-container .cart-template .summary-template-holder .cart-links.cart-links-bottom .link-choose-more-products-wrapper {
   text-align: center;
@@ -680,7 +680,7 @@ body {
   text-transform: initial;
   font-size: 0;
   border: 1px solid #ED1C24;
-  font-weight: 900;
+  font-weight: 600;
   text-decoration: none;
   padding: 7px;
   letter-spacing: 1px;
@@ -735,7 +735,7 @@ body {
 .new-product-price {
   font-size: 1rem;
   margin-bottom: 7px;
-  font-weight: bold;
+  font-weight: 600;
   color: #000000;
 }
 
@@ -780,6 +780,7 @@ body .table.cart-items tbody tr td.product-price .best-price,
 body .table.cart-items tbody tr td.quantity-price .total-selling-price,
 body .table.cart-items tbody tr td.quantity-price .best-price {
   color: #000000 !important;
+  font-weight: 600;
 }
 
 .checkout-container .orderform-template .orderform-template-holder {
@@ -818,7 +819,7 @@ body .table.cart-items tbody tr td.quantity-price .best-price {
   text-decoration: underline;
   color: #000000;
   font-family: "Montserrat", sans-serif;
-  font-weight: 800;
+  font-weight: 600;
 }
 .checkout-container .orderform-template .orderform-template-holder #client-profile-data .submit.btn-success,
 .checkout-container .orderform-template .orderform-template-holder #shipping-data .submit.btn-success,
@@ -866,11 +867,12 @@ body .table.cart-items tbody tr td.quantity-price .best-price {
   line-height: normal;
   font-weight: normal;
   font-family: "Montserrat", sans-serif;
-  font-weight: 800;
+  font-weight: 600;
   gap: 3px;
 }
 .checkout-container .orderform-template .orderform-template-holder #client-profile-data .client-profile-data .accordion-heading .accordion-toggle span::before {
   font-size: 18px;
+  font-weight: 600;
   content: "1. Datos personales";
   background-color: #FFFFFF;
   border: unset;
@@ -915,7 +917,7 @@ body .table.cart-items tbody tr td.quantity-price .best-price {
   color: #000000;
   text-decoration: underline;
   font-family: "Montserrat", sans-serif;
-  font-weight: 800;
+  font-weight: 600;
 }
 .checkout-container .orderform-template .orderform-template-holder #client-profile-data .client-profile-data .accordion-body .accordion-inner .box-step .form-step .box-client-info .box-client-info-pj .input label {
   font-size: 1rem;
@@ -964,7 +966,7 @@ body .table.cart-items tbody tr td.quantity-price .best-price {
   text-decoration: underline;
 }
 .checkout-container .orderform-template .orderform-template-holder #client-profile-data .client-profile-data .accordion-body .accordion-inner .box-step .form-step .btn-success {
-  font-weight: bold;
+  font-weight: 600;
   min-width: unset;
   padding: 9px;
   font-size: 1rem;
@@ -987,7 +989,7 @@ body .table.cart-items tbody tr td.quantity-price .best-price {
   margin: 0;
 }
 .checkout-container .orderform-template .orderform-template-holder #client-profile-data .client-profile-data .accordion-body .accordion-inner .box-step .box-info .client-profile-email .link-logout {
-  font-weight: bold;
+  font-weight: 600;
 }
 @media (min-width: 769px) {
   .checkout-container .orderform-template .orderform-template-holder #client-profile-data {
@@ -1007,6 +1009,7 @@ body .table.cart-items tbody tr td.quantity-price .best-price {
 }
 .checkout-container .orderform-template .orderform-template-holder #shipping-data .accordion-heading .accordion-toggle.collapsed::before {
   border: none;
+  font-weight: 600;
   content: "2. Entrega" !important;
   display: block;
   margin: 0;
@@ -1185,7 +1188,7 @@ body .table.cart-items tbody tr td.quantity-price .best-price {
   content: "SELECCIONE UNA DE LAS SIGUIENTES OPCIONES";
   font-size: 0.875rem;
   font-family: "Montserrat", sans-serif;
-  font-weight: 800;
+  font-weight: 600;
   color: #000000;
 }
 .checkout-container .orderform-template .orderform-template-holder #shipping-data .shipping-container .box-step .shp-pickup-receiver .vtex-omnishipping-1-x-receiverTitle {
@@ -1263,13 +1266,13 @@ body .table.cart-items tbody tr td.quantity-price .best-price {
   font-size: 0.875rem;
 }
 .checkout-container .orderform-template .orderform-template-holder .vtex-omnishipping-1-x-summaryChange {
-  color: #90B51B;
-  background: #fff;
-  border: 1px solid #90B51B;
+  color: #90B51B !important;
+  background: #fff !important;
+  border: 1px solid #90B51B !important;
   padding: 12px 40px;
   font-size: 1rem;
-  font-weight: bold;
-  width: auto;
+  font-weight: 600;
+  width: auto !important;
   border-radius: 50px;
   text-decoration: none;
 }
@@ -1287,7 +1290,7 @@ body .table.cart-items tbody tr td.quantity-price .best-price {
   color: #000000;
   margin: 0;
   font-family: "Montserrat", sans-serif;
-  font-weight: 800;
+  font-weight: 600;
   text-transform: uppercase;
 }
 @media (min-width: 769px) {
@@ -1306,10 +1309,11 @@ body .table.cart-items tbody tr td.quantity-price .best-price {
   gap: 3px;
   display: flex;
   font-family: "Montserrat", sans-serif;
-  font-weight: bold;
+  font-weight: 600;
 }
 .checkout-container .orderform-template #payment-data .accordion-heading .accordion-toggle.collapsed span:not(.payment-edit-link)::before {
   border: none;
+  font-weight: 600;
   content: "3.";
   display: block;
   margin: 0;
@@ -1374,7 +1378,7 @@ body .table.cart-items tbody tr td.quantity-price .best-price {
   }
 }
 .checkout-container .cart-template.mini-cart .item {
-  border: none;
+  border: none !important;
   padding-top: 0;
 }
 .checkout-container .cart-template.mini-cart .custom-cart-template-wrap {
@@ -1384,7 +1388,7 @@ body .table.cart-items tbody tr td.quantity-price .best-price {
   margin: 0;
   padding: 0 !important;
   font-family: "Montserrat", sans-serif;
-  font-weight: 800;
+  font-weight: 600;
   color: #000000;
   font-size: 0;
   text-align: center;
@@ -1506,7 +1510,7 @@ body .table.cart-items tbody tr td.quantity-price .best-price {
 }
 .checkout-container .cart-template.mini-cart .custom-cart-template-wrap #go-to-cart-button a {
   font-family: "Montserrat", sans-serif;
-  font-weight: 800;
+  font-weight: 600;
   color: #000000;
   font-size: 0.875rem;
   text-decoration: underline;
@@ -1519,7 +1523,7 @@ body .table.cart-items tbody tr td.quantity-price .best-price {
   display: block;
   margin-bottom: 10px;
   font-family: "Montserrat", sans-serif;
-  font-weight: 800;
+  font-weight: 600;
   color: #000000;
 }
 .checkout-container .cart-template.mini-cart .custom-cart-template-wrap .summary-template-holder input[type=text] {
@@ -1591,7 +1595,7 @@ body .table.cart-items tbody tr td.quantity-price .best-price {
   margin: 0 auto;
 }
 .checkout-container .cart-template.mini-cart .custom-cart-template-wrap .payment-submit-wrap #payment-data-submit:last-child span {
-  font-weight: bold;
+  font-weight: 600;
   width: fit-content;
   display: block;
   height: fit-content;
@@ -1677,4 +1681,8 @@ body .table.cart-items tbody tr td.quantity-price .best-price {
 .container.container-main.container-order-form,
 .container.container-main.container-cart {
   max-width: unset !important;
+}
+
+::-webkit-scrollbar-thumb {
+  color: #8c8c8c;
 }

@@ -27,7 +27,7 @@
           content: "Tu carrito está vacío";
           font-size: 1.425rem;
           font-family: 'Montserrat', sans-serif;
-          font-weight: 800;
+          font-weight: 600;
           text-transform: uppercase;
         }
       }
@@ -58,7 +58,7 @@
           width: 100%;
           text-align: center;
           font-family: 'Montserrat', sans-serif;
-          font-weight: 800;
+          font-weight: 600;
           line-height: 1;
           margin-bottom: 70px;
 
@@ -201,7 +201,7 @@
                   max-width: unset;
                   display: flex;
                   font-family: 'Montserrat', sans-serif;
-                  font-weight: bold;
+                  font-weight: 600;
                 }
 
                 .item-quantity-change {
@@ -314,7 +314,7 @@
               display: block;
               margin-bottom: 10px;
               font-family: 'Montserrat', sans-serif;
-              font-weight: 800;
+              font-weight: 600;
               color: #000000;
             }
 
@@ -378,7 +378,7 @@
                     color: #000000;
                     font-size: 1.125rem;
                     font-family: 'Montserrat', sans-serif;
-                    font-weight: 800;
+                    font-weight: 600;
                   }
 
                   .info {
@@ -419,7 +419,7 @@
             font-weight: normal;
             letter-spacing: 1px;
             font-family: 'Montserrat', sans-serif;
-            font-weight: 900;
+            font-weight: 600;
           }
         }
 
@@ -434,7 +434,7 @@
             text-transform: initial;
             font-size: 0;
             border: 1px solid #ED1C24;
-            font-weight: 900;
+            font-weight: 600;
             text-decoration: none;
             padding: 7px;
             letter-spacing: 1px;
@@ -501,7 +501,7 @@
 .new-product-price {
   font-size: 1rem;
   margin-bottom: 7px;
-  font-weight: bold;
+  font-weight: 600;
   color: #000000;
 }
 
@@ -545,4 +545,5 @@ body .table.cart-items tbody tr td.product-price .best-price,
 body .table.cart-items tbody tr td.quantity-price .total-selling-price,
 body .table.cart-items tbody tr td.quantity-price .best-price {
   color: #000000 !important;
+  font-weight: 600;
 }
