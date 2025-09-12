@@ -22,7 +22,7 @@ const GeolocationWrapper: React.FC<GeolocationWrapperProps> = ({
       {showButton && (
         <>
         <button 
-          className='flex items-center'
+          className='geolocation-button flex items-center'
           onClick={openModal}
           style={{
             fontFamily: 'Montserrat-Regular',
@@ -35,7 +35,7 @@ const GeolocationWrapper: React.FC<GeolocationWrapperProps> = ({
         >
           <i className='icon-map-marker'></i>
           <div 
-            className='tl flex items-center'
+            className='geolocation-button-text tl flex items-center'
             dangerouslySetInnerHTML={{ __html: buttonText }}
           />
         </button>

@@ -414,7 +414,7 @@
     "rich-text#head-show-more": {
         "title": "Ver mas",
         "props": {
-            "text": "[Método de Entrega](#) [Catálogo](#) [Nuestras Tiendas](#) [¿Cómo Comprar?](#)",
+            "text": "[Catálogo](#) [Nuestras Tiendas](#) [¿Cómo Comprar?](#)",
             "blockClass": "show-more-header"
         }
     },

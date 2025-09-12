@@ -197,23 +197,23 @@
 }
 
 
-:global(.vtex-flex-layout-0-x-stretchChildrenWidth):nth-child(1) :global(.vtex-flex-layout-0-x-flexColChild--deals):nth-child(1)::after {
+/* :global(.vtex-flex-layout-0-x-stretchChildrenWidth):nth-child(1) :global(.vtex-flex-layout-0-x-flexColChild--deals):nth-child(1)::after {
   content: '\e907';
-}
+} */
 
-:global(.vtex-flex-layout-0-x-stretchChildrenWidth):nth-child(2) :global(.vtex-flex-layout-0-x-flexColChild--deals):nth-child(1)::after {
+:global(.vtex-flex-layout-0-x-stretchChildrenWidth):nth-child(1) :global(.vtex-flex-layout-0-x-flexColChild--deals):nth-child(1)::after {
   content: '\e91a';
 }
 
-:global(.vtex-flex-layout-0-x-stretchChildrenWidth):nth-child(3) :global(.vtex-flex-layout-0-x-flexColChild--deals):nth-child(1)::after {
+:global(.vtex-flex-layout-0-x-stretchChildrenWidth):nth-child(2) :global(.vtex-flex-layout-0-x-flexColChild--deals):nth-child(1)::after {
   content: '\e906';
 }
 
-:global(.vtex-flex-layout-0-x-stretchChildrenWidth):nth-child(4) :global(.vtex-flex-layout-0-x-flexColChild--deals):nth-child(1)::after {
+:global(.vtex-flex-layout-0-x-stretchChildrenWidth):nth-child(3) :global(.vtex-flex-layout-0-x-flexColChild--deals):nth-child(1)::after {
   content: '\e919';
 }
 
-:global(.vtex-flex-layout-0-x-stretchChildrenWidth):nth-child(5) :global(.vtex-flex-layout-0-x-flexColChild--deals):nth-child(1)::after {
+:global(.vtex-flex-layout-0-x-stretchChildrenWidth):nth-child(4) :global(.vtex-flex-layout-0-x-flexColChild--deals):nth-child(1)::after {
   content: '\e901';
 }
 

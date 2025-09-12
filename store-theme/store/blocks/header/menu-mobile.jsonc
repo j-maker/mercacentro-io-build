@@ -2,6 +2,7 @@
     "drawer#header-show-more": {
         "title": "Mostrar más",
         "children": [
+            "geolocation",
             "rich-text#head-show-more"
         ],
         "props": {

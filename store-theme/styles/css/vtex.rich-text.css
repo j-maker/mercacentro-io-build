@@ -211,7 +211,7 @@
 .container--show-more-header {
     width: 100%;
     padding: 0 40px;
-    margin: 30px 0;
+    margin: 0 0 30px 0;
 }
 
 .paragraph--show-more-header {
@@ -219,14 +219,14 @@
     margin: 0 0 10px;
 }
 
-.paragraph--show-more-header::before {
+:global(.vtex-store-drawer-0-x-childrenContainer--show-more)::before {
     content: 'Ver más';
     font-family: 'Montserrat-Regular';
     font-weight: 100;
     font-size: 25px;
     line-height: 28px;
     padding: 0;
-    margin-bottom: 30px;
+    margin: 30px 35px;
     display: flex;
 }
 

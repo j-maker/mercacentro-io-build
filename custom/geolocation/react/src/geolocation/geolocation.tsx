@@ -13,68 +13,289 @@ const Geolocation: React.FC<GeolocationProps> = ({
   onClose, 
   title = "Elige un método de entrega"
 }) => {
-  // Estado para la ubicación seleccionada
   const [selectedLocation, setSelectedLocation] = useState({
     departamento: 'Tolima',
     ciudad: 'Ibagué',
     codigoPostal: '73001'
   });
 
-  // Estado para las ciudades disponibles según el departamento
   const [availableCities, setAvailableCities] = useState<Array<{name: string, code: string}>>(
     colombiaData.departments.find(dept => dept.name === 'Tolima')?.cities || []
   );
   
-  // Estado para controlar qué opción está seleccionada - Por defecto domicilio
   const [selectedOption, setSelectedOption] = useState<'domicilio' | 'tienda'>('domicilio');
 
+  const updateOrderFormWithLocation = async (location: typeof selectedLocation) => {
+    try {
+      const getResponse = await fetch('/api/checkout/pub/orderForm/', {
+        method: 'GET',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        }
+      });
 
-
-  // Cargar ubicación guardada en localStorage al inicializar
-  React.useEffect(() => {
-    const savedCity = localStorage.getItem('hideButton');
-    const savedDepartment = localStorage.getItem('selectedDepartment');
-    
-    if (savedCity && savedDepartment) {
-      console.log('Ubicación guardada encontrada:', { ciudad: savedCity, departamento: savedDepartment });
-      
-      // Buscar el departamento en los datos de Colombia
-      const department = colombiaData.departments.find(dept => dept.name === savedDepartment);
-      if (department) {
-        // Establecer el departamento y sus ciudades disponibles
-        setAvailableCities(department.cities);
+      if (getResponse.ok) {
+        const orderFormData = await getResponse.json();
+        const orderFormId = orderFormData.orderFormId || orderFormData.id;
         
-        if (savedCity === 'Recoger en tienda') {
-          // Si la opción anterior era recoger en tienda
-          setSelectedOption('tienda');
-          setSelectedLocation({
-            departamento: savedDepartment,
-            ciudad: '',
-            codigoPostal: ''
+        
+        if (!orderFormId) {
+          return;
+        }
+        
+        const shippingData = {
+          address: {
+            state: location.departamento,
+            city: location.ciudad,
+            postalCode: location.codigoPostal,
+            country: 'COL'
+          }
+        };
+
+
+        let updateResponse;
+        
+        try {
+          updateResponse = await fetch(`/api/checkout/pub/orderForm/${orderFormId}/attachments/shippingData`, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Accept': 'application/json'
+            },
+            body: JSON.stringify(shippingData)
           });
-          console.log('Opción de recoger en tienda restaurada para:', savedDepartment);
-        } else {
-          // Si había una ciudad específica seleccionada
-          const city = department.cities.find(city => city.name === savedCity);
-          if (city) {
-            setSelectedOption('domicilio');
-            setSelectedLocation({
-              departamento: savedDepartment,
-              ciudad: savedCity,
-              codigoPostal: city.code
+        } catch (error) {
+        }
+        
+        if (!updateResponse || !updateResponse.ok) {
+          try {
+            updateResponse = await fetch(`/api/checkout/pub/orderForm/${orderFormId}/shippingData`, {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+              },
+              body: JSON.stringify(shippingData)
             });
-            console.log('Ubicación completa restaurada:', { 
-              departamento: savedDepartment, 
-              ciudad: savedCity, 
-              codigoPostal: city.code 
-            });
+          } catch (error) {
           }
         }
+
+        
+        if (updateResponse && updateResponse.ok) {
+          const responseData = await updateResponse.json();
+          
+          const verifyResponse = await fetch('/api/checkout/pub/orderForm/', {
+            method: 'GET',
+            headers: {
+              'Accept': 'application/json',
+              'Content-Type': 'application/json'
+            }
+          });
+          
+          if (verifyResponse.ok) {
+            const updatedOrderForm = await verifyResponse.json();
+          }
+          
+          localStorage.setItem('hideButton', location.ciudad);
+          localStorage.setItem('selectedDepartment', location.departamento);
+          
+          window.dispatchEvent(new CustomEvent('geolocationChanged', { 
+            detail: { 
+              option: 'domicilio', 
+              location: location
+            }
+          }));
+        } else {
+          if (updateResponse) {
+            const errorData = await updateResponse.text();
+          }
+        }
+      } else {
+      }
+    } catch (error) {
+    }
+  };
+
+  const updateOrderFormWithLocationAlternative = async (location: typeof selectedLocation) => {
+    try {
+      
+      const getResponse = await fetch('/api/checkout/pub/orderForm/', {
+        method: 'GET',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        }
+      });
+
+      if (getResponse.ok) {
+        const orderFormData = await getResponse.json();
+        const orderFormId = orderFormData.orderFormId || orderFormData.id;
+        
+        
+        if (!orderFormId) {
+          return;
+        }
+        
+        const shippingData = {
+          address: {
+            state: location.departamento,
+            city: location.ciudad,
+            postalCode: location.codigoPostal,
+            country: 'COL'
+          }
+        };
+
+
+        let updateResponse;
+        
+        try {
+          updateResponse = await fetch(`/api/checkout/pub/orderForm/${orderFormId}/attachments/shippingData`, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Accept': 'application/json'
+            },
+            body: JSON.stringify(shippingData)
+          });
+        } catch (error) {
+        }
+        
+        if (!updateResponse || !updateResponse.ok) {
+          try {
+            updateResponse = await fetch(`/api/checkout/pub/orderForm/${orderFormId}/shippingData`, {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+              },
+              body: JSON.stringify(shippingData)
+            });
+          } catch (error) {
+          }
+        }
+        
+        if (!updateResponse || !updateResponse.ok) {
+          try {
+            const fullUpdateData = {
+              ...orderFormData,
+              shippingData: {
+                ...orderFormData.shippingData,
+                ...shippingData
+              }
+            };
+            
+            updateResponse = await fetch(`/api/checkout/pub/orderForm/${orderFormId}`, {
+              method: 'PATCH',
+              headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+              },
+              body: JSON.stringify(fullUpdateData)
+            });
+          } catch (error) {
+          }
+        }
+
+        
+        if (updateResponse && updateResponse.ok) {
+          const responseData = await updateResponse.json();
+          
+          localStorage.setItem('hideButton', location.ciudad);
+          localStorage.setItem('selectedDepartment', location.departamento);
+          
+          window.dispatchEvent(new CustomEvent('geolocationChanged', { 
+            detail: { 
+              option: 'domicilio', 
+              location: location
+            }
+          }));
+          
+          return true;
+        } else {
+          return false;
+        }
+      } else {
+        return false;
+      }
+    } catch (error) {
+      return false;
+    }
+  };
+
+  const loadOrderFormData = async () => {
+    try {
+      
+      const response = await fetch('/api/checkout/pub/orderForm/', {
+        method: 'GET',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        const orderFormData = await response.json();
+        
+        const shippingData = orderFormData.shippingData;
+        const shippingAddress = shippingData?.address;
+        
+        
+        if (shippingAddress && shippingAddress.state && shippingAddress.city) {
+          
+          const department = colombiaData.departments.find(dept => dept.name === shippingAddress.state);
+          if (department) {
+            setAvailableCities(department.cities);
+            
+            const city = department.cities.find(city => city.name === shippingAddress.city);
+            if (city) {
+              setSelectedLocation({
+                departamento: shippingAddress.state,
+                ciudad: shippingAddress.city,
+                codigoPostal: shippingAddress.postalCode || city.code
+              });
+              return;
+            }
+          }
+        }
+        
+        const defaultLocation = {
+          departamento: 'Tolima',
+          ciudad: 'Ibagué',
+          codigoPostal: '73001'
+        };
+        
+        loadDefaultValues();
+        await updateOrderFormWithLocation(defaultLocation);
+        
+      } else {
+        loadDefaultValues();
+      }
+    } catch (error) {
+      loadDefaultValues();
+    }
+  };
+
+  const loadDefaultValues = () => {
+    const defaultDepartment = colombiaData.departments.find(dept => dept.name === 'Tolima');
+    if (defaultDepartment) {
+      setAvailableCities(defaultDepartment.cities);
+      const defaultCity = defaultDepartment.cities.find(city => city.name === 'Ibagué');
+      if (defaultCity) {
+        setSelectedLocation({
+          departamento: 'Tolima',
+          ciudad: 'Ibagué',
+          codigoPostal: '73001'
+        });
       }
     }
+  };
+
+  React.useEffect(() => {
+    loadOrderFormData();
   }, []);
 
-  // Prevenir scroll del body cuando el modal está abierto
   React.useEffect(() => {
     if (isOpen) {
       document.body.classList.add('modal-open');
@@ -87,7 +308,6 @@ const Geolocation: React.FC<GeolocationProps> = ({
     };
   }, [isOpen]);
 
-  // Función para manejar cambio de departamento
   const handleDepartmentChange = (departmentName: string) => {
     const department = colombiaData.departments.find(dept => dept.name === departmentName);
     if (department) {
@@ -100,7 +320,6 @@ const Geolocation: React.FC<GeolocationProps> = ({
     }
   };
 
-  // Función para manejar cambio de ciudad
   const handleCityChange = (cityName: string) => {
     const city = availableCities.find(city => city.name === cityName);
     if (city) {
@@ -112,34 +331,38 @@ const Geolocation: React.FC<GeolocationProps> = ({
     }
   };
 
-  // Función para confirmar ubicación
-  const handleConfirmLocation = () => {
-    // Validar que todos los campos requeridos estén completos
+  const getOrderFormInfo = async () => {
+    try {
+      
+      const response = await fetch('/api/checkout/pub/orderForm/', {
+        method: 'GET',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        const orderFormData = await response.json();
+      } else {
+        const errorText = await response.text();
+      }
+    } catch (error) {
+    }
+  };
+
+  const handleConfirmLocation = async () => {
     if (!selectedLocation.departamento || !selectedLocation.ciudad || !selectedLocation.codigoPostal) {
-      console.warn('Faltan campos requeridos para confirmar la ubicación');
       return;
     }
     
-    console.log('Confirmando ubicación:', selectedLocation);
     
-    // Guardar la ciudad y departamento en localStorage
-    // Esto permite persistir la selección del usuario entre sesiones
-    localStorage.setItem('hideButton', selectedLocation.ciudad);
-    localStorage.setItem('selectedDepartment', selectedLocation.departamento);
-    console.log('Ubicación guardada en localStorage:', { 
-      ciudad: selectedLocation.ciudad, 
-      departamento: selectedLocation.departamento
-    });
+    const success = await updateOrderFormWithLocationAlternative(selectedLocation);
     
-    // Disparar evento personalizado con la ubicación seleccionada
-    window.dispatchEvent(new CustomEvent('geolocationChanged', { 
-      detail: { 
-        option: 'domicilio', 
-        location: selectedLocation
-      }
-    }));
+    if (!success) {
+      await updateOrderFormWithLocation(selectedLocation);
+    }
     
-    // Cerrar el modal
     onClose();
   };
 
@@ -149,13 +372,12 @@ const Geolocation: React.FC<GeolocationProps> = ({
 
   const handleOptionConfirm = (option: 'domicilio' | 'tienda') => {
     if (option === 'tienda') {
-      // Para recoger en tienda, también guardamos la información en localStorage
       localStorage.setItem('hideButton', 'Recoger en tienda');
       localStorage.setItem('selectedDepartment', selectedLocation.departamento);
-      console.log('Opción de recoger en tienda guardada para:', selectedLocation.departamento);
+      
+      getOrderFormInfo();
     }
     
-    // Disparar evento personalizado con la opción seleccionada
     window.dispatchEvent(new CustomEvent('geolocationChanged', { 
       detail: { 
         option: option,
@@ -177,7 +399,8 @@ const Geolocation: React.FC<GeolocationProps> = ({
         </div>
         
         <p className="geolocation-subtitle">
-          Selecciona tu método de entrega
+        Selecciona si quieres recibir tu mercado<br/>
+        a domicilio o recogerlo en tienda
         </p>
 
         <div className="delivery-options">
@@ -185,9 +408,7 @@ const Geolocation: React.FC<GeolocationProps> = ({
             className={`delivery-option ${selectedOption === 'domicilio' ? 'selected' : ''}`}
             onClick={() => handleOptionSelect('domicilio')}
           >
-            <div className="delivery-icon icon-shipping">
-              
-            </div>
+            <div className="delivery-icon icon-shipping"></div>
             <span className="delivery-text">Entrega a domicilio</span>
           </div>
 
@@ -195,23 +416,14 @@ const Geolocation: React.FC<GeolocationProps> = ({
             className={`delivery-option ${selectedOption === 'tienda' ? 'selected' : ''}`}
             onClick={() => handleOptionSelect('tienda')}
           >
-            <div className="delivery-icon icon-store">
-            </div>
+            <div className="delivery-icon icon-store"></div>
             <span className="delivery-text">Recoger en tienda</span>
           </div>
         </div>
 
-        {/* Selectores de Departamento y Ciudad - Solo visibles cuando se selecciona domicilio */}
         {selectedOption === 'domicilio' && (
           <div className="location-selectors">
-            <p className="location-subtitle">
-              Selecciona tu ubicación para calcular el envío
-            </p>
-            
             <div className="selector-group">
-              <label htmlFor="department-select" className="selector-label">
-                Departamento
-              </label>
               <select
                 id="department-select"
                 className="location-select"
@@ -228,9 +440,6 @@ const Geolocation: React.FC<GeolocationProps> = ({
             </div>
 
             <div className="selector-group">
-              <label htmlFor="city-select" className="selector-label">
-                Ciudad
-              </label>
               <select
                 id="city-select"
                 className="location-select"
@@ -251,7 +460,6 @@ const Geolocation: React.FC<GeolocationProps> = ({
           </div>
         )}
 
-        {/* Botón de confirmación - Siempre visible */}
         <div className="geolocation-actions">
           <button 
             className="geolocation-confirm-btn"
@@ -268,13 +476,11 @@ const Geolocation: React.FC<GeolocationProps> = ({
                 : false
             }
           >
-            Confirmar Ubicación
+            Enviar
           </button>
         </div>
-
-        
       </div>
-        </div>
+    </div>
     );
 };
 
