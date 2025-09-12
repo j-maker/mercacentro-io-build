@@ -102,123 +102,183 @@
         "title": "Departamento 1 M/O",
         "children": [
             "menu-item#shop"
-        ]
+        ],
+        "props": {
+            "renderChildren": false
+        }
     },
     "toggle-layout#menu-department-2": {
         "title": "Departamento 2 M/O",
         "children": [
             "menu-item#shop"
-        ]
+        ],
+        "props": {
+            "renderChildren": false
+        }
     },
     "toggle-layout#menu-department-3": {
         "title": "Departamento 3 M/O",
         "children": [
             "menu-item#shop"
-        ]
+        ],
+        "props": {
+            "renderChildren": false
+        }
     },
     "toggle-layout#menu-department-4": {
         "title": "Departamento 4 M/O",
         "children": [
             "menu-item#shop"
-        ]
+        ],
+        "props": {
+            "renderChildren": false
+        }
     },
     "toggle-layout#menu-department-5": {
         "title": "Departamento 5 M/O",
         "children": [
             "menu-item#shop"
-        ]
+        ],
+        "props": {
+            "renderChildren": false
+        }
     },
     "toggle-layout#menu-department-6": {
         "title": "Departamento 6 M/O",
         "children": [
             "menu-item#shop"
-        ]
+        ],
+        "props": {
+            "renderChildren": false
+        }
     },
     "toggle-layout#menu-department-7": {
         "title": "Departamento 7 M/O",
         "children": [
             "menu-item#shop"
-        ]
+        ],
+        "props": {
+            "renderChildren": false
+        }
     },
     "toggle-layout#menu-department-8": {
         "title": "Departamento 8 M/O",
         "children": [
             "menu-item#shop"
-        ]
+        ],
+        "props": {
+            "renderChildren": false
+        }
     },
     "toggle-layout#menu-department-9": {
         "title": "Departamento 9 M/O",
         "children": [
             "menu-item#shop"
-        ]
+        ],
+        "props": {
+            "renderChildren": false
+        }
     },
     
     "toggle-layout#menu-department-10": {
         "title": "Departamento 10 M/O",
         "children": [
             "menu-item#shop"
-        ]
+        ],
+        "props": {
+            "renderChildren": false
+        }
     },
     "toggle-layout#menu-department-11": {
         "title": "Departamento 11 M/O",
         "children": [
             "menu-item#shop"
-        ]
+        ],
+        "props": {
+            "renderChildren": false
+        }
     },
     "toggle-layout#menu-department-12": {
         "title": "Departamento 12 M/O",
         "children": [
             "menu-item#shop"
-        ]
+        ],
+        "props": {
+            "renderChildren": false
+        }
     },
     "toggle-layout#menu-department-13": {
         "title": "Departamento 13 M/O",
         "children": [
             "menu-item#shop"
-        ]
+        ],
+        "props": {
+            "renderChildren": false
+        }
     },
     "toggle-layout#menu-department-14": {
         "title": "Departamento 14 M/O",
         "children": [
             "menu-item#shop"
-        ]
+        ],
+        "props": {
+            "renderChildren": false
+        }
     },
     "toggle-layout#menu-department-15": {
         "title": "Departamento 15 M/O",
         "children": [
             "menu-item#shop"
-        ]
+        ],
+        "props": {
+            "renderChildren": false
+        }
     },
     "toggle-layout#menu-department-16": {
         "title": "Departamento 16 M/O",
         "children": [
             "menu-item#shop"
-        ]
+        ],
+        "props": {
+            "renderChildren": false
+        }
     },
     "toggle-layout#menu-department-17": {
         "title": "Departamento 17 M/O",
         "children": [
             "menu-item#shop"
-        ]
+        ],
+        "props": {
+            "renderChildren": false
+        }
     },
     "toggle-layout#menu-department-18": {
         "title": "Departamento 18 M/O",
         "children": [
             "menu-item#shop"
-        ]
+        ],
+        "props": {
+            "renderChildren": false
+        }
     },
     "toggle-layout#menu-department-19": {       
         "title": "Departamento 19 M/O",
         "children": [
             "menu-item#shop"
-        ]
+        ],
+        "props": {
+            "renderChildren": false
+        }
     },
     
     "toggle-layout#menu-department-20": {
         "title": "Departamento 20 M/O",
         "children": [
             "menu-item#shop"
-        ]
+        ],
+        "props": {
+            "renderChildren": false
+        }
     },
     "menu-item#shop": {
         "props": {

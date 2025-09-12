@@ -38,6 +38,7 @@
     background-color: transparent !important;
 }
 
+:global(.vtex-numeric-stepper__plus-button__text)::before,
 .quantitySelectorIncrease::before {
     content: "";
     background-image: url(/arquivos/plus.svg);
@@ -52,6 +53,8 @@
     border: none !important;
 }
 
+
+:global(.vtex-numeric-stepper__minus-button__text)::before,
 .quantitySelectorDecrease::before {
     content: "";
     background-image: url(/arquivos/minus.svg);

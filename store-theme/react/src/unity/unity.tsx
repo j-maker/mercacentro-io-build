@@ -41,15 +41,18 @@ const Unity = () => {
     let pricePerUnit = null;
     
     if (shouldCalculatePerUnit && price && valorUnidadMedida) {
+        // Desarrollo simple: precio / unidad (precio ya está en pesos colombianos)
+        const precioPorUnidad = price / parseFloat(valorUnidadMedida);
+        
+        // Formatear según el tipo de unidad
         if (unidadMedida === 'Unidad') {
-            // Para Unidad: sin división por 100, sin decimales
-            pricePerUnit = (price / parseFloat(valorUnidadMedida)).toFixed(0);
+            pricePerUnit = precioPorUnidad.toFixed(0);
         } else if (unidadMedida === 'Gramo') {
-            // Para Gramo: sin división por 100, 1 decimal
-            pricePerUnit = (price / parseFloat(valorUnidadMedida)).toFixed(1);
+            pricePerUnit = precioPorUnidad.toFixed(1);
+        } else if (unidadMedida === 'Mililitro') {
+            pricePerUnit = precioPorUnidad.toFixed(2);
         } else {
-            // Para otras unidades: con división por 100, 1 decimal
-            pricePerUnit = (price / 100 / parseFloat(valorUnidadMedida)).toFixed(1);
+            pricePerUnit = precioPorUnidad.toFixed(1);
         }
     }
 

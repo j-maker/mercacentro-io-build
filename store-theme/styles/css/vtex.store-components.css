@@ -251,6 +251,10 @@
         margin: 15px auto 10px;
     }
 
+    .imageElement--banner-shelf-home-mobile-2 {
+        margin: 0px auto 20px;
+    }
+
     .imageElementLink--banner-shelf-home-mobile {
         display: flex;
     }

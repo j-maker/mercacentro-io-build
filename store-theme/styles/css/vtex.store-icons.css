@@ -394,6 +394,11 @@
 
 @media screen and (min-width: 1026px) {
     
+    
+    :global(.vtex-rich-text-0-x-link--header-top-text-desktop):hover {
+        text-decoration: underline;
+    }
+    
     :global(.vtex-store-footer-2-x-socialNetworkLink),
     :global(.vtex-store-footer-2-x-socialNetworkLink)::after,
     :global(.vtex-menu-2-x-styledLinkContent--menu-footer-desktop),

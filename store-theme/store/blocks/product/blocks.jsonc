@@ -145,7 +145,7 @@
         "props": {
             "preventVerticalStretch": true,
             "width": "40%",
-            "blockClass": "main-desktop-image"
+            "blockClass": ["main-desktop-image","ssecond-info"]
         }
     },
     "flex-layout.col#main-sticky": {

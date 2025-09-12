@@ -77,11 +77,21 @@
       }
     }
   },
+  "image#banner_shelf-home_mobile_2": {
+    "title": "Banner",
+    "props": {
+      "blockClass": ["banner-shelf-home-mobile","banner-shelf-home-mobile-2"],
+      "src": "/assets/vtex.file-manager-graphql/images/375ed0fb-d9ae-455a-8319-3a478b1e30f4___be74371ad771f249bb892dccdb43d5f9.png",
+      "link": {
+        "url": "#"
+      }
+    }
+  },
   "toggle-layout#bannershelf": {
     "title": "Marca Mercacentro M/O",
     "children": [
       "rich-text#title-shelfs",
-      //banner
+      "image#banner_shelf-home_mobile_2",
       "list-context.product-list#collection"
     ]
   },

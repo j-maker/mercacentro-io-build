@@ -61,7 +61,7 @@
     }
 }
 
-@media screen and (max-width: 385px) {
+@media screen and (max-width: 400px) {
     .listItem :global(.vtex-button__label) {
         font-size: 12px !important;
     }

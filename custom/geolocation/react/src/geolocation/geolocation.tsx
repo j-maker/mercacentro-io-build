@@ -86,18 +86,6 @@ const Geolocation: React.FC<GeolocationProps> = ({
         if (updateResponse && updateResponse.ok) {
           const responseData = await updateResponse.json();
           
-          const verifyResponse = await fetch('/api/checkout/pub/orderForm/', {
-            method: 'GET',
-            headers: {
-              'Accept': 'application/json',
-              'Content-Type': 'application/json'
-            }
-          });
-          
-          if (verifyResponse.ok) {
-            const updatedOrderForm = await verifyResponse.json();
-          }
-          
           localStorage.setItem('hideButton', location.ciudad);
           localStorage.setItem('selectedDepartment', location.departamento);
           
@@ -107,6 +95,11 @@ const Geolocation: React.FC<GeolocationProps> = ({
               location: location
             }
           }));
+          
+          // Recargar la página después de actualizar exitosamente el shipping
+          setTimeout(() => {
+            window.location.reload();
+          }, 1000);
         } else {
           if (updateResponse) {
             const errorData = await updateResponse.text();
@@ -211,6 +204,11 @@ const Geolocation: React.FC<GeolocationProps> = ({
               location: location
             }
           }));
+          
+          // Recargar la página después de actualizar exitosamente el shipping
+          setTimeout(() => {
+            window.location.reload();
+          }, 1000);
           
           return true;
         } else {
@@ -384,6 +382,11 @@ const Geolocation: React.FC<GeolocationProps> = ({
         location: option === 'domicilio' ? selectedLocation : null
       }
     }));
+    
+    // Recargar la página después de cambiar la opción de entrega
+    setTimeout(() => {
+      window.location.reload();
+    }, 500);
     
     onClose();
   };

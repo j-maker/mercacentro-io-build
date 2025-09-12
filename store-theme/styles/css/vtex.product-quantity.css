@@ -25,15 +25,7 @@
 
 :global(.vtex-numeric-stepper__plus-button__text),
 :global(.vtex-numeric-stepper__minus-button__text) {
-    border: 2px solid red;
-    border-radius: 50%;
-    color: red;
-    width: 15px;
-    height: 15px;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    font-size: 0;
 }
 
 :global(.vtex-numeric-stepper__minus-button__text) {

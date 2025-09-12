@@ -253,6 +253,10 @@
 }
 
 @media screen and (min-width: 1026px) {
+    .flexCol--ssecond-info {
+        border-right: 1px solid #00000010;
+        padding-right: 15px;    
+    }
     .flexRow--quick-view {
         padding: 30px;
     }
