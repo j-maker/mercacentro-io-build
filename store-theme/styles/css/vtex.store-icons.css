@@ -209,8 +209,8 @@
 }
 
 :global(.vtex-login-2-x-accessCodeOptionBtn) :global(.vtex-button__label)::before {
-    content: "\e907";
-    font-size: 20px;
+    content: "\e902";
+    font-size: 18px;
     margin-right: 10px;
 }
 

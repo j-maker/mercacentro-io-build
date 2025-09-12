@@ -1,5 +1,30 @@
 {
-/*     "search-not-found-layout": {
+    "search-not-found-layout": {
+        "children": [
+            /* "flex-layout.row#searchbread", */
+            "flex-layout.row#notfound"
+        ]
+    },
+    "flex-layout.row#notfound": {
+        "children": [
+            "not-found"
+        ],
+        "props": {
+            "marginTop": 8,
+            "marginBottom": 8,
+            "fullWidth": true
+        }
+    },
+    "flex-layout.row#searchbread": {
+        "children": [
+            "breadcrumb.search"
+        ],
+        "props": {
+            "preserveLayoutOnMobile": true,
+            "fullWidth": true
+        }
+    }
+    /*     "search-not-found-layout": {
         "title": "Error - Página Vacía",
         "children": [
         ]

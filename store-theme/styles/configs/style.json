@@ -140,7 +140,7 @@
       "danger--faded": "transparent",
       "warning": "#FFB100",
       "warning--faded": "#FFF6E0",
-      "muted-1": "#3c3c3c",
+      "muted-1": "#000000",
       "muted-2": "#000000",
       "muted-3": "#CACBCC",
       "muted-4": "#E3E4E6",
