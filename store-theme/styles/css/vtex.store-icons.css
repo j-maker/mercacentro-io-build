@@ -425,10 +425,17 @@
     :global(.vtex-slider-layout-0-x-slideChildrenContainer--categoris):hover,
     :global(.vtex-store-drawer-0-x-openIconContainer--menu-desktop):hover,
     :global(.vtex-minicart-2-x-openIconContainer) :global(.vtex-button):hover,
-    :global(.vtex-login-2-x-container) :global(.vtex-button):hover,
-    :global(.vtex-store-components-3-x-imageElementLink):hover {
+    :global(.vtex-login-2-x-container) :global(.vtex-button):hover{
         opacity: 0.7;
     }
+
+    :global(.vtex-store-components-3-x-imageElement) {
+        transition: all .3s ease;
+    }
+    :global(.vtex-store-components-3-x-imageElementLink):hover :global(.vtex-store-components-3-x-imageElement) {
+        transform: scale(1.03);
+    }
+
 
 
     :global(.vtex-store-footer-2-x-socialNetworkLink):hover,

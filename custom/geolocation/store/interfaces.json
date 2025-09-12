@@ -1,7 +1,9 @@
 {
     "geolocation": {
         "component": "geolocation",
-        "allowed": ["geolocation"],
+        "allowed": [
+            "geolocation"
+        ],
         "props": {
             "title": {
                 "type": "string",
@@ -19,5 +21,10 @@
                 "default": "Seleccionar método de entrega"
             }
         }
+    },
+    "wrapper-add-to-cart": {
+        "render": "client",
+        "component": "wrapperAddToCart",
+        "composition": "children"
     }
 }

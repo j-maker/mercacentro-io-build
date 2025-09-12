@@ -547,3 +547,20 @@ body .table.cart-items tbody tr td.quantity-price .best-price {
   color: #000000 !important;
   font-weight: 600;
 }
+
+.cart-template.mini-cart {
+  .hproduct.item.muted{
+    flex-wrap: wrap;
+    .item-unavailable {
+      
+      .icon-warning-sign {
+        display: none
+      }
+    }
+  }
+}
+
+.icon-plus:before,
+.icon-edit:before {
+  content: "";
+}

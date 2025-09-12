@@ -26,7 +26,7 @@
         "children": [
             "product-summary-image",
             "flex-layout.col#minicart-name-price",
-            "add-to-cart-button#minicart"
+            "wrapper-add-to-cart#minicart"
         ],
         "props": {
             "colSizing": "auto",
@@ -36,8 +36,17 @@
     },
     "product-summary-image": {
         "props": {
+            "hoverImage": {
+                "label": "hover"
+            },
             "showBadge": false
         }
+    },
+    "wrapper-add-to-cart#minicart": {
+        "title": "Wrapper Add to Cart",
+        "children": [
+            "add-to-cart-button#minicart"
+        ]
     },
     "add-to-cart-button#minicart": {
         "props": {
@@ -74,8 +83,15 @@
         "children": [
             "product-summary-image",
             "add-to-list-btn",
-            "modal-trigger#quick-view"
+            "modal-trigger#quick-view",
+            "custom-flag-city"
         ]
+    },
+    "custom-flag-city": {
+        "title": "Flag City",
+        "props": {
+            "blockClass": "flag-city"
+        }
     },
     "flex-layout.row#info-shelf": {
         "title": "Info vitrina",
@@ -121,7 +137,7 @@
     "flex-layout.row#add-cart-button": {
         "children": [
             "product-rating-summary",
-            "add-to-cart-button#summary"
+            "wrapper-add-to-cart#summary"
         ],
         "props": {
             "preserveLayoutOnMobile": true,
@@ -140,6 +156,12 @@
             "message": "-{savingsPercentage}"
         }
     },
+    "wrapper-add-to-cart#summary": {
+        "title": "Wrapper Add to Cart",
+        "children": [
+            "add-to-cart-button#summary"
+        ]
+    },
     "add-to-cart-button#summary": {
         "props": {
             "width": "60%",
@@ -148,6 +170,12 @@
             "blockClass": "shelf",
             "text": "Agregar"
         }
+    },
+    "wrapper-add-to-cart#qv": {
+        "title": "Wrapper Add to Cart",
+        "children": [
+            "add-to-cart-button#qv"
+        ]
     },
     "add-to-cart-button#qv": {
         "props": {

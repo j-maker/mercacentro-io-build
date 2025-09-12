@@ -16,6 +16,7 @@ declare module 'vtex.product-context' {
           sellerId?: string;
           commertialOffer?: {
             Price?: number;
+            ListPrice?: number;
           };
         }>;
       }>;
@@ -31,6 +32,7 @@ declare module 'vtex.product-context' {
         sellerId?: string;
         commertialOffer?: {
           Price?: number;
+          ListPrice?: number;
         };
       }>;
     };

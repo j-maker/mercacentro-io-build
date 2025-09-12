@@ -36,15 +36,15 @@
         }
     },
     "flex-layout.row#shipping-info": {
-      "children": [
-        "custom-tiempo-envio",
-        "custom-domicilio"
-      ],
-      "props": {
-        "colSizing": "auto",
-        "colJustify": "between",
-        "blockClass": "shipping-info"
-      }
+        "children": [
+            "custom-tiempo-envio",
+            "custom-domicilio"
+        ],
+        "props": {
+            "colSizing": "auto",
+            "colJustify": "between",
+            "blockClass": "shipping-info"
+        }
     },
     "stack-layout#image": {
         "children": [
@@ -68,7 +68,7 @@
         },
         "children": [
             "product-quantity",
-            "add-to-cart-button#pdp"
+            "wrapper-add-to-cart#pdp"
         ]
     },
     "product-price-savings#pdp": {
@@ -98,7 +98,7 @@
             "product-selling-price",
             "custom-flag-promotion",
             "custom-unity",
-            "rich-text#offer",
+            "custom-text-promotion",
             "product-seller-name#pdp",
             //entreega
             "rich-text#how-buy", //como comprar
@@ -208,7 +208,7 @@
             "product-selling-price",
             "custom-flag-promotion",
             "custom-unity",
-            "rich-text#offer",
+            "custom-text-promotion",
             "flex-layout.row#pdp-wish-quantity",
             "flex-layout.row#pdp-buttons",
             "shelf.relatedProducts#view",
@@ -247,6 +247,12 @@
             "blockClass": "how-buy"
         }
     },
+    "custom-text-promotion": {
+        "title": "Texto",
+        "children": [
+            "rich-text#offer"
+        ]
+    },
     "rich-text#offer": {
         "title": "Texto",
         "props": {
@@ -262,7 +268,7 @@
     },
     "flex-layout.row#pdp-buttons": {
         "children": [
-            "add-to-cart-button#pdp"
+            "wrapper-add-to-cart#pdp"
         ],
         "props": {
             "marginBottom": 6,
@@ -270,6 +276,12 @@
             "fullWidth": true,
             "blockClass": "pdp-buttons"
         }
+    },
+    "wrapper-add-to-cart#pdp": {
+        "title": "Wrapper Add to Cart",
+        "children": [
+            "add-to-cart-button#pdp"
+        ]
     },
     "add-to-cart-button#pdp": {
         "title": "Botón de agregar al carrito",

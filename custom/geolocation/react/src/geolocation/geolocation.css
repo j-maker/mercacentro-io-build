@@ -132,6 +132,57 @@
   margin: 0 auto;
 }
 
+/* Estilos para los selectores de ubicación */
+:global(.location-selectors) {
+  padding: 0 28px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+:global(.selector-group) {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+:global(.selector-label) {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  font-family: 'Montserrat-Medium', sans-serif;
+}
+
+:global(.location-select) {
+  padding: 12px 16px;
+  border: 2px solid #e1e1e1;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: 'Montserrat-Regular', sans-serif;
+  background: white;
+  color: #333;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+:global(.location-select:focus) {
+  outline: none;
+  border-color: #90B51B;
+  box-shadow: 0 0 0 3px rgba(144, 181, 27, 0.1);
+}
+
+:global(.location-select:disabled) {
+  background-color: #f5f5f5;
+  color: #999;
+  cursor: not-allowed;
+  border-color: #ddd;
+}
+
+:global(.location-select option) {
+  padding: 8px;
+  font-size: 14px;
+}
+
 :global(.delivery-options) {
   display: flex;
   gap: 20px;
@@ -330,6 +381,20 @@
     font-size: 14px;
   }
 
+  :global(.location-selectors) {
+    padding: 0 24px 16px;
+    gap: 12px;
+  }
+
+  :global(.location-select) {
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+
+  :global(.selector-label) {
+    font-size: 13px;
+  }
+
   :global(.delivery-options) {
     flex-direction: column;
     gap: 16px;
@@ -376,4 +441,107 @@
   font-size: 20px;
   font-style: normal;
   color: #90B51B;
+}
+
+/* Estilos para información del shipping simulator */
+:global(.shipping-loading) {
+  margin: 20px 24px 15px 24px;
+  padding: 12px;
+  background-color: #f0f8ff;
+  border: 1px solid #b3d9ff;
+  border-radius: 6px;
+  text-align: center;
+}
+
+:global(.shipping-loading p) {
+  margin: 0;
+  color: #0066cc;
+  font-weight: 500;
+}
+
+:global(.shipping-info) {
+  margin: 20px 24px 15px 24px;
+  padding: 15px;
+  border-radius: 6px;
+}
+
+:global(.shipping-success) {
+  background-color: #f0fff4;
+  border: 1px solid #90ee90;
+  color: #006400;
+}
+
+:global(.shipping-success p) {
+  margin: 0 0 8px 0;
+  font-weight: 500;
+}
+
+:global(.shipping-error) {
+  background-color: #fff0f0;
+  border: 1px solid #ffb3b3;
+  color: #cc0000;
+}
+
+:global(.shipping-error p) {
+  margin: 0 0 8px 0;
+  font-weight: 500;
+}
+
+:global(.delivery-options) {
+  margin-top: 10px;
+}
+
+:global(.delivery-options p) {
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+:global(.delivery-options ul) {
+  margin: 0;
+  padding-left: 20px;
+}
+
+:global(.delivery-options li) {
+  margin-bottom: 4px;
+  font-size: 14px;
+}
+
+/* Botón de confirmación */
+:global(.geolocation-actions) {
+  margin: 20px 0;
+  text-align: center;
+}
+
+:global(.geolocation-confirm-btn) {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  min-width: 200px;
+}
+
+:global(.geolocation-confirm-btn:hover:not(:disabled)) {
+  background-color: #0056b3;
+}
+
+:global(.geolocation-confirm-btn:disabled) {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+
+/* Mensaje de error */
+:global(.geolocation-error) {
+  margin-top: 12px;
+  padding: 12px;
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+  border-radius: 6px;
+  font-size: 14px;
+  text-align: center;
 }

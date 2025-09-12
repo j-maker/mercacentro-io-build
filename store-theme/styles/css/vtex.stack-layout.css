@@ -32,6 +32,17 @@
     top: 0;
 }
 
+.stackItem--flag-city {
+    z-index: 4;
+    bottom: 0;
+    top: unset;
+    width: 100%;
+    left: 0;
+    justify-content: center;
+    display: flex
+;
+}
+
 @media screen and (min-width: 1026px) {
     :global(.vtex-product-summary-2-x-element):hover .stackItem--wishlist,
     :global(.vtex-product-summary-2-x-element):hover .stackItem--quick-view {

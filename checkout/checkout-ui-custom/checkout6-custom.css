@@ -783,6 +783,18 @@ body .table.cart-items tbody tr td.quantity-price .best-price {
   font-weight: 600;
 }
 
+.cart-template.mini-cart .hproduct.item.muted {
+  flex-wrap: wrap;
+}
+.cart-template.mini-cart .hproduct.item.muted .item-unavailable .icon-warning-sign {
+  display: none;
+}
+
+.icon-plus:before,
+.icon-edit:before {
+  content: "";
+}
+
 .checkout-container .orderform-template .orderform-template-holder {
   /* &::before {
     content: "FINALIZAR COMPRA";

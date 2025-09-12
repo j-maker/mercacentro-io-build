@@ -46,3 +46,8 @@ $(window).on('orderFormUpdated.vtex', function (evt, orderForm) {
   }
   addShippingInfo()
 })
+
+// Escuchar eventos de geolocalización desde el store-theme
+$(window).on('geolocationChanged', function (evt) {
+  console.log('Evento de geolocalización recibido en checkout:', evt.detail)
+})

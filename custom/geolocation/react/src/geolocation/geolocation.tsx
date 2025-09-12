@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import colombiaData from './colombiaData.json';
 import './geolocation.css';
 
 interface GeolocationProps {
@@ -12,144 +13,155 @@ const Geolocation: React.FC<GeolocationProps> = ({
   onClose, 
   title = "Elige un método de entrega"
 }) => {
-  // Simulación del orderForm para demostración
-  const [orderForm, setOrderForm] = useState({
-    id: 'order-123',
-    items: [],
-    shippingData: null,
-    pickupData: null,
-    deliveryOption: null,
-    totalizers: [],
-    value: 0,
-    clientProfileData: null
-  });
-  
-  const [selectedOption, setSelectedOption] = useState<'domicilio' | 'tienda' | null>(null);
-  const [address, setAddress] = useState({
-    calle: '',
-    numero: '',
-    apartamento: '',
+  // Estado para la ubicación seleccionada
+  const [selectedLocation, setSelectedLocation] = useState({
+    departamento: 'Tolima',
     ciudad: 'Ibagué',
-    departamento: 'Tolima'
+    codigoPostal: '73001'
   });
-  const [selectedStore, setSelectedStore] = useState('');
 
-  const stores = [
-    { id: '1', name: 'Tienda Centro - Ibagué', address: 'Calle 15 #3-25, Centro' },
-    { id: '2', name: 'Tienda Norte - Ibagué', address: 'Carrera 3 #15-40, Norte' },
-    { id: '3', name: 'Tienda Sur - Ibagué', address: 'Calle 60 #5-20, Sur' }
-  ];
+  // Estado para las ciudades disponibles según el departamento
+  const [availableCities, setAvailableCities] = useState<Array<{name: string, code: string}>>(
+    colombiaData.departments.find(dept => dept.name === 'Tolima')?.cities || []
+  );
+  
+  // Estado para controlar qué opción está seleccionada - Por defecto domicilio
+  const [selectedOption, setSelectedOption] = useState<'domicilio' | 'tienda'>('domicilio');
 
-  const handleOptionSelect = (option: 'domicilio' | 'tienda') => {
-    setSelectedOption(option);
-  };
 
-  const handleAddressChange = (field: string, value: string) => {
-    setAddress(prev => ({
-      ...prev,
-      [field]: value
-    }));
-  };
 
-  // Mostrar orderForm actual al montar el componente
+  // Cargar ubicación guardada en localStorage al inicializar
   React.useEffect(() => {
-    console.log('=== ORDERFORM ACTUAL ===');
-    console.log('OrderForm:', JSON.stringify(orderForm, null, 2));
+    const savedCity = localStorage.getItem('hideButton');
+    const savedDepartment = localStorage.getItem('selectedDepartment');
+    
+    if (savedCity && savedDepartment) {
+      console.log('Ubicación guardada encontrada:', { ciudad: savedCity, departamento: savedDepartment });
+      
+      // Buscar el departamento en los datos de Colombia
+      const department = colombiaData.departments.find(dept => dept.name === savedDepartment);
+      if (department) {
+        // Establecer el departamento y sus ciudades disponibles
+        setAvailableCities(department.cities);
+        
+        if (savedCity === 'Recoger en tienda') {
+          // Si la opción anterior era recoger en tienda
+          setSelectedOption('tienda');
+          setSelectedLocation({
+            departamento: savedDepartment,
+            ciudad: '',
+            codigoPostal: ''
+          });
+          console.log('Opción de recoger en tienda restaurada para:', savedDepartment);
+        } else {
+          // Si había una ciudad específica seleccionada
+          const city = department.cities.find(city => city.name === savedCity);
+          if (city) {
+            setSelectedOption('domicilio');
+            setSelectedLocation({
+              departamento: savedDepartment,
+              ciudad: savedCity,
+              codigoPostal: city.code
+            });
+            console.log('Ubicación completa restaurada:', { 
+              departamento: savedDepartment, 
+              ciudad: savedCity, 
+              codigoPostal: city.code 
+            });
+          }
+        }
+      }
+    }
   }, []);
 
-  // Mostrar cambios en el orderForm cuando se actualiza
-  React.useEffect(() => {
-    if (orderForm) {
-      console.log('=== ORDERFORM ACTUALIZADO ===');
-      console.log('shippingData:', orderForm.shippingData);
-      console.log('pickupData:', orderForm.pickupData);
-      console.log('deliveryOption:', orderForm.deliveryOption);
-    }
-  }, [orderForm]);
-
-  // Cargar información guardada cuando se abre el modal
+  // Prevenir scroll del body cuando el modal está abierto
   React.useEffect(() => {
     if (isOpen) {
-      // Prevenir scroll del body
       document.body.classList.add('modal-open');
     } else {
-      // Restaurar scroll del body
       document.body.classList.remove('modal-open');
     }
     
-    // Cleanup al desmontar
     return () => {
       document.body.classList.remove('modal-open');
     };
   }, [isOpen]);
 
-  const handleConfirm = () => {
-    console.log('=== ORDERFORM ANTES DE LA ACTUALIZACIÓN ===');
-    console.log('OrderForm anterior:', JSON.stringify(orderForm, null, 2));
-    
-    if (selectedOption === 'domicilio') {
-      // Actualizar solo los campos necesarios para entrega a domicilio
-      const updatedOrderForm = {
-        ...orderForm,
-        shippingData: {
-          address: {
-            street: address.calle,
-            number: address.numero,
-            complement: address.apartamento,
-            city: address.ciudad,
-            state: address.departamento,
-            country: 'Colombia',
-            postalCode: '730001' // Código postal por defecto para Ibagué
-          },
-          deliveryType: 'homeDelivery',
-          estimatedDelivery: '2-3 días hábiles'
-        },
-        pickupData: null, // Limpiar pickupData
-        deliveryOption: {
-          type: 'domicilio',
-          address: address,
-          estimatedDelivery: '2-3 días hábiles',
-          timestamp: new Date().toISOString()
-        }
-      };
-      
-      console.log('=== CAMPOS ACTUALIZADOS (DOMICILIO) ===');
-      console.log('shippingData:', JSON.stringify(updatedOrderForm.shippingData, null, 2));
-      console.log('pickupData:', updatedOrderForm.pickupData);
-      console.log('deliveryOption:', JSON.stringify(updatedOrderForm.deliveryOption, null, 2));
-      
-      setOrderForm(updatedOrderForm);
-      
-    } else if (selectedOption === 'tienda') {
-      // Actualizar solo los campos necesarios para recoger en tienda
-      const selectedStoreInfo = stores.find(store => store.id === selectedStore);
-      const updatedOrderForm = {
-        ...orderForm,
-        shippingData: null, // Limpiar shippingData
-        pickupData: {
-          store: {
-            id: selectedStoreInfo?.id,
-            name: selectedStoreInfo?.name,
-            address: selectedStoreInfo?.address
-          },
-          deliveryType: 'pickup',
-          estimatedPickup: '1-2 días hábiles'
-        },
-        deliveryOption: {
-          type: 'tienda',
-          store: selectedStoreInfo,
-          estimatedPickup: '1-2 días hábiles',
-          timestamp: new Date().toISOString()
-        }
-      };
-      
-      console.log('=== CAMPOS ACTUALIZADOS (TIENDA) ===');
-      console.log('shippingData:', updatedOrderForm.shippingData);
-      console.log('pickupData:', JSON.stringify(updatedOrderForm.pickupData, null, 2));
-      console.log('deliveryOption:', JSON.stringify(updatedOrderForm.deliveryOption, null, 2));
-      
-      setOrderForm(updatedOrderForm);
+  // Función para manejar cambio de departamento
+  const handleDepartmentChange = (departmentName: string) => {
+    const department = colombiaData.departments.find(dept => dept.name === departmentName);
+    if (department) {
+      setAvailableCities(department.cities);
+      setSelectedLocation({
+        departamento: departmentName,
+        ciudad: '',
+        codigoPostal: ''
+      });
     }
+  };
+
+  // Función para manejar cambio de ciudad
+  const handleCityChange = (cityName: string) => {
+    const city = availableCities.find(city => city.name === cityName);
+    if (city) {
+      setSelectedLocation(prev => ({
+        ...prev,
+        ciudad: cityName,
+        codigoPostal: city.code
+      }));
+    }
+  };
+
+  // Función para confirmar ubicación
+  const handleConfirmLocation = () => {
+    // Validar que todos los campos requeridos estén completos
+    if (!selectedLocation.departamento || !selectedLocation.ciudad || !selectedLocation.codigoPostal) {
+      console.warn('Faltan campos requeridos para confirmar la ubicación');
+      return;
+    }
+    
+    console.log('Confirmando ubicación:', selectedLocation);
+    
+    // Guardar la ciudad y departamento en localStorage
+    // Esto permite persistir la selección del usuario entre sesiones
+    localStorage.setItem('hideButton', selectedLocation.ciudad);
+    localStorage.setItem('selectedDepartment', selectedLocation.departamento);
+    console.log('Ubicación guardada en localStorage:', { 
+      ciudad: selectedLocation.ciudad, 
+      departamento: selectedLocation.departamento
+    });
+    
+    // Disparar evento personalizado con la ubicación seleccionada
+    window.dispatchEvent(new CustomEvent('geolocationChanged', { 
+      detail: { 
+        option: 'domicilio', 
+        location: selectedLocation
+      }
+    }));
+    
+    // Cerrar el modal
+    onClose();
+  };
+
+  const handleOptionSelect = (option: 'domicilio' | 'tienda') => {
+    setSelectedOption(option);
+  };
+
+  const handleOptionConfirm = (option: 'domicilio' | 'tienda') => {
+    if (option === 'tienda') {
+      // Para recoger en tienda, también guardamos la información en localStorage
+      localStorage.setItem('hideButton', 'Recoger en tienda');
+      localStorage.setItem('selectedDepartment', selectedLocation.departamento);
+      console.log('Opción de recoger en tienda guardada para:', selectedLocation.departamento);
+    }
+    
+    // Disparar evento personalizado con la opción seleccionada
+    window.dispatchEvent(new CustomEvent('geolocationChanged', { 
+      detail: { 
+        option: option,
+        location: option === 'domicilio' ? selectedLocation : null
+      }
+    }));
     
     onClose();
   };
@@ -165,7 +177,7 @@ const Geolocation: React.FC<GeolocationProps> = ({
         </div>
         
         <p className="geolocation-subtitle">
-          Selecciona si quieres recibir tu mercado a domicilio o recogerlo en tienda
+          Selecciona tu método de entrega
         </p>
 
         <div className="delivery-options">
@@ -189,94 +201,78 @@ const Geolocation: React.FC<GeolocationProps> = ({
           </div>
         </div>
 
+        {/* Selectores de Departamento y Ciudad - Solo visibles cuando se selecciona domicilio */}
         {selectedOption === 'domicilio' && (
-          <div className="address-form">
-            <p className="address-info">
-              Estás llevando un producto que solamente está disponible para entrega en Tolima, Ibagué.
+          <div className="location-selectors">
+            <p className="location-subtitle">
+              Selecciona tu ubicación para calcular el envío
             </p>
             
-            <div className="address-fields">
-              <div className="address-row">
-                <select 
-                  className="address-select"
-                  value={address.ciudad}
-                  onChange={(e) => handleAddressChange('ciudad', e.target.value)}
-                >
-                  <option value="Ibagué">Ibagué</option>
-                </select>
-              </div>
-              
-              <div className="address-row">
-                <input
-                  type="text"
-                  placeholder="Calle"
-                  className="address-input"
-                  value={address.calle}
-                  onChange={(e) => handleAddressChange('calle', e.target.value)}
-                />
-                <input
-                  type="text"
-                  placeholder="#"
-                  className="address-input-small"
-                  value={address.numero}
-                  onChange={(e) => handleAddressChange('numero', e.target.value)}
-                />
-                <input
-                  type="text"
-                  placeholder="#"
-                  className="address-input-small"
-                  value={address.apartamento}
-                  onChange={(e) => handleAddressChange('apartamento', e.target.value)}
-                />
-              </div>
-              
-              <div className="address-row">
-                <input
-                  type="text"
-                  placeholder="Apartamento, torre, casa, etc"
-                  className="address-input-full"
-                  value={address.apartamento}
-                  onChange={(e) => handleAddressChange('apartamento', e.target.value)}
-                />
-              </div>
+            <div className="selector-group">
+              <label htmlFor="department-select" className="selector-label">
+                Departamento
+              </label>
+              <select
+                id="department-select"
+                className="location-select"
+                value={selectedLocation.departamento}
+                onChange={(e) => handleDepartmentChange(e.target.value)}
+              >
+                <option value="">Selecciona un departamento</option>
+                {colombiaData.departments.map((department) => (
+                  <option key={department.code} value={department.name}>
+                    {department.name}
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            <div className="selector-group">
+              <label htmlFor="city-select" className="selector-label">
+                Ciudad
+              </label>
+              <select
+                id="city-select"
+                className="location-select"
+                value={selectedLocation.ciudad}
+                onChange={(e) => handleCityChange(e.target.value)}
+                disabled={!selectedLocation.departamento}
+              >
+                <option value="">
+                  {selectedLocation.departamento ? 'Selecciona una ciudad' : 'Primero selecciona un departamento'}
+                </option>
+                {availableCities.map((city) => (
+                  <option key={city.code} value={city.name}>
+                    {city.name}
+                  </option>
+                ))}
+              </select>
             </div>
           </div>
         )}
 
-        {selectedOption === 'tienda' && (
-          <div className="store-selection">
-            <select 
-              className="store-select"
-              value={selectedStore}
-              onChange={(e) => setSelectedStore(e.target.value)}
-            >
-              <option value="">Seleccionar tienda</option>
-              {stores.map(store => (
-                <option key={store.id} value={store.id}>
-                  {store.name} - {store.address}
-                </option>
-              ))}
-            </select>
-          </div>
-        )}
+        {/* Botón de confirmación - Siempre visible */}
+        <div className="geolocation-actions">
+          <button 
+            className="geolocation-confirm-btn"
+            onClick={() => {
+              if (selectedOption === 'domicilio') {
+                handleConfirmLocation();
+              } else {
+                handleOptionConfirm('tienda');
+              }
+            }}
+            disabled={
+              selectedOption === 'domicilio' 
+                ? (!selectedLocation.departamento || !selectedLocation.ciudad)
+                : false
+            }
+          >
+            Confirmar Ubicación
+          </button>
+        </div>
 
-        {selectedOption === 'domicilio' && address.calle && address.numero && (
-          <button 
-            className="confirm-button"
-            onClick={handleConfirm}
-          >
-            Enviar
-          </button>
-        )}
         
-        {selectedOption === 'tienda' && selectedStore && (
-          <button 
-            className="confirm-button"
-            onClick={handleConfirm}
-          >
-            Confirmar
-          </button>
-        )}
       </div>
         </div>
     );

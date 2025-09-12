@@ -1,4 +1,12 @@
 {
+  "custom-text-promotion": {
+    "component": "TextPromotion",
+    "render": "client",
+    "composition": "children"
+  },
+  "custom-flag-city": {
+    "component": "FlagCity"
+  },
   "custom-flag-promotion": {
     "component": "FlagPromotion"
   },

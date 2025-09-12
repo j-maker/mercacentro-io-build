@@ -56,12 +56,3 @@ export default GeolocationWrapper;
 
 // Exportar componentes adicionales
 export { default as GeolocationModal } from './src/geolocation/geolocation';
-export { default as DeliverySummary } from './src/geolocation/DeliverySummary';
-export { default as CheckoutIntegration } from './src/geolocation/CheckoutIntegration';
-
-// Exportar hooks
-export { useDeliveryOption } from './src/geolocation/useDeliveryOption';
-export { useCheckoutIntegration } from './src/geolocation/useCheckoutIntegration';
-
-// Exportar tipos
-export type { DeliveryOption } from './src/geolocation/useDeliveryOption';
