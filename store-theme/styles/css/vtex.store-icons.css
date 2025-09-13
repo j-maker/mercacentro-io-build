@@ -228,7 +228,7 @@
 
 :global(.vtex-login-2-x-emailPasswordOptionBtn) :global(.vtex-button__label)::after {
 
-    content: "correo electrónico";
+    content: "email y contraseña";
     font-family: 'Montserrat-Bold';
     margin-left: 5px;
 }

@@ -19,3 +19,7 @@
     height: 40px;
     width: 225px;
 }
+
+:global(.vtex-sticky-layout-0-x-container--buy-button) :global(.vtex-button) {
+    width: 100%;
+}

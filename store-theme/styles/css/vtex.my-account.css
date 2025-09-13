@@ -412,7 +412,7 @@
 }
 
 :global(.vtex-flex-layout-0-x-flexColChild--info-shelf):nth-child(3) {
-  margin-bottom: auto;
+  margin-top: auto;
 }
 
 @media screen and (min-width: 1026px) {
@@ -510,6 +510,13 @@
 
 @media screen and (max-width: 1025px) {
 
+  :global(.vtex-flex-layout-0-x-flexRowContent--add-cart-button) > :global(.vtex-flex-layout-0-x-stretchChildrenWidth):nth-child(2) {
+    width: 30% !important;
+  }
+  :global(.vtex-flex-layout-0-x-flexRowContent--add-cart-button) > :global(.vtex-flex-layout-0-x-stretchChildrenWidth):nth-child(2) {
+    width: 70% !important;
+  }
+
   :global(.vtex-render__container-id-home) :global(.vtex-slider-layout-0-x-sliderLayoutContainer--banner_slider) {
     margin-bottom: 0px !important;
   }
@@ -556,7 +563,7 @@
 
   :global(.vtex-store-components-3-x-searchBarContainer) input {
     color: #1a1717;
-    font-size: 13px;
+    font-size: 16px;
     line-height: 16px;
   }
 

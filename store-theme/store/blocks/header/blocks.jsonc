@@ -90,12 +90,7 @@
             "toggle-layout#menu-department-12",
             "toggle-layout#menu-department-13",
             "toggle-layout#menu-department-14",
-            "toggle-layout#menu-department-15",
-            "toggle-layout#menu-department-16",
-            "toggle-layout#menu-department-17",
-            "toggle-layout#menu-department-18",
-            "toggle-layout#menu-department-19",
-            "toggle-layout#menu-department-20"
+            "toggle-layout#menu-department-15"
         ]
     },
     "toggle-layout#menu-department-1": {
@@ -336,18 +331,28 @@
     "flex-layout.col#image-subcategories": {
         "title": "Imagenes",
         "children": [
-            "image#image-subcategories",
-            "image#image-subcategories"
+            "image#image-subcategories-1",
+            "image#image-subcategories-2"
         ],
         "props": {
             "width": "30%",
             "blockClass": "image-subcategories"
         }
     },
-    "image#image-subcategories": {
-        "title": "Imagen",
+    "image#image-subcategories-1": {
+        "title": "Imagen 1",
         "props": {
-            "src": "/arquivos/230x340.png",
+            "src": "",
+            "link": {
+                "url": "#"
+            },
+            "blockClass": "image-subcategories"
+        }
+    },
+    "image#image-subcategories-2": {
+        "title": "Imagen 2",
+        "props": {
+            "src": "",
             "link": {
                 "url": "#"
             },

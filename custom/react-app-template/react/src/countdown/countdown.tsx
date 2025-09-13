@@ -114,7 +114,7 @@ const Countdown: React.FC<CountdownProps> = ({
         lineHeight: '24px',
         margin: '0 5px',
         display: 'inline-block' as const,
-        minWidth: '60px',
+        minWidth: '50px',
         fontFamily: 'Montserrat-Bold, sans-serif'
     };
 

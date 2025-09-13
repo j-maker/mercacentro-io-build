@@ -12,6 +12,7 @@
     padding: 0;
     justify-content: flex-start;
     margin-bottom: 7px;
+    height: 38px;
 }
 
 .productNameContainer {
@@ -57,5 +58,12 @@
     .productBrandName--brand {
         font-size: 10px;
         line-height: 12px;
+    }
+
+    .nameContainer {
+        padding: 0;
+        justify-content: flex-start;
+        margin-bottom: 7px;
+        height: 34px;
     }
 }

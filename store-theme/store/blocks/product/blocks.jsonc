@@ -37,12 +37,11 @@
     },
     "flex-layout.row#shipping-info": {
         "children": [
-            "custom-tiempo-envio",
-            "custom-domicilio"
+            "custom-tiempo-envio"
         ],
         "props": {
             "colSizing": "auto",
-            "colJustify": "between",
+            "colJustify": "center",
             "blockClass": "shipping-info"
         }
     },
@@ -100,7 +99,7 @@
             "custom-unity",
             "custom-text-promotion",
             "product-seller-name#pdp",
-            //entreega
+            "flex-layout.row#shipping-info",
             "rich-text#how-buy", //como comprar
             "rich-text#methods-pdp",
             "image#methods",

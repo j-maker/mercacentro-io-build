@@ -418,6 +418,9 @@ body {
 .checkout-container .cart-template .cart .cart-items tbody .product-item {
   border: none;
 }
+.checkout-container .cart-template .cart .cart-items tbody .product-item .unavailable {
+  background-color: transparent;
+}
 .checkout-container .cart-template .cart .cart-items tbody .product-item .v-custom-product-item-wrap {
   padding: 0;
   background-color: #fff;

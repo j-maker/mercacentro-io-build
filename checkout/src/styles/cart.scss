@@ -100,7 +100,9 @@
 
           .product-item {
             border: none;
-
+            .unavailable {
+              background-color: transparent;
+            }
             .v-custom-product-item-wrap {
               padding: 0;
               background-color: #fff;

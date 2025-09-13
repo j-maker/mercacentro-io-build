@@ -207,7 +207,7 @@
 }
 
 :global(.icon-shipping)::after {
-  content: '\e919';
+  content: '\e944';
   font-family: 'icon' !important;
   font-size: 40px;
   font-style: normal;
@@ -526,7 +526,10 @@
 }
 
 @media (max-width: 768px) {
+  
   :global(.icon-map-marker) {
+    background-color: transparent;
+    border: transparent;
     display: flex;
     align-items: center;
     width: auto;
