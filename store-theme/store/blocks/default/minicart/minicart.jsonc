@@ -150,7 +150,6 @@
     ],
     "props": {
       "totalizersToShow": [
-        // "Discounts",
         "Items",
         "Discounts",
         "Tax"

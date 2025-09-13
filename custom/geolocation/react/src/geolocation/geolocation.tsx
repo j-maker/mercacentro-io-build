@@ -96,7 +96,6 @@ const Geolocation: React.FC<GeolocationProps> = ({
             }
           }));
           
-          // Recargar la página después de actualizar exitosamente el shipping
           setTimeout(() => {
             window.location.reload();
           }, 1000);
@@ -205,7 +204,6 @@ const Geolocation: React.FC<GeolocationProps> = ({
             }
           }));
           
-          // Recargar la página después de actualizar exitosamente el shipping
           setTimeout(() => {
             window.location.reload();
           }, 1000);
@@ -383,7 +381,6 @@ const Geolocation: React.FC<GeolocationProps> = ({
       }
     }));
     
-    // Recargar la página después de cambiar la opción de entrega
     setTimeout(() => {
       window.location.reload();
     }, 500);

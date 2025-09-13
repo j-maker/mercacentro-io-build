@@ -15,7 +15,6 @@ export const addPlaceholder = () => {
 }
 
 export const addTermsAndConditions = () => {
-  /* $(".save-data-tex").prop('checked', false); */
   $('.custom-privacy-message').remove();
 }
 
@@ -103,7 +102,6 @@ export const addCartCheckboxes = () => {
         $('#terms-checkbox, #privacy-checkbox').on('change', checkButtonState);
         
         checkboxesAdded = true;
-        console.log('Checkboxes agregados y enlace deshabilitado');
       }
       
       // Verificar el estado del enlace

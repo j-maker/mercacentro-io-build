@@ -78,7 +78,6 @@ const FlagPromotion = () => {
                 const endpoint = endpoints[i];
                 apiUrl = `${endpoint.url}?${endpoint.params.toString()}`;
                 
-
                 try {
                     response = await fetch(apiUrl, {
                         method: 'GET',
@@ -114,8 +113,6 @@ const FlagPromotion = () => {
             const data = await response.json();
 
             setApiData(data);
-
-
         } catch (error) {
             setApiError(error);
         } finally {
@@ -138,7 +135,6 @@ const FlagPromotion = () => {
         skip: !selectedItem.itemId || !seller.sellerId,
         errorPolicy: 'all'
     });
-
 
     if (loading) {
         return null;
@@ -176,8 +172,6 @@ const FlagPromotion = () => {
             return benefitName.includes('dto bines');
         });
     }
-
-    
 
     if (!dtoBinesPromotion && !apiDtoBinesPromotion) {
         return null;

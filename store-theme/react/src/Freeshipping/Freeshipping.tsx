@@ -11,7 +11,6 @@ interface FreeshippingProps {
 
 const Freeshipping = ({ Envio, defaultVisible = true }: FreeshippingProps) => {
     const [isVisible, setIsVisible] = useState(() => {
-        // Intentar recuperar estado de localStorage
         if (typeof window !== 'undefined') {
             const saved = localStorage.getItem('freeshipping-visible');
             return saved !== null ? JSON.parse(saved) : defaultVisible;
@@ -20,11 +19,9 @@ const Freeshipping = ({ Envio, defaultVisible = true }: FreeshippingProps) => {
     });
     const orderForm = useOrderForm();
 
-    // Obtener valores del carrito con valores por defecto seguros
     const cartTotal = pathOr(0, ['orderForm', 'value'], orderForm) / 100;
     const deliveryCost = pathOr(0, ['orderForm', 'shipping', 'deliveryOptions', 0, 'price'], orderForm) / 100;
 
-    // Calcular subtotal sin envío - usar useMemo para optimizar
     const { subtotal, qualifiesForFreeShipping, amountMissing, progressPercentage } = useMemo(() => {
         const sub = cartTotal - deliveryCost;
         const qualifies = sub >= Envio;
@@ -39,7 +36,6 @@ const Freeshipping = ({ Envio, defaultVisible = true }: FreeshippingProps) => {
         };
     }, [cartTotal, deliveryCost, Envio]);
 
-    // Guardar estado en localStorage cuando cambie
     const toggleVisibility = () => {
         const newState = !isVisible;
         setIsVisible(newState);

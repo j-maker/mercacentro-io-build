@@ -1,6 +1,5 @@
 @use './vars' as *;
 
-//header
 .custom-main-header {
   height: 60px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
@@ -26,7 +25,6 @@
       }
     }
 
-    // Imagen para Desktop - visible solo en pantallas grandes
     .main-logo-desktop {
       display: block;
       
@@ -35,7 +33,6 @@
       }
     }
 
-    // Imagen para Mobile - visible solo en pantallas pequeñas
     .main-logo-mobile {
       display: none;
       
@@ -70,7 +67,6 @@
   }
 }
 
-//Footer
 .custom-main-footer {
   background-color: $main-white;
   padding: 40px 20px;
@@ -180,7 +176,6 @@
         object-fit: contain;
       }
 
-      // Imagen para Desktop - visible solo en pantallas grandes
       .payment-image-desktop {
         display: block;
         max-width: 400px;
@@ -190,7 +185,6 @@
         }
       }
 
-      // Imagen para Mobile - visible solo en pantallas pequeñas
       .payment-image-mobile {
         display: none;
         max-width: 300px;
@@ -208,7 +202,6 @@
   max-width: unset;
 }
 
-//Imagenes
 .table.cart-items td.product-image {
   border-radius: 10px;
   a {

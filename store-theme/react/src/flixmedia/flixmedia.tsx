@@ -85,7 +85,6 @@ const Flixmedia: React.FC<FlixmediaConfig> = ({
     };
 
     script.onerror = () => {
-      // Si hay error al cargar el script, mostrar descripción del producto
       setShowProductDescription(true);
     };
 
@@ -101,17 +100,14 @@ const Flixmedia: React.FC<FlixmediaConfig> = ({
         const flixJsCallbacks = (window as any).flixJsCallbacks;
 
         flixJsCallbacks.setLoadCallback(() => {
-          // Callback cuando se carga el contenido de inpage
           checkFlixmediaContent();
         }, 'inpage');
 
         flixJsCallbacks.setLoadCallback(() => {
-          // Callback cuando se carga el contenido de minisite
           checkFlixmediaContent();
         }, 'minisite');
 
         flixJsCallbacks.setLoadCallback(() => {
-          // Callback cuando no hay contenido (noshow)
           setShowProductDescription(true);
         }, 'noshow');
 
@@ -120,13 +116,11 @@ const Flixmedia: React.FC<FlixmediaConfig> = ({
         setTimeout(configureFlixmedia, 1000);
       }
     } catch (error) {
-      // Si hay error, mostrar descripción del producto
       setShowProductDescription(true);
     }
   };
 
   const checkFlixmediaContent = () => {
-    // Verificar si flixmedia tiene contenido
     const inpageElement = document.getElementById('flix-inpage');
     const minisiteElement = document.getElementById('flix-minisite');
     
@@ -138,7 +132,6 @@ const Flixmedia: React.FC<FlixmediaConfig> = ({
         setFlixmediaHasContent(true);
         setShowProductDescription(false);
       } else {
-        // Si no hay contenido después de un tiempo, mostrar descripción del producto
         setTimeout(() => {
           if (!flixmediaHasContent) {
             setShowProductDescription(true);
@@ -187,16 +180,14 @@ const Flixmedia: React.FC<FlixmediaConfig> = ({
     }
   }, [productContext?.product]);
 
-  // Si no hay producto, no mostrar nada
   if (!productContext?.product) {
     return null;
   }
 
-  // Si debemos mostrar la descripción del producto
   if (showProductDescription) {
     const description = getProductDescription();
     if (!description) {
-      return null; // No mostrar nada si no hay descripción
+      return null;
     }
 
     return (

@@ -19,10 +19,8 @@ const Descripcion = () => {
         return null;
     }
 
-    // Obtener la descripción del producto
     const description = product?.description || '';
 
-    // Solo mostrar si hay descripción
     if (!description) {
         return null;
     }
