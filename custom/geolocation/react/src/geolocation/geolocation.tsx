@@ -14,16 +14,22 @@ const Geolocation: React.FC<GeolocationProps> = ({
   title = "Elige un método de entrega"
 }) => {
   const [selectedLocation, setSelectedLocation] = useState({
-    departamento: 'Tolima',
-    ciudad: 'Ibagué',
-    codigoPostal: '73001'
+    departamento: '',
+    ciudad: '',
+    codigoPostal: ''
   });
 
-  const [availableCities, setAvailableCities] = useState<Array<{name: string, code: string}>>(
-    colombiaData.departments.find(dept => dept.name === 'Tolima')?.cities || []
-  );
+  const [availableCities, setAvailableCities] = useState<Array<{name: string, code: string}>>([]);
   
   const [selectedOption, setSelectedOption] = useState<'domicilio' | 'tienda'>('domicilio');
+  
+  const [initialLocation, setInitialLocation] = useState({
+    departamento: '',
+    ciudad: '',
+    codigoPostal: ''
+  });
+  const [initialOption, setInitialOption] = useState<'domicilio' | 'tienda'>('domicilio');
+  const [pickupPointInfo, setPickupPointInfo] = useState<{name: string, address: string} | null>(null);
 
   const updateOrderFormWithLocation = async (location: typeof selectedLocation) => {
     try {
@@ -234,6 +240,36 @@ const Geolocation: React.FC<GeolocationProps> = ({
       if (response.ok) {
         const orderFormData = await response.json();
         
+        const logisticsInfo = orderFormData.shippingData?.logisticsInfo;
+        
+        if (!logisticsInfo || logisticsInfo.length === 0) {
+          setSelectedOption('domicilio');
+          setInitialOption('domicilio');
+        } else {
+          const hasPickupSelected = logisticsInfo.some((info: any) => 
+            info.selectedDeliveryChannel === 'pickup-in-point' || 
+            (info.selectedSla && info.selectedSla.includes('Recogida'))
+          );
+          
+          if (hasPickupSelected) {
+            setSelectedOption('tienda');
+            setInitialOption('tienda');
+            
+            const pickupPoints = orderFormData.shippingData?.pickupPoints;
+            if (pickupPoints && pickupPoints.length > 0) {
+              const selectedPickup = pickupPoints[0];
+              setPickupPointInfo({
+                name: selectedPickup.friendlyName || selectedPickup.name || 'Tienda',
+                address: selectedPickup.address?.street || selectedPickup.address?.addressName || 'Dirección no disponible'
+              });
+            }
+            return;
+          } else {
+            setSelectedOption('domicilio');
+            setInitialOption('domicilio');
+          }
+        }
+        
         const shippingData = orderFormData.shippingData;
         const shippingAddress = shippingData?.address;
         
@@ -246,24 +282,21 @@ const Geolocation: React.FC<GeolocationProps> = ({
             
             const city = department.cities.find(city => city.name === shippingAddress.city);
             if (city) {
-              setSelectedLocation({
+              const locationData = {
                 departamento: shippingAddress.state,
                 ciudad: shippingAddress.city,
                 codigoPostal: shippingAddress.postalCode || city.code
-              });
+              };
+              setSelectedLocation(locationData);
+              setInitialLocation(locationData);
+              setSelectedOption('domicilio');
+              setInitialOption('domicilio');
               return;
             }
           }
         }
         
-        const defaultLocation = {
-          departamento: 'Tolima',
-          ciudad: 'Ibagué',
-          codigoPostal: '73001'
-        };
-        
         loadDefaultValues();
-        await updateOrderFormWithLocation(defaultLocation);
         
       } else {
         loadDefaultValues();
@@ -274,18 +307,17 @@ const Geolocation: React.FC<GeolocationProps> = ({
   };
 
   const loadDefaultValues = () => {
-    const defaultDepartment = colombiaData.departments.find(dept => dept.name === 'Tolima');
-    if (defaultDepartment) {
-      setAvailableCities(defaultDepartment.cities);
-      const defaultCity = defaultDepartment.cities.find(city => city.name === 'Ibagué');
-      if (defaultCity) {
-        setSelectedLocation({
-          departamento: 'Tolima',
-          ciudad: 'Ibagué',
-          codigoPostal: '73001'
-        });
-      }
-    }
+    setSelectedLocation({
+      departamento: '',
+      ciudad: '',
+      codigoPostal: ''
+    });
+    setInitialLocation({
+      departamento: '',
+      ciudad: '',
+      codigoPostal: ''
+    });
+    setAvailableCities([]);
   };
 
   React.useEffect(() => {
@@ -295,6 +327,8 @@ const Geolocation: React.FC<GeolocationProps> = ({
   React.useEffect(() => {
     if (isOpen) {
       document.body.classList.add('modal-open');
+      setInitialLocation(selectedLocation);
+      setInitialOption(selectedOption);
     } else {
       document.body.classList.remove('modal-open');
     }
@@ -347,11 +381,73 @@ const Geolocation: React.FC<GeolocationProps> = ({
     }
   };
 
+  const updateOrderFormForPickup = async () => {
+    try {
+      const getResponse = await fetch('/api/checkout/pub/orderForm/', {
+        method: 'GET',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        }
+      });
+
+      if (getResponse.ok) {
+        const orderFormData = await getResponse.json();
+        const orderFormId = orderFormData.orderFormId || orderFormData.id;
+        
+        if (!orderFormId) {
+          return false;
+        }
+        
+        const logisticsInfo = orderFormData.shippingData?.logisticsInfo;
+        if (logisticsInfo && logisticsInfo.length > 0) {
+          const itemInfo = logisticsInfo[0];
+          
+          const pickupSla = itemInfo.slas?.find((sla: any) => 
+            sla.deliveryChannel === 'pickup-in-point' || 
+            sla.name?.includes('Recogida')
+          );
+          
+          if (pickupSla) {
+            const updateData = {
+              logisticsInfo: [{
+                ...itemInfo,
+                selectedDeliveryChannel: 'pickup-in-point',
+                selectedSla: pickupSla.id || pickupSla.name
+              }]
+            };
+            
+            const updateResponse = await fetch(`/api/checkout/pub/orderForm/${orderFormId}/attachments/logisticsInfo`, {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+              },
+              body: JSON.stringify(updateData)
+            });
+            
+            return updateResponse && updateResponse.ok;
+          }
+        }
+        
+        return false;
+      } else {
+        return false;
+      }
+    } catch (error) {
+      return false;
+    }
+  };
+
   const handleConfirmLocation = async () => {
     if (!selectedLocation.departamento || !selectedLocation.ciudad || !selectedLocation.codigoPostal) {
       return;
     }
     
+    if (!hasChanges()) {
+      onClose();
+      return;
+    }
     
     const success = await updateOrderFormWithLocationAlternative(selectedLocation);
     
@@ -366,24 +462,58 @@ const Geolocation: React.FC<GeolocationProps> = ({
     setSelectedOption(option);
   };
 
-  const handleOptionConfirm = (option: 'domicilio' | 'tienda') => {
-    if (option === 'tienda') {
-      localStorage.setItem('hideButton', 'Recoger en tienda');
-      localStorage.setItem('selectedDepartment', selectedLocation.departamento);
-      
-      getOrderFormInfo();
+  const hasChanges = () => {
+    if (selectedOption !== initialOption) {
+      return true;
     }
     
-    window.dispatchEvent(new CustomEvent('geolocationChanged', { 
-      detail: { 
-        option: option,
-        location: option === 'domicilio' ? selectedLocation : null
-      }
-    }));
+    if (selectedOption === 'domicilio') {
+      return (
+        selectedLocation.departamento !== initialLocation.departamento ||
+        selectedLocation.ciudad !== initialLocation.ciudad ||
+        selectedLocation.codigoPostal !== initialLocation.codigoPostal
+      );
+    }
     
-    setTimeout(() => {
-      window.location.reload();
-    }, 500);
+    return false;
+  };
+
+  const handleOptionConfirm = async (option: 'domicilio' | 'tienda') => {
+    if (!hasChanges()) {
+      onClose();
+      return;
+    }
+    
+    if (option === 'tienda') {
+      const success = await updateOrderFormForPickup();
+      
+      if (success) {
+        localStorage.setItem('hideButton', 'Recoger en tienda');
+        localStorage.setItem('selectedDepartment', selectedLocation.departamento);
+        
+        window.dispatchEvent(new CustomEvent('geolocationChanged', { 
+          detail: { 
+            option: option,
+            location: null
+          }
+        }));
+        
+        setTimeout(() => {
+          window.location.reload();
+        }, 1000);
+      }
+    } else {
+      window.dispatchEvent(new CustomEvent('geolocationChanged', { 
+        detail: { 
+          option: option,
+          location: selectedLocation
+        }
+      }));
+      
+      setTimeout(() => {
+        window.location.reload();
+      }, 500);
+    }
     
     onClose();
   };
@@ -457,6 +587,14 @@ const Geolocation: React.FC<GeolocationProps> = ({
                 ))}
               </select>
             </div>
+          </div>
+        )}
+
+        {selectedOption === 'tienda' && pickupPointInfo && (
+          <div className="pickup-info">
+            <div className="pickup-info-title">Punto de recogida:</div>
+            <div className="pickup-info-name">{pickupPointInfo.name}</div>
+            <div className="pickup-info-address">{pickupPointInfo.address}</div>
           </div>
         )}
 

@@ -28,17 +28,14 @@ const TiempoEnvio = () => {
         return null;
     }
 
-    // Obtener las especificaciones del producto
     const specifications = product?.properties || [];
 
-    // Buscar la especificación de tiempo de envío
     const tiempoEnvio = specifications.find(spec =>
         spec.name === 'Tiempo de Envío' ||
         spec.name === 'Tiempo de Envio' ||
         spec.name === 'Shipping Time'
     )?.values?.[0];
 
-    // Solo mostrar si hay tiempo de envío
     if (!tiempoEnvio) {
         return null;
     }

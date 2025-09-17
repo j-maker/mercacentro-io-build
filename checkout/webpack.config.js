@@ -8,10 +8,10 @@ module.exports = {
     filename: 'checkout6-custom.js',
     path: path.resolve(__dirname, 'checkout-ui-custom'),
   },
-  watch: true, // Observar cambios automáticamente
+  watch: true,
   watchOptions: {
     ignored: /node_modules/,
-    poll: 1000, // Verificar cambios cada segundo
+    poll: 1000,
   },
   module: {
     rules: [
@@ -36,11 +36,11 @@ module.exports = {
     }),
   ],
   optimization: {
-    minimize: false, // No minimizar en desarrollo para debugging
+    minimize: false,
     minimizer: [
       '...',
       new CssMinimizerPlugin(),
     ],
   },
-  mode: 'development', // Cambiar a development para mejor debugging
+  mode: 'development',
 };

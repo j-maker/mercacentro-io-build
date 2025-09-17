@@ -140,16 +140,16 @@
         }
       ]
     },
-    {
-      "name": "Bogotá, D.C.",
-      "code": "11",
-      "cities": [
-        {
-          "name": "Bogotá D.C.",
-          "code": "11001"
-        }
-      ]
-    },
+     {
+       "name": "Bogotá, D.C.",
+       "code": "11",
+       "cities": [
+         {
+           "name": "Bogotá, D.c.",
+           "code": "11001"
+         }
+       ]
+     },
     {
       "name": "Boyacá",
       "code": "15",

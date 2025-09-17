@@ -1,9 +1,4 @@
 {
-  "store.orderplaced": {
-    "title": "Orden Confirmada",
-    "blocks": ["order-placed"]
-  },
-
   "store.account": {
     "title": "Mi Cuenta",
     "blocks": ["my-account"],

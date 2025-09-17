@@ -415,6 +415,14 @@
   margin-top: auto;
 }
 
+:global(.vtex-order-placed-2-x-productImageColumn) {
+  width: 70px;
+}
+
+:global(.vtex-order-placed-2-x-noticesList) {
+  background-color: transparent;
+}
+
 @media screen and (min-width: 1026px) {
   :global(.vtex-flex-layout-0-x-flexRowContent--quick-view) {
     justify-content: space-between;

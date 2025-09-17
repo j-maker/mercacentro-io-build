@@ -1,6 +1,0 @@
-* {
-  --main-white: #FFFFFF;
-}
-
-/* Importar estilos del store-location */
-@import url('../css/vtex.store-location.css');

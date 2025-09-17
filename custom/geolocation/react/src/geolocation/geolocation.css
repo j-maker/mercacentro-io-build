@@ -491,6 +491,38 @@
   font-size: 14px;
 }
 
+:global(.pickup-info) {
+  margin: 0 0 20px 0;
+  padding: 16px;
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  text-align: left;
+}
+
+:global(.pickup-info-title) {
+  font-size: 14px;
+  font-weight: 600;
+  color: #90B51B;
+  margin-bottom: 8px;
+  font-family: 'Montserrat-SemiBold', sans-serif;
+}
+
+:global(.pickup-info-name) {
+  font-size: 16px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 4px;
+  font-family: 'Montserrat-Bold', sans-serif;
+}
+
+:global(.pickup-info-address) {
+  font-size: 14px;
+  color: #666;
+  font-family: 'Montserrat-Regular', sans-serif;
+  line-height: 1.4;
+}
+
 :global(.geolocation-actions) {
   margin: 20px 0;
   text-align: center;
@@ -560,5 +592,22 @@
     padding: 0;
     border-bottom: 1px solid #00000040 !important;
     margin: 0 auto;
+  }
+
+  :global(.pickup-info) {
+    margin: 16px 0;
+    padding: 12px;
+  }
+
+  :global(.pickup-info-title) {
+    font-size: 13px;
+  }
+
+  :global(.pickup-info-name) {
+    font-size: 15px;
+  }
+
+  :global(.pickup-info-address) {
+    font-size: 13px;
   }
 }

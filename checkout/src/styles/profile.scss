@@ -5,13 +5,6 @@
 
 
     .orderform-template-holder {
-      /* &::before {
-        content: "FINALIZAR COMPRA";
-        font-size: 1rem;
-        color: $main-gray;
-        display: block;
-        margin-bottom: 16px;
-      } */
 
       #client-profile-data,
       #shipping-data,
@@ -179,11 +172,6 @@
                       }
                     }
 
-                    /* input[type="checkbox"] {
-                      width: 16px;
-                      height: 16px;
-                      accent-color: #000000;
-                    } */
 
                     .newsletter {
                       order: 2;
@@ -367,7 +355,7 @@
 
             .address-summary {
 
-
+              min-height: 40px;
               border-radius: 25px;
               padding: 0 20px;
               margin: 0;
@@ -380,6 +368,10 @@
 
               a {
                 color: #000000;
+              }
+
+              @media screen and (max-width: 768px) {
+                padding: 10px 0;
               }
             }
 
@@ -434,17 +426,22 @@
 
             .vtex-omnishipping-1-x-deliveryChannelsWrapper {
               display: flex;
-              gap: 21px;
+              gap: 15px;
               border: none;
-              box-shadow: none;
+              background: #f7f7f7;
+              border-radius: 30px;
+              padding: 5px;
+              width: auto;
 
               .vtex-omnishipping-1-x-deliveryChannelsToggle {
                 display: none;
               }
 
               .vtex-omnishipping-1-x-deliveryChannelsOption {
-                border-radius: 4px;
-                border: 1px solid $main-black;
+                border: none;
+                padding: 0;
+                background: transparent;
+                border-radius: 30px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -464,16 +461,18 @@
               }
 
               .vtex-omnishipping-1-x-deliveryOptionActive {
-                background-color: #000000;
+                background-color: #90B51B;
                 color: $main-white;
+                font-family: 'Montserrat', sans-serif;
+                font-weight: 600;
               }
             }
 
             .vtex-omnishipping-1-x-ask {
               .vtex-omnishipping-1-x-cta {
                 button {
-                  border-color: #000000;
-                  background: #000000;
+                  border-color: #90B51B;
+                  background: #90B51B;
                   text-transform: uppercase;
                   font-size: 0.875rem;
                   padding: 16px 70px;
@@ -991,14 +990,12 @@
 
                       tr {
                         padding: 0;
-                        /* border-bottom: 1px solid #D8D8D8 !important; */
                         font-size: 15px;
                       }
                     }
 
                     tfoot tr {
                       padding: 0;
-                      /* border-bottom: 1px solid #D8D8D8 !important; */
 
                       td {
                         font-size: 1.125rem;
@@ -1057,10 +1054,6 @@
     @media (min-width: 769px) {
       width: 30%;
     }
-  }
-
-  #postalCode-finished-loading {
-    display: none;
   }
 }
 

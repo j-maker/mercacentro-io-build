@@ -53,7 +53,6 @@ const Countdown: React.FC<CountdownProps> = ({
             const endDateObj = new Date(endDate);
             const currentDate = new Date();
             
-            // Verificar que la fecha sea válida
             if (isNaN(endDateObj.getTime())) {
                 console.error('Fecha de finalización inválida:', endDate);
                 setIsValidDate(false);
@@ -206,7 +205,6 @@ const Countdown: React.FC<CountdownProps> = ({
     );
 };
 
-// Agregar el schema usando una declaración de tipo más directa
 const CountdownWithSchema = Countdown as React.FC<CountdownProps> & {
     schema: any;
 };

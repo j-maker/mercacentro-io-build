@@ -21,7 +21,6 @@ export const addTermsAndConditions = () => {
 export const addCartCheckboxes = () => {
   let checkboxesAdded = false;
   
-  // Función para verificar el estado de los checkboxes y controlar el enlace
   const checkButtonState = () => {
     const cartLink = $('#cart-to-orderform');
     if (cartLink.length > 0) {
@@ -29,7 +28,6 @@ export const addCartCheckboxes = () => {
       const privacyChecked = $('#privacy-checkbox').is(':checked');
       
       if (termsChecked && privacyChecked) {
-        // Habilitar el enlace
         cartLink.removeAttr('disabled');
         cartLink.removeClass('disabled-link');
         cartLink.off('click.prevent');
@@ -39,7 +37,6 @@ export const addCartCheckboxes = () => {
           'cursor': 'pointer'
         });
       } else {
-        // Deshabilitar el enlace
         cartLink.attr('disabled', 'true');
         cartLink.addClass('disabled-link');
         cartLink.css({
@@ -48,7 +45,6 @@ export const addCartCheckboxes = () => {
           'cursor': 'not-allowed'
         });
         
-        // Prevenir el comportamiento por defecto del enlace
         cartLink.off('click.prevent').on('click.prevent', function(e) {
           e.preventDefault();
           e.stopPropagation();
@@ -58,12 +54,10 @@ export const addCartCheckboxes = () => {
     }
   };
   
-  // Usar un intervalo para verificar cuando el elemento esté disponible
   const interval = setInterval(() => {
     const cartLink = $('#cart-to-orderform');
     
     if (cartLink.length > 0) {
-      // Inicialmente deshabilitar el enlace siempre
       cartLink.attr('disabled', 'true');
       cartLink.addClass('disabled-link');
       cartLink.css({
@@ -72,16 +66,13 @@ export const addCartCheckboxes = () => {
         'cursor': 'not-allowed'
       });
       
-      // Prevenir el comportamiento por defecto del enlace
       cartLink.off('click.prevent').on('click.prevent', function(e) {
         e.preventDefault();
         e.stopPropagation();
         return false;
       });
       
-      // Verificar si los checkboxes ya existen para evitar duplicados
       if (!$('#terms-checkbox').length && !checkboxesAdded) {
-        // Crear el contenedor de checkboxes
         const checkboxesContainer = `
           <div class="cart-checkboxes-container" style="margin-bottom: 40px;">
             <div class="checkbox-item" style="margin-bottom: 10px;">
@@ -95,27 +86,22 @@ export const addCartCheckboxes = () => {
           </div>
         `;
         
-        // Insertar los checkboxes antes del enlace
         cartLink.before(checkboxesContainer);
         
-        // Agregar event listeners a los checkboxes
         $('#terms-checkbox, #privacy-checkbox').on('change', checkButtonState);
         
         checkboxesAdded = true;
       }
       
-      // Verificar el estado del enlace
       checkButtonState();
     }
-  }, 200); // Verificar cada 200ms para ser más agresivo
+  }, 200);
   
-  // Observer para detectar cambios en el DOM
   const observer = new MutationObserver((mutations) => {
     mutations.forEach((mutation) => {
       if (mutation.type === 'childList') {
         const cartLink = $('#cart-to-orderform');
         if (cartLink.length > 0) {
-          // Forzar deshabilitación del enlace si los checkboxes no están marcados
           setTimeout(() => {
             checkButtonState();
           }, 100);
@@ -124,13 +110,11 @@ export const addCartCheckboxes = () => {
     });
   });
   
-  // Observar cambios en el body
   observer.observe(document.body, {
     childList: true,
     subtree: true
   });
   
-  // Limpiar el intervalo después de 15 segundos
   setTimeout(() => {
     clearInterval(interval);
     observer.disconnect();

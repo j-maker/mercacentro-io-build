@@ -5,9 +5,7 @@ export const addShippingInfo = () => {
 
     if ($container.length === 0) return;
 
-
     if ($('.myship').length > 0) return;
-
 
     const logisticsInfo = vtexjs?.checkout?.orderForm?.shippingData?.logisticsInfo;
     if (!logisticsInfo || logisticsInfo.length === 0) return;
@@ -25,7 +23,6 @@ export const addShippingInfo = () => {
 
     $container.append(html);
     obs.disconnect();
-    ;
   });
 
   observer.observe(document.body, {

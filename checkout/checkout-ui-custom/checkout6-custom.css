@@ -798,15 +798,6 @@ body .table.cart-items tbody tr td.quantity-price .best-price {
   content: "";
 }
 
-.checkout-container .orderform-template .orderform-template-holder {
-  /* &::before {
-    content: "FINALIZAR COMPRA";
-    font-size: 1rem;
-    color: $main-gray;
-    display: block;
-    margin-bottom: 16px;
-  } */
-}
 .checkout-container .orderform-template .orderform-template-holder #client-profile-data,
 .checkout-container .orderform-template .orderform-template-holder #shipping-data,
 .checkout-container .orderform-template .orderform-template-holder #payment-data {
@@ -901,11 +892,6 @@ body .table.cart-items tbody tr td.quantity-price .best-price {
 .checkout-container .orderform-template .orderform-template-holder #client-profile-data .client-profile-data .accordion-body .accordion-inner .box-step .form-step .box-client-info {
   display: flex;
   flex-direction: column;
-  /* input[type="checkbox"] {
-    width: 16px;
-    height: 16px;
-    accent-color: #000000;
-  } */
 }
 .checkout-container .orderform-template .orderform-template-holder #client-profile-data .client-profile-data .accordion-body .accordion-inner .box-step .form-step .box-client-info .row-fluid {
   order: 1;
@@ -1078,6 +1064,7 @@ body .table.cart-items tbody tr td.quantity-price .best-price {
   color: #000000;
 }
 .checkout-container .orderform-template .orderform-template-holder #shipping-data .shipping-container .box-step .address-summary {
+  min-height: 40px;
   border-radius: 25px;
   padding: 0 20px;
   margin: 0;
@@ -1090,6 +1077,11 @@ body .table.cart-items tbody tr td.quantity-price .best-price {
 }
 .checkout-container .orderform-template .orderform-template-holder #shipping-data .shipping-container .box-step .address-summary a {
   color: #000000;
+}
+@media screen and (max-width: 768px) {
+  .checkout-container .orderform-template .orderform-template-holder #shipping-data .shipping-container .box-step .address-summary {
+    padding: 10px 0;
+  }
 }
 .checkout-container .orderform-template .orderform-template-holder #shipping-data .shipping-container .box-step .vtex-omnishipping-1-x-deliveryGroup .shp-lean-option {
   border: none;
@@ -1130,16 +1122,21 @@ body .table.cart-items tbody tr td.quantity-price .best-price {
 }
 .checkout-container .orderform-template .orderform-template-holder #shipping-data .shipping-container .box-step .vtex-omnishipping-1-x-deliveryChannelsWrapper {
   display: flex;
-  gap: 21px;
+  gap: 15px;
   border: none;
-  box-shadow: none;
+  background: #f7f7f7;
+  border-radius: 30px;
+  padding: 5px;
+  width: auto;
 }
 .checkout-container .orderform-template .orderform-template-holder #shipping-data .shipping-container .box-step .vtex-omnishipping-1-x-deliveryChannelsWrapper .vtex-omnishipping-1-x-deliveryChannelsToggle {
   display: none;
 }
 .checkout-container .orderform-template .orderform-template-holder #shipping-data .shipping-container .box-step .vtex-omnishipping-1-x-deliveryChannelsWrapper .vtex-omnishipping-1-x-deliveryChannelsOption {
-  border-radius: 4px;
-  border: 1px solid #000000;
+  border: none;
+  padding: 0;
+  background: transparent;
+  border-radius: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1158,12 +1155,14 @@ body .table.cart-items tbody tr td.quantity-price .best-price {
   font-size: 0.875rem;
 }
 .checkout-container .orderform-template .orderform-template-holder #shipping-data .shipping-container .box-step .vtex-omnishipping-1-x-deliveryChannelsWrapper .vtex-omnishipping-1-x-deliveryOptionActive {
-  background-color: #000000;
+  background-color: #90B51B;
   color: #FFFFFF;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
 }
 .checkout-container .orderform-template .orderform-template-holder #shipping-data .shipping-container .box-step .vtex-omnishipping-1-x-ask .vtex-omnishipping-1-x-cta button {
-  border-color: #000000;
-  background: #000000;
+  border-color: #90B51B;
+  background: #90B51B;
   text-transform: uppercase;
   font-size: 0.875rem;
   padding: 16px 70px;
@@ -1583,12 +1582,10 @@ body .table.cart-items tbody tr td.quantity-price .best-price {
 }
 .checkout-container .cart-template.mini-cart .custom-cart-template-wrap .summary-template-holder .row-fluid.summary .totalizers.summary-totalizers.cart-totalizers .accordion-group .accordion-body .accordion-inner .table .totalizers-list tr {
   padding: 0;
-  /* border-bottom: 1px solid #D8D8D8 !important; */
   font-size: 15px;
 }
 .checkout-container .cart-template.mini-cart .custom-cart-template-wrap .summary-template-holder .row-fluid.summary .totalizers.summary-totalizers.cart-totalizers .accordion-group .accordion-body .accordion-inner .table tfoot tr {
   padding: 0;
-  /* border-bottom: 1px solid #D8D8D8 !important; */
 }
 .checkout-container .cart-template.mini-cart .custom-cart-template-wrap .summary-template-holder .row-fluid.summary .totalizers.summary-totalizers.cart-totalizers .accordion-group .accordion-body .accordion-inner .table tfoot tr td {
   font-size: 1.125rem;
@@ -1624,9 +1621,6 @@ body .table.cart-items tbody tr td.quantity-price .best-price {
   .checkout-container .btn-go-to-payment {
     width: 30%;
   }
-}
-.checkout-container #postalCode-finished-loading {
-  display: none;
 }
 
 #payment-data .box-step form.form-step {

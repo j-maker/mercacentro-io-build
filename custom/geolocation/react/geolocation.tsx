@@ -4,7 +4,7 @@ import Geolocation from './src/geolocation/geolocation';
 interface GeolocationWrapperProps {
   title?: string;
   showButton?: boolean;
-  buttonText?: string; // Puede contener HTML
+  buttonText?: string;
 }
 
 const GeolocationWrapper: React.FC<GeolocationWrapperProps> = ({ 
@@ -51,8 +51,6 @@ const GeolocationWrapper: React.FC<GeolocationWrapperProps> = ({
   );
 };
 
-// Exportar el wrapper como componente principal
 export default GeolocationWrapper;
 
-// Exportar componentes adicionales
 export { default as GeolocationModal } from './src/geolocation/geolocation';

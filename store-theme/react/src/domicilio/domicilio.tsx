@@ -19,17 +19,14 @@ const Domicilio = () => {
         return null;
     }
 
-    // Obtener las especificaciones del producto
     const specifications = product?.properties || [];
     
-    // Buscar la especificación de domicilio
     const domicilio = specifications.find(spec => 
         spec.name === 'Domicilio' || 
         spec.name === 'Home Delivery' ||
         spec.name === 'Entrega a Domicilio'
     )?.values?.[0];
 
-    // Solo mostrar si hay información de domicilio
     if (!domicilio) {
         return null;
     }

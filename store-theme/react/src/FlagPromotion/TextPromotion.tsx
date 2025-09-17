@@ -8,7 +8,6 @@ const TextPromotion = ({children}: any) => {
         return null;
     }
 
-    // Obtener el precio del producto
     const selectedItem = productContext.selectedItem;
     const seller = selectedItem.sellers?.[0];
     const commertialOffer = seller?.commertialOffer;
@@ -20,10 +19,8 @@ const TextPromotion = ({children}: any) => {
     const listPrice = (commertialOffer as any).ListPrice || 0;
     const price = commertialOffer.Price || 0;
 
-    // Verificar si hay descuento (ListPrice > Price)
     const hasDiscount = listPrice > price && listPrice > 0;
 
-    // Solo mostrar children si hay descuento
     if (!hasDiscount) {
         return null;
     }

@@ -19,10 +19,8 @@ const Unity = () => {
         return null;
     }
 
-    // Obtener las especificaciones del producto
     const specifications = product?.properties || [];
     
-    // Buscar las especificaciones específicas
     const unidadMedida = specifications.find(spec => 
         spec.name === 'Unidad de Medida'
     )?.values?.[0];
@@ -31,20 +29,15 @@ const Unity = () => {
         spec.name === 'Valor Unidad de Medida'
     )?.values?.[0];
 
-    // Obtener el precio del producto
     const price = selectedItem.sellers?.[0]?.commertialOffer?.Price;
     
-    // Calcular precio por unidad para cualquier unidad de medida
     const shouldCalculatePerUnit = unidadMedida && valorUnidadMedida;
     
-    // Calcular el precio por unidad de medida solo si es necesario
     let pricePerUnit = null;
     
     if (shouldCalculatePerUnit && price && valorUnidadMedida) {
-        // Desarrollo simple: precio / unidad (precio ya está en pesos colombianos)
         const precioPorUnidad = price / parseFloat(valorUnidadMedida);
         
-        // Formatear según el tipo de unidad
         if (unidadMedida === 'Unidad') {
             pricePerUnit = precioPorUnidad.toFixed(0);
         } else if (unidadMedida === 'Gramo') {
@@ -56,7 +49,6 @@ const Unity = () => {
         }
     }
 
-    // Solo mostrar si tenemos los datos necesarios
     if (!shouldCalculatePerUnit || !unidadMedida || !valorUnidadMedida || !pricePerUnit) {
         return null;
     }

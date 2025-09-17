@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react';
-// @ts-ignore
 import { useProduct } from 'vtex.product-context';
-// @ts-ignore
 import { useQuery } from 'react-apollo';
 
 import GET_BENEFITS from '../../graphql/getBenefits.gql';
