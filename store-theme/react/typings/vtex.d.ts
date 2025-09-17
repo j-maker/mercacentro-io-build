@@ -2,6 +2,10 @@ declare module 'vtex.product-context' {
   export interface ProductContext {
     product: {
       productId?: string;
+      clusterHighlights?: Array<{
+        name: string;
+        id?: string;
+      }>;
       properties?: Array<{
         name: string;
         values?: string[];

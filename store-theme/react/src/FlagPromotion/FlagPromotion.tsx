@@ -26,6 +26,9 @@ const FlagPromotion = () => {
 
     const seller = selectedItem.sellers[0];
 
+    // Obtener clusterHighlights del producto
+    const clusterHighlights = (product as any).clusterHighlights || [];
+
     const fetchApiData = async () => {
         if (!selectedItem.itemId || !seller.sellerId) return;
 
@@ -148,12 +151,18 @@ const FlagPromotion = () => {
 
     const { benefits } = data || {};
     const allBenefits = benefits || [];
-
+    
+    // Buscar específicamente la promoción con nombre 'dto bines' (fijo)
     const dtoBinesPromotion = allBenefits.find((benefit: any) => {
         if (!benefit || !benefit.name) return false;
-        const benefitName = benefit.name.toLowerCase();
-        return benefitName.includes('dto bines');
+        return benefit.name.toLowerCase() === 'dto bines';
     });
+
+    // Guardar los nombres de las colecciones si se encuentra la promoción
+    if (dtoBinesPromotion && dtoBinesPromotion.collections && Array.isArray(dtoBinesPromotion.collections)) {
+        const collectionNames = dtoBinesPromotion.collections.map((c: any) => c.name);
+        (dtoBinesPromotion as any).collectionNames = collectionNames;
+    }
 
     let apiDtoBinesPromotion = null;
     if (apiData) {
@@ -164,18 +173,55 @@ const FlagPromotion = () => {
             processedApiBenefits = apiData.benefits || apiData.items || apiData.data || Object.values(apiData);
         }
 
+        // Buscar específicamente la promoción con nombre 'dto bines' (fijo) en la API
         apiDtoBinesPromotion = processedApiBenefits.find((benefit: any) => {
             if (!benefit || !benefit.name) return false;
-            const benefitName = benefit.name.toLowerCase();
-            return benefitName.includes('dto bines');
+            return benefit.name.toLowerCase() === 'dto bines';
         });
+
+        // Guardar los nombres de las colecciones si se encuentra la promoción en la API
+        if (apiDtoBinesPromotion && apiDtoBinesPromotion.collections && Array.isArray(apiDtoBinesPromotion.collections)) {
+            const collectionNames = apiDtoBinesPromotion.collections.map((c: any) => c.name);
+            (apiDtoBinesPromotion as any).collectionNames = collectionNames;
+        }
     }
 
     if (!dtoBinesPromotion && !apiDtoBinesPromotion) {
         return null;
     }
 
-    const promotionData = dtoBinesPromotion || apiDtoBinesPromotion;
+    // Priorizar la promoción de la API ya que tiene las colecciones
+    const promotionData = apiDtoBinesPromotion || dtoBinesPromotion;
+    
+    // Guardar los nombres de las colecciones para usar en la lógica
+    if (promotionData && promotionData.collections && Array.isArray(promotionData.collections)) {
+        const finalCollectionNames = promotionData.collections.map((c: any) => c.name);
+        (promotionData as any).collectionNames = finalCollectionNames;
+    }
+
+    // Función para validar si el producto pertenece a la colección de la promoción
+    const isProductInPromotionCollection = (): boolean => {
+        if (!promotionData || !(promotionData as any).collectionNames) {
+            return false;
+        }
+
+        const promotionCollectionNames = (promotionData as any).collectionNames;
+        
+        // Verificar si alguna colección del producto coincide con las colecciones de la promoción
+        const hasMatchingCollection = clusterHighlights.some((cluster: any) => {
+            if (!cluster || !cluster.name) {
+                return false;
+            }
+            return promotionCollectionNames.includes(cluster.name);
+        });
+
+        return hasMatchingCollection;
+    };
+
+    // Validar si el producto pertenece a la colección de la promoción
+    if (!isProductInPromotionCollection()) {
+        return null;
+    }
 
     const findPercentualDiscount = (data: any): any => {
         if (!data) return null;
