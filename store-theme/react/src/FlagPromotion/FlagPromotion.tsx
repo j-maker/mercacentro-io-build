@@ -26,7 +26,6 @@ const FlagPromotion = () => {
 
     const seller = selectedItem.sellers[0];
 
-    // Obtener clusterHighlights del producto
     const clusterHighlights = (product as any).clusterHighlights || [];
 
     const fetchApiData = async () => {
@@ -152,13 +151,32 @@ const FlagPromotion = () => {
     const { benefits } = data || {};
     const allBenefits = benefits || [];
     
-    // Buscar específicamente la promoción con nombre 'dto bines' (fijo)
     const dtoBinesPromotion = allBenefits.find((benefit: any) => {
         if (!benefit || !benefit.name) return false;
         return benefit.name.toLowerCase() === 'dto bines';
     });
 
-    // Guardar los nombres de las colecciones si se encuentra la promoción
+    const isPromotionActive = (promotion: any): boolean => {
+        if (!promotion) return false;
+        
+        if (promotion.isActive !== undefined) {
+            return promotion.isActive === true;
+        }
+        
+        if (promotion.status !== undefined) {
+            return promotion.status === 'active' || promotion.status === 'enabled';
+        }
+        
+        if (promotion.validFrom && promotion.validTo) {
+            const now = new Date();
+            const validFrom = new Date(promotion.validFrom);
+            const validTo = new Date(promotion.validTo);
+            return now >= validFrom && now <= validTo;
+        }
+        
+        return true;
+    };
+
     if (dtoBinesPromotion && dtoBinesPromotion.collections && Array.isArray(dtoBinesPromotion.collections)) {
         const collectionNames = dtoBinesPromotion.collections.map((c: any) => c.name);
         (dtoBinesPromotion as any).collectionNames = collectionNames;
@@ -173,13 +191,11 @@ const FlagPromotion = () => {
             processedApiBenefits = apiData.benefits || apiData.items || apiData.data || Object.values(apiData);
         }
 
-        // Buscar específicamente la promoción con nombre 'dto bines' (fijo) en la API
         apiDtoBinesPromotion = processedApiBenefits.find((benefit: any) => {
             if (!benefit || !benefit.name) return false;
             return benefit.name.toLowerCase() === 'dto bines';
         });
 
-        // Guardar los nombres de las colecciones si se encuentra la promoción en la API
         if (apiDtoBinesPromotion && apiDtoBinesPromotion.collections && Array.isArray(apiDtoBinesPromotion.collections)) {
             const collectionNames = apiDtoBinesPromotion.collections.map((c: any) => c.name);
             (apiDtoBinesPromotion as any).collectionNames = collectionNames;
@@ -190,16 +206,28 @@ const FlagPromotion = () => {
         return null;
     }
 
-    // Priorizar la promoción de la API ya que tiene las colecciones
-    const promotionData = apiDtoBinesPromotion || dtoBinesPromotion;
+    const isGraphQLPromotionActive = dtoBinesPromotion ? isPromotionActive(dtoBinesPromotion) : false;
+    const isApiPromotionActive = apiDtoBinesPromotion ? isPromotionActive(apiDtoBinesPromotion) : false;
     
-    // Guardar los nombres de las colecciones para usar en la lógica
+    if (!isGraphQLPromotionActive && !isApiPromotionActive) {
+        return null;
+    }
+
+    const promotionData = (isApiPromotionActive && apiDtoBinesPromotion) 
+        ? apiDtoBinesPromotion 
+        : (isGraphQLPromotionActive && dtoBinesPromotion) 
+            ? dtoBinesPromotion 
+            : null;
+
+    if (!promotionData) {
+        return null;
+    }
+    
     if (promotionData && promotionData.collections && Array.isArray(promotionData.collections)) {
         const finalCollectionNames = promotionData.collections.map((c: any) => c.name);
         (promotionData as any).collectionNames = finalCollectionNames;
     }
 
-    // Función para validar si el producto pertenece a la colección de la promoción
     const isProductInPromotionCollection = (): boolean => {
         if (!promotionData || !(promotionData as any).collectionNames) {
             return false;
@@ -207,7 +235,6 @@ const FlagPromotion = () => {
 
         const promotionCollectionNames = (promotionData as any).collectionNames;
         
-        // Verificar si alguna colección del producto coincide con las colecciones de la promoción
         const hasMatchingCollection = clusterHighlights.some((cluster: any) => {
             if (!cluster || !cluster.name) {
                 return false;
@@ -218,7 +245,6 @@ const FlagPromotion = () => {
         return hasMatchingCollection;
     };
 
-    // Validar si el producto pertenece a la colección de la promoción
     if (!isProductInPromotionCollection()) {
         return null;
     }
@@ -248,7 +274,7 @@ const FlagPromotion = () => {
     };
 
     const discountValue = apiData ? findPercentualDiscount(apiData) : null;
-    const productPrice = seller.commertialOffer?.Price || 0;
+    const productPrice = seller.commertialOffer?.ListPrice || seller.commertialOffer?.Price || 0;
 
     if (!discountValue || discountValue <= 0 || productPrice <= 0) {
         return null;
