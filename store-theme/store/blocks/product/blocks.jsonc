@@ -108,6 +108,27 @@
             "sticky-layout#buy-button"
         ]
     },
+    "flex-layout.row#shipping-info-mobile": {
+        "children": [
+            "flex-layout.col#shipping-info-mobile"
+        ],
+        "props": {
+            "fullWidth": true,
+            "blockClass": "shipping-info"
+        }
+    },
+    "flex-layout.col#shipping-info-mobile": {
+        "children": [
+            "flex-layout.row#prices",
+            "product-selling-price",
+            "custom-flag-promotion",
+            "custom-unity"
+        ],
+        "props": {
+            "preventVerticalStretch": true,
+            "blockClass": "shipping-info"
+        }
+    },
     "product-seller-name": {
         "props": {
             "showLabel": true,
@@ -144,7 +165,10 @@
         "props": {
             "preventVerticalStretch": true,
             "width": "40%",
-            "blockClass": ["main-desktop-image","ssecond-info"]
+            "blockClass": [
+                "main-desktop-image",
+                "ssecond-info"
+            ]
         }
     },
     "flex-layout.col#main-sticky": {

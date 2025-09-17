@@ -106,10 +106,7 @@
     "flex-layout.col#info-shelf": {
         "children": [
             "product-summary-name",
-            "flex-layout.row#prices",
-            "product-selling-price",
-            "custom-flag-promotion",
-            "custom-unity",
+            "flex-layout.row#shipping-info-mobile",
             "product-seller-name",
             "flex-layout.row#add-cart-button"
         ],
