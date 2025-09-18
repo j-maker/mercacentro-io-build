@@ -468,11 +468,12 @@
     },
     "tab-content.item#product2": {
         "children": [
-            "product-specification-group"
+            "custom-specifications"
         ],
         "props": {
             "blockClass": "product",
             "tabId": "product2"
         }
     }
+
 }

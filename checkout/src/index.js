@@ -1,6 +1,6 @@
 import './styles.scss'
 import { checkoutStepsReader } from './js/steps'
-import { changePlaceholder, addPlaceholder, addTermsAndConditions, addCartCheckboxes } from './js/generals'
+import { changePlaceholder, addPlaceholder, addTermsAndConditions, addCartCheckboxes, hidePostalCodeIfNoPickupPoints } from './js/generals'
 import { addShippingInfo } from './js/shipping'
 
 
@@ -38,6 +38,7 @@ $(window).on('orderFormUpdated.vtex', function (evt, orderForm) {
   setTimeout(() => {
     changePlaceholder()
     addCartCheckboxes()
+    hidePostalCodeIfNoPickupPoints()
   }, 200)
   if (hash.includes('email') || hash.includes('profile')) {
     addPlaceholder()
@@ -47,4 +48,7 @@ $(window).on('orderFormUpdated.vtex', function (evt, orderForm) {
 })
 
 $(window).on('geolocationChanged', function (evt) {
+  setTimeout(() => {
+    hidePostalCodeIfNoPickupPoints()
+  }, 500)
 })

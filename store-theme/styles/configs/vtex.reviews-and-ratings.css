@@ -325,6 +325,10 @@
     align-items: center;
 }
 
+:global(.vtex-reviews-and-ratings-3-x-summaryContainer) {
+    font-size: 0;
+}
+
 :global(.vtex-reviews-and-ratings-3-x-reviewCommentMessage) span a,
 :global(.vtex-reviews-and-ratings-3-x-reviewCommentMessage) span span span span a {
     color: #535353;

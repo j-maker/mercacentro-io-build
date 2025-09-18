@@ -43,7 +43,7 @@
     }
 
     .hoverImage {
-        display: inline-flex;
+        height: auto;
         z-index: 1;
     }
 

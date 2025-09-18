@@ -529,8 +529,7 @@ const Geolocation: React.FC<GeolocationProps> = ({
         </div>
         
         <p className="geolocation-subtitle">
-        Selecciona si quieres recibir tu mercado<br/>
-        a domicilio o recogerlo en tienda
+        Selecciona si quieres recibir tu pedido a domicilio o recogerlo en tienda
         </p>
 
         <div className="delivery-options">

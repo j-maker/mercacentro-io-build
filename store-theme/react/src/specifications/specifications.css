@@ -1,0 +1,18 @@
+.specificationsContainer {
+    padding: 10px 20px;
+}
+
+.specificationName {
+    margin-right: 5px;
+}
+
+.specificationItem {
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .specificationItem {
+        font-size: 13px;
+    }
+}

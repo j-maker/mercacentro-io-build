@@ -77,11 +77,11 @@ export const addCartCheckboxes = () => {
           <div class="cart-checkboxes-container" style="margin-bottom: 40px;">
             <div class="checkbox-item" style="margin-bottom: 10px;">
               <input type="checkbox" id="terms-checkbox" name="terms-checkbox">
-              <label for="terms-checkbox" style="margin-left: 8px; font-size: 14px; color: #000000;">Acepto los términos y condiciones</label>
+              <label for="terms-checkbox" style="margin-left: 8px; font-size: 14px; color: #000000;">Acepto los <a href="/terminos-y-condiciones" target="_blank" style="color: #000000; text-decoration: underline;">términos y condiciones</a></label>
             </div>
             <div class="checkbox-item" style="margin-bottom: 10px;">
               <input type="checkbox" id="privacy-checkbox" name="privacy-checkbox">
-              <label for="privacy-checkbox" style="margin-left: 8px; font-size: 14px; color: #000000;">Acepto la política de tratamiento de datos</label>
+              <label for="privacy-checkbox" style="margin-left: 8px; font-size: 14px; color: #000000;">Acepto la <a href="/politica-tratamiento-datos" target="_blank" style="color: #000000; text-decoration: underline;">política de tratamiento de datos</a></label>
             </div>
           </div>
         `;
@@ -119,4 +119,53 @@ export const addCartCheckboxes = () => {
     clearInterval(interval);
     observer.disconnect();
   }, 15000);
+}
+
+export const hidePostalCodeIfNoPickupPoints = () => {
+  const checkPickupPoints = () => {
+    if (window.vtexjs && window.vtexjs.checkout && window.vtexjs.checkout.orderForm) {
+      const orderForm = window.vtexjs.checkout.orderForm;
+      const pickupPoints = orderForm.shippingData && orderForm.shippingData.pickupPoints ? orderForm.shippingData.pickupPoints : [];
+      
+      const element = document.getElementById('postalCode-finished-loading');
+      
+      if (pickupPoints.length === 0) {
+        if (element) {
+          element.style.display = 'none';
+        } else {
+          $('#postalCode-finished-loading').attr('style', 'display: none !important');
+        }
+      } else {
+        if (element) {
+          element.style.display = '';
+        } else {
+          $('#postalCode-finished-loading').removeAttr('style');
+        }
+      }
+    }
+  };
+  
+  checkPickupPoints();
+  
+  let lastPickupPointsLength = -1;
+  
+  const checkForOrderFormChanges = () => {
+    if (window.vtexjs && window.vtexjs.checkout && window.vtexjs.checkout.orderForm) {
+      const orderForm = window.vtexjs.checkout.orderForm;
+      const pickupPoints = orderForm.shippingData && orderForm.shippingData.pickupPoints ? orderForm.shippingData.pickupPoints : [];
+      
+      if (pickupPoints.length !== lastPickupPointsLength) {
+        lastPickupPointsLength = pickupPoints.length;
+        checkPickupPoints();
+      }
+    }
+  };
+  
+  const interval = setInterval(checkForOrderFormChanges, 200);
+  const directInterval = setInterval(checkPickupPoints, 1000);
+  
+  setTimeout(() => {
+    clearInterval(interval);
+    clearInterval(directInterval);
+  }, 60000);
 }

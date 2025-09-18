@@ -97,7 +97,7 @@
     }
   },
   "flex-layout.row#minicart-footer": {
-    "title": "Contenido",
+    "title": "Footer",
     "props": {
       "blockClass": "content__minicart__footer",
       "colSizing": "auto"
@@ -110,14 +110,19 @@
     ]
   },
   "responsive-layout.desktop#freeshipping": {
+    "title": "Freeshipping Desktop",
     "children": [
       "custom-freeshipping"
     ]
   },
   "responsive-layout.mobile#freeshipping": {
+    "title": "Freeshipping Mobile",
     "children": [
       "custom-freeshipping"
     ]
+  },
+  "custom-freeshipping": {
+    "title": "Freeshipping"
   },
   "flex-layout.row#continue": {
     "children": [

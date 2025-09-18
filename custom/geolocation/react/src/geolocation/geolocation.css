@@ -121,8 +121,9 @@
   line-height: 19px;
   color: #000;
   font-family: 'Montserrat-Regular';
-  max-width: 96%;
+  max-width: 450px;
   margin: 0 auto;
+
 }
 
 :global(.location-selectors) {
@@ -363,7 +364,7 @@
   }
 
   :global(.geolocation-subtitle) {
-    padding: 0 24px 20px;
+    padding: 0 10px 20px;
     font-size: 14px;
   }
 

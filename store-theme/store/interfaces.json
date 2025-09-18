@@ -4,6 +4,9 @@
     "render": "client",
     "composition": "children"
   },
+  "custom-specifications": {
+    "component": "specification"
+  },
   "custom-flag-city": {
     "component": "FlagCity"
   },

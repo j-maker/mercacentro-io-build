@@ -23,10 +23,17 @@ const Freeshipping = ({ Envio, defaultVisible = true }: FreeshippingProps) => {
     const deliveryCost = pathOr(0, ['orderForm', 'shipping', 'deliveryOptions', 0, 'price'], orderForm) / 100;
 
     const { subtotal, qualifiesForFreeShipping, amountMissing, progressPercentage } = useMemo(() => {
-        const sub = cartTotal - deliveryCost;
-        const qualifies = sub >= Envio;
-        const missing = qualifies ? 0 : Envio - sub;
-        const percentage = Math.min((sub / Envio) * 100, 100);
+        // Valor mínimo para envío gratis: 150000
+        const FREE_SHIPPING_MINIMUM = 150000;
+        
+        // Validar que los valores sean números válidos
+        const validCartTotal = isNaN(cartTotal) ? 0 : cartTotal;
+        const validDeliveryCost = isNaN(deliveryCost) ? 0 : deliveryCost;
+        
+        const sub = validCartTotal - validDeliveryCost;
+        const qualifies = sub >= FREE_SHIPPING_MINIMUM;
+        const missing = qualifies ? 0 : FREE_SHIPPING_MINIMUM - sub;
+        const percentage = Math.min((sub / FREE_SHIPPING_MINIMUM) * 100, 100);
 
         return {
             subtotal: sub,
@@ -34,7 +41,7 @@ const Freeshipping = ({ Envio, defaultVisible = true }: FreeshippingProps) => {
             amountMissing: missing,
             progressPercentage: percentage
         };
-    }, [cartTotal, deliveryCost, Envio]);
+    }, [cartTotal, deliveryCost]);
 
     const toggleVisibility = () => {
         const newState = !isVisible;
@@ -66,35 +73,13 @@ const Freeshipping = ({ Envio, defaultVisible = true }: FreeshippingProps) => {
                 ) : (
                     <div className={styles.freeShippingSuccess}>
                         <p className={styles.successText}>
-                            ¡Felicidades! Tu envío es <span className={styles.highlight}>GRATIS</span>
+                            ¡Felicidades! Tu envío es GRATIS<span className={styles.highlight} style={{color: '#90B51B'}}> *Aplica Ibague</span>
                         </p>
                     </div>
                 )}
             </div>
         </div>
     )
-}
-
-Freeshipping.defaultProps = {
-    Envio: 200000
-}
-
-Freeshipping.getSchema = () => {
-    return {
-        title: 'Freeshipping',
-        type: 'object',
-        properties: {
-            Envio: {
-                title: 'Valor envio gratis',
-                type: 'number'
-            },
-            defaultVisible: {
-                title: 'Visible por defecto',
-                type: 'boolean',
-                default: true
-            }
-        }
-    }
 }
 
 export { Freeshipping }
