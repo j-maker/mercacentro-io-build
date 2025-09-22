@@ -202,19 +202,19 @@
 } */
 
 :global(.vtex-flex-layout-0-x-stretchChildrenWidth):nth-child(1) :global(.vtex-flex-layout-0-x-flexColChild--deals):nth-child(1)::after {
-  content: '\e91a';
+  content: '\e944';
 }
 
 :global(.vtex-flex-layout-0-x-stretchChildrenWidth):nth-child(2) :global(.vtex-flex-layout-0-x-flexColChild--deals):nth-child(1)::after {
-  content: '\e906';
+  content: '\e91a';
 }
 
 :global(.vtex-flex-layout-0-x-stretchChildrenWidth):nth-child(3) :global(.vtex-flex-layout-0-x-flexColChild--deals):nth-child(1)::after {
-  content: '\e919';
+  content: '\e906';
 }
 
 :global(.vtex-flex-layout-0-x-stretchChildrenWidth):nth-child(4) :global(.vtex-flex-layout-0-x-flexColChild--deals):nth-child(1)::after {
-  content: '\e901';
+  content: '\e919';
 }
 
 :global(.vtex-flex-layout-0-x-flexRowContent--department)> :global(.vtex-flex-layout-0-x-stretchChildrenWidth):nth-child(1) {
@@ -421,6 +421,10 @@
 
 :global(.vtex-order-placed-2-x-noticesList) {
   background-color: transparent;
+}
+
+:global(.vtex-order-placed-2-x-packageShippingEstimate) {
+  display: none;
 }
 
 @media screen and (min-width: 1026px) {

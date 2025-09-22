@@ -77,11 +77,11 @@ export const addCartCheckboxes = () => {
           <div class="cart-checkboxes-container" style="margin-bottom: 40px;">
             <div class="checkbox-item" style="margin-bottom: 10px;">
               <input type="checkbox" id="terms-checkbox" name="terms-checkbox">
-              <label for="terms-checkbox" style="margin-left: 8px; font-size: 14px; color: #000000;">Acepto los <a href="/terminos-y-condiciones" target="_blank" style="color: #000000; text-decoration: underline;">términos y condiciones</a></label>
+              <label for="terms-checkbox" style="margin-left: 8px; font-size: 14px; color: #000000;">Acepto los <a href="/terminos" target="_blank" style="color: #000000; text-decoration: underline;">términos y condiciones</a></label>
             </div>
             <div class="checkbox-item" style="margin-bottom: 10px;">
               <input type="checkbox" id="privacy-checkbox" name="privacy-checkbox">
-              <label for="privacy-checkbox" style="margin-left: 8px; font-size: 14px; color: #000000;">Acepto la <a href="/politica-tratamiento-datos" target="_blank" style="color: #000000; text-decoration: underline;">política de tratamiento de datos</a></label>
+              <label for="privacy-checkbox" style="margin-left: 8px; font-size: 14px; color: #000000;">Acepto la <a href="/politica-datos" target="_blank" style="color: #000000; text-decoration: underline;">política de tratamiento de datos</a></label>
             </div>
           </div>
         `;
@@ -168,4 +168,92 @@ export const hidePostalCodeIfNoPickupPoints = () => {
     clearInterval(interval);
     clearInterval(directInterval);
   }, 60000);
+}
+
+// Función para agregar ciudades específicas cuando se selecciona Tolima
+export const addTolimaCities = () => {
+  const addCitiesToTolima = () => {
+    const stateSelect = document.getElementById('ship-state');
+    const citySelect = document.getElementById('ship-city');
+    
+    if (!stateSelect || !citySelect) {
+      return;
+    }
+    
+    // Verificar si ya se agregó el event listener
+    if (stateSelect.hasAttribute('data-tolima-listener')) {
+      return;
+    }
+    
+    // Marcar como procesado
+    stateSelect.setAttribute('data-tolima-listener', 'true');
+    
+    // Función para agregar ciudades de Tolima en orden alfabético
+    const addTolimaCitiesToSelect = () => {
+      // Verificar si las ciudades ya existen para evitar duplicados
+      const existingCities = Array.from(citySelect.options).map(option => option.value);
+      
+      // Crear las opciones de las ciudades
+      const citiesToAdd = [
+        { value: 'Chicoral___73148', text: 'Chicoral' },
+        { value: 'Mariquita___73443', text: 'Mariquita' }
+      ];
+      
+      citiesToAdd.forEach(city => {
+        if (!existingCities.includes(city.value)) {
+          const option = document.createElement('option');
+          option.value = city.value;
+          option.textContent = city.text;
+          
+          // Encontrar la posición correcta para insertar alfabéticamente
+          let insertIndex = 1; // Empezar después de la opción vacía
+          
+          for (let i = 1; i < citySelect.options.length; i++) {
+            const currentOption = citySelect.options[i];
+            // Comparar alfabéticamente por el texto
+            if (city.text < currentOption.textContent) {
+              insertIndex = i;
+              break;
+            }
+            insertIndex = i + 1;
+          }
+          
+          // Insertar en la posición correcta
+          if (insertIndex >= citySelect.options.length) {
+            citySelect.appendChild(option);
+          } else {
+            citySelect.insertBefore(option, citySelect.options[insertIndex]);
+          }
+        }
+      });
+    };
+    
+    // Event listener para detectar cambio de departamento
+    stateSelect.addEventListener('change', (e) => {
+      if (e.target.value === 'Tolima') {
+        // Esperar un momento para que se carguen las ciudades existentes
+        setTimeout(() => {
+          addTolimaCitiesToSelect();
+        }, 100);
+      }
+    });
+    
+    // Si Tolima ya está seleccionado al cargar la página
+    if (stateSelect.value === 'Tolima') {
+      setTimeout(() => {
+        addTolimaCitiesToSelect();
+      }, 500);
+    }
+  };
+  
+  // Ejecutar inmediatamente
+  addCitiesToTolima();
+  
+  // Ejecutar periódicamente para capturar elementos que se cargan dinámicamente
+  const interval = setInterval(addCitiesToTolima, 1000);
+  
+  // Limpiar después de 30 segundos
+  setTimeout(() => {
+    clearInterval(interval);
+  }, 30000);
 }

@@ -1695,3 +1695,7 @@ body .table.cart-items tbody tr td.quantity-price .best-price {
 ::-webkit-scrollbar-thumb {
   color: #8c8c8c;
 }
+
+.orderform-template-holder .step.shipping-data .box-step > *.vtex-omnishipping-1-x-deliveryGroup {
+  display: none;
+}

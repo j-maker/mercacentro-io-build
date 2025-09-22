@@ -67,7 +67,7 @@ const Freeshipping = ({ Envio, defaultVisible = true }: FreeshippingProps) => {
                         <p className={styles.shippingText}>
                             ¡Te faltan <span className={styles.priceHighlight}>
                                 <FormattedPrice value={amountMissing} />
-                            </span> para el <span className={styles.highlight}>envío gratis!</span>
+                            </span> para el <span className={styles.highlight}>envío gratis!</span> <span className={styles.highlight} style={{color: '#90B51B'}}> *Aplica Ibague</span>
                         </p>
                     </>
                 ) : (

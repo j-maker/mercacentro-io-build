@@ -37,16 +37,7 @@ const Unity = () => {
     
     if (shouldCalculatePerUnit && price && valorUnidadMedida) {
         const precioPorUnidad = price / parseFloat(valorUnidadMedida);
-        
-        if (unidadMedida === 'Unidad') {
-            pricePerUnit = precioPorUnidad.toFixed(0);
-        } else if (unidadMedida === 'Gramo') {
-            pricePerUnit = precioPorUnidad.toFixed(1);
-        } else if (unidadMedida === 'Mililitro') {
-            pricePerUnit = precioPorUnidad.toFixed(2);
-        } else {
-            pricePerUnit = precioPorUnidad.toFixed(1);
-        }
+        pricePerUnit = precioPorUnidad.toFixed(2);
     }
 
     if (!shouldCalculatePerUnit || !unidadMedida || !valorUnidadMedida || !pricePerUnit) {
